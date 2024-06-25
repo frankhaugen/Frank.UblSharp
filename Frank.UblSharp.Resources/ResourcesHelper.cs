@@ -1,11 +1,9 @@
 ﻿using System.Xml.Schema;
 
-namespace Frank.UblSharp.Resources;
-
-public static class ResourcesHelper
+namespace Frank.UblSharp.Resources
 {
-    public static XmlSchemaSet GetXmlSchemaSet()
+    public static class ResourcesHelper
     {
-        return AdditionalResources.GetXmlSchemaSet();
+        public static XmlSchemaSet GetXmlSchemaSet() => AdditionalResources.GetXmlSchemaSet();
     }
 }
