@@ -155,32 +155,6 @@ public class AdditionalFilesHelperGenerator : ISourceGenerator
                                 }))))));
     }
 
-    // public static MethodDeclarationSyntax GenerateGetXmlSchemaSetMethod()
-    // {
-    //     var methodBody = SyntaxFactory.Block(
-    //         SyntaxFactory.LocalDeclarationStatement(
-    //             SyntaxFactory.VariableDeclaration(SyntaxFactory.IdentifierName("var"))
-    //                 .WithVariables(
-    //                     SyntaxFactory.SingletonSeparatedList(
-    //                         SyntaxFactory.VariableDeclarator("schemaSet")
-    //                             .WithInitializer(SyntaxFactory.EqualsValueClause(
-    //                                 SyntaxFactory.ObjectCreationExpression(SyntaxFactory.IdentifierName("XmlSchemaSet"))
-    //                                     .WithArgumentList(SyntaxFactory.ArgumentList())))))),
-    //         ,
-    //         SyntaxFactory.ExpressionStatement(
-    //             SyntaxFactory.InvocationExpression(
-    //                 SyntaxFactory.MemberAccessExpression(
-    //                     SyntaxKind.SimpleMemberAccessExpression,
-    //                     SyntaxFactory.IdentifierName("schemaSet"),
-    //                     SyntaxFactory.IdentifierName("Compile")))),
-    //         SyntaxFactory.ReturnStatement(SyntaxFactory.IdentifierName("schemaSet"))
-    //     );
-    //
-    //     return SyntaxFactory.MethodDeclaration(SyntaxFactory.ParseTypeName("XmlSchemaSet"), "GetXmlSchemaSet")
-    //         .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.StaticKeyword))
-    //         .WithBody(methodBody);
-    // }
-
     private static ClassDeclarationSyntax GenerateClassRecursively(ClassMember classMember)
     {
         var classDeclaration = SyntaxFactory.ClassDeclaration(ConvertPathToClassName(classMember.Name))
