@@ -1,0 +1,64 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4E8D3E9A-8608-47B3-A469-73EB3F5F02F5}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\merge.yml = .github\workflows\merge.yml
+		.github\workflows\pull-request.yml = .github\workflows\pull-request.yml
+		.github\workflows\release.yml = .github\workflows\release.yml
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		icon.png = icon.png
+		LICENSE = LICENSE
+		nuget.config = nuget.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.UblSharp", "Frank.UblSharp\Frank.UblSharp.csproj", "{53BBD137-9DD3-4546-B9BD-54036ECABB99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.UblSharp.Generator", "Frank.UblSharp.Generator\Frank.UblSharp.Generator.csproj", "{E8B81AB8-8445-4480-9CF2-474E1E240600}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.UblSharp.Validation", "Frank.UblSharp.Validation\Frank.UblSharp.Validation.csproj", "{4D45B2E4-429D-4F4E-B3E4-28204CB74649}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.UblSharp.Resources", "Frank.UblSharp.Resources\Frank.UblSharp.Resources.csproj", "{352346A6-783B-483E-8553-64FC4D82E9D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.UblSharp.Tests", "Frank.UblSharp.Tests\Frank.UblSharp.Tests.csproj", "{536D7B97-AEAA-4730-89E2-A09146620C0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.UblSharp.Internals.XsdCodeGenerator", "Frank.UblSharp.Internals.XsdCodeGenerator\Frank.UblSharp.Internals.XsdCodeGenerator.csproj", "{63CBD8A5-41AF-457A-AA5C-4C01D0F2FF2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53BBD137-9DD3-4546-B9BD-54036ECABB99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53BBD137-9DD3-4546-B9BD-54036ECABB99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53BBD137-9DD3-4546-B9BD-54036ECABB99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53BBD137-9DD3-4546-B9BD-54036ECABB99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8B81AB8-8445-4480-9CF2-474E1E240600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8B81AB8-8445-4480-9CF2-474E1E240600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8B81AB8-8445-4480-9CF2-474E1E240600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8B81AB8-8445-4480-9CF2-474E1E240600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D45B2E4-429D-4F4E-B3E4-28204CB74649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D45B2E4-429D-4F4E-B3E4-28204CB74649}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D45B2E4-429D-4F4E-B3E4-28204CB74649}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D45B2E4-429D-4F4E-B3E4-28204CB74649}.Release|Any CPU.Build.0 = Release|Any CPU
+		{352346A6-783B-483E-8553-64FC4D82E9D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{352346A6-783B-483E-8553-64FC4D82E9D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{352346A6-783B-483E-8553-64FC4D82E9D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{352346A6-783B-483E-8553-64FC4D82E9D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{536D7B97-AEAA-4730-89E2-A09146620C0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{536D7B97-AEAA-4730-89E2-A09146620C0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{536D7B97-AEAA-4730-89E2-A09146620C0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{536D7B97-AEAA-4730-89E2-A09146620C0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63CBD8A5-41AF-457A-AA5C-4C01D0F2FF2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63CBD8A5-41AF-457A-AA5C-4C01D0F2FF2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63CBD8A5-41AF-457A-AA5C-4C01D0F2FF2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63CBD8A5-41AF-457A-AA5C-4C01D0F2FF2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
