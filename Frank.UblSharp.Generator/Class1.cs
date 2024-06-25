@@ -17,7 +17,7 @@ namespace Frank.UblSharp.Generator
             var generator = new UblGenerator();
             var options = new UblGeneratorOptions
             {
-                OutputPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\..\..\.generated"),
+                OutputPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Frank.UblSharp"),
                 Namespace = "Frank.UblSharp",
                 UblSharpNamespace = "Frank.UblSharp",
                 GenerateCommonFiles = true,

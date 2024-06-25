@@ -165,7 +165,7 @@ namespace Frank.UblSharp.Generator
 
             sb = new StringBuilder(string.Join(Environment.NewLine, lines));
 
-            var xsdFilename = new Uri(schema.SourceUri).LocalPath;
+            var xsdFilename = GetFilename(schema);
             var fi = new FileInfo(xsdFilename);
             var foldername = namespaceProvider.GetNamespaceFolderName(schema);
             string targetPath = Path.Combine(options.OutputPath, foldername);
@@ -181,6 +181,12 @@ namespace Frank.UblSharp.Generator
                 ofile.Write(sb);
                 Console.WriteLine($"Written: {outputFile}");
             }
+        }
+
+        private string GetFilename(XmlSchema schema)
+        {
+            var schemaName = schema.TargetNamespace.Split(':').Last();
+            return schemaName;
         }
 
         private void ReplaceKnownSchemaIncludes(XmlSchema schema, Dictionary<string, string> knownSchemas)

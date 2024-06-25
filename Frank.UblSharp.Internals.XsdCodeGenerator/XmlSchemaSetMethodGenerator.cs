@@ -66,177 +66,182 @@ namespace Frank.UblSharp.Internals.XsdCodeGenerator
 					        SyntaxFactory.IdentifierName("Files"),
 					        SyntaxFactory.Block
 					        (
-						        SyntaxFactory.LocalDeclarationStatement
-							        (
-								        SyntaxFactory.VariableDeclaration
+						        SyntaxFactory.SingletonList<StatementSyntax>
+						        (
+							        SyntaxFactory.UsingStatement
+								        (
+									        SyntaxFactory.Block
 									        (
-										        SyntaxFactory.IdentifierName("var")
-									        )
-									        .WithVariables
-									        (
-										        SyntaxFactory.SingletonSeparatedList<VariableDeclaratorSyntax>
+										        SyntaxFactory.LocalDeclarationStatement
 										        (
-											        SyntaxFactory.VariableDeclarator
+											        SyntaxFactory.VariableDeclaration
 												        (
-													        SyntaxFactory.Identifier("reader")
+													        SyntaxFactory.IdentifierName("var")
 												        )
-												        .WithInitializer
+												        .WithVariables
 												        (
-													        SyntaxFactory.EqualsValueClause
+													        SyntaxFactory.SingletonSeparatedList<VariableDeclaratorSyntax>
 													        (
-														        SyntaxFactory.InvocationExpression
-														        (
-															        SyntaxFactory.MemberAccessExpression
+														        SyntaxFactory.VariableDeclarator
 															        (
-																        SyntaxKind.SimpleMemberAccessExpression,
-																        SyntaxFactory.IdentifierName("xsdFile"),
-																        SyntaxFactory.IdentifierName("OpenText")
+																        SyntaxFactory.Identifier("schema")
 															        )
-														        )
+															        .WithInitializer
+															        (
+																        SyntaxFactory.EqualsValueClause
+																        (
+																	        SyntaxFactory.InvocationExpression
+																		        (
+																			        SyntaxFactory.MemberAccessExpression
+																			        (
+																				        SyntaxKind.SimpleMemberAccessExpression,
+																				        SyntaxFactory.IdentifierName("XmlSchema"),
+																				        SyntaxFactory.IdentifierName("Read")
+																			        )
+																		        )
+																		        .WithArgumentList
+																		        (
+																			        SyntaxFactory.ArgumentList
+																			        (
+																				        SyntaxFactory.SeparatedList<ArgumentSyntax>
+																				        (
+																					        new SyntaxNodeOrToken[]
+																					        {
+																						        SyntaxFactory.Argument
+																						        (
+																							        SyntaxFactory.IdentifierName("reader")
+																						        ),
+																						        SyntaxFactory.Token(SyntaxKind.CommaToken),
+																						        SyntaxFactory.Argument
+																						        (
+																							        SyntaxFactory.LiteralExpression
+																							        (
+																								        SyntaxKind.NullLiteralExpression
+																							        )
+																						        )
+																					        }
+																				        )
+																			        )
+																		        )
+																        )
+															        )
 													        )
 												        )
-										        )
-									        )
-							        )
-							        .WithUsingKeyword
-							        (
-								        SyntaxFactory.Token(SyntaxKind.UsingKeyword)
-							        ),
-						        SyntaxFactory.LocalDeclarationStatement
-						        (
-							        SyntaxFactory.VariableDeclaration
-								        (
-									        SyntaxFactory.IdentifierName("var")
-								        )
-								        .WithVariables
-								        (
-									        SyntaxFactory.SingletonSeparatedList<VariableDeclaratorSyntax>
-									        (
-										        SyntaxFactory.VariableDeclarator
+										        ),
+										        SyntaxFactory.IfStatement
+										        (
+											        SyntaxFactory.BinaryExpression
 											        (
-												        SyntaxFactory.Identifier("schema")
-											        )
-											        .WithInitializer
+												        SyntaxKind.NotEqualsExpression,
+												        SyntaxFactory.IdentifierName("schema"),
+												        SyntaxFactory.LiteralExpression
+												        (
+													        SyntaxKind.NullLiteralExpression
+												        )
+											        ),
+											        SyntaxFactory.Block
 											        (
-												        SyntaxFactory.EqualsValueClause
+												        SyntaxFactory.ExpressionStatement
+												        (
+													        SyntaxFactory.AssignmentExpression
+													        (
+														        SyntaxKind.SimpleAssignmentExpression,
+														        SyntaxFactory.MemberAccessExpression
+														        (
+															        SyntaxKind.SimpleMemberAccessExpression,
+															        SyntaxFactory.IdentifierName("schema"),
+															        SyntaxFactory.IdentifierName("SourceUri")
+														        ),
+														        SyntaxFactory.MemberAccessExpression
+														        (
+															        SyntaxKind.SimpleMemberAccessExpression,
+															        SyntaxFactory.ObjectCreationExpression
+																        (
+																	        SyntaxFactory.IdentifierName("Uri")
+																        )
+																        .WithArgumentList
+																        (
+																	        SyntaxFactory.ArgumentList
+																	        (
+																		        SyntaxFactory.SingletonSeparatedList<ArgumentSyntax>
+																		        (
+																			        SyntaxFactory.Argument
+																			        (
+																				        SyntaxFactory.MemberAccessExpression
+																				        (
+																					        SyntaxKind.SimpleMemberAccessExpression,
+																					        SyntaxFactory.IdentifierName("xsdFile"),
+																					        SyntaxFactory.IdentifierName("FullName")
+																				        )
+																			        )
+																		        )
+																	        )
+																        ),
+															        SyntaxFactory.IdentifierName("AbsoluteUri")
+														        )
+													        )
+												        ),
+												        SyntaxFactory.ExpressionStatement
 												        (
 													        SyntaxFactory.InvocationExpression
 														        (
 															        SyntaxFactory.MemberAccessExpression
 															        (
 																        SyntaxKind.SimpleMemberAccessExpression,
-																        SyntaxFactory.IdentifierName("XmlSchema"),
-																        SyntaxFactory.IdentifierName("Read")
+																        SyntaxFactory.IdentifierName("schemaSet"),
+																        SyntaxFactory.IdentifierName("Add")
 															        )
 														        )
 														        .WithArgumentList
 														        (
 															        SyntaxFactory.ArgumentList
 															        (
-																        SyntaxFactory.SeparatedList<ArgumentSyntax>
+																        SyntaxFactory.SingletonSeparatedList<ArgumentSyntax>
 																        (
-																	        new SyntaxNodeOrToken[]
-																	        {
-																		        SyntaxFactory.Argument
-																		        (
-																			        SyntaxFactory.IdentifierName("reader")
-																		        ),
-																		        SyntaxFactory.Token(SyntaxKind.CommaToken),
-																		        SyntaxFactory.Argument
-																		        (
-																			        SyntaxFactory.LiteralExpression
-																			        (
-																				        SyntaxKind.NullLiteralExpression
-																			        )
-																		        )
-																	        }
+																	        SyntaxFactory.Argument
+																	        (
+																		        SyntaxFactory.IdentifierName("schema")
+																	        )
 																        )
 															        )
 														        )
 												        )
 											        )
+										        )
 									        )
 								        )
-						        ),
-						        SyntaxFactory.IfStatement
-						        (
-							        SyntaxFactory.BinaryExpression
-							        (
-								        SyntaxKind.NotEqualsExpression,
-								        SyntaxFactory.IdentifierName("schema"),
-								        SyntaxFactory.LiteralExpression
+								        .WithDeclaration
 								        (
-									        SyntaxKind.NullLiteralExpression
-								        )
-							        ),
-							        SyntaxFactory.Block
-							        (
-								        SyntaxFactory.ExpressionStatement
-								        (
-									        SyntaxFactory.AssignmentExpression
-									        (
-										        SyntaxKind.SimpleAssignmentExpression,
-										        SyntaxFactory.MemberAccessExpression
+									        SyntaxFactory.VariableDeclaration
 										        (
-											        SyntaxKind.SimpleMemberAccessExpression,
-											        SyntaxFactory.IdentifierName("schema"),
-											        SyntaxFactory.IdentifierName("SourceUri")
-										        ),
-										        SyntaxFactory.MemberAccessExpression
+											        SyntaxFactory.IdentifierName("var")
+										        )
+										        .WithVariables
 										        (
-											        SyntaxKind.SimpleMemberAccessExpression,
-											        SyntaxFactory.ObjectCreationExpression
-												        (
-													        SyntaxFactory.IdentifierName("Uri")
-												        )
-												        .WithArgumentList
-												        (
-													        SyntaxFactory.ArgumentList
+											        SyntaxFactory.SingletonSeparatedList<VariableDeclaratorSyntax>
+											        (
+												        SyntaxFactory.VariableDeclarator
 													        (
-														        SyntaxFactory.SingletonSeparatedList<ArgumentSyntax>
+														        SyntaxFactory.Identifier("reader")
+													        )
+													        .WithInitializer
+													        (
+														        SyntaxFactory.EqualsValueClause
 														        (
-															        SyntaxFactory.Argument
+															        SyntaxFactory.InvocationExpression
 															        (
 																        SyntaxFactory.MemberAccessExpression
 																        (
 																	        SyntaxKind.SimpleMemberAccessExpression,
 																	        SyntaxFactory.IdentifierName("xsdFile"),
-																	        SyntaxFactory.IdentifierName("FullName")
+																	        SyntaxFactory.IdentifierName("OpenText")
 																        )
 															        )
 														        )
 													        )
-												        ),
-											        SyntaxFactory.IdentifierName("AbsoluteUri")
-										        )
-									        )
-								        ),
-								        SyntaxFactory.ExpressionStatement
-								        (
-									        SyntaxFactory.InvocationExpression
-										        (
-											        SyntaxFactory.MemberAccessExpression
-											        (
-												        SyntaxKind.SimpleMemberAccessExpression,
-												        SyntaxFactory.IdentifierName("schemaSet"),
-												        SyntaxFactory.IdentifierName("Add")
-											        )
-										        )
-										        .WithArgumentList
-										        (
-											        SyntaxFactory.ArgumentList
-											        (
-												        SyntaxFactory.SingletonSeparatedList<ArgumentSyntax>
-												        (
-													        SyntaxFactory.Argument
-													        (
-														        SyntaxFactory.IdentifierName("schema")
-													        )
-												        )
 											        )
 										        )
 								        )
-							        )
 						        )
 					        )
 				        ),
