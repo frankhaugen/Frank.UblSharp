@@ -3,13 +3,28 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Frank.UblSharp.GeneratorV2.SyntaxRewriters;
-
 public class PropertyRewriter : CSharpSyntaxRewriter
 {
+    public override SyntaxNode VisitClassDeclaration(ClassDeclarationSyntax node)
+    {
+        var updatedClass = base.VisitClassDeclaration(node) as ClassDeclarationSyntax;
+
+        if (updatedClass != null)
+        {
+            // Remove fields that were converted to auto-properties
+            var fieldsToRemove = updatedClass.Members.OfType<FieldDeclarationSyntax>()
+                .Where(f => updatedClass.Members.OfType<PropertyDeclarationSyntax>()
+                    .Any(p => IsBackingField(f, p)))
+                .ToList();
+
+            updatedClass = updatedClass.RemoveNodes(fieldsToRemove, SyntaxRemoveOptions.KeepNoTrivia);
+        }
+
+        return updatedClass;
+    }
+
     public override SyntaxNode VisitPropertyDeclaration(PropertyDeclarationSyntax node)
     {
-        Console.WriteLine($"Property: {node.Identifier.Text}");
-
         if (node.AccessorList != null && node.AccessorList.Accessors.Count == 2)
         {
             var getAccessor = node.AccessorList.Accessors.FirstOrDefault(a => a.Kind() == SyntaxKind.GetAccessorDeclaration);
@@ -20,7 +35,9 @@ public class PropertyRewriter : CSharpSyntaxRewriter
             {
                 var fieldName = GetBackingField(node);
                 if (fieldName != null)
-                    return node.WithoutLeadingTrivia().WithTrailingTrivia(SyntaxFactory.Whitespace(Environment.NewLine))
+                {
+                    // Create a new property declaration with auto-property syntax and preserve the attributes
+                    var newProperty = node
                         .WithAccessorList(SyntaxFactory.AccessorList(SyntaxFactory.List(new[]
                         {
                             SyntaxFactory.AccessorDeclaration(SyntaxKind.GetAccessorDeclaration)
@@ -28,7 +45,12 @@ public class PropertyRewriter : CSharpSyntaxRewriter
                             SyntaxFactory.AccessorDeclaration(SyntaxKind.SetAccessorDeclaration)
                                 .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken))
                         })))
+                        .WithTrailingTrivia(SyntaxFactory.Whitespace(Environment.NewLine))
+                        .WithLeadingTrivia(node.GetLeadingTrivia())
                         .WithTriviaFrom(node);
+
+                    return newProperty;
+                }
             }
         }
 
@@ -40,11 +62,24 @@ public class PropertyRewriter : CSharpSyntaxRewriter
         var classDeclaration = property.Ancestors().OfType<ClassDeclarationSyntax>().FirstOrDefault();
         if (classDeclaration == null) return null;
 
+        // Find the field with a similar name to the property
         var fieldName = property.Identifier.Text;
         var backingField = classDeclaration.Members
             .OfType<FieldDeclarationSyntax>()
-            .FirstOrDefault(f => f.Declaration.Variables.Any(v => v.Identifier.Text.Contains(fieldName, StringComparison.OrdinalIgnoreCase)));
+            .FirstOrDefault(f =>
+            {
+                var fieldIdentifier = f.Declaration.Variables.First().Identifier.Text;
+                return string.Equals(fieldIdentifier.TrimStart('_'), fieldName, StringComparison.OrdinalIgnoreCase);
+            });
 
         return backingField?.Declaration.Variables.First().Identifier.Text;
+    }
+
+    private bool IsBackingField(FieldDeclarationSyntax field, PropertyDeclarationSyntax property)
+    {
+        var fieldName = field.Declaration.Variables.First().Identifier.Text;
+        var propertyName = property.Identifier.Text;
+
+        return string.Equals(fieldName.TrimStart('_'), propertyName, StringComparison.OrdinalIgnoreCase);
     }
 }

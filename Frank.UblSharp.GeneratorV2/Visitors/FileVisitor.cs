@@ -11,7 +11,6 @@ public class FileVisitor
         var tree = CSharpSyntaxTree.ParseText(code);
         var root = tree.GetRoot();
         var newRoot = new PropertyRewriter().Visit(root);
-        newRoot = new FieldRewriter().Visit(newRoot);
         var newCode = newRoot.ToFullString();
         File.WriteAllText(file.FullName, newCode);
     }
