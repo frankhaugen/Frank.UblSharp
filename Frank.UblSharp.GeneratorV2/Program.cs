@@ -1,6 +1,5 @@
 ﻿using Frank.UblSharp.GeneratorV2.Visitors;
 using Frank.UblSharp.Resources;
-using Microsoft.CodeAnalysis.MSBuild;
 using XmlSchemaClassGenerator;
 
 namespace Frank.UblSharp.GeneratorV2;
@@ -10,9 +9,9 @@ public class Program
     public static async Task Main()
     {
         var outputDirectory = new DirectoryInfo(@"D:\frankrepos\Frank.UblSharp\Frank.UblSharp");
-        
+
         // GenerateFiles(outputDirectory);
-        
+
         new DirectoryVisitor().VisitDirectory(outputDirectory);
     }
 
@@ -24,12 +23,9 @@ public class Program
 
         converter.GenerateNullables = true;
         converter.CollectionSettersMode = CollectionSettersMode.PublicWithoutConstructorInitialization;
-        
+
         converter.Generate(schemaSet);
-        
-        foreach (var log in fileLog)
-        {
-            Console.Error.WriteLine(log);
-        }
+
+        foreach (var log in fileLog) Console.Error.WriteLine(log);
     }
 }

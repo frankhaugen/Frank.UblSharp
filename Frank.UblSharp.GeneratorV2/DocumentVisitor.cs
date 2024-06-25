@@ -1,6 +1,5 @@
 ﻿using Frank.UblSharp.GeneratorV2.SyntaxRewriters;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
 
 namespace Frank.UblSharp.GeneratorV2;
 
@@ -12,9 +11,6 @@ public class DocumentVisitor
         if (root is null) return;
 
         var newRoot = new PropertyRewriter().Visit(root);
-        if (newRoot != root)
-        {
-            document = document.WithSyntaxRoot(newRoot);
-        }
+        if (newRoot != root) document = document.WithSyntaxRoot(newRoot);
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.CodeDom;
+using System.Text;
 using System.Text.RegularExpressions;
 using XmlSchemaClassGenerator;
 
@@ -19,8 +20,8 @@ public static class UblGeneratorFactory
             NamingScheme = NamingScheme.PascalCase,
             DataAnnotationMode = DataAnnotationMode.Partial,
             CollectionSettersMode = CollectionSettersMode.PublicWithoutConstructorInitialization,
-            CodeTypeReferenceOptions = System.CodeDom.CodeTypeReferenceOptions.GenericTypeParameter,
-            NamespaceProvider = new NamespaceProvider()
+            CodeTypeReferenceOptions = CodeTypeReferenceOptions.GenericTypeParameter,
+            NamespaceProvider = new NamespaceProvider
             {
                 GenerateNamespace = x =>
                 {
@@ -28,7 +29,7 @@ public static class UblGeneratorFactory
 
                     namespaceBuilder.Append(rootNamespace);
                     namespaceBuilder.Append(".");
-                    
+
                     var customNamespace = new Regex("[^a-zA-Z0-9]").Replace(x.XmlSchemaNamespace, "_");
 
                     if (customNamespace.StartsWith("urn_oasis_names_specification_ubl_schema_xsd_"))
@@ -38,42 +39,16 @@ public static class UblGeneratorFactory
                             .Replace("_2", "");
                         namespaceBuilder.Append(documentName);
                     }
-                    if (customNamespace == "urn_oasis_names_specification_ubl_schema_xsd_CommonExtensionComponents_2")
-                    {
-                        namespaceBuilder.Append("CommonExtensionComponents");
-                    }
-                    if (customNamespace == "urn_oasis_names_specification_ubl_schema_xsd_CommonSignatureComponents_2")
-                    {
-                        namespaceBuilder.Append("CommonSignatureComponents");
-                    }
-                    if (customNamespace == "urn_oasis_names_specification_ubl_schema_xsd_SignatureBasicComponents_2")
-                    {
-                        namespaceBuilder.Append("SignatureBasicComponents");
-                    }
-                    if (customNamespace == "urn_oasis_names_specification_ubl_schema_xsd_SignatureAggregateComponents_2")
-                    {
-                        namespaceBuilder.Append("SignatureAggregateComponents");
-                    }
-                    if (customNamespace == "urn_oasis_names_specification_ubl_schema_xsd_CommonAggregateComponents_2")
-                    {
-                        namespaceBuilder.Append("CommonAggregateComponents");
-                    }
-                    if (customNamespace == "urn_oasis_names_specification_ubl_schema_xsd_CommonBasicComponents_2")
-                    {
-                        namespaceBuilder.Append("CommonBasicComponents");
-                    }
-                    if (customNamespace == "urn_oasis_names_specification_ubl_schema_xsd_UnqualifiedDataTypes_2")
-                    {
-                        namespaceBuilder.Append("UnqualifiedDataTypes");
-                    }
-                    if (customNamespace == "urn_un_unece_uncefact_data_specification_CoreComponentTypeSchemaModule_2")
-                    {
-                        namespaceBuilder.Append("CoreComponentTypes");
-                    }
-                    if (customNamespace.StartsWith("http___"))
-                    {
-                        namespaceBuilder.Append("CoreComponentTypes");
-                    }
+
+                    if (customNamespace == "urn_oasis_names_specification_ubl_schema_xsd_CommonExtensionComponents_2") namespaceBuilder.Append("CommonExtensionComponents");
+                    if (customNamespace == "urn_oasis_names_specification_ubl_schema_xsd_CommonSignatureComponents_2") namespaceBuilder.Append("CommonSignatureComponents");
+                    if (customNamespace == "urn_oasis_names_specification_ubl_schema_xsd_SignatureBasicComponents_2") namespaceBuilder.Append("SignatureBasicComponents");
+                    if (customNamespace == "urn_oasis_names_specification_ubl_schema_xsd_SignatureAggregateComponents_2") namespaceBuilder.Append("SignatureAggregateComponents");
+                    if (customNamespace == "urn_oasis_names_specification_ubl_schema_xsd_CommonAggregateComponents_2") namespaceBuilder.Append("CommonAggregateComponents");
+                    if (customNamespace == "urn_oasis_names_specification_ubl_schema_xsd_CommonBasicComponents_2") namespaceBuilder.Append("CommonBasicComponents");
+                    if (customNamespace == "urn_oasis_names_specification_ubl_schema_xsd_UnqualifiedDataTypes_2") namespaceBuilder.Append("UnqualifiedDataTypes");
+                    if (customNamespace == "urn_un_unece_uncefact_data_specification_CoreComponentTypeSchemaModule_2") namespaceBuilder.Append("CoreComponentTypes");
+                    if (customNamespace.StartsWith("http___")) namespaceBuilder.Append("CoreComponentTypes");
 
                     return namespaceBuilder.ToString();
                 }
@@ -98,7 +73,7 @@ public static class UblGeneratorFactory
             AssemblyVisible = false,
             EnableUpaCheck = true,
             UseShouldSerializePattern = false,
-            GenerateDesignerCategoryAttribute = false,
+            GenerateDesignerCategoryAttribute = false
         };
     }
 }
