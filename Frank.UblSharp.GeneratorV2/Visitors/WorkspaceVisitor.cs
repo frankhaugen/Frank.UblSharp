@@ -5,7 +5,7 @@ namespace Frank.UblSharp.GeneratorV2.Visitors;
 
 public class WorkspaceVisitor
 {
-    private readonly RewriterContext _rewriterContext = new();
+    private readonly SyntaxTreeRewriter _syntaxTreeRewriter = new();
     
     public async Task VisitAsync(MSBuildWorkspace workspace)
     {
@@ -15,7 +15,7 @@ public class WorkspaceVisitor
         {
             var root = await document.GetSyntaxRootAsync();
             if (root is null) continue;
-            var newRoot = _rewriterContext.Rewrite(root);
+            var newRoot = _syntaxTreeRewriter.Rewrite(root.SyntaxTree);
             if (newRoot != root) solution = solution.WithDocumentSyntaxRoot(document.Id, newRoot);
         }
 
