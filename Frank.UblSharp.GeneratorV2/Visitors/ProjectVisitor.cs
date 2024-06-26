@@ -1,6 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 
-namespace Frank.UblSharp.GeneratorV2;
+namespace Frank.UblSharp.GeneratorV2.Visitors;
 
 public class ProjectVisitor
 {
