@@ -12,7 +12,13 @@ public class Program
 
         // GenerateFiles(outputDirectory);
 
-        new DirectoryVisitor().VisitDirectory(outputDirectory);
+        var file = new FileInfo(@"D:\frankrepos\Frank.UblSharp\Frank.UblSharp\Frank.UblSharp.ApplicationResponse\ApplicationResponseType.cs");
+        var before = await File.ReadAllTextAsync(file.FullName);
+        var fileVisitor = new FileVisitor();
+        fileVisitor.VisitFile(file);
+        var after = await File.ReadAllTextAsync(file.FullName);
+        
+        Console.WriteLine(after);
     }
 
     private static void GenerateFiles(DirectoryInfo outputDirectory)
