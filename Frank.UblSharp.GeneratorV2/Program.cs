@@ -1,117 +1,135 @@
-﻿using Frank.UblSharp.GeneratorV2.SyntaxRewriters;
-using Microsoft.CodeAnalysis;
+﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
 
 namespace Frank.UblSharp.GeneratorV2;
 
-        // GenerateFiles(outputDirectory);
-
 public class Program
 {
     public static async Task Main()
     {
         var outputDirectory = new DirectoryInfo(@"D:\frankrepos\Frank.UblSharp\Frank.UblSharp");
+        new DirectoryVisitor().VisitDirectory(outputDirectory);
+    }
 
-        var files = outputDirectory.GetFiles("*.cs", SearchOption.AllDirectories);
 
-        foreach (var file in files)
+    public class DirectoryVisitor
+    {
+        public void VisitDirectory(DirectoryInfo directory)
         {
-            var before = await File.ReadAllTextAsync(file.FullName);
-            var syntaxTree = CSharpSyntaxTree.ParseText(before);
-            var root = await syntaxTree.GetRootAsync();
-            var compilation = CSharpCompilation.Create("YourCompilation")
-                .AddReferences(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
-                .AddSyntaxTrees(syntaxTree);
-            var semanticModel = compilation.GetSemanticModel(syntaxTree);
-        
-            var extractor = new PropertyExtractor(semanticModel);
-            var propertiesWithBackingFields = extractor.ExtractPropertiesWithBackingFields(root);
+            var files = directory.GetFiles("*.cs", SearchOption.AllDirectories);
+            foreach (var file in files) new FileVisitor().VisitFile(file);
+        }
+    }
 
-            foreach (var propertiesWithBackingField in propertiesWithBackingFields)
-            {
-                var rewriter = new PropertyRewriter(semanticModel, propertiesWithBackingField.BackingField, propertiesWithBackingField.Property);
-                root = rewriter.Visit(root);
-            }
-        
-            var formattedRoot = Formatter.Format(root, new AdhocWorkspace());
-            var after = formattedRoot.ToFullString();
-            if (before != after)
-            {
-                await File.WriteAllTextAsync(file.FullName, after);
-            }
+    public class FileVisitor
+    {
+        public void VisitFile(FileInfo file)
+        {
+            var code = File.ReadAllText(file.FullName);
+            var syntaxTree = CSharpSyntaxTree.ParseText(code);
+            
+            var rewriter = new SyntaxTreeRewriter();
+            rewriter.Rewrite(ref syntaxTree);
+
+            var newCode = Formatter.Format(syntaxTree.GetRoot(), new AdhocWorkspace()).ToFullString();
+
+            File.WriteAllText(file.FullName, newCode);
         }
     }
     
-    class PropertyRewriter : CSharpSyntaxRewriter
-{
-    private readonly SemanticModel _semanticModel;
-    private readonly ISymbol _backingField;
-    private readonly PropertyDeclarationSyntax _property;
-
-    public PropertyRewriter(SemanticModel semanticModel, ISymbol backingField, PropertyDeclarationSyntax property)
+    private class SyntaxTreeRewriter
     {
-        _semanticModel = semanticModel;
-        _backingField = backingField;
-        _property = property;
-    }
-
-    public override SyntaxNode VisitIdentifierName(IdentifierNameSyntax name)
-    {
-        if (_backingField != null && name.Identifier.ValueText.Equals(_backingField.Name))
+        public void Rewrite(ref SyntaxTree syntaxTree)
         {
-            var symbolInfo = _semanticModel.GetSymbolInfo(name);
-            if (symbolInfo.Symbol != null && Equals(symbolInfo.Symbol.OriginalDefinition, _backingField))
+            var rootNode = syntaxTree.GetRoot();
+            var compilation = CSharpCompilation.Create("YourCompilation")
+                .AddReferences(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
+                .AddSyntaxTrees(syntaxTree); // Add the SyntaxTree here
+        
+            var propertiesWithBackingFields = new PropertyExtractor(compilation.GetSemanticModel(syntaxTree)).ExtractPropertiesWithBackingFields(rootNode);
+        
+            foreach (var propertiesWithBackingField in propertiesWithBackingFields)
             {
-                name = name.WithIdentifier(SyntaxFactory.Identifier(_property.Identifier.ValueText));
-                return name.WithAdditionalAnnotations(Formatter.Annotation);
+                var rewriter = new PropertyRewriter(compilation.GetSemanticModel(syntaxTree), propertiesWithBackingField.BackingField, propertiesWithBackingField.Property);
+                var newRootNode = rewriter.Visit(rootNode);
+        
+                // After doing the rewrite, refresh the syntax tree and semantic model.
+                var newSyntaxTree = newRootNode.SyntaxTree;
+                rootNode = newRootNode;
+                compilation = compilation.ReplaceSyntaxTree(syntaxTree, newSyntaxTree);
+                syntaxTree = newSyntaxTree;
             }
         }
-        return name;
     }
 
-    public override SyntaxNode VisitPropertyDeclaration(PropertyDeclarationSyntax propertyDeclaration)
+    private class PropertyRewriter : CSharpSyntaxRewriter
     {
-        if (propertyDeclaration == _property)
+        private readonly ISymbol _backingField;
+        private readonly PropertyDeclarationSyntax _property;
+        private readonly SemanticModel _semanticModel;
+
+        public PropertyRewriter(SemanticModel semanticModel, ISymbol backingField, PropertyDeclarationSyntax property)
         {
-            return ConvertToAutoProperty(propertyDeclaration).WithAdditionalAnnotations(Formatter.Annotation);
+            _semanticModel = semanticModel;
+            _backingField = backingField;
+            _property = property;
         }
-        return base.VisitPropertyDeclaration(propertyDeclaration);
-    }
 
-    public override SyntaxNode VisitFieldDeclaration(FieldDeclarationSyntax field)
-    {
-        if (field.Declaration.Variables.Count == 1 && Equals(_semanticModel.GetDeclaredSymbol(field.Declaration.Variables.First()), _backingField))
+        public override SyntaxNode VisitIdentifierName(IdentifierNameSyntax name)
         {
-            return null;
+            if (_backingField != null && name.Identifier.ValueText.Equals(_backingField.Name))
+            {
+                var symbolInfo = _semanticModel.GetSymbolInfo(name);
+                if (symbolInfo.Symbol != null && Equals(symbolInfo.Symbol.OriginalDefinition, _backingField))
+                {
+                    name = name.WithIdentifier(SyntaxFactory.Identifier(_property.Identifier.ValueText));
+                    return name.WithAdditionalAnnotations(Formatter.Annotation);
+                }
+            }
+
+            return name;
         }
-        return field;
-    }
 
-    public override SyntaxNode VisitVariableDeclarator(VariableDeclaratorSyntax variable)
-    {
-        if (variable.Parent.Parent is FieldDeclarationSyntax field && field.Declaration.Variables.Count == 1 && Equals(_semanticModel.GetDeclaredSymbol(variable), _backingField))
+        public override SyntaxNode VisitPropertyDeclaration(PropertyDeclarationSyntax propertyDeclaration)
         {
-            return null;
+            if (propertyDeclaration == _property) return ConvertToAutoProperty(propertyDeclaration).WithAdditionalAnnotations(Formatter.Annotation);
+            return base.VisitPropertyDeclaration(propertyDeclaration);
         }
-        return variable;
+
+        public override SyntaxNode VisitFieldDeclaration(FieldDeclarationSyntax field)
+        {
+            if (field == null)
+                return null;
+            if (field.Declaration.Variables.Count == 1 && Equals(_semanticModel.GetDeclaredSymbol(field.Declaration.Variables.First()), _backingField)) return null;
+            return field;
+        }
+
+        public override SyntaxNode VisitVariableDeclarator(VariableDeclaratorSyntax variable)
+        {
+            if (variable.Parent.Parent is FieldDeclarationSyntax field && field.Declaration.Variables.Count == 1 && Equals(_semanticModel.GetDeclaredSymbol(variable), _backingField)) return null;
+            return variable;
+        }
+
+        private PropertyDeclarationSyntax ConvertToAutoProperty(PropertyDeclarationSyntax propertyDeclaration)
+        {
+            return propertyDeclaration.WithAccessorList(SyntaxFactory.AccessorList(SyntaxFactory.List(new[]
+            {
+                SyntaxFactory.AccessorDeclaration(SyntaxKind.GetAccessorDeclaration).WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken)),
+                SyntaxFactory.AccessorDeclaration(SyntaxKind.SetAccessorDeclaration).WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken))
+            })));
+        }
     }
 
-    private PropertyDeclarationSyntax ConvertToAutoProperty(PropertyDeclarationSyntax propertyDeclaration)
-    {
-        return propertyDeclaration.WithAccessorList(SyntaxFactory.AccessorList(SyntaxFactory.List(new[]
-        {
-            SyntaxFactory.AccessorDeclaration(SyntaxKind.GetAccessorDeclaration).WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken)),
-            SyntaxFactory.AccessorDeclaration(SyntaxKind.SetAccessorDeclaration).WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken))
-        })));
-    }
-}
     public class PropertyExtractor
     {
         private readonly SemanticModel _semanticModel;
 
-        public PropertyExtractor(SemanticModel semanticModel) => _semanticModel = semanticModel;
+        public PropertyExtractor(SemanticModel semanticModel)
+        {
+            _semanticModel = semanticModel;
+        }
 
         public IEnumerable<PropertyWithBackingField> ExtractPropertiesWithBackingFields(SyntaxNode root)
         {
@@ -131,8 +149,8 @@ public class Program
             var propertySymbol = _semanticModel.GetDeclaredSymbol(property);
             if (propertySymbol == null) return null;
             if (propertySymbol.SetMethod?.DeclaringSyntaxReferences == null) return null;
-            
-            foreach (var accessor in propertySymbol.GetMethod?.DeclaringSyntaxReferences.Concat(propertySymbol.SetMethod?.DeclaringSyntaxReferences?? []) ?? [])
+
+            foreach (var accessor in propertySymbol.GetMethod?.DeclaringSyntaxReferences.Concat(propertySymbol.SetMethod?.DeclaringSyntaxReferences ?? []) ?? [])
             {
                 var syntaxNode = accessor.GetSyntax() as AccessorDeclarationSyntax;
                 var identifier = syntaxNode?.DescendantNodes().OfType<IdentifierNameSyntax>().FirstOrDefault();
@@ -145,7 +163,7 @@ public class Program
             return null;
         }
     }
-    
+
     public struct PropertyWithBackingField
     {
         public ISymbol BackingField { get; }
@@ -158,16 +176,3 @@ public class Program
         }
     }
 }
-    // private static void GenerateFiles(DirectoryInfo outputDirectory)
-    // {
-    //     var fileLog = new List<string>();
-    //     var schemaSet = ResourcesHelper.GetXmlSchemaSet();
-    //     var converter = UblGeneratorFactory.Create(outputDirectory, "Frank.UblSharp", fileLog);
-    //
-    //     converter.GenerateNullables = true;
-    //     converter.CollectionSettersMode = CollectionSettersMode.PublicWithoutConstructorInitialization;
-    //
-    //     converter.Generate(schemaSet);
-    //
-    //     foreach (var log in fileLog) Console.Error.WriteLine(log);
-    // }
