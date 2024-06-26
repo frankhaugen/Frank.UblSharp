@@ -1,4 +1,6 @@
-﻿using Frank.UblSharp.GeneratorV2.Visitors;
+﻿using System.Text;
+using Diff;
+using Frank.UblSharp.GeneratorV2.Visitors;
 using Frank.UblSharp.Resources;
 using XmlSchemaClassGenerator;
 
@@ -11,8 +13,18 @@ public class Program
         var outputDirectory = new DirectoryInfo(@"D:\frankrepos\Frank.UblSharp\Frank.UblSharp");
 
         // GenerateFiles(outputDirectory);
+        
+        var fileVisitor = new FileVisitor();
+        
+        var file = new FileInfo(@"D:\frankrepos\Frank.UblSharp\Frank.UblSharp\Frank.UblSharp.ApplicationResponse\ApplicationResponseType.cs");
+        
+        var before = await File.ReadAllTextAsync(file.FullName);
+        var beforeLines = before.Split(Environment.NewLine);
+        fileVisitor.VisitFile(file);
+        var after = await File.ReadAllTextAsync(file.FullName);
+        var afterLines = after.Split(Environment.NewLine);
 
-        new DirectoryVisitor().VisitDirectory(outputDirectory);
+        Console.WriteLine(after);
     }
 
     private static void GenerateFiles(DirectoryInfo outputDirectory)
