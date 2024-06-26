@@ -40,13 +40,10 @@ public class AutoPropertyRewriter : CSharpSyntaxRewriter
                         .WithTriviaFrom(node)
                         .WithModifiers(node.Modifiers);
 
-                    // Replace references to the backing field in the class
-                    var root = node.SyntaxTree.GetRoot();
-                    var rewriter = new FieldReferenceRewriter(fieldName, node.Identifier.Text);
-                    root = rewriter.Visit(root);
+                    // Annotate the property to identify it later
+                    newProperty = newProperty.WithAdditionalAnnotations(new SyntaxAnnotation("AutoProperty"));
 
-                    // Update the syntax tree with the new root
-                    return newProperty.WithAdditionalAnnotations(new SyntaxAnnotation("NeedsRemoval", fieldName));
+                    return newProperty;
                 }
             }
         }
@@ -58,20 +55,29 @@ public class AutoPropertyRewriter : CSharpSyntaxRewriter
     {
         var newRoot = Visit(root);
 
-        // Remove annotated fields
-        var annotatedNodes = newRoot.GetAnnotatedNodes("NeedsRemoval");
-        foreach (var node in annotatedNodes)
+        // Remove backing fields
+        var annotatedProperties = newRoot.GetAnnotatedNodes("AutoProperty").OfType<PropertyDeclarationSyntax>();
+        foreach (var property in annotatedProperties)
         {
-            var fieldName = node.GetAnnotations("NeedsRemoval").FirstOrDefault()?.Data;
+            var fieldName = GetBackingField(property);
+            if (fieldName == null) continue;
+            var fieldNode = newRoot.DescendantNodes().OfType<FieldDeclarationSyntax>()
+                .FirstOrDefault(f => f.Declaration.Variables.Any(v => v.Identifier.Text == fieldName));
+
+            if (fieldNode != null)
+            {
+                newRoot = newRoot.RemoveNode(fieldNode, SyntaxRemoveOptions.KeepNoTrivia);
+            }
+        }
+
+        // Replace field references with property references
+        foreach (var property in annotatedProperties)
+        {
+            var fieldName = GetBackingField(property);
             if (fieldName != null)
             {
-                var fieldNode = newRoot.DescendantNodes().OfType<FieldDeclarationSyntax>()
-                    .FirstOrDefault(f => f.Declaration.Variables.Any(v => v.Identifier.Text == fieldName));
-
-                if (fieldNode != null)
-                {
-                    newRoot = newRoot.RemoveNode(fieldNode, SyntaxRemoveOptions.KeepNoTrivia);
-                }
+                var rewriter = new FieldReferenceRewriter(fieldName, property.Identifier.Text);
+                newRoot = rewriter.Visit(newRoot);
             }
         }
 
@@ -83,38 +89,17 @@ public class AutoPropertyRewriter : CSharpSyntaxRewriter
         var propertySymbol = _semanticModel.GetDeclaredSymbol(property) as IPropertySymbol;
         if (propertySymbol != null)
         {
-            var containingType = propertySymbol.ContainingType;
-            var fields = containingType.GetMembers().OfType<IFieldSymbol>();
-            foreach (var field in fields)
+            foreach (var accessor in propertySymbol.GetMethod.DeclaringSyntaxReferences.Concat(propertySymbol.SetMethod.DeclaringSyntaxReferences))
             {
-                if (field.AssociatedSymbol == propertySymbol)
+                var syntaxNode = accessor.GetSyntax() as AccessorDeclarationSyntax;
+                var identifier = syntaxNode?.DescendantNodes().OfType<IdentifierNameSyntax>().FirstOrDefault();
+                if (identifier != null)
                 {
-                    return field.Name;
+                    return identifier.Identifier.Text;
                 }
             }
         }
 
         return null;
-    }
-
-    private bool IsBackingField(string fieldName)
-    {
-        var symbol = _semanticModel.LookupSymbols(0, name: fieldName).FirstOrDefault();
-        if (symbol is IFieldSymbol fieldSymbol)
-        {
-            var containingType = fieldSymbol.ContainingType;
-            var properties = containingType.GetMembers().OfType<IPropertySymbol>();
-            foreach (var property in properties)
-            {
-                var propertyNode = (PropertyDeclarationSyntax)property.DeclaringSyntaxReferences.First().GetSyntax();
-                var backingFieldName = GetBackingField(propertyNode);
-                if (backingFieldName == fieldName)
-                {
-                    return true;
-                }
-            }
-        }
-
-        return false;
     }
 }
