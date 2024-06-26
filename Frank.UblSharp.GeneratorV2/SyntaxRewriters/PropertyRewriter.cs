@@ -40,13 +40,11 @@ public class AutoPropertyRewriter : CSharpSyntaxRewriter
                         .WithTriviaFrom(node)
                         .WithModifiers(node.Modifiers);
 
-                    // Replace references to the backing field in the class
+                    // Replace references to the backing field in the property
                     var root = node.SyntaxTree.GetRoot();
                     var rewriter = new FieldReferenceRewriter(fieldName, node.Identifier.Text);
                     root = rewriter.Visit(root);
 
-                    // Update the syntax tree with the new root
-                    node = root.DescendantNodes().OfType<PropertyDeclarationSyntax>().FirstOrDefault(p => p.Identifier.Text == node.Identifier.Text);
                     return newProperty;
                 }
             }
@@ -88,7 +86,7 @@ public class AutoPropertyRewriter : CSharpSyntaxRewriter
                         if (field.DeclaringSyntaxReferences.Any())
                         {
                             var fieldDeclaration = field.DeclaringSyntaxReferences.First().GetSyntax() as VariableDeclaratorSyntax;
-                            if (fieldDeclaration != null)
+                            if (fieldDeclaration != null && property.AccessorList.Accessors.Any(a => a.Body?.DescendantNodes().OfType<IdentifierNameSyntax>().Any(id => id.Identifier.Text == fieldDeclaration.Identifier.Text) == true))
                             {
                                 return fieldDeclaration.Identifier.Text;
                             }
