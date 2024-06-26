@@ -46,8 +46,7 @@ public class AutoPropertyRewriter : CSharpSyntaxRewriter
                     root = rewriter.Visit(root);
 
                     // Update the syntax tree with the new root
-                    node = root.DescendantNodes().OfType<PropertyDeclarationSyntax>().FirstOrDefault(p => p.Identifier.Text == node.Identifier.Text);
-                    return newProperty;
+                    return newProperty.WithAdditionalAnnotations(new SyntaxAnnotation("NeedsRemoval", fieldName));
                 }
             }
         }
@@ -55,45 +54,42 @@ public class AutoPropertyRewriter : CSharpSyntaxRewriter
         return base.VisitPropertyDeclaration(node);
     }
 
-    public override SyntaxNode VisitFieldDeclaration(FieldDeclarationSyntax node)
+    public SyntaxNode Transform(SyntaxNode root)
     {
-        // Determine if the field is a backing field that needs removal
-        var variableName = node.Declaration.Variables.First().Identifier.Text;
-        var isBackingField = IsBackingField(variableName);
+        var newRoot = Visit(root);
 
-        if (isBackingField)
+        // Remove annotated fields
+        var annotatedNodes = newRoot.GetAnnotatedNodes("NeedsRemoval");
+        foreach (var node in annotatedNodes)
         {
-            // Remove the field by returning null
-            return null;
+            var fieldName = node.GetAnnotations("NeedsRemoval").FirstOrDefault()?.Data;
+            if (fieldName != null)
+            {
+                var fieldNode = newRoot.DescendantNodes().OfType<FieldDeclarationSyntax>()
+                    .FirstOrDefault(f => f.Declaration.Variables.Any(v => v.Identifier.Text == fieldName));
+
+                if (fieldNode != null)
+                {
+                    newRoot = newRoot.RemoveNode(fieldNode, SyntaxRemoveOptions.KeepNoTrivia);
+                }
+            }
         }
 
-        return base.VisitFieldDeclaration(node);
+        return newRoot;
     }
 
     private string GetBackingField(PropertyDeclarationSyntax property)
     {
-        var semanticModel = _semanticModel;
-        var propertySymbol = semanticModel.GetDeclaredSymbol(property) as IPropertySymbol;
+        var propertySymbol = _semanticModel.GetDeclaredSymbol(property) as IPropertySymbol;
         if (propertySymbol != null)
         {
-            foreach (var syntaxReference in propertySymbol.DeclaringSyntaxReferences)
+            var containingType = propertySymbol.ContainingType;
+            var fields = containingType.GetMembers().OfType<IFieldSymbol>();
+            foreach (var field in fields)
             {
-                var propertyNode = syntaxReference.GetSyntax() as PropertyDeclarationSyntax;
-                if (propertyNode == property)
+                if (field.AssociatedSymbol == propertySymbol)
                 {
-                    var containingType = propertySymbol.ContainingType;
-                    var fields = containingType.GetMembers().OfType<IFieldSymbol>();
-                    foreach (var field in fields)
-                    {
-                        if (field.DeclaringSyntaxReferences.Any())
-                        {
-                            var fieldDeclaration = field.DeclaringSyntaxReferences.First().GetSyntax() as VariableDeclaratorSyntax;
-                            if (fieldDeclaration != null)
-                            {
-                                return fieldDeclaration.Identifier.Text;
-                            }
-                        }
-                    }
+                    return field.Name;
                 }
             }
         }
