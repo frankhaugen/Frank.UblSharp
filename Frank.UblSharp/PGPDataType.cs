@@ -17,5 +17,5 @@ public partial class PGPDataType
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
     [System.Xml.Serialization.XmlIgnoreAttribute()]
-    public ItemsChoiceType1[] ItemsElementName { get; set; }
+    public string[] ItemsElementName { get; set; }
 }

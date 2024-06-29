@@ -22,7 +22,7 @@ public partial class KeyInfoType
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
     [System.Xml.Serialization.XmlIgnoreAttribute()]
-    public ItemsChoiceType2[] ItemsElementName { get; set; }
+    public string[] ItemsElementName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute()]

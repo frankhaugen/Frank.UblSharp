@@ -28,7 +28,7 @@ public partial class UnsignedSignaturePropertiesType
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
     [System.Xml.Serialization.XmlIgnoreAttribute()]
-    public ItemsChoiceType3[] ItemsElementName { get; set; }
+    public string[] ItemsElementName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]

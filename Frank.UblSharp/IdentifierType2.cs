@@ -8,7 +8,7 @@ public partial class IdentifierType2
 {
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public QualifierType Qualifier { get; set; }
+    public string Qualifier { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlIgnoreAttribute()]

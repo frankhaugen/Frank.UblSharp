@@ -20,5 +20,5 @@ public partial class X509DataType
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
     [System.Xml.Serialization.XmlIgnoreAttribute()]
-    public ItemsChoiceType[] ItemsElementName { get; set; }
+    public string[] ItemsElementName { get; set; }
 }
