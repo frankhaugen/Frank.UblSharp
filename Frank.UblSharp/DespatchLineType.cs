@@ -7,18 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("DespatchLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class DespatchLineType
 {
-    private NoteType[] noteField;
-    private LineStatusCodeType lineStatusCodeField;
-    private DeliveredQuantityType deliveredQuantityField;
-    private BackorderQuantityType backorderQuantityField;
-    private BackorderReasonType[] backorderReasonField;
-    private OutstandingQuantityType outstandingQuantityField;
-    private OutstandingReasonType[] outstandingReasonField;
-    private OversupplyQuantityType oversupplyQuantityField;
-    private OrderLineReferenceType[] orderLineReferenceField;
-    private DocumentReferenceType[] documentReferenceField;
-    private ItemType itemField;
-    private ShipmentType[] shipmentField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -29,180 +17,48 @@ public partial class DespatchLineType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NoteType[] Note
-    {
-        get
-        {
-            return this.noteField;
-        }
-
-        set
-        {
-            this.noteField = value;
-        }
-    }
+    public NoteType[] Note { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LineStatusCodeType LineStatusCode
-    {
-        get
-        {
-            return this.lineStatusCodeField;
-        }
-
-        set
-        {
-            this.lineStatusCodeField = value;
-        }
-    }
+    public LineStatusCodeType LineStatusCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DeliveredQuantityType DeliveredQuantity
-    {
-        get
-        {
-            return this.deliveredQuantityField;
-        }
-
-        set
-        {
-            this.deliveredQuantityField = value;
-        }
-    }
+    public DeliveredQuantityType DeliveredQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public BackorderQuantityType BackorderQuantity
-    {
-        get
-        {
-            return this.backorderQuantityField;
-        }
-
-        set
-        {
-            this.backorderQuantityField = value;
-        }
-    }
+    public BackorderQuantityType BackorderQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("BackorderReason", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public BackorderReasonType[] BackorderReason
-    {
-        get
-        {
-            return this.backorderReasonField;
-        }
-
-        set
-        {
-            this.backorderReasonField = value;
-        }
-    }
+    public BackorderReasonType[] BackorderReason { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public OutstandingQuantityType OutstandingQuantity
-    {
-        get
-        {
-            return this.outstandingQuantityField;
-        }
-
-        set
-        {
-            this.outstandingQuantityField = value;
-        }
-    }
+    public OutstandingQuantityType OutstandingQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("OutstandingReason", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public OutstandingReasonType[] OutstandingReason
-    {
-        get
-        {
-            return this.outstandingReasonField;
-        }
-
-        set
-        {
-            this.outstandingReasonField = value;
-        }
-    }
+    public OutstandingReasonType[] OutstandingReason { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public OversupplyQuantityType OversupplyQuantity
-    {
-        get
-        {
-            return this.oversupplyQuantityField;
-        }
-
-        set
-        {
-            this.oversupplyQuantityField = value;
-        }
-    }
+    public OversupplyQuantityType OversupplyQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("OrderLineReference")]
-    public OrderLineReferenceType[] OrderLineReference
-    {
-        get
-        {
-            return this.orderLineReferenceField;
-        }
-
-        set
-        {
-            this.orderLineReferenceField = value;
-        }
-    }
+    public OrderLineReferenceType[] OrderLineReference { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("DocumentReference")]
-    public DocumentReferenceType[] DocumentReference
-    {
-        get
-        {
-            return this.documentReferenceField;
-        }
-
-        set
-        {
-            this.documentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType[] DocumentReference { get; set; }
 
     /// <remarks/>
-    public ItemType Item
-    {
-        get
-        {
-            return this.itemField;
-        }
-
-        set
-        {
-            this.itemField = value;
-        }
-    }
+    public ItemType Item { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Shipment")]
-    public ShipmentType[] Shipment
-    {
-        get
-        {
-            return this.shipmentField;
-        }
-
-        set
-        {
-            this.shipmentField = value;
-        }
-    }
+    public ShipmentType[] Shipment { get; set; }
 }

@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TendererPartyQualification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TendererPartyQualificationType
 {
-    private QualifyingPartyType[] additionalQualifyingPartyField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("InterestedProcurementProjectLot")]
     public ProcurementProjectLotType[] InterestedProcurementProjectLot { get; set; }
@@ -17,16 +16,5 @@ public partial class TendererPartyQualificationType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("AdditionalQualifyingParty")]
-    public QualifyingPartyType[] AdditionalQualifyingParty
-    {
-        get
-        {
-            return this.additionalQualifyingPartyField;
-        }
-
-        set
-        {
-            this.additionalQualifyingPartyField = value;
-        }
-    }
+    public QualifyingPartyType[] AdditionalQualifyingParty { get; set; }
 }

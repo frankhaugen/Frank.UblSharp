@@ -7,14 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TaxSubtotal", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TaxSubtotalType
 {
-    private CalculationSequenceNumericType calculationSequenceNumericField;
-    private TransactionCurrencyTaxAmountType transactionCurrencyTaxAmountField;
-    private PercentType1 percentField;
-    private BaseUnitMeasureType baseUnitMeasureField;
-    private PerUnitAmountType perUnitAmountField;
-    private TierRangeType tierRangeField;
-    private TierRatePercentType tierRatePercentField;
-    private TaxCategoryType taxCategoryField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TaxableAmountType TaxableAmount { get; set; }
@@ -25,120 +17,32 @@ public partial class TaxSubtotalType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CalculationSequenceNumericType CalculationSequenceNumeric
-    {
-        get
-        {
-            return this.calculationSequenceNumericField;
-        }
-
-        set
-        {
-            this.calculationSequenceNumericField = value;
-        }
-    }
+    public CalculationSequenceNumericType CalculationSequenceNumeric { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TransactionCurrencyTaxAmountType TransactionCurrencyTaxAmount
-    {
-        get
-        {
-            return this.transactionCurrencyTaxAmountField;
-        }
-
-        set
-        {
-            this.transactionCurrencyTaxAmountField = value;
-        }
-    }
+    public TransactionCurrencyTaxAmountType TransactionCurrencyTaxAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PercentType1 Percent
-    {
-        get
-        {
-            return this.percentField;
-        }
-
-        set
-        {
-            this.percentField = value;
-        }
-    }
+    public PercentType1 Percent { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public BaseUnitMeasureType BaseUnitMeasure
-    {
-        get
-        {
-            return this.baseUnitMeasureField;
-        }
-
-        set
-        {
-            this.baseUnitMeasureField = value;
-        }
-    }
+    public BaseUnitMeasureType BaseUnitMeasure { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PerUnitAmountType PerUnitAmount
-    {
-        get
-        {
-            return this.perUnitAmountField;
-        }
-
-        set
-        {
-            this.perUnitAmountField = value;
-        }
-    }
+    public PerUnitAmountType PerUnitAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TierRangeType TierRange
-    {
-        get
-        {
-            return this.tierRangeField;
-        }
-
-        set
-        {
-            this.tierRangeField = value;
-        }
-    }
+    public TierRangeType TierRange { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TierRatePercentType TierRatePercent
-    {
-        get
-        {
-            return this.tierRatePercentField;
-        }
-
-        set
-        {
-            this.tierRatePercentField = value;
-        }
-    }
+    public TierRatePercentType TierRatePercent { get; set; }
 
     /// <remarks/>
-    public TaxCategoryType TaxCategory
-    {
-        get
-        {
-            return this.taxCategoryField;
-        }
-
-        set
-        {
-            this.taxCategoryField = value;
-        }
-    }
+    public TaxCategoryType TaxCategory { get; set; }
 }

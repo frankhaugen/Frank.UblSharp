@@ -7,13 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ExchangeRate", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ExchangeRateType
 {
-    private TargetCurrencyCodeType targetCurrencyCodeField;
-    private TargetCurrencyBaseRateType targetCurrencyBaseRateField;
-    private ExchangeMarketIDType exchangeMarketIDField;
-    private CalculationRateType calculationRateField;
-    private MathematicOperatorCodeType mathematicOperatorCodeField;
-    private DateType1 dateField;
-    private ContractType foreignExchangeContractField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SourceCurrencyCodeType SourceCurrencyCode { get; set; }
@@ -24,105 +17,28 @@ public partial class ExchangeRateType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TargetCurrencyCodeType TargetCurrencyCode
-    {
-        get
-        {
-            return this.targetCurrencyCodeField;
-        }
-
-        set
-        {
-            this.targetCurrencyCodeField = value;
-        }
-    }
+    public TargetCurrencyCodeType TargetCurrencyCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TargetCurrencyBaseRateType TargetCurrencyBaseRate
-    {
-        get
-        {
-            return this.targetCurrencyBaseRateField;
-        }
-
-        set
-        {
-            this.targetCurrencyBaseRateField = value;
-        }
-    }
+    public TargetCurrencyBaseRateType TargetCurrencyBaseRate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ExchangeMarketIDType ExchangeMarketID
-    {
-        get
-        {
-            return this.exchangeMarketIDField;
-        }
-
-        set
-        {
-            this.exchangeMarketIDField = value;
-        }
-    }
+    public ExchangeMarketIDType ExchangeMarketID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CalculationRateType CalculationRate
-    {
-        get
-        {
-            return this.calculationRateField;
-        }
-
-        set
-        {
-            this.calculationRateField = value;
-        }
-    }
+    public CalculationRateType CalculationRate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MathematicOperatorCodeType MathematicOperatorCode
-    {
-        get
-        {
-            return this.mathematicOperatorCodeField;
-        }
-
-        set
-        {
-            this.mathematicOperatorCodeField = value;
-        }
-    }
+    public MathematicOperatorCodeType MathematicOperatorCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DateType1 Date
-    {
-        get
-        {
-            return this.dateField;
-        }
-
-        set
-        {
-            this.dateField = value;
-        }
-    }
+    public DateType1 Date { get; set; }
 
     /// <remarks/>
-    public ContractType ForeignExchangeContract
-    {
-        get
-        {
-            return this.foreignExchangeContractField;
-        }
-
-        set
-        {
-            this.foreignExchangeContractField = value;
-        }
-    }
+    public ContractType ForeignExchangeContract { get; set; }
 }

@@ -7,11 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Consumption", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ConsumptionType
 {
-    private AllowanceChargeType[] allowanceChargeField;
-    private TaxTotalType[] taxTotalField;
-    private EnergyWaterSupplyType energyWaterSupplyField;
-    private TelecommunicationsSupplyType telecommunicationsSupplyField;
-    private MonetaryTotalType legalMonetaryTotalField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public UtilityStatementTypeCodeType UtilityStatementTypeCode { get; set; }
@@ -21,73 +16,18 @@ public partial class ConsumptionType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("AllowanceCharge")]
-    public AllowanceChargeType[] AllowanceCharge
-    {
-        get
-        {
-            return this.allowanceChargeField;
-        }
-
-        set
-        {
-            this.allowanceChargeField = value;
-        }
-    }
+    public AllowanceChargeType[] AllowanceCharge { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("TaxTotal")]
-    public TaxTotalType[] TaxTotal
-    {
-        get
-        {
-            return this.taxTotalField;
-        }
-
-        set
-        {
-            this.taxTotalField = value;
-        }
-    }
+    public TaxTotalType[] TaxTotal { get; set; }
 
     /// <remarks/>
-    public EnergyWaterSupplyType EnergyWaterSupply
-    {
-        get
-        {
-            return this.energyWaterSupplyField;
-        }
-
-        set
-        {
-            this.energyWaterSupplyField = value;
-        }
-    }
+    public EnergyWaterSupplyType EnergyWaterSupply { get; set; }
 
     /// <remarks/>
-    public TelecommunicationsSupplyType TelecommunicationsSupply
-    {
-        get
-        {
-            return this.telecommunicationsSupplyField;
-        }
-
-        set
-        {
-            this.telecommunicationsSupplyField = value;
-        }
-    }
+    public TelecommunicationsSupplyType TelecommunicationsSupply { get; set; }
 
     /// <remarks/>
-    public MonetaryTotalType LegalMonetaryTotal
-    {
-        get
-        {
-            return this.legalMonetaryTotalField;
-        }
-
-        set
-        {
-            this.legalMonetaryTotalField = value;
-        }
-    }
+    public MonetaryTotalType LegalMonetaryTotal { get; set; }
 }

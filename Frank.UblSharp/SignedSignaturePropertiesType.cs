@@ -7,11 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("SignedSignatureProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
 public partial class SignedSignaturePropertiesType
 {
-    private CertIDType[] signingCertificateField;
-    private SignaturePolicyIdentifierType signaturePolicyIdentifierField;
-    private SignatureProductionPlaceType signatureProductionPlaceField;
-    private SignerRoleType signerRoleField;
-    private string idField;
     /// <remarks/>
     public System.DateTime SigningTime { get; set; }
 
@@ -21,73 +16,18 @@ public partial class SignedSignaturePropertiesType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayItemAttribute("Cert", IsNullable = false)]
-    public CertIDType[] SigningCertificate
-    {
-        get
-        {
-            return this.signingCertificateField;
-        }
-
-        set
-        {
-            this.signingCertificateField = value;
-        }
-    }
+    public CertIDType[] SigningCertificate { get; set; }
 
     /// <remarks/>
-    public SignaturePolicyIdentifierType SignaturePolicyIdentifier
-    {
-        get
-        {
-            return this.signaturePolicyIdentifierField;
-        }
-
-        set
-        {
-            this.signaturePolicyIdentifierField = value;
-        }
-    }
+    public SignaturePolicyIdentifierType SignaturePolicyIdentifier { get; set; }
 
     /// <remarks/>
-    public SignatureProductionPlaceType SignatureProductionPlace
-    {
-        get
-        {
-            return this.signatureProductionPlaceField;
-        }
-
-        set
-        {
-            this.signatureProductionPlaceField = value;
-        }
-    }
+    public SignatureProductionPlaceType SignatureProductionPlace { get; set; }
 
     /// <remarks/>
-    public SignerRoleType SignerRole
-    {
-        get
-        {
-            return this.signerRoleField;
-        }
-
-        set
-        {
-            this.signerRoleField = value;
-        }
-    }
+    public SignerRoleType SignerRole { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
-    public string Id
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public string Id { get; set; }
 }

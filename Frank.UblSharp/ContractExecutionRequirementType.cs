@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ContractExecutionRequirement", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ContractExecutionRequirementType
 {
-    private DescriptionType[] descriptionField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Name", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NameType1[] Name { get; set; }
@@ -18,16 +17,5 @@ public partial class ContractExecutionRequirementType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 }

@@ -7,11 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AccountingSupplierParty", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class SupplierPartyType
 {
-    private DataSendingCapabilityType dataSendingCapabilityField;
-    private PartyType partyField;
-    private ContactType despatchContactField;
-    private ContactType accountingContactField;
-    private ContactType sellerContactField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CustomerAssignedAccountIDType CustomerAssignedAccountID { get; set; }
@@ -22,72 +17,17 @@ public partial class SupplierPartyType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DataSendingCapabilityType DataSendingCapability
-    {
-        get
-        {
-            return this.dataSendingCapabilityField;
-        }
-
-        set
-        {
-            this.dataSendingCapabilityField = value;
-        }
-    }
+    public DataSendingCapabilityType DataSendingCapability { get; set; }
 
     /// <remarks/>
-    public PartyType Party
-    {
-        get
-        {
-            return this.partyField;
-        }
-
-        set
-        {
-            this.partyField = value;
-        }
-    }
+    public PartyType Party { get; set; }
 
     /// <remarks/>
-    public ContactType DespatchContact
-    {
-        get
-        {
-            return this.despatchContactField;
-        }
-
-        set
-        {
-            this.despatchContactField = value;
-        }
-    }
+    public ContactType DespatchContact { get; set; }
 
     /// <remarks/>
-    public ContactType AccountingContact
-    {
-        get
-        {
-            return this.accountingContactField;
-        }
-
-        set
-        {
-            this.accountingContactField = value;
-        }
-    }
+    public ContactType AccountingContact { get; set; }
 
     /// <remarks/>
-    public ContactType SellerContact
-    {
-        get
-        {
-            return this.sellerContactField;
-        }
-
-        set
-        {
-            this.sellerContactField = value;
-        }
-    }
+    public ContactType SellerContact { get; set; }
 }

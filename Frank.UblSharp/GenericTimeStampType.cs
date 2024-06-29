@@ -8,8 +8,6 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
 public abstract partial class GenericTimeStampType
 {
-    private object[] items1Field;
-    private string idField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Include", typeof(IncludeType))]
     [System.Xml.Serialization.XmlElementAttribute("ReferenceInfo", typeof(ReferenceInfoType))]
@@ -22,31 +20,9 @@ public abstract partial class GenericTimeStampType
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("EncapsulatedTimeStamp", typeof(EncapsulatedPKIDataType))]
     [System.Xml.Serialization.XmlElementAttribute("XMLTimeStamp", typeof(AnyType))]
-    public object[] Items1
-    {
-        get
-        {
-            return this.items1Field;
-        }
-
-        set
-        {
-            this.items1Field = value;
-        }
-    }
+    public object[] Items1 { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
-    public string Id
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public string Id { get; set; }
 }

@@ -7,13 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("FinancialAccount", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class FinancialAccountType
 {
-    private AliasNameType aliasNameField;
-    private AccountTypeCodeType accountTypeCodeField;
-    private AccountFormatCodeType accountFormatCodeField;
-    private CurrencyCodeType currencyCodeField;
-    private PaymentNoteType[] paymentNoteField;
-    private BranchType financialInstitutionBranchField;
-    private CountryType countryField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -24,104 +17,27 @@ public partial class FinancialAccountType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AliasNameType AliasName
-    {
-        get
-        {
-            return this.aliasNameField;
-        }
-
-        set
-        {
-            this.aliasNameField = value;
-        }
-    }
+    public AliasNameType AliasName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AccountTypeCodeType AccountTypeCode
-    {
-        get
-        {
-            return this.accountTypeCodeField;
-        }
-
-        set
-        {
-            this.accountTypeCodeField = value;
-        }
-    }
+    public AccountTypeCodeType AccountTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AccountFormatCodeType AccountFormatCode
-    {
-        get
-        {
-            return this.accountFormatCodeField;
-        }
-
-        set
-        {
-            this.accountFormatCodeField = value;
-        }
-    }
+    public AccountFormatCodeType AccountFormatCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CurrencyCodeType CurrencyCode
-    {
-        get
-        {
-            return this.currencyCodeField;
-        }
-
-        set
-        {
-            this.currencyCodeField = value;
-        }
-    }
+    public CurrencyCodeType CurrencyCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("PaymentNote", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PaymentNoteType[] PaymentNote
-    {
-        get
-        {
-            return this.paymentNoteField;
-        }
-
-        set
-        {
-            this.paymentNoteField = value;
-        }
-    }
+    public PaymentNoteType[] PaymentNote { get; set; }
 
     /// <remarks/>
-    public BranchType FinancialInstitutionBranch
-    {
-        get
-        {
-            return this.financialInstitutionBranchField;
-        }
-
-        set
-        {
-            this.financialInstitutionBranchField = value;
-        }
-    }
+    public BranchType FinancialInstitutionBranch { get; set; }
 
     /// <remarks/>
-    public CountryType Country
-    {
-        get
-        {
-            return this.countryField;
-        }
-
-        set
-        {
-            this.countryField = value;
-        }
-    }
+    public CountryType Country { get; set; }
 }

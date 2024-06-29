@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("CommitmentTypeIndication", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
 public partial class CommitmentTypeIndicationType
 {
-    private AnyType[] commitmentTypeQualifiersField;
     /// <remarks/>
     public ObjectIdentifierType CommitmentTypeId { get; set; }
 
@@ -18,16 +17,5 @@ public partial class CommitmentTypeIndicationType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayItemAttribute("CommitmentTypeQualifier", IsNullable = false)]
-    public AnyType[] CommitmentTypeQualifiers
-    {
-        get
-        {
-            return this.commitmentTypeQualifiersField;
-        }
-
-        set
-        {
-            this.commitmentTypeQualifiersField = value;
-        }
-    }
+    public AnyType[] CommitmentTypeQualifiers { get; set; }
 }

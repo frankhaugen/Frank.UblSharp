@@ -7,10 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("SupplierConsumption", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class SupplierConsumptionType
 {
-    private PartyType utilityCustomerPartyField;
-    private ConsumptionType consumptionField;
-    private ContractType contractField;
-    private ConsumptionLineType[] consumptionLineField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DescriptionType[] Description { get; set; }
@@ -19,59 +15,15 @@ public partial class SupplierConsumptionType
     public PartyType UtilitySupplierParty { get; set; }
 
     /// <remarks/>
-    public PartyType UtilityCustomerParty
-    {
-        get
-        {
-            return this.utilityCustomerPartyField;
-        }
-
-        set
-        {
-            this.utilityCustomerPartyField = value;
-        }
-    }
+    public PartyType UtilityCustomerParty { get; set; }
 
     /// <remarks/>
-    public ConsumptionType Consumption
-    {
-        get
-        {
-            return this.consumptionField;
-        }
-
-        set
-        {
-            this.consumptionField = value;
-        }
-    }
+    public ConsumptionType Consumption { get; set; }
 
     /// <remarks/>
-    public ContractType Contract
-    {
-        get
-        {
-            return this.contractField;
-        }
-
-        set
-        {
-            this.contractField = value;
-        }
-    }
+    public ContractType Contract { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ConsumptionLine")]
-    public ConsumptionLineType[] ConsumptionLine
-    {
-        get
-        {
-            return this.consumptionLineField;
-        }
-
-        set
-        {
-            this.consumptionLineField = value;
-        }
-    }
+    public ConsumptionLineType[] ConsumptionLine { get; set; }
 }

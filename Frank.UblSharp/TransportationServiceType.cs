@@ -7,27 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AdditionalTransportationService", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TransportationServiceType
 {
-    private PriorityType priorityField;
-    private FreightRateClassCodeType freightRateClassCodeField;
-    private TransportationServiceDescriptionType[] transportationServiceDescriptionField;
-    private TransportationServiceDetailsURIType transportationServiceDetailsURIField;
-    private NominationDateType nominationDateField;
-    private NominationTimeType nominationTimeField;
-    private NameType1 nameField;
-    private SequenceNumericType sequenceNumericField;
-    private TransportEquipmentType[] transportEquipmentField;
-    private TransportEquipmentType[] supportedTransportEquipmentField;
-    private TransportEquipmentType[] unsupportedTransportEquipmentField;
-    private CommodityClassificationType[] commodityClassificationField;
-    private CommodityClassificationType[] supportedCommodityClassificationField;
-    private CommodityClassificationType[] unsupportedCommodityClassificationField;
-    private DimensionType totalCapacityDimensionField;
-    private ShipmentStageType[] shipmentStageField;
-    private TransportEventType[] transportEventField;
-    private PartyType responsibleTransportServiceProviderPartyField;
-    private EnvironmentalEmissionType[] environmentalEmissionField;
-    private PeriodType estimatedDurationPeriodField;
-    private ServiceFrequencyType[] scheduledServiceFrequencyField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TransportServiceCodeType TransportServiceCode { get; set; }
@@ -38,313 +17,82 @@ public partial class TransportationServiceType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PriorityType Priority
-    {
-        get
-        {
-            return this.priorityField;
-        }
-
-        set
-        {
-            this.priorityField = value;
-        }
-    }
+    public PriorityType Priority { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public FreightRateClassCodeType FreightRateClassCode
-    {
-        get
-        {
-            return this.freightRateClassCodeField;
-        }
-
-        set
-        {
-            this.freightRateClassCodeField = value;
-        }
-    }
+    public FreightRateClassCodeType FreightRateClassCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("TransportationServiceDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TransportationServiceDescriptionType[] TransportationServiceDescription
-    {
-        get
-        {
-            return this.transportationServiceDescriptionField;
-        }
-
-        set
-        {
-            this.transportationServiceDescriptionField = value;
-        }
-    }
+    public TransportationServiceDescriptionType[] TransportationServiceDescription { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TransportationServiceDetailsURIType TransportationServiceDetailsURI
-    {
-        get
-        {
-            return this.transportationServiceDetailsURIField;
-        }
-
-        set
-        {
-            this.transportationServiceDetailsURIField = value;
-        }
-    }
+    public TransportationServiceDetailsURIType TransportationServiceDetailsURI { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NominationDateType NominationDate
-    {
-        get
-        {
-            return this.nominationDateField;
-        }
-
-        set
-        {
-            this.nominationDateField = value;
-        }
-    }
+    public NominationDateType NominationDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NominationTimeType NominationTime
-    {
-        get
-        {
-            return this.nominationTimeField;
-        }
-
-        set
-        {
-            this.nominationTimeField = value;
-        }
-    }
+    public NominationTimeType NominationTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NameType1 Name
-    {
-        get
-        {
-            return this.nameField;
-        }
-
-        set
-        {
-            this.nameField = value;
-        }
-    }
+    public NameType1 Name { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SequenceNumericType SequenceNumeric
-    {
-        get
-        {
-            return this.sequenceNumericField;
-        }
-
-        set
-        {
-            this.sequenceNumericField = value;
-        }
-    }
+    public SequenceNumericType SequenceNumeric { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("TransportEquipment")]
-    public TransportEquipmentType[] TransportEquipment
-    {
-        get
-        {
-            return this.transportEquipmentField;
-        }
-
-        set
-        {
-            this.transportEquipmentField = value;
-        }
-    }
+    public TransportEquipmentType[] TransportEquipment { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("SupportedTransportEquipment")]
-    public TransportEquipmentType[] SupportedTransportEquipment
-    {
-        get
-        {
-            return this.supportedTransportEquipmentField;
-        }
-
-        set
-        {
-            this.supportedTransportEquipmentField = value;
-        }
-    }
+    public TransportEquipmentType[] SupportedTransportEquipment { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("UnsupportedTransportEquipment")]
-    public TransportEquipmentType[] UnsupportedTransportEquipment
-    {
-        get
-        {
-            return this.unsupportedTransportEquipmentField;
-        }
-
-        set
-        {
-            this.unsupportedTransportEquipmentField = value;
-        }
-    }
+    public TransportEquipmentType[] UnsupportedTransportEquipment { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("CommodityClassification")]
-    public CommodityClassificationType[] CommodityClassification
-    {
-        get
-        {
-            return this.commodityClassificationField;
-        }
-
-        set
-        {
-            this.commodityClassificationField = value;
-        }
-    }
+    public CommodityClassificationType[] CommodityClassification { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("SupportedCommodityClassification")]
-    public CommodityClassificationType[] SupportedCommodityClassification
-    {
-        get
-        {
-            return this.supportedCommodityClassificationField;
-        }
-
-        set
-        {
-            this.supportedCommodityClassificationField = value;
-        }
-    }
+    public CommodityClassificationType[] SupportedCommodityClassification { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("UnsupportedCommodityClassification")]
-    public CommodityClassificationType[] UnsupportedCommodityClassification
-    {
-        get
-        {
-            return this.unsupportedCommodityClassificationField;
-        }
-
-        set
-        {
-            this.unsupportedCommodityClassificationField = value;
-        }
-    }
+    public CommodityClassificationType[] UnsupportedCommodityClassification { get; set; }
 
     /// <remarks/>
-    public DimensionType TotalCapacityDimension
-    {
-        get
-        {
-            return this.totalCapacityDimensionField;
-        }
-
-        set
-        {
-            this.totalCapacityDimensionField = value;
-        }
-    }
+    public DimensionType TotalCapacityDimension { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ShipmentStage")]
-    public ShipmentStageType[] ShipmentStage
-    {
-        get
-        {
-            return this.shipmentStageField;
-        }
-
-        set
-        {
-            this.shipmentStageField = value;
-        }
-    }
+    public ShipmentStageType[] ShipmentStage { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("TransportEvent")]
-    public TransportEventType[] TransportEvent
-    {
-        get
-        {
-            return this.transportEventField;
-        }
-
-        set
-        {
-            this.transportEventField = value;
-        }
-    }
+    public TransportEventType[] TransportEvent { get; set; }
 
     /// <remarks/>
-    public PartyType ResponsibleTransportServiceProviderParty
-    {
-        get
-        {
-            return this.responsibleTransportServiceProviderPartyField;
-        }
-
-        set
-        {
-            this.responsibleTransportServiceProviderPartyField = value;
-        }
-    }
+    public PartyType ResponsibleTransportServiceProviderParty { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("EnvironmentalEmission")]
-    public EnvironmentalEmissionType[] EnvironmentalEmission
-    {
-        get
-        {
-            return this.environmentalEmissionField;
-        }
-
-        set
-        {
-            this.environmentalEmissionField = value;
-        }
-    }
+    public EnvironmentalEmissionType[] EnvironmentalEmission { get; set; }
 
     /// <remarks/>
-    public PeriodType EstimatedDurationPeriod
-    {
-        get
-        {
-            return this.estimatedDurationPeriodField;
-        }
-
-        set
-        {
-            this.estimatedDurationPeriodField = value;
-        }
-    }
+    public PeriodType EstimatedDurationPeriod { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ScheduledServiceFrequency")]
-    public ServiceFrequencyType[] ScheduledServiceFrequency
-    {
-        get
-        {
-            return this.scheduledServiceFrequencyField;
-        }
-
-        set
-        {
-            this.scheduledServiceFrequencyField = value;
-        }
-    }
+    public ServiceFrequencyType[] ScheduledServiceFrequency { get; set; }
 }

@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("EventComment", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class EventCommentType
 {
-    private IssueTimeType issueTimeField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CommentType Comment { get; set; }
@@ -18,16 +17,5 @@ public partial class EventCommentType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IssueTimeType IssueTime
-    {
-        get
-        {
-            return this.issueTimeField;
-        }
-
-        set
-        {
-            this.issueTimeField = value;
-        }
-    }
+    public IssueTimeType IssueTime { get; set; }
 }

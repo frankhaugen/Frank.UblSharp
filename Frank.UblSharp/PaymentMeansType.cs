@@ -7,17 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("PaymentMeans", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PaymentMeansType
 {
-    private PaymentDueDateType paymentDueDateField;
-    private PaymentChannelCodeType paymentChannelCodeField;
-    private InstructionIDType instructionIDField;
-    private InstructionNoteType[] instructionNoteField;
-    private PaymentIDType[] paymentIDField;
-    private CardAccountType cardAccountField;
-    private FinancialAccountType payerFinancialAccountField;
-    private FinancialAccountType payeeFinancialAccountField;
-    private CreditAccountType creditAccountField;
-    private PaymentMandateType paymentMandateField;
-    private TradeFinancingType tradeFinancingField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -28,160 +17,39 @@ public partial class PaymentMeansType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PaymentDueDateType PaymentDueDate
-    {
-        get
-        {
-            return this.paymentDueDateField;
-        }
-
-        set
-        {
-            this.paymentDueDateField = value;
-        }
-    }
+    public PaymentDueDateType PaymentDueDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PaymentChannelCodeType PaymentChannelCode
-    {
-        get
-        {
-            return this.paymentChannelCodeField;
-        }
-
-        set
-        {
-            this.paymentChannelCodeField = value;
-        }
-    }
+    public PaymentChannelCodeType PaymentChannelCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public InstructionIDType InstructionID
-    {
-        get
-        {
-            return this.instructionIDField;
-        }
-
-        set
-        {
-            this.instructionIDField = value;
-        }
-    }
+    public InstructionIDType InstructionID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("InstructionNote", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public InstructionNoteType[] InstructionNote
-    {
-        get
-        {
-            return this.instructionNoteField;
-        }
-
-        set
-        {
-            this.instructionNoteField = value;
-        }
-    }
+    public InstructionNoteType[] InstructionNote { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("PaymentID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PaymentIDType[] PaymentID
-    {
-        get
-        {
-            return this.paymentIDField;
-        }
-
-        set
-        {
-            this.paymentIDField = value;
-        }
-    }
+    public PaymentIDType[] PaymentID { get; set; }
 
     /// <remarks/>
-    public CardAccountType CardAccount
-    {
-        get
-        {
-            return this.cardAccountField;
-        }
-
-        set
-        {
-            this.cardAccountField = value;
-        }
-    }
+    public CardAccountType CardAccount { get; set; }
 
     /// <remarks/>
-    public FinancialAccountType PayerFinancialAccount
-    {
-        get
-        {
-            return this.payerFinancialAccountField;
-        }
-
-        set
-        {
-            this.payerFinancialAccountField = value;
-        }
-    }
+    public FinancialAccountType PayerFinancialAccount { get; set; }
 
     /// <remarks/>
-    public FinancialAccountType PayeeFinancialAccount
-    {
-        get
-        {
-            return this.payeeFinancialAccountField;
-        }
-
-        set
-        {
-            this.payeeFinancialAccountField = value;
-        }
-    }
+    public FinancialAccountType PayeeFinancialAccount { get; set; }
 
     /// <remarks/>
-    public CreditAccountType CreditAccount
-    {
-        get
-        {
-            return this.creditAccountField;
-        }
-
-        set
-        {
-            this.creditAccountField = value;
-        }
-    }
+    public CreditAccountType CreditAccount { get; set; }
 
     /// <remarks/>
-    public PaymentMandateType PaymentMandate
-    {
-        get
-        {
-            return this.paymentMandateField;
-        }
-
-        set
-        {
-            this.paymentMandateField = value;
-        }
-    }
+    public PaymentMandateType PaymentMandate { get; set; }
 
     /// <remarks/>
-    public TradeFinancingType TradeFinancing
-    {
-        get
-        {
-            return this.tradeFinancingField;
-        }
-
-        set
-        {
-            this.tradeFinancingField = value;
-        }
-    }
+    public TradeFinancingType TradeFinancing { get; set; }
 }

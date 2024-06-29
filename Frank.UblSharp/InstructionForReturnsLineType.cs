@@ -7,9 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("InstructionForReturnsLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class InstructionForReturnsLineType
 {
-    private QuantityType2 quantityField;
-    private PartyType manufacturerPartyField;
-    private ItemType itemField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -20,44 +17,11 @@ public partial class InstructionForReturnsLineType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public QuantityType2 Quantity
-    {
-        get
-        {
-            return this.quantityField;
-        }
-
-        set
-        {
-            this.quantityField = value;
-        }
-    }
+    public QuantityType2 Quantity { get; set; }
 
     /// <remarks/>
-    public PartyType ManufacturerParty
-    {
-        get
-        {
-            return this.manufacturerPartyField;
-        }
-
-        set
-        {
-            this.manufacturerPartyField = value;
-        }
-    }
+    public PartyType ManufacturerParty { get; set; }
 
     /// <remarks/>
-    public ItemType Item
-    {
-        get
-        {
-            return this.itemField;
-        }
-
-        set
-        {
-            this.itemField = value;
-        }
-    }
+    public ItemType Item { get; set; }
 }

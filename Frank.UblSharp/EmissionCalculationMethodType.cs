@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("EmissionCalculationMethod", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class EmissionCalculationMethodType
 {
-    private LocationType1 measurementFromLocationField;
-    private LocationType1 measurementToLocationField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CalculationMethodCodeType CalculationMethodCode { get; set; }
@@ -18,30 +16,8 @@ public partial class EmissionCalculationMethodType
     public FullnessIndicationCodeType FullnessIndicationCode { get; set; }
 
     /// <remarks/>
-    public LocationType1 MeasurementFromLocation
-    {
-        get
-        {
-            return this.measurementFromLocationField;
-        }
-
-        set
-        {
-            this.measurementFromLocationField = value;
-        }
-    }
+    public LocationType1 MeasurementFromLocation { get; set; }
 
     /// <remarks/>
-    public LocationType1 MeasurementToLocation
-    {
-        get
-        {
-            return this.measurementToLocationField;
-        }
-
-        set
-        {
-            this.measurementToLocationField = value;
-        }
-    }
+    public LocationType1 MeasurementToLocation { get; set; }
 }

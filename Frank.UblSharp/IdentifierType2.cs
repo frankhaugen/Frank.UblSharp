@@ -6,7 +6,6 @@
 [System.Xml.Serialization.XmlTypeAttribute(TypeName = "IdentifierType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
 public partial class IdentifierType2
 {
-    private string valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
     public QualifierType Qualifier { get; set; }
@@ -17,16 +16,5 @@ public partial class IdentifierType2
 
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute(DataType = "anyURI")]
-    public string Value
-    {
-        get
-        {
-            return this.valueField;
-        }
-
-        set
-        {
-            this.valueField = value;
-        }
-    }
+    public string Value { get; set; }
 }

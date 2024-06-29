@@ -7,26 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Forecast", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:Forecast-2", IsNullable = false)]
 public partial class ForecastType
 {
-    private CustomizationIDType customizationIDField;
-    private ProfileIDType profileIDField;
-    private ProfileExecutionIDType profileExecutionIDField;
-    private IDType idField;
-    private CopyIndicatorType copyIndicatorField;
-    private UUIDType uUIDField;
-    private IssueDateType issueDateField;
-    private IssueTimeType issueTimeField;
-    private NoteType[] noteField;
-    private VersionIDType versionIDField;
-    private BasedOnConsensusIndicatorType basedOnConsensusIndicatorField;
-    private ForecastPurposeCodeType forecastPurposeCodeField;
-    private PeriodType forecastPeriodField;
-    private DocumentReferenceType[] additionalDocumentReferenceField;
-    private SignatureType[] signatureField;
-    private PartyType senderPartyField;
-    private PartyType receiverPartyField;
-    private CustomerPartyType buyerCustomerPartyField;
-    private SupplierPartyType sellerSupplierPartyField;
-    private ForecastLineType[] forecastLineField;
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
     [System.Xml.Serialization.XmlArrayItemAttribute("UBLExtension", IsNullable = false)]
@@ -38,301 +18,81 @@ public partial class ForecastType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CustomizationIDType CustomizationID
-    {
-        get
-        {
-            return this.customizationIDField;
-        }
-
-        set
-        {
-            this.customizationIDField = value;
-        }
-    }
+    public CustomizationIDType CustomizationID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ProfileIDType ProfileID
-    {
-        get
-        {
-            return this.profileIDField;
-        }
-
-        set
-        {
-            this.profileIDField = value;
-        }
-    }
+    public ProfileIDType ProfileID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ProfileExecutionIDType ProfileExecutionID
-    {
-        get
-        {
-            return this.profileExecutionIDField;
-        }
-
-        set
-        {
-            this.profileExecutionIDField = value;
-        }
-    }
+    public ProfileExecutionIDType ProfileExecutionID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CopyIndicatorType CopyIndicator
-    {
-        get
-        {
-            return this.copyIndicatorField;
-        }
-
-        set
-        {
-            this.copyIndicatorField = value;
-        }
-    }
+    public CopyIndicatorType CopyIndicator { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public UUIDType UUID
-    {
-        get
-        {
-            return this.uUIDField;
-        }
-
-        set
-        {
-            this.uUIDField = value;
-        }
-    }
+    public UUIDType UUID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IssueDateType IssueDate
-    {
-        get
-        {
-            return this.issueDateField;
-        }
-
-        set
-        {
-            this.issueDateField = value;
-        }
-    }
+    public IssueDateType IssueDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IssueTimeType IssueTime
-    {
-        get
-        {
-            return this.issueTimeField;
-        }
-
-        set
-        {
-            this.issueTimeField = value;
-        }
-    }
+    public IssueTimeType IssueTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NoteType[] Note
-    {
-        get
-        {
-            return this.noteField;
-        }
-
-        set
-        {
-            this.noteField = value;
-        }
-    }
+    public NoteType[] Note { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public VersionIDType VersionID
-    {
-        get
-        {
-            return this.versionIDField;
-        }
-
-        set
-        {
-            this.versionIDField = value;
-        }
-    }
+    public VersionIDType VersionID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public BasedOnConsensusIndicatorType BasedOnConsensusIndicator
-    {
-        get
-        {
-            return this.basedOnConsensusIndicatorField;
-        }
-
-        set
-        {
-            this.basedOnConsensusIndicatorField = value;
-        }
-    }
+    public BasedOnConsensusIndicatorType BasedOnConsensusIndicator { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ForecastPurposeCodeType ForecastPurposeCode
-    {
-        get
-        {
-            return this.forecastPurposeCodeField;
-        }
-
-        set
-        {
-            this.forecastPurposeCodeField = value;
-        }
-    }
+    public ForecastPurposeCodeType ForecastPurposeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-    public PeriodType ForecastPeriod
-    {
-        get
-        {
-            return this.forecastPeriodField;
-        }
-
-        set
-        {
-            this.forecastPeriodField = value;
-        }
-    }
+    public PeriodType ForecastPeriod { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("AdditionalDocumentReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-    public DocumentReferenceType[] AdditionalDocumentReference
-    {
-        get
-        {
-            return this.additionalDocumentReferenceField;
-        }
-
-        set
-        {
-            this.additionalDocumentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType[] AdditionalDocumentReference { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Signature", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-    public SignatureType[] Signature
-    {
-        get
-        {
-            return this.signatureField;
-        }
-
-        set
-        {
-            this.signatureField = value;
-        }
-    }
+    public SignatureType[] Signature { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-    public PartyType SenderParty
-    {
-        get
-        {
-            return this.senderPartyField;
-        }
-
-        set
-        {
-            this.senderPartyField = value;
-        }
-    }
+    public PartyType SenderParty { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-    public PartyType ReceiverParty
-    {
-        get
-        {
-            return this.receiverPartyField;
-        }
-
-        set
-        {
-            this.receiverPartyField = value;
-        }
-    }
+    public PartyType ReceiverParty { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-    public CustomerPartyType BuyerCustomerParty
-    {
-        get
-        {
-            return this.buyerCustomerPartyField;
-        }
-
-        set
-        {
-            this.buyerCustomerPartyField = value;
-        }
-    }
+    public CustomerPartyType BuyerCustomerParty { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-    public SupplierPartyType SellerSupplierParty
-    {
-        get
-        {
-            return this.sellerSupplierPartyField;
-        }
-
-        set
-        {
-            this.sellerSupplierPartyField = value;
-        }
-    }
+    public SupplierPartyType SellerSupplierParty { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ForecastLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-    public ForecastLineType[] ForecastLine
-    {
-        get
-        {
-            return this.forecastLineField;
-        }
-
-        set
-        {
-            this.forecastLineField = value;
-        }
-    }
+    public ForecastLineType[] ForecastLine { get; set; }
 }

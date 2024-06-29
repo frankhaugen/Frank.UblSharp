@@ -75,7 +75,6 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
 public partial class AmountType
 {
-    private decimal valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
     public string currencyID { get; set; }
@@ -86,16 +85,5 @@ public partial class AmountType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute()]
-    public decimal Value
-    {
-        get
-        {
-            return this.valueField;
-        }
-
-        set
-        {
-            this.valueField = value;
-        }
-    }
+    public decimal Value { get; set; }
 }

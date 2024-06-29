@@ -7,16 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AcceptanceTransportEvent", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TransportEventType
 {
-    private OccurrenceTimeType occurrenceTimeField;
-    private TransportEventTypeCodeType transportEventTypeCodeField;
-    private DescriptionType[] descriptionField;
-    private CompletionIndicatorType completionIndicatorField;
-    private ShipmentType reportedShipmentField;
-    private StatusType[] currentStatusField;
-    private ContactType[] contactField;
-    private LocationType1 locationField;
-    private SignatureType signatureField;
-    private PeriodType[] periodField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IdentificationIDType IdentificationID { get; set; }
@@ -27,148 +17,38 @@ public partial class TransportEventType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public OccurrenceTimeType OccurrenceTime
-    {
-        get
-        {
-            return this.occurrenceTimeField;
-        }
-
-        set
-        {
-            this.occurrenceTimeField = value;
-        }
-    }
+    public OccurrenceTimeType OccurrenceTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TransportEventTypeCodeType TransportEventTypeCode
-    {
-        get
-        {
-            return this.transportEventTypeCodeField;
-        }
-
-        set
-        {
-            this.transportEventTypeCodeField = value;
-        }
-    }
+    public TransportEventTypeCodeType TransportEventTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CompletionIndicatorType CompletionIndicator
-    {
-        get
-        {
-            return this.completionIndicatorField;
-        }
-
-        set
-        {
-            this.completionIndicatorField = value;
-        }
-    }
+    public CompletionIndicatorType CompletionIndicator { get; set; }
 
     /// <remarks/>
-    public ShipmentType ReportedShipment
-    {
-        get
-        {
-            return this.reportedShipmentField;
-        }
-
-        set
-        {
-            this.reportedShipmentField = value;
-        }
-    }
+    public ShipmentType ReportedShipment { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("CurrentStatus")]
-    public StatusType[] CurrentStatus
-    {
-        get
-        {
-            return this.currentStatusField;
-        }
-
-        set
-        {
-            this.currentStatusField = value;
-        }
-    }
+    public StatusType[] CurrentStatus { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Contact")]
-    public ContactType[] Contact
-    {
-        get
-        {
-            return this.contactField;
-        }
-
-        set
-        {
-            this.contactField = value;
-        }
-    }
+    public ContactType[] Contact { get; set; }
 
     /// <remarks/>
-    public LocationType1 Location
-    {
-        get
-        {
-            return this.locationField;
-        }
-
-        set
-        {
-            this.locationField = value;
-        }
-    }
+    public LocationType1 Location { get; set; }
 
     /// <remarks/>
-    public SignatureType Signature
-    {
-        get
-        {
-            return this.signatureField;
-        }
-
-        set
-        {
-            this.signatureField = value;
-        }
-    }
+    public SignatureType Signature { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Period")]
-    public PeriodType[] Period
-    {
-        get
-        {
-            return this.periodField;
-        }
-
-        set
-        {
-            this.periodField = value;
-        }
-    }
+    public PeriodType[] Period { get; set; }
 }

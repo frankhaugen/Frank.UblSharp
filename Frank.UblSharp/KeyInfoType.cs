@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("KeyInfo", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
 public partial class KeyInfoType
 {
-    private string[] textField;
-    private string idField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAnyElementAttribute()]
     [System.Xml.Serialization.XmlElementAttribute("KeyName", typeof(string))]
@@ -28,31 +26,9 @@ public partial class KeyInfoType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute()]
-    public string[] Text
-    {
-        get
-        {
-            return this.textField;
-        }
-
-        set
-        {
-            this.textField = value;
-        }
-    }
+    public string[] Text { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
-    public string Id
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public string Id { get; set; }
 }

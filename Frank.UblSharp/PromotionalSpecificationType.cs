@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("PromotionalSpecification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PromotionalSpecificationType
 {
-    private EventTacticType[] eventTacticField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SpecificationIDType SpecificationID { get; set; }
@@ -18,16 +17,5 @@ public partial class PromotionalSpecificationType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("EventTactic")]
-    public EventTacticType[] EventTactic
-    {
-        get
-        {
-            return this.eventTacticField;
-        }
-
-        set
-        {
-            this.eventTacticField = value;
-        }
-    }
+    public EventTacticType[] EventTactic { get; set; }
 }

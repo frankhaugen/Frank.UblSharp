@@ -7,13 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Pickup", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PickupType
 {
-    private ActualPickupTimeType actualPickupTimeField;
-    private EarliestPickupDateType earliestPickupDateField;
-    private EarliestPickupTimeType earliestPickupTimeField;
-    private LatestPickupDateType latestPickupDateField;
-    private LatestPickupTimeType latestPickupTimeField;
-    private LocationType1 pickupLocationField;
-    private PartyType pickupPartyField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -24,104 +17,27 @@ public partial class PickupType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ActualPickupTimeType ActualPickupTime
-    {
-        get
-        {
-            return this.actualPickupTimeField;
-        }
-
-        set
-        {
-            this.actualPickupTimeField = value;
-        }
-    }
+    public ActualPickupTimeType ActualPickupTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public EarliestPickupDateType EarliestPickupDate
-    {
-        get
-        {
-            return this.earliestPickupDateField;
-        }
-
-        set
-        {
-            this.earliestPickupDateField = value;
-        }
-    }
+    public EarliestPickupDateType EarliestPickupDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public EarliestPickupTimeType EarliestPickupTime
-    {
-        get
-        {
-            return this.earliestPickupTimeField;
-        }
-
-        set
-        {
-            this.earliestPickupTimeField = value;
-        }
-    }
+    public EarliestPickupTimeType EarliestPickupTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LatestPickupDateType LatestPickupDate
-    {
-        get
-        {
-            return this.latestPickupDateField;
-        }
-
-        set
-        {
-            this.latestPickupDateField = value;
-        }
-    }
+    public LatestPickupDateType LatestPickupDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LatestPickupTimeType LatestPickupTime
-    {
-        get
-        {
-            return this.latestPickupTimeField;
-        }
-
-        set
-        {
-            this.latestPickupTimeField = value;
-        }
-    }
+    public LatestPickupTimeType LatestPickupTime { get; set; }
 
     /// <remarks/>
-    public LocationType1 PickupLocation
-    {
-        get
-        {
-            return this.pickupLocationField;
-        }
-
-        set
-        {
-            this.pickupLocationField = value;
-        }
-    }
+    public LocationType1 PickupLocation { get; set; }
 
     /// <remarks/>
-    public PartyType PickupParty
-    {
-        get
-        {
-            return this.pickupPartyField;
-        }
-
-        set
-        {
-            this.pickupPartyField = value;
-        }
-    }
+    public PartyType PickupParty { get; set; }
 }

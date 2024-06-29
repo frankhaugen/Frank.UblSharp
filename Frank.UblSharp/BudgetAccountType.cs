@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("BudgetAccount", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class BudgetAccountType
 {
-    private ClassificationSchemeType requiredClassificationSchemeField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -17,16 +16,5 @@ public partial class BudgetAccountType
     public BudgetYearNumericType BudgetYearNumeric { get; set; }
 
     /// <remarks/>
-    public ClassificationSchemeType RequiredClassificationScheme
-    {
-        get
-        {
-            return this.requiredClassificationSchemeField;
-        }
-
-        set
-        {
-            this.requiredClassificationSchemeField = value;
-        }
-    }
+    public ClassificationSchemeType RequiredClassificationScheme { get; set; }
 }

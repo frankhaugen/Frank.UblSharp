@@ -7,25 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("GoodsItemItinerary", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:GoodsItemItinerary-2", IsNullable = false)]
 public partial class GoodsItemItineraryType
 {
-    private CustomizationIDType customizationIDField;
-    private ProfileIDType profileIDField;
-    private ProfileExecutionIDType profileExecutionIDField;
-    private IDType idField;
-    private CopyIndicatorType copyIndicatorField;
-    private UUIDType uUIDField;
-    private IssueDateType issueDateField;
-    private IssueTimeType issueTimeField;
-    private NoteType[] noteField;
-    private VersionIDType versionIDField;
-    private TransportExecutionPlanReferenceIDType transportExecutionPlanReferenceIDField;
-    private SignatureType[] signatureField;
-    private PartyType senderPartyField;
-    private PartyType receiverPartyField;
-    private ConsignmentType[] referencedConsignmentField;
-    private TransportEquipmentType[] referencedTransportEquipmentField;
-    private PackageType[] referencedPackageField;
-    private GoodsItemType[] referencedGoodsItemField;
-    private TransportationSegmentType[] transportationSegmentField;
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
     [System.Xml.Serialization.XmlArrayItemAttribute("UBLExtension", IsNullable = false)]
@@ -37,286 +18,77 @@ public partial class GoodsItemItineraryType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CustomizationIDType CustomizationID
-    {
-        get
-        {
-            return this.customizationIDField;
-        }
-
-        set
-        {
-            this.customizationIDField = value;
-        }
-    }
+    public CustomizationIDType CustomizationID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ProfileIDType ProfileID
-    {
-        get
-        {
-            return this.profileIDField;
-        }
-
-        set
-        {
-            this.profileIDField = value;
-        }
-    }
+    public ProfileIDType ProfileID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ProfileExecutionIDType ProfileExecutionID
-    {
-        get
-        {
-            return this.profileExecutionIDField;
-        }
-
-        set
-        {
-            this.profileExecutionIDField = value;
-        }
-    }
+    public ProfileExecutionIDType ProfileExecutionID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CopyIndicatorType CopyIndicator
-    {
-        get
-        {
-            return this.copyIndicatorField;
-        }
-
-        set
-        {
-            this.copyIndicatorField = value;
-        }
-    }
+    public CopyIndicatorType CopyIndicator { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public UUIDType UUID
-    {
-        get
-        {
-            return this.uUIDField;
-        }
-
-        set
-        {
-            this.uUIDField = value;
-        }
-    }
+    public UUIDType UUID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IssueDateType IssueDate
-    {
-        get
-        {
-            return this.issueDateField;
-        }
-
-        set
-        {
-            this.issueDateField = value;
-        }
-    }
+    public IssueDateType IssueDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IssueTimeType IssueTime
-    {
-        get
-        {
-            return this.issueTimeField;
-        }
-
-        set
-        {
-            this.issueTimeField = value;
-        }
-    }
+    public IssueTimeType IssueTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NoteType[] Note
-    {
-        get
-        {
-            return this.noteField;
-        }
-
-        set
-        {
-            this.noteField = value;
-        }
-    }
+    public NoteType[] Note { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public VersionIDType VersionID
-    {
-        get
-        {
-            return this.versionIDField;
-        }
-
-        set
-        {
-            this.versionIDField = value;
-        }
-    }
+    public VersionIDType VersionID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TransportExecutionPlanReferenceIDType TransportExecutionPlanReferenceID
-    {
-        get
-        {
-            return this.transportExecutionPlanReferenceIDField;
-        }
-
-        set
-        {
-            this.transportExecutionPlanReferenceIDField = value;
-        }
-    }
+    public TransportExecutionPlanReferenceIDType TransportExecutionPlanReferenceID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Signature", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-    public SignatureType[] Signature
-    {
-        get
-        {
-            return this.signatureField;
-        }
-
-        set
-        {
-            this.signatureField = value;
-        }
-    }
+    public SignatureType[] Signature { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-    public PartyType SenderParty
-    {
-        get
-        {
-            return this.senderPartyField;
-        }
-
-        set
-        {
-            this.senderPartyField = value;
-        }
-    }
+    public PartyType SenderParty { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-    public PartyType ReceiverParty
-    {
-        get
-        {
-            return this.receiverPartyField;
-        }
-
-        set
-        {
-            this.receiverPartyField = value;
-        }
-    }
+    public PartyType ReceiverParty { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ReferencedConsignment", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-    public ConsignmentType[] ReferencedConsignment
-    {
-        get
-        {
-            return this.referencedConsignmentField;
-        }
-
-        set
-        {
-            this.referencedConsignmentField = value;
-        }
-    }
+    public ConsignmentType[] ReferencedConsignment { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ReferencedTransportEquipment", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-    public TransportEquipmentType[] ReferencedTransportEquipment
-    {
-        get
-        {
-            return this.referencedTransportEquipmentField;
-        }
-
-        set
-        {
-            this.referencedTransportEquipmentField = value;
-        }
-    }
+    public TransportEquipmentType[] ReferencedTransportEquipment { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ReferencedPackage", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-    public PackageType[] ReferencedPackage
-    {
-        get
-        {
-            return this.referencedPackageField;
-        }
-
-        set
-        {
-            this.referencedPackageField = value;
-        }
-    }
+    public PackageType[] ReferencedPackage { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ReferencedGoodsItem", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-    public GoodsItemType[] ReferencedGoodsItem
-    {
-        get
-        {
-            return this.referencedGoodsItemField;
-        }
-
-        set
-        {
-            this.referencedGoodsItemField = value;
-        }
-    }
+    public GoodsItemType[] ReferencedGoodsItem { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("TransportationSegment", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-    public TransportationSegmentType[] TransportationSegment
-    {
-        get
-        {
-            return this.transportationSegmentField;
-        }
-
-        set
-        {
-            this.transportationSegmentField = value;
-        }
-    }
+    public TransportationSegmentType[] TransportationSegment { get; set; }
 }

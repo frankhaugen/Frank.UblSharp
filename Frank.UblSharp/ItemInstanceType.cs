@@ -7,12 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ItemInstance", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ItemInstanceType
 {
-    private ManufactureTimeType manufactureTimeField;
-    private BestBeforeDateType bestBeforeDateField;
-    private RegistrationIDType registrationIDField;
-    private SerialIDType serialIDField;
-    private ItemPropertyType[] additionalItemPropertyField;
-    private LotIdentificationType lotIdentificationField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ProductTraceIDType ProductTraceID { get; set; }
@@ -23,90 +17,24 @@ public partial class ItemInstanceType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ManufactureTimeType ManufactureTime
-    {
-        get
-        {
-            return this.manufactureTimeField;
-        }
-
-        set
-        {
-            this.manufactureTimeField = value;
-        }
-    }
+    public ManufactureTimeType ManufactureTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public BestBeforeDateType BestBeforeDate
-    {
-        get
-        {
-            return this.bestBeforeDateField;
-        }
-
-        set
-        {
-            this.bestBeforeDateField = value;
-        }
-    }
+    public BestBeforeDateType BestBeforeDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public RegistrationIDType RegistrationID
-    {
-        get
-        {
-            return this.registrationIDField;
-        }
-
-        set
-        {
-            this.registrationIDField = value;
-        }
-    }
+    public RegistrationIDType RegistrationID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SerialIDType SerialID
-    {
-        get
-        {
-            return this.serialIDField;
-        }
-
-        set
-        {
-            this.serialIDField = value;
-        }
-    }
+    public SerialIDType SerialID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("AdditionalItemProperty")]
-    public ItemPropertyType[] AdditionalItemProperty
-    {
-        get
-        {
-            return this.additionalItemPropertyField;
-        }
-
-        set
-        {
-            this.additionalItemPropertyField = value;
-        }
-    }
+    public ItemPropertyType[] AdditionalItemProperty { get; set; }
 
     /// <remarks/>
-    public LotIdentificationType LotIdentification
-    {
-        get
-        {
-            return this.lotIdentificationField;
-        }
-
-        set
-        {
-            this.lotIdentificationField = value;
-        }
-    }
+    public LotIdentificationType LotIdentification { get; set; }
 }

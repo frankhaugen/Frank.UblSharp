@@ -7,12 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("MaritimeTransport", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class MaritimeTransportType
 {
-    private RadioCallSignIDType radioCallSignIDField;
-    private ShipsRequirementsType[] shipsRequirementsField;
-    private GrossTonnageMeasureType grossTonnageMeasureField;
-    private NetTonnageMeasureType netTonnageMeasureField;
-    private DocumentReferenceType registryCertificateDocumentReferenceField;
-    private LocationType1 registryPortLocationField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public VesselIDType VesselID { get; set; }
@@ -23,89 +17,23 @@ public partial class MaritimeTransportType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public RadioCallSignIDType RadioCallSignID
-    {
-        get
-        {
-            return this.radioCallSignIDField;
-        }
-
-        set
-        {
-            this.radioCallSignIDField = value;
-        }
-    }
+    public RadioCallSignIDType RadioCallSignID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ShipsRequirements", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ShipsRequirementsType[] ShipsRequirements
-    {
-        get
-        {
-            return this.shipsRequirementsField;
-        }
-
-        set
-        {
-            this.shipsRequirementsField = value;
-        }
-    }
+    public ShipsRequirementsType[] ShipsRequirements { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public GrossTonnageMeasureType GrossTonnageMeasure
-    {
-        get
-        {
-            return this.grossTonnageMeasureField;
-        }
-
-        set
-        {
-            this.grossTonnageMeasureField = value;
-        }
-    }
+    public GrossTonnageMeasureType GrossTonnageMeasure { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NetTonnageMeasureType NetTonnageMeasure
-    {
-        get
-        {
-            return this.netTonnageMeasureField;
-        }
-
-        set
-        {
-            this.netTonnageMeasureField = value;
-        }
-    }
+    public NetTonnageMeasureType NetTonnageMeasure { get; set; }
 
     /// <remarks/>
-    public DocumentReferenceType RegistryCertificateDocumentReference
-    {
-        get
-        {
-            return this.registryCertificateDocumentReferenceField;
-        }
-
-        set
-        {
-            this.registryCertificateDocumentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType RegistryCertificateDocumentReference { get; set; }
 
     /// <remarks/>
-    public LocationType1 RegistryPortLocation
-    {
-        get
-        {
-            return this.registryPortLocationField;
-        }
-
-        set
-        {
-            this.registryPortLocationField = value;
-        }
-    }
+    public LocationType1 RegistryPortLocation { get; set; }
 }

@@ -7,16 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ConsumptionCorrection", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ConsumptionCorrectionType
 {
-    private MeterNumberType meterNumberField;
-    private GasPressureQuantityType gasPressureQuantityField;
-    private ActualTemperatureReductionQuantityType actualTemperatureReductionQuantityField;
-    private NormalTemperatureReductionQuantityType normalTemperatureReductionQuantityField;
-    private DifferenceTemperatureReductionQuantityType differenceTemperatureReductionQuantityField;
-    private DescriptionType[] descriptionField;
-    private CorrectionUnitAmountType correctionUnitAmountField;
-    private ConsumptionEnergyQuantityType consumptionEnergyQuantityField;
-    private ConsumptionWaterQuantityType consumptionWaterQuantityField;
-    private CorrectionAmountType correctionAmountField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CorrectionTypeType CorrectionType { get; set; }
@@ -27,151 +17,41 @@ public partial class ConsumptionCorrectionType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MeterNumberType MeterNumber
-    {
-        get
-        {
-            return this.meterNumberField;
-        }
-
-        set
-        {
-            this.meterNumberField = value;
-        }
-    }
+    public MeterNumberType MeterNumber { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public GasPressureQuantityType GasPressureQuantity
-    {
-        get
-        {
-            return this.gasPressureQuantityField;
-        }
-
-        set
-        {
-            this.gasPressureQuantityField = value;
-        }
-    }
+    public GasPressureQuantityType GasPressureQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ActualTemperatureReductionQuantityType ActualTemperatureReductionQuantity
-    {
-        get
-        {
-            return this.actualTemperatureReductionQuantityField;
-        }
-
-        set
-        {
-            this.actualTemperatureReductionQuantityField = value;
-        }
-    }
+    public ActualTemperatureReductionQuantityType ActualTemperatureReductionQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NormalTemperatureReductionQuantityType NormalTemperatureReductionQuantity
-    {
-        get
-        {
-            return this.normalTemperatureReductionQuantityField;
-        }
-
-        set
-        {
-            this.normalTemperatureReductionQuantityField = value;
-        }
-    }
+    public NormalTemperatureReductionQuantityType NormalTemperatureReductionQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DifferenceTemperatureReductionQuantityType DifferenceTemperatureReductionQuantity
-    {
-        get
-        {
-            return this.differenceTemperatureReductionQuantityField;
-        }
-
-        set
-        {
-            this.differenceTemperatureReductionQuantityField = value;
-        }
-    }
+    public DifferenceTemperatureReductionQuantityType DifferenceTemperatureReductionQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CorrectionUnitAmountType CorrectionUnitAmount
-    {
-        get
-        {
-            return this.correctionUnitAmountField;
-        }
-
-        set
-        {
-            this.correctionUnitAmountField = value;
-        }
-    }
+    public CorrectionUnitAmountType CorrectionUnitAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ConsumptionEnergyQuantityType ConsumptionEnergyQuantity
-    {
-        get
-        {
-            return this.consumptionEnergyQuantityField;
-        }
-
-        set
-        {
-            this.consumptionEnergyQuantityField = value;
-        }
-    }
+    public ConsumptionEnergyQuantityType ConsumptionEnergyQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ConsumptionWaterQuantityType ConsumptionWaterQuantity
-    {
-        get
-        {
-            return this.consumptionWaterQuantityField;
-        }
-
-        set
-        {
-            this.consumptionWaterQuantityField = value;
-        }
-    }
+    public ConsumptionWaterQuantityType ConsumptionWaterQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CorrectionAmountType CorrectionAmount
-    {
-        get
-        {
-            return this.correctionAmountField;
-        }
-
-        set
-        {
-            this.correctionAmountField = value;
-        }
-    }
+    public CorrectionAmountType CorrectionAmount { get; set; }
 }

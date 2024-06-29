@@ -7,11 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("CompletedTask", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class CompletedTaskType
 {
-    private PartyCapacityAmountType partyCapacityAmountField;
-    private DescriptionType[] descriptionField;
-    private EvidenceSuppliedType[] evidenceSuppliedField;
-    private PeriodType periodField;
-    private CustomerPartyType recipientCustomerPartyField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AnnualAverageAmountType AnnualAverageAmount { get; set; }
@@ -22,74 +17,19 @@ public partial class CompletedTaskType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PartyCapacityAmountType PartyCapacityAmount
-    {
-        get
-        {
-            return this.partyCapacityAmountField;
-        }
-
-        set
-        {
-            this.partyCapacityAmountField = value;
-        }
-    }
+    public PartyCapacityAmountType PartyCapacityAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("EvidenceSupplied")]
-    public EvidenceSuppliedType[] EvidenceSupplied
-    {
-        get
-        {
-            return this.evidenceSuppliedField;
-        }
-
-        set
-        {
-            this.evidenceSuppliedField = value;
-        }
-    }
+    public EvidenceSuppliedType[] EvidenceSupplied { get; set; }
 
     /// <remarks/>
-    public PeriodType Period
-    {
-        get
-        {
-            return this.periodField;
-        }
-
-        set
-        {
-            this.periodField = value;
-        }
-    }
+    public PeriodType Period { get; set; }
 
     /// <remarks/>
-    public CustomerPartyType RecipientCustomerParty
-    {
-        get
-        {
-            return this.recipientCustomerPartyField;
-        }
-
-        set
-        {
-            this.recipientCustomerPartyField = value;
-        }
-    }
+    public CustomerPartyType RecipientCustomerParty { get; set; }
 }

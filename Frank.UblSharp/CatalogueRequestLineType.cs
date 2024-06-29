@@ -7,10 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("CatalogueRequestLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class CatalogueRequestLineType
 {
-    private NoteType[] noteField;
-    private PeriodType lineValidityPeriodField;
-    private ItemLocationQuantityType[] requiredItemLocationQuantityField;
-    private ItemType itemField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -21,59 +17,15 @@ public partial class CatalogueRequestLineType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NoteType[] Note
-    {
-        get
-        {
-            return this.noteField;
-        }
-
-        set
-        {
-            this.noteField = value;
-        }
-    }
+    public NoteType[] Note { get; set; }
 
     /// <remarks/>
-    public PeriodType LineValidityPeriod
-    {
-        get
-        {
-            return this.lineValidityPeriodField;
-        }
-
-        set
-        {
-            this.lineValidityPeriodField = value;
-        }
-    }
+    public PeriodType LineValidityPeriod { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("RequiredItemLocationQuantity")]
-    public ItemLocationQuantityType[] RequiredItemLocationQuantity
-    {
-        get
-        {
-            return this.requiredItemLocationQuantityField;
-        }
-
-        set
-        {
-            this.requiredItemLocationQuantityField = value;
-        }
-    }
+    public ItemLocationQuantityType[] RequiredItemLocationQuantity { get; set; }
 
     /// <remarks/>
-    public ItemType Item
-    {
-        get
-        {
-            return this.itemField;
-        }
-
-        set
-        {
-            this.itemField = value;
-        }
-    }
+    public ItemType Item { get; set; }
 }

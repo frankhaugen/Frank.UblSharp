@@ -7,14 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Signature", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class SignatureType
 {
-    private ValidationDateType validationDateField;
-    private ValidationTimeType validationTimeField;
-    private ValidatorIDType validatorIDField;
-    private CanonicalizationMethodType canonicalizationMethodField;
-    private SignatureMethodType signatureMethodField;
-    private PartyType signatoryPartyField;
-    private AttachmentType digitalSignatureAttachmentField;
-    private DocumentReferenceType originalDocumentReferenceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -25,118 +17,30 @@ public partial class SignatureType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ValidationDateType ValidationDate
-    {
-        get
-        {
-            return this.validationDateField;
-        }
-
-        set
-        {
-            this.validationDateField = value;
-        }
-    }
+    public ValidationDateType ValidationDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ValidationTimeType ValidationTime
-    {
-        get
-        {
-            return this.validationTimeField;
-        }
-
-        set
-        {
-            this.validationTimeField = value;
-        }
-    }
+    public ValidationTimeType ValidationTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ValidatorIDType ValidatorID
-    {
-        get
-        {
-            return this.validatorIDField;
-        }
-
-        set
-        {
-            this.validatorIDField = value;
-        }
-    }
+    public ValidatorIDType ValidatorID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CanonicalizationMethodType CanonicalizationMethod
-    {
-        get
-        {
-            return this.canonicalizationMethodField;
-        }
-
-        set
-        {
-            this.canonicalizationMethodField = value;
-        }
-    }
+    public CanonicalizationMethodType CanonicalizationMethod { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SignatureMethodType SignatureMethod
-    {
-        get
-        {
-            return this.signatureMethodField;
-        }
-
-        set
-        {
-            this.signatureMethodField = value;
-        }
-    }
+    public SignatureMethodType SignatureMethod { get; set; }
 
     /// <remarks/>
-    public PartyType SignatoryParty
-    {
-        get
-        {
-            return this.signatoryPartyField;
-        }
-
-        set
-        {
-            this.signatoryPartyField = value;
-        }
-    }
+    public PartyType SignatoryParty { get; set; }
 
     /// <remarks/>
-    public AttachmentType DigitalSignatureAttachment
-    {
-        get
-        {
-            return this.digitalSignatureAttachmentField;
-        }
-
-        set
-        {
-            this.digitalSignatureAttachmentField = value;
-        }
-    }
+    public AttachmentType DigitalSignatureAttachment { get; set; }
 
     /// <remarks/>
-    public DocumentReferenceType OriginalDocumentReference
-    {
-        get
-        {
-            return this.originalDocumentReferenceField;
-        }
-
-        set
-        {
-            this.originalDocumentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType OriginalDocumentReference { get; set; }
 }

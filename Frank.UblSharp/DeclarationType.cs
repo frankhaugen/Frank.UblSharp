@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Declaration", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class DeclarationType
 {
-    private DescriptionType[] descriptionField;
-    private EvidenceSuppliedType[] evidenceSuppliedField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Name", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NameType1[] Name { get; set; }
@@ -19,31 +17,9 @@ public partial class DeclarationType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("EvidenceSupplied")]
-    public EvidenceSuppliedType[] EvidenceSupplied
-    {
-        get
-        {
-            return this.evidenceSuppliedField;
-        }
-
-        set
-        {
-            this.evidenceSuppliedField = value;
-        }
-    }
+    public EvidenceSuppliedType[] EvidenceSupplied { get; set; }
 }

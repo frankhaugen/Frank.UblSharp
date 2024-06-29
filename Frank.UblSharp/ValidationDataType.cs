@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TimeStampValidationData", Namespace = "http://uri.etsi.org/01903/v1.4.1#", IsNullable = false)]
 public partial class ValidationDataType
 {
-    private string idField;
-    private string urField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     public CertificateValuesType CertificateValues { get; set; }
@@ -19,31 +17,9 @@ public partial class ValidationDataType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
-    public string Id
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public string Id { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-    public string UR
-    {
-        get
-        {
-            return this.urField;
-        }
-
-        set
-        {
-            this.urField = value;
-        }
-    }
+    public string UR { get; set; }
 }

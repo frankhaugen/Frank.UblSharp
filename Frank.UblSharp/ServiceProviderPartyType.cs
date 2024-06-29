@@ -7,9 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ServiceProviderParty", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ServiceProviderPartyType
 {
-    private ServiceTypeType[] serviceTypeField;
-    private PartyType partyField;
-    private ContactType sellerContactField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -20,44 +17,11 @@ public partial class ServiceProviderPartyType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ServiceType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ServiceTypeType[] ServiceType
-    {
-        get
-        {
-            return this.serviceTypeField;
-        }
-
-        set
-        {
-            this.serviceTypeField = value;
-        }
-    }
+    public ServiceTypeType[] ServiceType { get; set; }
 
     /// <remarks/>
-    public PartyType Party
-    {
-        get
-        {
-            return this.partyField;
-        }
-
-        set
-        {
-            this.partyField = value;
-        }
-    }
+    public PartyType Party { get; set; }
 
     /// <remarks/>
-    public ContactType SellerContact
-    {
-        get
-        {
-            return this.sellerContactField;
-        }
-
-        set
-        {
-            this.sellerContactField = value;
-        }
-    }
+    public ContactType SellerContact { get; set; }
 }

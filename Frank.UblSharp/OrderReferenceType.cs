@@ -7,13 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("OrderReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class OrderReferenceType
 {
-    private CopyIndicatorType copyIndicatorField;
-    private UUIDType uUIDField;
-    private IssueDateType issueDateField;
-    private IssueTimeType issueTimeField;
-    private CustomerReferenceType customerReferenceField;
-    private OrderTypeCodeType orderTypeCodeField;
-    private DocumentReferenceType documentReferenceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -24,105 +17,28 @@ public partial class OrderReferenceType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CopyIndicatorType CopyIndicator
-    {
-        get
-        {
-            return this.copyIndicatorField;
-        }
-
-        set
-        {
-            this.copyIndicatorField = value;
-        }
-    }
+    public CopyIndicatorType CopyIndicator { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public UUIDType UUID
-    {
-        get
-        {
-            return this.uUIDField;
-        }
-
-        set
-        {
-            this.uUIDField = value;
-        }
-    }
+    public UUIDType UUID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IssueDateType IssueDate
-    {
-        get
-        {
-            return this.issueDateField;
-        }
-
-        set
-        {
-            this.issueDateField = value;
-        }
-    }
+    public IssueDateType IssueDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IssueTimeType IssueTime
-    {
-        get
-        {
-            return this.issueTimeField;
-        }
-
-        set
-        {
-            this.issueTimeField = value;
-        }
-    }
+    public IssueTimeType IssueTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CustomerReferenceType CustomerReference
-    {
-        get
-        {
-            return this.customerReferenceField;
-        }
-
-        set
-        {
-            this.customerReferenceField = value;
-        }
-    }
+    public CustomerReferenceType CustomerReference { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public OrderTypeCodeType OrderTypeCode
-    {
-        get
-        {
-            return this.orderTypeCodeField;
-        }
-
-        set
-        {
-            this.orderTypeCodeField = value;
-        }
-    }
+    public OrderTypeCodeType OrderTypeCode { get; set; }
 
     /// <remarks/>
-    public DocumentReferenceType DocumentReference
-    {
-        get
-        {
-            return this.documentReferenceField;
-        }
-
-        set
-        {
-            this.documentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType DocumentReference { get; set; }
 }

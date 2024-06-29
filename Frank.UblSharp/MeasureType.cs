@@ -33,7 +33,6 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
 public partial class MeasureType
 {
-    private decimal valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
     public string unitCode { get; set; }
@@ -44,16 +43,5 @@ public partial class MeasureType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute()]
-    public decimal Value
-    {
-        get
-        {
-            return this.valueField;
-        }
-
-        set
-        {
-            this.valueField = value;
-        }
-    }
+    public decimal Value { get; set; }
 }

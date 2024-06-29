@@ -7,9 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AdditionalDocumentResponse", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class DocumentResponseType
 {
-    private PartyType issuerPartyField;
-    private PartyType recipientPartyField;
-    private LineResponseType[] lineResponseField;
     /// <remarks/>
     public ResponseType Response { get; set; }
 
@@ -18,45 +15,12 @@ public partial class DocumentResponseType
     public DocumentReferenceType[] DocumentReference { get; set; }
 
     /// <remarks/>
-    public PartyType IssuerParty
-    {
-        get
-        {
-            return this.issuerPartyField;
-        }
-
-        set
-        {
-            this.issuerPartyField = value;
-        }
-    }
+    public PartyType IssuerParty { get; set; }
 
     /// <remarks/>
-    public PartyType RecipientParty
-    {
-        get
-        {
-            return this.recipientPartyField;
-        }
-
-        set
-        {
-            this.recipientPartyField = value;
-        }
-    }
+    public PartyType RecipientParty { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("LineResponse")]
-    public LineResponseType[] LineResponse
-    {
-        get
-        {
-            return this.lineResponseField;
-        }
-
-        set
-        {
-            this.lineResponseField = value;
-        }
-    }
+    public LineResponseType[] LineResponse { get; set; }
 }

@@ -7,9 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Signature", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
 public partial class SignatureType1
 {
-    private KeyInfoType keyInfoField;
-    private ObjectType[] objectField;
-    private string idField;
     /// <remarks/>
     public SignedInfoType SignedInfo { get; set; }
 
@@ -17,46 +14,13 @@ public partial class SignatureType1
     public SignatureValueType SignatureValue { get; set; }
 
     /// <remarks/>
-    public KeyInfoType KeyInfo
-    {
-        get
-        {
-            return this.keyInfoField;
-        }
-
-        set
-        {
-            this.keyInfoField = value;
-        }
-    }
+    public KeyInfoType KeyInfo { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Object")]
-    public ObjectType[] Object
-    {
-        get
-        {
-            return this.objectField;
-        }
-
-        set
-        {
-            this.objectField = value;
-        }
-    }
+    public ObjectType[] Object { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
-    public string Id
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public string Id { get; set; }
 }

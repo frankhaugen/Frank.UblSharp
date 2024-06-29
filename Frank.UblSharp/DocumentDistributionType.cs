@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("DocumentDistribution", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class DocumentDistributionType
 {
-    private PartyType partyField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PrintQualifierType PrintQualifier { get; set; }
@@ -17,16 +16,5 @@ public partial class DocumentDistributionType
     public MaximumCopiesNumericType MaximumCopiesNumeric { get; set; }
 
     /// <remarks/>
-    public PartyType Party
-    {
-        get
-        {
-            return this.partyField;
-        }
-
-        set
-        {
-            this.partyField = value;
-        }
-    }
+    public PartyType Party { get; set; }
 }

@@ -120,12 +120,6 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
 public partial class IdentifierType
 {
-    private string schemeAgencyIDField;
-    private string schemeAgencyNameField;
-    private string schemeVersionIDField;
-    private string schemeDataURIField;
-    private string schemeURIField;
-    private string valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
     public string schemeID { get; set; }
@@ -136,91 +130,25 @@ public partial class IdentifierType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-    public string schemeAgencyID
-    {
-        get
-        {
-            return this.schemeAgencyIDField;
-        }
-
-        set
-        {
-            this.schemeAgencyIDField = value;
-        }
-    }
+    public string schemeAgencyID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string schemeAgencyName
-    {
-        get
-        {
-            return this.schemeAgencyNameField;
-        }
-
-        set
-        {
-            this.schemeAgencyNameField = value;
-        }
-    }
+    public string schemeAgencyName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-    public string schemeVersionID
-    {
-        get
-        {
-            return this.schemeVersionIDField;
-        }
-
-        set
-        {
-            this.schemeVersionIDField = value;
-        }
-    }
+    public string schemeVersionID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-    public string schemeDataURI
-    {
-        get
-        {
-            return this.schemeDataURIField;
-        }
-
-        set
-        {
-            this.schemeDataURIField = value;
-        }
-    }
+    public string schemeDataURI { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-    public string schemeURI
-    {
-        get
-        {
-            return this.schemeURIField;
-        }
-
-        set
-        {
-            this.schemeURIField = value;
-        }
-    }
+    public string schemeURI { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute(DataType = "normalizedString")]
-    public string Value
-    {
-        get
-        {
-            return this.valueField;
-        }
-
-        set
-        {
-            this.valueField = value;
-        }
-    }
+    public string Value { get; set; }
 }

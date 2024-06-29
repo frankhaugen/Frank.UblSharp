@@ -7,11 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AllowedSubcontractTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class SubcontractTermsType
 {
-    private DescriptionType[] descriptionField;
-    private AmountType2 amountField;
-    private SubcontractingConditionsCodeType subcontractingConditionsCodeField;
-    private MaximumPercentType maximumPercentField;
-    private MinimumPercentType minimumPercentField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public RateType1 Rate { get; set; }
@@ -22,76 +17,21 @@ public partial class SubcontractTermsType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AmountType2 Amount
-    {
-        get
-        {
-            return this.amountField;
-        }
-
-        set
-        {
-            this.amountField = value;
-        }
-    }
+    public AmountType2 Amount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SubcontractingConditionsCodeType SubcontractingConditionsCode
-    {
-        get
-        {
-            return this.subcontractingConditionsCodeField;
-        }
-
-        set
-        {
-            this.subcontractingConditionsCodeField = value;
-        }
-    }
+    public SubcontractingConditionsCodeType SubcontractingConditionsCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MaximumPercentType MaximumPercent
-    {
-        get
-        {
-            return this.maximumPercentField;
-        }
-
-        set
-        {
-            this.maximumPercentField = value;
-        }
-    }
+    public MaximumPercentType MaximumPercent { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MinimumPercentType MinimumPercent
-    {
-        get
-        {
-            return this.minimumPercentField;
-        }
-
-        set
-        {
-            this.minimumPercentField = value;
-        }
-    }
+    public MinimumPercentType MinimumPercent { get; set; }
 }

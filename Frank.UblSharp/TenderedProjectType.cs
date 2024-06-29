@@ -7,15 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AwardedTenderedProject", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TenderedProjectType
 {
-    private FeeDescriptionType[] feeDescriptionField;
-    private TenderEnvelopeIDType tenderEnvelopeIDField;
-    private TenderEnvelopeTypeCodeType tenderEnvelopeTypeCodeField;
-    private ProcurementProjectLotType procurementProjectLotField;
-    private DocumentReferenceType[] evidenceDocumentReferenceField;
-    private TaxTotalType[] taxTotalField;
-    private MonetaryTotalType legalMonetaryTotalField;
-    private TenderLineType[] tenderLineField;
-    private AwardingCriterionResponseType[] awardingCriterionResponseField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public VariantIDType VariantID { get; set; }
@@ -26,134 +17,35 @@ public partial class TenderedProjectType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("FeeDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public FeeDescriptionType[] FeeDescription
-    {
-        get
-        {
-            return this.feeDescriptionField;
-        }
-
-        set
-        {
-            this.feeDescriptionField = value;
-        }
-    }
+    public FeeDescriptionType[] FeeDescription { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TenderEnvelopeIDType TenderEnvelopeID
-    {
-        get
-        {
-            return this.tenderEnvelopeIDField;
-        }
-
-        set
-        {
-            this.tenderEnvelopeIDField = value;
-        }
-    }
+    public TenderEnvelopeIDType TenderEnvelopeID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TenderEnvelopeTypeCodeType TenderEnvelopeTypeCode
-    {
-        get
-        {
-            return this.tenderEnvelopeTypeCodeField;
-        }
-
-        set
-        {
-            this.tenderEnvelopeTypeCodeField = value;
-        }
-    }
+    public TenderEnvelopeTypeCodeType TenderEnvelopeTypeCode { get; set; }
 
     /// <remarks/>
-    public ProcurementProjectLotType ProcurementProjectLot
-    {
-        get
-        {
-            return this.procurementProjectLotField;
-        }
-
-        set
-        {
-            this.procurementProjectLotField = value;
-        }
-    }
+    public ProcurementProjectLotType ProcurementProjectLot { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("EvidenceDocumentReference")]
-    public DocumentReferenceType[] EvidenceDocumentReference
-    {
-        get
-        {
-            return this.evidenceDocumentReferenceField;
-        }
-
-        set
-        {
-            this.evidenceDocumentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType[] EvidenceDocumentReference { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("TaxTotal")]
-    public TaxTotalType[] TaxTotal
-    {
-        get
-        {
-            return this.taxTotalField;
-        }
-
-        set
-        {
-            this.taxTotalField = value;
-        }
-    }
+    public TaxTotalType[] TaxTotal { get; set; }
 
     /// <remarks/>
-    public MonetaryTotalType LegalMonetaryTotal
-    {
-        get
-        {
-            return this.legalMonetaryTotalField;
-        }
-
-        set
-        {
-            this.legalMonetaryTotalField = value;
-        }
-    }
+    public MonetaryTotalType LegalMonetaryTotal { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("TenderLine")]
-    public TenderLineType[] TenderLine
-    {
-        get
-        {
-            return this.tenderLineField;
-        }
-
-        set
-        {
-            this.tenderLineField = value;
-        }
-    }
+    public TenderLineType[] TenderLine { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("AwardingCriterionResponse")]
-    public AwardingCriterionResponseType[] AwardingCriterionResponse
-    {
-        get
-        {
-            return this.awardingCriterionResponseField;
-        }
-
-        set
-        {
-            this.awardingCriterionResponseField = value;
-        }
-    }
+    public AwardingCriterionResponseType[] AwardingCriterionResponse { get; set; }
 }

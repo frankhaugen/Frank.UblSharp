@@ -7,15 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ConsumptionLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ConsumptionLineType
 {
-    private InvoicedQuantityType invoicedQuantityField;
-    private LineExtensionAmountType lineExtensionAmountField;
-    private PeriodType periodField;
-    private DeliveryType[] deliveryField;
-    private AllowanceChargeType[] allowanceChargeField;
-    private TaxTotalType[] taxTotalField;
-    private UtilityItemType utilityItemField;
-    private PriceType priceField;
-    private UnstructuredPriceType unstructuredPriceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -26,132 +17,33 @@ public partial class ConsumptionLineType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public InvoicedQuantityType InvoicedQuantity
-    {
-        get
-        {
-            return this.invoicedQuantityField;
-        }
-
-        set
-        {
-            this.invoicedQuantityField = value;
-        }
-    }
+    public InvoicedQuantityType InvoicedQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LineExtensionAmountType LineExtensionAmount
-    {
-        get
-        {
-            return this.lineExtensionAmountField;
-        }
-
-        set
-        {
-            this.lineExtensionAmountField = value;
-        }
-    }
+    public LineExtensionAmountType LineExtensionAmount { get; set; }
 
     /// <remarks/>
-    public PeriodType Period
-    {
-        get
-        {
-            return this.periodField;
-        }
-
-        set
-        {
-            this.periodField = value;
-        }
-    }
+    public PeriodType Period { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Delivery")]
-    public DeliveryType[] Delivery
-    {
-        get
-        {
-            return this.deliveryField;
-        }
-
-        set
-        {
-            this.deliveryField = value;
-        }
-    }
+    public DeliveryType[] Delivery { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("AllowanceCharge")]
-    public AllowanceChargeType[] AllowanceCharge
-    {
-        get
-        {
-            return this.allowanceChargeField;
-        }
-
-        set
-        {
-            this.allowanceChargeField = value;
-        }
-    }
+    public AllowanceChargeType[] AllowanceCharge { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("TaxTotal")]
-    public TaxTotalType[] TaxTotal
-    {
-        get
-        {
-            return this.taxTotalField;
-        }
-
-        set
-        {
-            this.taxTotalField = value;
-        }
-    }
+    public TaxTotalType[] TaxTotal { get; set; }
 
     /// <remarks/>
-    public UtilityItemType UtilityItem
-    {
-        get
-        {
-            return this.utilityItemField;
-        }
-
-        set
-        {
-            this.utilityItemField = value;
-        }
-    }
+    public UtilityItemType UtilityItem { get; set; }
 
     /// <remarks/>
-    public PriceType Price
-    {
-        get
-        {
-            return this.priceField;
-        }
-
-        set
-        {
-            this.priceField = value;
-        }
-    }
+    public PriceType Price { get; set; }
 
     /// <remarks/>
-    public UnstructuredPriceType UnstructuredPrice
-    {
-        get
-        {
-            return this.unstructuredPriceField;
-        }
-
-        set
-        {
-            this.unstructuredPriceField = value;
-        }
-    }
+    public UnstructuredPriceType UnstructuredPrice { get; set; }
 }

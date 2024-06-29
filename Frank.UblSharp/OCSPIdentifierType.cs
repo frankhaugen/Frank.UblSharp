@@ -6,7 +6,6 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
 public partial class OCSPIdentifierType
 {
-    private string uRIField;
     /// <remarks/>
     public ResponderIDType ResponderID { get; set; }
 
@@ -15,16 +14,5 @@ public partial class OCSPIdentifierType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-    public string URI
-    {
-        get
-        {
-            return this.uRIField;
-        }
-
-        set
-        {
-            this.uRIField = value;
-        }
-    }
+    public string URI { get; set; }
 }

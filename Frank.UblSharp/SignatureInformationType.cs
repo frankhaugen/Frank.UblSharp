@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("SignatureInformation", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2", IsNullable = false)]
 public partial class SignatureInformationType
 {
-    private SignatureType1 signatureField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -18,16 +17,5 @@ public partial class SignatureInformationType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
-    public SignatureType1 Signature
-    {
-        get
-        {
-            return this.signatureField;
-        }
-
-        set
-        {
-            this.signatureField = value;
-        }
-    }
+    public SignatureType1 Signature { get; set; }
 }

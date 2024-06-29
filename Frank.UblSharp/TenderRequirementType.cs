@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("DocumentTenderRequirement", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TenderRequirementType
 {
-    private DocumentReferenceType templateDocumentReferenceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NameType1 Name { get; set; }
@@ -17,16 +16,5 @@ public partial class TenderRequirementType
     public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
-    public DocumentReferenceType TemplateDocumentReference
-    {
-        get
-        {
-            return this.templateDocumentReferenceField;
-        }
-
-        set
-        {
-            this.templateDocumentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType TemplateDocumentReference { get; set; }
 }

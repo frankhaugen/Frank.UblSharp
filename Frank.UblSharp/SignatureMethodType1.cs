@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("SignatureMethod", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
 public partial class SignatureMethodType1
 {
-    private string algorithmField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(DataType = "integer")]
     public string HMACOutputLength { get; set; }
@@ -19,16 +18,5 @@ public partial class SignatureMethodType1
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-    public string Algorithm
-    {
-        get
-        {
-            return this.algorithmField;
-        }
-
-        set
-        {
-            this.algorithmField = value;
-        }
-    }
+    public string Algorithm { get; set; }
 }

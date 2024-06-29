@@ -7,16 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TransportSchedule", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TransportScheduleType
 {
-    private ReferenceTimeType referenceTimeField;
-    private ReliabilityPercentType reliabilityPercentField;
-    private RemarksType[] remarksField;
-    private LocationType1 statusLocationField;
-    private TransportEventType actualArrivalTransportEventField;
-    private TransportEventType actualDepartureTransportEventField;
-    private TransportEventType estimatedDepartureTransportEventField;
-    private TransportEventType estimatedArrivalTransportEventField;
-    private TransportEventType plannedDepartureTransportEventField;
-    private TransportEventType plannedArrivalTransportEventField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SequenceNumericType SequenceNumeric { get; set; }
@@ -27,144 +17,34 @@ public partial class TransportScheduleType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ReferenceTimeType ReferenceTime
-    {
-        get
-        {
-            return this.referenceTimeField;
-        }
-
-        set
-        {
-            this.referenceTimeField = value;
-        }
-    }
+    public ReferenceTimeType ReferenceTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ReliabilityPercentType ReliabilityPercent
-    {
-        get
-        {
-            return this.reliabilityPercentField;
-        }
-
-        set
-        {
-            this.reliabilityPercentField = value;
-        }
-    }
+    public ReliabilityPercentType ReliabilityPercent { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Remarks", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public RemarksType[] Remarks
-    {
-        get
-        {
-            return this.remarksField;
-        }
-
-        set
-        {
-            this.remarksField = value;
-        }
-    }
+    public RemarksType[] Remarks { get; set; }
 
     /// <remarks/>
-    public LocationType1 StatusLocation
-    {
-        get
-        {
-            return this.statusLocationField;
-        }
-
-        set
-        {
-            this.statusLocationField = value;
-        }
-    }
+    public LocationType1 StatusLocation { get; set; }
 
     /// <remarks/>
-    public TransportEventType ActualArrivalTransportEvent
-    {
-        get
-        {
-            return this.actualArrivalTransportEventField;
-        }
-
-        set
-        {
-            this.actualArrivalTransportEventField = value;
-        }
-    }
+    public TransportEventType ActualArrivalTransportEvent { get; set; }
 
     /// <remarks/>
-    public TransportEventType ActualDepartureTransportEvent
-    {
-        get
-        {
-            return this.actualDepartureTransportEventField;
-        }
-
-        set
-        {
-            this.actualDepartureTransportEventField = value;
-        }
-    }
+    public TransportEventType ActualDepartureTransportEvent { get; set; }
 
     /// <remarks/>
-    public TransportEventType EstimatedDepartureTransportEvent
-    {
-        get
-        {
-            return this.estimatedDepartureTransportEventField;
-        }
-
-        set
-        {
-            this.estimatedDepartureTransportEventField = value;
-        }
-    }
+    public TransportEventType EstimatedDepartureTransportEvent { get; set; }
 
     /// <remarks/>
-    public TransportEventType EstimatedArrivalTransportEvent
-    {
-        get
-        {
-            return this.estimatedArrivalTransportEventField;
-        }
-
-        set
-        {
-            this.estimatedArrivalTransportEventField = value;
-        }
-    }
+    public TransportEventType EstimatedArrivalTransportEvent { get; set; }
 
     /// <remarks/>
-    public TransportEventType PlannedDepartureTransportEvent
-    {
-        get
-        {
-            return this.plannedDepartureTransportEventField;
-        }
-
-        set
-        {
-            this.plannedDepartureTransportEventField = value;
-        }
-    }
+    public TransportEventType PlannedDepartureTransportEvent { get; set; }
 
     /// <remarks/>
-    public TransportEventType PlannedArrivalTransportEvent
-    {
-        get
-        {
-            return this.plannedArrivalTransportEventField;
-        }
-
-        set
-        {
-            this.plannedArrivalTransportEventField = value;
-        }
-    }
+    public TransportEventType PlannedArrivalTransportEvent { get; set; }
 }

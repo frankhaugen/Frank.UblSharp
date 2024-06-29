@@ -7,11 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Certificate", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class CertificateType
 {
-    private CertificateTypeType certificateType1Field;
-    private RemarksType[] remarksField;
-    private PartyType issuerPartyField;
-    private DocumentReferenceType[] documentReferenceField;
-    private SignatureType[] signatureField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -22,75 +17,20 @@ public partial class CertificateType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("CertificateType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CertificateTypeType CertificateType1
-    {
-        get
-        {
-            return this.certificateType1Field;
-        }
-
-        set
-        {
-            this.certificateType1Field = value;
-        }
-    }
+    public CertificateTypeType CertificateType1 { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Remarks", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public RemarksType[] Remarks
-    {
-        get
-        {
-            return this.remarksField;
-        }
-
-        set
-        {
-            this.remarksField = value;
-        }
-    }
+    public RemarksType[] Remarks { get; set; }
 
     /// <remarks/>
-    public PartyType IssuerParty
-    {
-        get
-        {
-            return this.issuerPartyField;
-        }
-
-        set
-        {
-            this.issuerPartyField = value;
-        }
-    }
+    public PartyType IssuerParty { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("DocumentReference")]
-    public DocumentReferenceType[] DocumentReference
-    {
-        get
-        {
-            return this.documentReferenceField;
-        }
-
-        set
-        {
-            this.documentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType[] DocumentReference { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Signature")]
-    public SignatureType[] Signature
-    {
-        get
-        {
-            return this.signatureField;
-        }
-
-        set
-        {
-            this.signatureField = value;
-        }
-    }
+    public SignatureType[] Signature { get; set; }
 }

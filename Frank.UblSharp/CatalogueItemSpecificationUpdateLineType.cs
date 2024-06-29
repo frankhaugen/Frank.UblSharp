@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("CatalogueItemSpecificationUpdateLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class CatalogueItemSpecificationUpdateLineType
 {
-    private SupplierPartyType sellerSupplierPartyField;
-    private ItemType itemField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -17,30 +15,8 @@ public partial class CatalogueItemSpecificationUpdateLineType
     public CustomerPartyType ContractorCustomerParty { get; set; }
 
     /// <remarks/>
-    public SupplierPartyType SellerSupplierParty
-    {
-        get
-        {
-            return this.sellerSupplierPartyField;
-        }
-
-        set
-        {
-            this.sellerSupplierPartyField = value;
-        }
-    }
+    public SupplierPartyType SellerSupplierParty { get; set; }
 
     /// <remarks/>
-    public ItemType Item
-    {
-        get
-        {
-            return this.itemField;
-        }
-
-        set
-        {
-            this.itemField = value;
-        }
-    }
+    public ItemType Item { get; set; }
 }

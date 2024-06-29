@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("PreviousPriceList", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PriceListType
 {
-    private PeriodType[] validityPeriodField;
-    private PriceListType previousPriceListField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -19,30 +17,8 @@ public partial class PriceListType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ValidityPeriod")]
-    public PeriodType[] ValidityPeriod
-    {
-        get
-        {
-            return this.validityPeriodField;
-        }
-
-        set
-        {
-            this.validityPeriodField = value;
-        }
-    }
+    public PeriodType[] ValidityPeriod { get; set; }
 
     /// <remarks/>
-    public PriceListType PreviousPriceList
-    {
-        get
-        {
-            return this.previousPriceListField;
-        }
-
-        set
-        {
-            this.previousPriceListField = value;
-        }
-    }
+    public PriceListType PreviousPriceList { get; set; }
 }

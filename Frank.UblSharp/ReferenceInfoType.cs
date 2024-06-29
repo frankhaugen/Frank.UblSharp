@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ReferenceInfo", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
 public partial class ReferenceInfoType
 {
-    private string idField;
-    private string uRIField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     public DigestMethodType DigestMethod { get; set; }
@@ -19,31 +17,9 @@ public partial class ReferenceInfoType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
-    public string Id
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public string Id { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-    public string URI
-    {
-        get
-        {
-            return this.uRIField;
-        }
-
-        set
-        {
-            this.uRIField = value;
-        }
-    }
+    public string URI { get; set; }
 }

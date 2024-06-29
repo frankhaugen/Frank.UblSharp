@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("InterestedProcurementProjectLot", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ProcurementProjectLotType
 {
-    private ProcurementProjectType procurementProjectField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -16,16 +15,5 @@ public partial class ProcurementProjectLotType
     public TenderingTermsType TenderingTerms { get; set; }
 
     /// <remarks/>
-    public ProcurementProjectType ProcurementProject
-    {
-        get
-        {
-            return this.procurementProjectField;
-        }
-
-        set
-        {
-            this.procurementProjectField = value;
-        }
-    }
+    public ProcurementProjectType ProcurementProject { get; set; }
 }

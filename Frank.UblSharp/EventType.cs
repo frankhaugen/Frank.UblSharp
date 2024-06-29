@@ -7,13 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Event", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class EventType
 {
-    private OccurrenceTimeType occurrenceTimeField;
-    private TypeCodeType typeCodeField;
-    private DescriptionType[] descriptionField;
-    private CompletionIndicatorType completionIndicatorField;
-    private StatusType[] currentStatusField;
-    private ContactType[] contactField;
-    private LocationType1 occurenceLocationField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IdentificationIDType IdentificationID { get; set; }
@@ -24,105 +17,28 @@ public partial class EventType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public OccurrenceTimeType OccurrenceTime
-    {
-        get
-        {
-            return this.occurrenceTimeField;
-        }
-
-        set
-        {
-            this.occurrenceTimeField = value;
-        }
-    }
+    public OccurrenceTimeType OccurrenceTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TypeCodeType TypeCode
-    {
-        get
-        {
-            return this.typeCodeField;
-        }
-
-        set
-        {
-            this.typeCodeField = value;
-        }
-    }
+    public TypeCodeType TypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CompletionIndicatorType CompletionIndicator
-    {
-        get
-        {
-            return this.completionIndicatorField;
-        }
-
-        set
-        {
-            this.completionIndicatorField = value;
-        }
-    }
+    public CompletionIndicatorType CompletionIndicator { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("CurrentStatus")]
-    public StatusType[] CurrentStatus
-    {
-        get
-        {
-            return this.currentStatusField;
-        }
-
-        set
-        {
-            this.currentStatusField = value;
-        }
-    }
+    public StatusType[] CurrentStatus { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Contact")]
-    public ContactType[] Contact
-    {
-        get
-        {
-            return this.contactField;
-        }
-
-        set
-        {
-            this.contactField = value;
-        }
-    }
+    public ContactType[] Contact { get; set; }
 
     /// <remarks/>
-    public LocationType1 OccurenceLocation
-    {
-        get
-        {
-            return this.occurenceLocationField;
-        }
-
-        set
-        {
-            this.occurenceLocationField = value;
-        }
-    }
+    public LocationType1 OccurenceLocation { get; set; }
 }

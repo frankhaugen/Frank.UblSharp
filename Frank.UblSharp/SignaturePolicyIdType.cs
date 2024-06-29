@@ -6,8 +6,6 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
 public partial class SignaturePolicyIdType
 {
-    private DigestAlgAndValueType sigPolicyHashField;
-    private AnyType[] sigPolicyQualifiersField;
     /// <remarks/>
     public ObjectIdentifierType SigPolicyId { get; set; }
 
@@ -17,31 +15,9 @@ public partial class SignaturePolicyIdType
     public TransformType[] Transforms { get; set; }
 
     /// <remarks/>
-    public DigestAlgAndValueType SigPolicyHash
-    {
-        get
-        {
-            return this.sigPolicyHashField;
-        }
-
-        set
-        {
-            this.sigPolicyHashField = value;
-        }
-    }
+    public DigestAlgAndValueType SigPolicyHash { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayItemAttribute("SigPolicyQualifier", IsNullable = false)]
-    public AnyType[] SigPolicyQualifiers
-    {
-        get
-        {
-            return this.sigPolicyQualifiersField;
-        }
-
-        set
-        {
-            this.sigPolicyQualifiersField = value;
-        }
-    }
+    public AnyType[] SigPolicyQualifiers { get; set; }
 }

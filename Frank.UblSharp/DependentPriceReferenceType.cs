@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("DependentPriceReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class DependentPriceReferenceType
 {
-    private LineReferenceType dependentLineReferenceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PercentType1 Percent { get; set; }
@@ -16,16 +15,5 @@ public partial class DependentPriceReferenceType
     public AddressType LocationAddress { get; set; }
 
     /// <remarks/>
-    public LineReferenceType DependentLineReference
-    {
-        get
-        {
-            return this.dependentLineReferenceField;
-        }
-
-        set
-        {
-            this.dependentLineReferenceField = value;
-        }
-    }
+    public LineReferenceType DependentLineReference { get; set; }
 }

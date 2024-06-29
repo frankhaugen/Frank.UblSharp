@@ -7,11 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AuctionTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class AuctionTermsType
 {
-    private DescriptionType[] descriptionField;
-    private ProcessDescriptionType[] processDescriptionField;
-    private ConditionsDescriptionType[] conditionsDescriptionField;
-    private ElectronicDeviceDescriptionType[] electronicDeviceDescriptionField;
-    private AuctionURIType auctionURIField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AuctionConstraintIndicatorType AuctionConstraintIndicator { get; set; }
@@ -22,76 +17,21 @@ public partial class AuctionTermsType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ProcessDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ProcessDescriptionType[] ProcessDescription
-    {
-        get
-        {
-            return this.processDescriptionField;
-        }
-
-        set
-        {
-            this.processDescriptionField = value;
-        }
-    }
+    public ProcessDescriptionType[] ProcessDescription { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ConditionsDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ConditionsDescriptionType[] ConditionsDescription
-    {
-        get
-        {
-            return this.conditionsDescriptionField;
-        }
-
-        set
-        {
-            this.conditionsDescriptionField = value;
-        }
-    }
+    public ConditionsDescriptionType[] ConditionsDescription { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ElectronicDeviceDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ElectronicDeviceDescriptionType[] ElectronicDeviceDescription
-    {
-        get
-        {
-            return this.electronicDeviceDescriptionField;
-        }
-
-        set
-        {
-            this.electronicDeviceDescriptionField = value;
-        }
-    }
+    public ElectronicDeviceDescriptionType[] ElectronicDeviceDescription { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AuctionURIType AuctionURI
-    {
-        get
-        {
-            return this.auctionURIField;
-        }
-
-        set
-        {
-            this.auctionURIField = value;
-        }
-    }
+    public AuctionURIType AuctionURI { get; set; }
 }

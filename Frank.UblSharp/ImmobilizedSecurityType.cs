@@ -7,11 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ImmobilizedSecurity", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ImmobilizedSecurityType
 {
-    private IssueDateType issueDateField;
-    private FaceValueAmountType faceValueAmountField;
-    private MarketValueAmountType marketValueAmountField;
-    private SharesNumberQuantityType sharesNumberQuantityField;
-    private PartyType issuerPartyField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ImmobilizationCertificateIDType ImmobilizationCertificateID { get; set; }
@@ -22,75 +17,20 @@ public partial class ImmobilizedSecurityType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IssueDateType IssueDate
-    {
-        get
-        {
-            return this.issueDateField;
-        }
-
-        set
-        {
-            this.issueDateField = value;
-        }
-    }
+    public IssueDateType IssueDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public FaceValueAmountType FaceValueAmount
-    {
-        get
-        {
-            return this.faceValueAmountField;
-        }
-
-        set
-        {
-            this.faceValueAmountField = value;
-        }
-    }
+    public FaceValueAmountType FaceValueAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MarketValueAmountType MarketValueAmount
-    {
-        get
-        {
-            return this.marketValueAmountField;
-        }
-
-        set
-        {
-            this.marketValueAmountField = value;
-        }
-    }
+    public MarketValueAmountType MarketValueAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SharesNumberQuantityType SharesNumberQuantity
-    {
-        get
-        {
-            return this.sharesNumberQuantityField;
-        }
-
-        set
-        {
-            this.sharesNumberQuantityField = value;
-        }
-    }
+    public SharesNumberQuantityType SharesNumberQuantity { get; set; }
 
     /// <remarks/>
-    public PartyType IssuerParty
-    {
-        get
-        {
-            return this.issuerPartyField;
-        }
-
-        set
-        {
-            this.issuerPartyField = value;
-        }
-    }
+    public PartyType IssuerParty { get; set; }
 }

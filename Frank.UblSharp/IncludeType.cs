@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Include", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
 public partial class IncludeType
 {
-    private bool referencedDataFieldSpecified;
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
     public string URI { get; set; }
@@ -18,16 +17,5 @@ public partial class IncludeType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlIgnoreAttribute()]
-    public bool referencedDataSpecified
-    {
-        get
-        {
-            return this.referencedDataFieldSpecified;
-        }
-
-        set
-        {
-            this.referencedDataFieldSpecified = value;
-        }
-    }
+    public bool referencedDataSpecified { get; set; }
 }

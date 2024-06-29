@@ -7,11 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("PartyTaxScheme", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PartyTaxSchemeType
 {
-    private TaxLevelCodeType taxLevelCodeField;
-    private ExemptionReasonCodeType exemptionReasonCodeField;
-    private ExemptionReasonType[] exemptionReasonField;
-    private AddressType registrationAddressField;
-    private TaxSchemeType taxSchemeField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public RegistrationNameType RegistrationName { get; set; }
@@ -22,74 +17,19 @@ public partial class PartyTaxSchemeType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TaxLevelCodeType TaxLevelCode
-    {
-        get
-        {
-            return this.taxLevelCodeField;
-        }
-
-        set
-        {
-            this.taxLevelCodeField = value;
-        }
-    }
+    public TaxLevelCodeType TaxLevelCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ExemptionReasonCodeType ExemptionReasonCode
-    {
-        get
-        {
-            return this.exemptionReasonCodeField;
-        }
-
-        set
-        {
-            this.exemptionReasonCodeField = value;
-        }
-    }
+    public ExemptionReasonCodeType ExemptionReasonCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ExemptionReason", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ExemptionReasonType[] ExemptionReason
-    {
-        get
-        {
-            return this.exemptionReasonField;
-        }
-
-        set
-        {
-            this.exemptionReasonField = value;
-        }
-    }
+    public ExemptionReasonType[] ExemptionReason { get; set; }
 
     /// <remarks/>
-    public AddressType RegistrationAddress
-    {
-        get
-        {
-            return this.registrationAddressField;
-        }
-
-        set
-        {
-            this.registrationAddressField = value;
-        }
-    }
+    public AddressType RegistrationAddress { get; set; }
 
     /// <remarks/>
-    public TaxSchemeType TaxScheme
-    {
-        get
-        {
-            return this.taxSchemeField;
-        }
-
-        set
-        {
-            this.taxSchemeField = value;
-        }
-    }
+    public TaxSchemeType TaxScheme { get; set; }
 }

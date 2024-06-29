@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Communication", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class CommunicationType
 {
-    private ValueType valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ChannelCodeType ChannelCode { get; set; }
@@ -18,16 +17,5 @@ public partial class CommunicationType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ValueType Value
-    {
-        get
-        {
-            return this.valueField;
-        }
-
-        set
-        {
-            this.valueField = value;
-        }
-    }
+    public ValueType Value { get; set; }
 }

@@ -7,9 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("SecondaryHazard", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class SecondaryHazardType
 {
-    private PlacardEndorsementType placardEndorsementField;
-    private EmergencyProceduresCodeType emergencyProceduresCodeField;
-    private ExtensionType[] extensionField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -20,46 +17,13 @@ public partial class SecondaryHazardType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PlacardEndorsementType PlacardEndorsement
-    {
-        get
-        {
-            return this.placardEndorsementField;
-        }
-
-        set
-        {
-            this.placardEndorsementField = value;
-        }
-    }
+    public PlacardEndorsementType PlacardEndorsement { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public EmergencyProceduresCodeType EmergencyProceduresCode
-    {
-        get
-        {
-            return this.emergencyProceduresCodeField;
-        }
-
-        set
-        {
-            this.emergencyProceduresCodeField = value;
-        }
-    }
+    public EmergencyProceduresCodeType EmergencyProceduresCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Extension", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ExtensionType[] Extension
-    {
-        get
-        {
-            return this.extensionField;
-        }
-
-        set
-        {
-            this.extensionField = value;
-        }
-    }
+    public ExtensionType[] Extension { get; set; }
 }

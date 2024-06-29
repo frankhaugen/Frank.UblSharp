@@ -7,9 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("OrderLineReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class OrderLineReferenceType
 {
-    private UUIDType uUIDField;
-    private LineStatusCodeType lineStatusCodeField;
-    private OrderReferenceType orderReferenceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LineIDType LineID { get; set; }
@@ -20,45 +17,12 @@ public partial class OrderLineReferenceType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public UUIDType UUID
-    {
-        get
-        {
-            return this.uUIDField;
-        }
-
-        set
-        {
-            this.uUIDField = value;
-        }
-    }
+    public UUIDType UUID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LineStatusCodeType LineStatusCode
-    {
-        get
-        {
-            return this.lineStatusCodeField;
-        }
-
-        set
-        {
-            this.lineStatusCodeField = value;
-        }
-    }
+    public LineStatusCodeType LineStatusCode { get; set; }
 
     /// <remarks/>
-    public OrderReferenceType OrderReference
-    {
-        get
-        {
-            return this.orderReferenceField;
-        }
-
-        set
-        {
-            this.orderReferenceField = value;
-        }
-    }
+    public OrderReferenceType OrderReference { get; set; }
 }

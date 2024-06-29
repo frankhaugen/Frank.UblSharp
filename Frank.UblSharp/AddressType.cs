@@ -7,31 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Address", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class AddressType
 {
-    private AddressFormatCodeType addressFormatCodeField;
-    private PostboxType postboxField;
-    private FloorType floorField;
-    private RoomType roomField;
-    private StreetNameType streetNameField;
-    private AdditionalStreetNameType additionalStreetNameField;
-    private BlockNameType blockNameField;
-    private BuildingNameType buildingNameField;
-    private BuildingNumberType buildingNumberField;
-    private InhouseMailType inhouseMailField;
-    private DepartmentType departmentField;
-    private MarkAttentionType markAttentionField;
-    private MarkCareType markCareField;
-    private PlotIdentificationType plotIdentificationField;
-    private CitySubdivisionNameType citySubdivisionNameField;
-    private CityNameType cityNameField;
-    private PostalZoneType postalZoneField;
-    private CountrySubentityType countrySubentityField;
-    private CountrySubentityCodeType countrySubentityCodeField;
-    private RegionType regionField;
-    private DistrictType districtField;
-    private TimezoneOffsetType timezoneOffsetField;
-    private AddressLineType[] addressLineField;
-    private CountryType countryField;
-    private LocationCoordinateType[] locationCoordinateField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -42,375 +17,100 @@ public partial class AddressType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AddressFormatCodeType AddressFormatCode
-    {
-        get
-        {
-            return this.addressFormatCodeField;
-        }
-
-        set
-        {
-            this.addressFormatCodeField = value;
-        }
-    }
+    public AddressFormatCodeType AddressFormatCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PostboxType Postbox
-    {
-        get
-        {
-            return this.postboxField;
-        }
-
-        set
-        {
-            this.postboxField = value;
-        }
-    }
+    public PostboxType Postbox { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public FloorType Floor
-    {
-        get
-        {
-            return this.floorField;
-        }
-
-        set
-        {
-            this.floorField = value;
-        }
-    }
+    public FloorType Floor { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public RoomType Room
-    {
-        get
-        {
-            return this.roomField;
-        }
-
-        set
-        {
-            this.roomField = value;
-        }
-    }
+    public RoomType Room { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public StreetNameType StreetName
-    {
-        get
-        {
-            return this.streetNameField;
-        }
-
-        set
-        {
-            this.streetNameField = value;
-        }
-    }
+    public StreetNameType StreetName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AdditionalStreetNameType AdditionalStreetName
-    {
-        get
-        {
-            return this.additionalStreetNameField;
-        }
-
-        set
-        {
-            this.additionalStreetNameField = value;
-        }
-    }
+    public AdditionalStreetNameType AdditionalStreetName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public BlockNameType BlockName
-    {
-        get
-        {
-            return this.blockNameField;
-        }
-
-        set
-        {
-            this.blockNameField = value;
-        }
-    }
+    public BlockNameType BlockName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public BuildingNameType BuildingName
-    {
-        get
-        {
-            return this.buildingNameField;
-        }
-
-        set
-        {
-            this.buildingNameField = value;
-        }
-    }
+    public BuildingNameType BuildingName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public BuildingNumberType BuildingNumber
-    {
-        get
-        {
-            return this.buildingNumberField;
-        }
-
-        set
-        {
-            this.buildingNumberField = value;
-        }
-    }
+    public BuildingNumberType BuildingNumber { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public InhouseMailType InhouseMail
-    {
-        get
-        {
-            return this.inhouseMailField;
-        }
-
-        set
-        {
-            this.inhouseMailField = value;
-        }
-    }
+    public InhouseMailType InhouseMail { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DepartmentType Department
-    {
-        get
-        {
-            return this.departmentField;
-        }
-
-        set
-        {
-            this.departmentField = value;
-        }
-    }
+    public DepartmentType Department { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MarkAttentionType MarkAttention
-    {
-        get
-        {
-            return this.markAttentionField;
-        }
-
-        set
-        {
-            this.markAttentionField = value;
-        }
-    }
+    public MarkAttentionType MarkAttention { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MarkCareType MarkCare
-    {
-        get
-        {
-            return this.markCareField;
-        }
-
-        set
-        {
-            this.markCareField = value;
-        }
-    }
+    public MarkCareType MarkCare { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PlotIdentificationType PlotIdentification
-    {
-        get
-        {
-            return this.plotIdentificationField;
-        }
-
-        set
-        {
-            this.plotIdentificationField = value;
-        }
-    }
+    public PlotIdentificationType PlotIdentification { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CitySubdivisionNameType CitySubdivisionName
-    {
-        get
-        {
-            return this.citySubdivisionNameField;
-        }
-
-        set
-        {
-            this.citySubdivisionNameField = value;
-        }
-    }
+    public CitySubdivisionNameType CitySubdivisionName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CityNameType CityName
-    {
-        get
-        {
-            return this.cityNameField;
-        }
-
-        set
-        {
-            this.cityNameField = value;
-        }
-    }
+    public CityNameType CityName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PostalZoneType PostalZone
-    {
-        get
-        {
-            return this.postalZoneField;
-        }
-
-        set
-        {
-            this.postalZoneField = value;
-        }
-    }
+    public PostalZoneType PostalZone { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CountrySubentityType CountrySubentity
-    {
-        get
-        {
-            return this.countrySubentityField;
-        }
-
-        set
-        {
-            this.countrySubentityField = value;
-        }
-    }
+    public CountrySubentityType CountrySubentity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CountrySubentityCodeType CountrySubentityCode
-    {
-        get
-        {
-            return this.countrySubentityCodeField;
-        }
-
-        set
-        {
-            this.countrySubentityCodeField = value;
-        }
-    }
+    public CountrySubentityCodeType CountrySubentityCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public RegionType Region
-    {
-        get
-        {
-            return this.regionField;
-        }
-
-        set
-        {
-            this.regionField = value;
-        }
-    }
+    public RegionType Region { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DistrictType District
-    {
-        get
-        {
-            return this.districtField;
-        }
-
-        set
-        {
-            this.districtField = value;
-        }
-    }
+    public DistrictType District { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TimezoneOffsetType TimezoneOffset
-    {
-        get
-        {
-            return this.timezoneOffsetField;
-        }
-
-        set
-        {
-            this.timezoneOffsetField = value;
-        }
-    }
+    public TimezoneOffsetType TimezoneOffset { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("AddressLine")]
-    public AddressLineType[] AddressLine
-    {
-        get
-        {
-            return this.addressLineField;
-        }
-
-        set
-        {
-            this.addressLineField = value;
-        }
-    }
+    public AddressLineType[] AddressLine { get; set; }
 
     /// <remarks/>
-    public CountryType Country
-    {
-        get
-        {
-            return this.countryField;
-        }
-
-        set
-        {
-            this.countryField = value;
-        }
-    }
+    public CountryType Country { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("LocationCoordinate")]
-    public LocationCoordinateType[] LocationCoordinate
-    {
-        get
-        {
-            return this.locationCoordinateField;
-        }
-
-        set
-        {
-            this.locationCoordinateField = value;
-        }
-    }
+    public LocationCoordinateType[] LocationCoordinate { get; set; }
 }

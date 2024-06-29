@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ProjectReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ProjectReferenceType
 {
-    private IssueDateType issueDateField;
-    private WorkPhaseReferenceType[] workPhaseReferenceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -19,31 +17,9 @@ public partial class ProjectReferenceType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IssueDateType IssueDate
-    {
-        get
-        {
-            return this.issueDateField;
-        }
-
-        set
-        {
-            this.issueDateField = value;
-        }
-    }
+    public IssueDateType IssueDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("WorkPhaseReference")]
-    public WorkPhaseReferenceType[] WorkPhaseReference
-    {
-        get
-        {
-            return this.workPhaseReferenceField;
-        }
-
-        set
-        {
-            this.workPhaseReferenceField = value;
-        }
-    }
+    public WorkPhaseReferenceType[] WorkPhaseReference { get; set; }
 }

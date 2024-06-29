@@ -7,10 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TelecommunicationsSupply", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TelecommunicationsSupplyType
 {
-    private PrivacyCodeType privacyCodeField;
-    private DescriptionType[] descriptionField;
-    private TotalAmountType totalAmountField;
-    private TelecommunicationsSupplyLineType[] telecommunicationsSupplyLineField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("TelecommunicationsSupplyType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TelecommunicationsSupplyTypeType TelecommunicationsSupplyType1 { get; set; }
@@ -21,61 +17,17 @@ public partial class TelecommunicationsSupplyType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PrivacyCodeType PrivacyCode
-    {
-        get
-        {
-            return this.privacyCodeField;
-        }
-
-        set
-        {
-            this.privacyCodeField = value;
-        }
-    }
+    public PrivacyCodeType PrivacyCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TotalAmountType TotalAmount
-    {
-        get
-        {
-            return this.totalAmountField;
-        }
-
-        set
-        {
-            this.totalAmountField = value;
-        }
-    }
+    public TotalAmountType TotalAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("TelecommunicationsSupplyLine")]
-    public TelecommunicationsSupplyLineType[] TelecommunicationsSupplyLine
-    {
-        get
-        {
-            return this.telecommunicationsSupplyLineField;
-        }
-
-        set
-        {
-            this.telecommunicationsSupplyLineField = value;
-        }
-    }
+    public TelecommunicationsSupplyLineType[] TelecommunicationsSupplyLine { get; set; }
 }

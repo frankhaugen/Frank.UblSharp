@@ -7,11 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("WorkPhaseReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class WorkPhaseReferenceType
 {
-    private WorkPhaseType[] workPhaseField;
-    private ProgressPercentType progressPercentField;
-    private StartDateType startDateField;
-    private EndDateType endDateField;
-    private DocumentReferenceType[] workOrderDocumentReferenceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -22,76 +17,21 @@ public partial class WorkPhaseReferenceType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("WorkPhase", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public WorkPhaseType[] WorkPhase
-    {
-        get
-        {
-            return this.workPhaseField;
-        }
-
-        set
-        {
-            this.workPhaseField = value;
-        }
-    }
+    public WorkPhaseType[] WorkPhase { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ProgressPercentType ProgressPercent
-    {
-        get
-        {
-            return this.progressPercentField;
-        }
-
-        set
-        {
-            this.progressPercentField = value;
-        }
-    }
+    public ProgressPercentType ProgressPercent { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public StartDateType StartDate
-    {
-        get
-        {
-            return this.startDateField;
-        }
-
-        set
-        {
-            this.startDateField = value;
-        }
-    }
+    public StartDateType StartDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public EndDateType EndDate
-    {
-        get
-        {
-            return this.endDateField;
-        }
-
-        set
-        {
-            this.endDateField = value;
-        }
-    }
+    public EndDateType EndDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("WorkOrderDocumentReference")]
-    public DocumentReferenceType[] WorkOrderDocumentReference
-    {
-        get
-        {
-            return this.workOrderDocumentReferenceField;
-        }
-
-        set
-        {
-            this.workOrderDocumentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType[] WorkOrderDocumentReference { get; set; }
 }

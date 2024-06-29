@@ -7,12 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ForecastException", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ForecastExceptionType
 {
-    private IssueDateType issueDateField;
-    private IssueTimeType issueTimeField;
-    private DataSourceCodeType dataSourceCodeField;
-    private ComparisonDataCodeType comparisonDataCodeField;
-    private ComparisonForecastIssueTimeType comparisonForecastIssueTimeField;
-    private ComparisonForecastIssueDateType comparisonForecastIssueDateField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ForecastPurposeCodeType ForecastPurposeCode { get; set; }
@@ -23,91 +17,25 @@ public partial class ForecastExceptionType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IssueDateType IssueDate
-    {
-        get
-        {
-            return this.issueDateField;
-        }
-
-        set
-        {
-            this.issueDateField = value;
-        }
-    }
+    public IssueDateType IssueDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IssueTimeType IssueTime
-    {
-        get
-        {
-            return this.issueTimeField;
-        }
-
-        set
-        {
-            this.issueTimeField = value;
-        }
-    }
+    public IssueTimeType IssueTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DataSourceCodeType DataSourceCode
-    {
-        get
-        {
-            return this.dataSourceCodeField;
-        }
-
-        set
-        {
-            this.dataSourceCodeField = value;
-        }
-    }
+    public DataSourceCodeType DataSourceCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ComparisonDataCodeType ComparisonDataCode
-    {
-        get
-        {
-            return this.comparisonDataCodeField;
-        }
-
-        set
-        {
-            this.comparisonDataCodeField = value;
-        }
-    }
+    public ComparisonDataCodeType ComparisonDataCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ComparisonForecastIssueTimeType ComparisonForecastIssueTime
-    {
-        get
-        {
-            return this.comparisonForecastIssueTimeField;
-        }
-
-        set
-        {
-            this.comparisonForecastIssueTimeField = value;
-        }
-    }
+    public ComparisonForecastIssueTimeType ComparisonForecastIssueTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ComparisonForecastIssueDateType ComparisonForecastIssueDate
-    {
-        get
-        {
-            return this.comparisonForecastIssueDateField;
-        }
-
-        set
-        {
-            this.comparisonForecastIssueDateField = value;
-        }
-    }
+    public ComparisonForecastIssueDateType ComparisonForecastIssueDate { get; set; }
 }

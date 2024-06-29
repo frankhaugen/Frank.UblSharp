@@ -7,9 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("SpecificTendererRequirement", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TendererRequirementType
 {
-    private DescriptionType[] descriptionField;
-    private LegalReferenceType legalReferenceField;
-    private EvidenceType[] suggestedEvidenceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Name", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NameType1[] Name { get; set; }
@@ -20,46 +17,13 @@ public partial class TendererRequirementType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LegalReferenceType LegalReference
-    {
-        get
-        {
-            return this.legalReferenceField;
-        }
-
-        set
-        {
-            this.legalReferenceField = value;
-        }
-    }
+    public LegalReferenceType LegalReference { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("SuggestedEvidence")]
-    public EvidenceType[] SuggestedEvidence
-    {
-        get
-        {
-            return this.suggestedEvidenceField;
-        }
-
-        set
-        {
-            this.suggestedEvidenceField = value;
-        }
-    }
+    public EvidenceType[] SuggestedEvidence { get; set; }
 }

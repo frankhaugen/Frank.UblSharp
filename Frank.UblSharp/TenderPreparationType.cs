@@ -7,10 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TenderPreparation", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TenderPreparationType
 {
-    private DescriptionType[] descriptionField;
-    private OpenTenderIDType openTenderIDField;
-    private ProcurementProjectLotType[] procurementProjectLotField;
-    private TenderRequirementType[] documentTenderRequirementField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TenderEnvelopeIDType TenderEnvelopeID { get; set; }
@@ -21,61 +17,17 @@ public partial class TenderPreparationType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public OpenTenderIDType OpenTenderID
-    {
-        get
-        {
-            return this.openTenderIDField;
-        }
-
-        set
-        {
-            this.openTenderIDField = value;
-        }
-    }
+    public OpenTenderIDType OpenTenderID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ProcurementProjectLot")]
-    public ProcurementProjectLotType[] ProcurementProjectLot
-    {
-        get
-        {
-            return this.procurementProjectLotField;
-        }
-
-        set
-        {
-            this.procurementProjectLotField = value;
-        }
-    }
+    public ProcurementProjectLotType[] ProcurementProjectLot { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("DocumentTenderRequirement")]
-    public TenderRequirementType[] DocumentTenderRequirement
-    {
-        get
-        {
-            return this.documentTenderRequirementField;
-        }
-
-        set
-        {
-            this.documentTenderRequirementField = value;
-        }
-    }
+    public TenderRequirementType[] DocumentTenderRequirement { get; set; }
 }

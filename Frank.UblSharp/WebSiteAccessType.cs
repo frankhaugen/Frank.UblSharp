@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("WebSiteAccess", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class WebSiteAccessType
 {
-    private LoginType loginField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public URIType URI { get; set; }
@@ -18,16 +17,5 @@ public partial class WebSiteAccessType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LoginType Login
-    {
-        get
-        {
-            return this.loginField;
-        }
-
-        set
-        {
-            this.loginField = value;
-        }
-    }
+    public LoginType Login { get; set; }
 }

@@ -7,13 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ForecastRevisionLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ForecastRevisionLineType
 {
-    private DescriptionType[] descriptionField;
-    private RevisedForecastLineIDType revisedForecastLineIDField;
-    private SourceForecastIssueDateType sourceForecastIssueDateField;
-    private SourceForecastIssueTimeType sourceForecastIssueTimeField;
-    private AdjustmentReasonCodeType adjustmentReasonCodeField;
-    private PeriodType forecastPeriodField;
-    private SalesItemType salesItemField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -24,104 +17,27 @@ public partial class ForecastRevisionLineType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public RevisedForecastLineIDType RevisedForecastLineID
-    {
-        get
-        {
-            return this.revisedForecastLineIDField;
-        }
-
-        set
-        {
-            this.revisedForecastLineIDField = value;
-        }
-    }
+    public RevisedForecastLineIDType RevisedForecastLineID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SourceForecastIssueDateType SourceForecastIssueDate
-    {
-        get
-        {
-            return this.sourceForecastIssueDateField;
-        }
-
-        set
-        {
-            this.sourceForecastIssueDateField = value;
-        }
-    }
+    public SourceForecastIssueDateType SourceForecastIssueDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SourceForecastIssueTimeType SourceForecastIssueTime
-    {
-        get
-        {
-            return this.sourceForecastIssueTimeField;
-        }
-
-        set
-        {
-            this.sourceForecastIssueTimeField = value;
-        }
-    }
+    public SourceForecastIssueTimeType SourceForecastIssueTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AdjustmentReasonCodeType AdjustmentReasonCode
-    {
-        get
-        {
-            return this.adjustmentReasonCodeField;
-        }
-
-        set
-        {
-            this.adjustmentReasonCodeField = value;
-        }
-    }
+    public AdjustmentReasonCodeType AdjustmentReasonCode { get; set; }
 
     /// <remarks/>
-    public PeriodType ForecastPeriod
-    {
-        get
-        {
-            return this.forecastPeriodField;
-        }
-
-        set
-        {
-            this.forecastPeriodField = value;
-        }
-    }
+    public PeriodType ForecastPeriod { get; set; }
 
     /// <remarks/>
-    public SalesItemType SalesItem
-    {
-        get
-        {
-            return this.salesItemField;
-        }
-
-        set
-        {
-            this.salesItemField = value;
-        }
-    }
+    public SalesItemType SalesItem { get; set; }
 }

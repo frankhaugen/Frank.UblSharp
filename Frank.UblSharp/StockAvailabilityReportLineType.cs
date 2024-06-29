@@ -7,11 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("StockAvailabilityReportLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class StockAvailabilityReportLineType
 {
-    private QuantityType2 quantityField;
-    private ValueAmountType valueAmountField;
-    private AvailabilityDateType availabilityDateField;
-    private AvailabilityStatusCodeType availabilityStatusCodeField;
-    private ItemType itemField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -22,75 +17,20 @@ public partial class StockAvailabilityReportLineType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public QuantityType2 Quantity
-    {
-        get
-        {
-            return this.quantityField;
-        }
-
-        set
-        {
-            this.quantityField = value;
-        }
-    }
+    public QuantityType2 Quantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ValueAmountType ValueAmount
-    {
-        get
-        {
-            return this.valueAmountField;
-        }
-
-        set
-        {
-            this.valueAmountField = value;
-        }
-    }
+    public ValueAmountType ValueAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AvailabilityDateType AvailabilityDate
-    {
-        get
-        {
-            return this.availabilityDateField;
-        }
-
-        set
-        {
-            this.availabilityDateField = value;
-        }
-    }
+    public AvailabilityDateType AvailabilityDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AvailabilityStatusCodeType AvailabilityStatusCode
-    {
-        get
-        {
-            return this.availabilityStatusCodeField;
-        }
-
-        set
-        {
-            this.availabilityStatusCodeField = value;
-        }
-    }
+    public AvailabilityStatusCodeType AvailabilityStatusCode { get; set; }
 
     /// <remarks/>
-    public ItemType Item
-    {
-        get
-        {
-            return this.itemField;
-        }
-
-        set
-        {
-            this.itemField = value;
-        }
-    }
+    public ItemType Item { get; set; }
 }

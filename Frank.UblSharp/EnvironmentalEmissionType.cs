@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("EnvironmentalEmission", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class EnvironmentalEmissionType
 {
-    private DescriptionType[] descriptionField;
-    private EmissionCalculationMethodType[] emissionCalculationMethodField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public EnvironmentalEmissionTypeCodeType EnvironmentalEmissionTypeCode { get; set; }
@@ -19,31 +17,9 @@ public partial class EnvironmentalEmissionType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("EmissionCalculationMethod")]
-    public EmissionCalculationMethodType[] EmissionCalculationMethod
-    {
-        get
-        {
-            return this.emissionCalculationMethodField;
-        }
-
-        set
-        {
-            this.emissionCalculationMethodField = value;
-        }
-    }
+    public EmissionCalculationMethodType[] EmissionCalculationMethod { get; set; }
 }

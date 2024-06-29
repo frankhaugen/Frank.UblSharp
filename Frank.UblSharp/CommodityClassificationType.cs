@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AdditionalCommodityClassification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class CommodityClassificationType
 {
-    private CommodityCodeType commodityCodeField;
-    private ItemClassificationCodeType itemClassificationCodeField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NatureCodeType NatureCode { get; set; }
@@ -19,31 +17,9 @@ public partial class CommodityClassificationType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CommodityCodeType CommodityCode
-    {
-        get
-        {
-            return this.commodityCodeField;
-        }
-
-        set
-        {
-            this.commodityCodeField = value;
-        }
-    }
+    public CommodityCodeType CommodityCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ItemClassificationCodeType ItemClassificationCode
-    {
-        get
-        {
-            return this.itemClassificationCodeField;
-        }
-
-        set
-        {
-            this.itemClassificationCodeField = value;
-        }
-    }
+    public ItemClassificationCodeType ItemClassificationCode { get; set; }
 }

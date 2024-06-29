@@ -7,18 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Contract", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ContractType
 {
-    private IssueTimeType issueTimeField;
-    private NominationDateType nominationDateField;
-    private NominationTimeType nominationTimeField;
-    private ContractTypeCodeType contractTypeCodeField;
-    private ContractTypeType contractType1Field;
-    private NoteType[] noteField;
-    private VersionIDType versionIDField;
-    private DescriptionType[] descriptionField;
-    private PeriodType validityPeriodField;
-    private DocumentReferenceType[] contractDocumentReferenceField;
-    private PeriodType nominationPeriodField;
-    private DeliveryType contractualDeliveryField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -29,178 +17,46 @@ public partial class ContractType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IssueTimeType IssueTime
-    {
-        get
-        {
-            return this.issueTimeField;
-        }
-
-        set
-        {
-            this.issueTimeField = value;
-        }
-    }
+    public IssueTimeType IssueTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NominationDateType NominationDate
-    {
-        get
-        {
-            return this.nominationDateField;
-        }
-
-        set
-        {
-            this.nominationDateField = value;
-        }
-    }
+    public NominationDateType NominationDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NominationTimeType NominationTime
-    {
-        get
-        {
-            return this.nominationTimeField;
-        }
-
-        set
-        {
-            this.nominationTimeField = value;
-        }
-    }
+    public NominationTimeType NominationTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ContractTypeCodeType ContractTypeCode
-    {
-        get
-        {
-            return this.contractTypeCodeField;
-        }
-
-        set
-        {
-            this.contractTypeCodeField = value;
-        }
-    }
+    public ContractTypeCodeType ContractTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ContractType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ContractTypeType ContractType1
-    {
-        get
-        {
-            return this.contractType1Field;
-        }
-
-        set
-        {
-            this.contractType1Field = value;
-        }
-    }
+    public ContractTypeType ContractType1 { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NoteType[] Note
-    {
-        get
-        {
-            return this.noteField;
-        }
-
-        set
-        {
-            this.noteField = value;
-        }
-    }
+    public NoteType[] Note { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public VersionIDType VersionID
-    {
-        get
-        {
-            return this.versionIDField;
-        }
-
-        set
-        {
-            this.versionIDField = value;
-        }
-    }
+    public VersionIDType VersionID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
-    public PeriodType ValidityPeriod
-    {
-        get
-        {
-            return this.validityPeriodField;
-        }
-
-        set
-        {
-            this.validityPeriodField = value;
-        }
-    }
+    public PeriodType ValidityPeriod { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ContractDocumentReference")]
-    public DocumentReferenceType[] ContractDocumentReference
-    {
-        get
-        {
-            return this.contractDocumentReferenceField;
-        }
-
-        set
-        {
-            this.contractDocumentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType[] ContractDocumentReference { get; set; }
 
     /// <remarks/>
-    public PeriodType NominationPeriod
-    {
-        get
-        {
-            return this.nominationPeriodField;
-        }
-
-        set
-        {
-            this.nominationPeriodField = value;
-        }
-    }
+    public PeriodType NominationPeriod { get; set; }
 
     /// <remarks/>
-    public DeliveryType ContractualDelivery
-    {
-        get
-        {
-            return this.contractualDeliveryField;
-        }
-
-        set
-        {
-            this.contractualDeliveryField = value;
-        }
-    }
+    public DeliveryType ContractualDelivery { get; set; }
 }

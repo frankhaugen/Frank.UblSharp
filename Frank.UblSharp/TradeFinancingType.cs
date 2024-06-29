@@ -7,11 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TradeFinancing", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TradeFinancingType
 {
-    private DocumentReferenceType contractDocumentReferenceField;
-    private DocumentReferenceType[] documentReferenceField;
-    private PartyType financingPartyField;
-    private FinancialAccountType financingFinancialAccountField;
-    private ClauseType[] clauseField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -21,74 +16,19 @@ public partial class TradeFinancingType
     public FinancingInstrumentCodeType FinancingInstrumentCode { get; set; }
 
     /// <remarks/>
-    public DocumentReferenceType ContractDocumentReference
-    {
-        get
-        {
-            return this.contractDocumentReferenceField;
-        }
-
-        set
-        {
-            this.contractDocumentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType ContractDocumentReference { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("DocumentReference")]
-    public DocumentReferenceType[] DocumentReference
-    {
-        get
-        {
-            return this.documentReferenceField;
-        }
-
-        set
-        {
-            this.documentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType[] DocumentReference { get; set; }
 
     /// <remarks/>
-    public PartyType FinancingParty
-    {
-        get
-        {
-            return this.financingPartyField;
-        }
-
-        set
-        {
-            this.financingPartyField = value;
-        }
-    }
+    public PartyType FinancingParty { get; set; }
 
     /// <remarks/>
-    public FinancialAccountType FinancingFinancialAccount
-    {
-        get
-        {
-            return this.financingFinancialAccountField;
-        }
-
-        set
-        {
-            this.financingFinancialAccountField = value;
-        }
-    }
+    public FinancialAccountType FinancingFinancialAccount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Clause")]
-    public ClauseType[] Clause
-    {
-        get
-        {
-            return this.clauseField;
-        }
-
-        set
-        {
-            this.clauseField = value;
-        }
-    }
+    public ClauseType[] Clause { get; set; }
 }

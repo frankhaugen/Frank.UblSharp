@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("CorporateRegistrationScheme", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class CorporateRegistrationSchemeType
 {
-    private CorporateRegistrationTypeCodeType corporateRegistrationTypeCodeField;
-    private AddressType[] jurisdictionRegionAddressField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -19,31 +17,9 @@ public partial class CorporateRegistrationSchemeType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CorporateRegistrationTypeCodeType CorporateRegistrationTypeCode
-    {
-        get
-        {
-            return this.corporateRegistrationTypeCodeField;
-        }
-
-        set
-        {
-            this.corporateRegistrationTypeCodeField = value;
-        }
-    }
+    public CorporateRegistrationTypeCodeType CorporateRegistrationTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("JurisdictionRegionAddress")]
-    public AddressType[] JurisdictionRegionAddress
-    {
-        get
-        {
-            return this.jurisdictionRegionAddressField;
-        }
-
-        set
-        {
-            this.jurisdictionRegionAddressField = value;
-        }
-    }
+    public AddressType[] JurisdictionRegionAddress { get; set; }
 }

@@ -7,14 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ItemManagementProfile", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ItemManagementProfileType
 {
-    private MultipleOrderQuantityType multipleOrderQuantityField;
-    private OrderIntervalDaysNumericType orderIntervalDaysNumericField;
-    private ReplenishmentOwnerDescriptionType[] replenishmentOwnerDescriptionField;
-    private TargetServicePercentType targetServicePercentField;
-    private TargetInventoryQuantityType targetInventoryQuantityField;
-    private PeriodType effectivePeriodField;
-    private ItemType itemField;
-    private ItemLocationQuantityType itemLocationQuantityField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public FrozenPeriodDaysNumericType FrozenPeriodDaysNumeric { get; set; }
@@ -25,118 +17,30 @@ public partial class ItemManagementProfileType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MultipleOrderQuantityType MultipleOrderQuantity
-    {
-        get
-        {
-            return this.multipleOrderQuantityField;
-        }
-
-        set
-        {
-            this.multipleOrderQuantityField = value;
-        }
-    }
+    public MultipleOrderQuantityType MultipleOrderQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public OrderIntervalDaysNumericType OrderIntervalDaysNumeric
-    {
-        get
-        {
-            return this.orderIntervalDaysNumericField;
-        }
-
-        set
-        {
-            this.orderIntervalDaysNumericField = value;
-        }
-    }
+    public OrderIntervalDaysNumericType OrderIntervalDaysNumeric { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ReplenishmentOwnerDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ReplenishmentOwnerDescriptionType[] ReplenishmentOwnerDescription
-    {
-        get
-        {
-            return this.replenishmentOwnerDescriptionField;
-        }
-
-        set
-        {
-            this.replenishmentOwnerDescriptionField = value;
-        }
-    }
+    public ReplenishmentOwnerDescriptionType[] ReplenishmentOwnerDescription { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TargetServicePercentType TargetServicePercent
-    {
-        get
-        {
-            return this.targetServicePercentField;
-        }
-
-        set
-        {
-            this.targetServicePercentField = value;
-        }
-    }
+    public TargetServicePercentType TargetServicePercent { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TargetInventoryQuantityType TargetInventoryQuantity
-    {
-        get
-        {
-            return this.targetInventoryQuantityField;
-        }
-
-        set
-        {
-            this.targetInventoryQuantityField = value;
-        }
-    }
+    public TargetInventoryQuantityType TargetInventoryQuantity { get; set; }
 
     /// <remarks/>
-    public PeriodType EffectivePeriod
-    {
-        get
-        {
-            return this.effectivePeriodField;
-        }
-
-        set
-        {
-            this.effectivePeriodField = value;
-        }
-    }
+    public PeriodType EffectivePeriod { get; set; }
 
     /// <remarks/>
-    public ItemType Item
-    {
-        get
-        {
-            return this.itemField;
-        }
-
-        set
-        {
-            this.itemField = value;
-        }
-    }
+    public ItemType Item { get; set; }
 
     /// <remarks/>
-    public ItemLocationQuantityType ItemLocationQuantity
-    {
-        get
-        {
-            return this.itemLocationQuantityField;
-        }
-
-        set
-        {
-            this.itemLocationQuantityField = value;
-        }
-    }
+    public ItemLocationQuantityType ItemLocationQuantity { get; set; }
 }

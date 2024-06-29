@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("EventLineItem", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class EventLineItemType
 {
-    private RetailPlannedImpactType[] retailPlannedImpactField;
-    private ItemType supplyItemField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LineNumberNumericType LineNumberNumeric { get; set; }
@@ -18,30 +16,8 @@ public partial class EventLineItemType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("RetailPlannedImpact")]
-    public RetailPlannedImpactType[] RetailPlannedImpact
-    {
-        get
-        {
-            return this.retailPlannedImpactField;
-        }
-
-        set
-        {
-            this.retailPlannedImpactField = value;
-        }
-    }
+    public RetailPlannedImpactType[] RetailPlannedImpact { get; set; }
 
     /// <remarks/>
-    public ItemType SupplyItem
-    {
-        get
-        {
-            return this.supplyItemField;
-        }
-
-        set
-        {
-            this.supplyItemField = value;
-        }
-    }
+    public ItemType SupplyItem { get; set; }
 }

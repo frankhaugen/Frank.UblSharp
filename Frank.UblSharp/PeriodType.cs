@@ -7,11 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ActivityPeriod", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PeriodType
 {
-    private EndDateType endDateField;
-    private EndTimeType endTimeField;
-    private DurationMeasureType durationMeasureField;
-    private DescriptionCodeType[] descriptionCodeField;
-    private DescriptionType[] descriptionField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public StartDateType StartDate { get; set; }
@@ -22,76 +17,21 @@ public partial class PeriodType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public EndDateType EndDate
-    {
-        get
-        {
-            return this.endDateField;
-        }
-
-        set
-        {
-            this.endDateField = value;
-        }
-    }
+    public EndDateType EndDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public EndTimeType EndTime
-    {
-        get
-        {
-            return this.endTimeField;
-        }
-
-        set
-        {
-            this.endTimeField = value;
-        }
-    }
+    public EndTimeType EndTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DurationMeasureType DurationMeasure
-    {
-        get
-        {
-            return this.durationMeasureField;
-        }
-
-        set
-        {
-            this.durationMeasureField = value;
-        }
-    }
+    public DurationMeasureType DurationMeasure { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("DescriptionCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionCodeType[] DescriptionCode
-    {
-        get
-        {
-            return this.descriptionCodeField;
-        }
-
-        set
-        {
-            this.descriptionCodeField = value;
-        }
-    }
+    public DescriptionCodeType[] DescriptionCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 }

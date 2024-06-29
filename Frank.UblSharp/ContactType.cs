@@ -7,11 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AccountingContact", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ContactType
 {
-    private TelephoneType telephoneField;
-    private TelefaxType telefaxField;
-    private ElectronicMailType electronicMailField;
-    private NoteType[] noteField;
-    private CommunicationType[] otherCommunicationField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -22,76 +17,21 @@ public partial class ContactType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TelephoneType Telephone
-    {
-        get
-        {
-            return this.telephoneField;
-        }
-
-        set
-        {
-            this.telephoneField = value;
-        }
-    }
+    public TelephoneType Telephone { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TelefaxType Telefax
-    {
-        get
-        {
-            return this.telefaxField;
-        }
-
-        set
-        {
-            this.telefaxField = value;
-        }
-    }
+    public TelefaxType Telefax { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ElectronicMailType ElectronicMail
-    {
-        get
-        {
-            return this.electronicMailField;
-        }
-
-        set
-        {
-            this.electronicMailField = value;
-        }
-    }
+    public ElectronicMailType ElectronicMail { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NoteType[] Note
-    {
-        get
-        {
-            return this.noteField;
-        }
-
-        set
-        {
-            this.noteField = value;
-        }
-    }
+    public NoteType[] Note { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("OtherCommunication")]
-    public CommunicationType[] OtherCommunication
-    {
-        get
-        {
-            return this.otherCommunicationField;
-        }
-
-        set
-        {
-            this.otherCommunicationField = value;
-        }
-    }
+    public CommunicationType[] OtherCommunication { get; set; }
 }

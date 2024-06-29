@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Object", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
 public partial class ObjectType
 {
-    private string mimeTypeField;
-    private string encodingField;
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute()]
     [System.Xml.Serialization.XmlAnyElementAttribute()]
@@ -20,31 +18,9 @@ public partial class ObjectType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string MimeType
-    {
-        get
-        {
-            return this.mimeTypeField;
-        }
-
-        set
-        {
-            this.mimeTypeField = value;
-        }
-    }
+    public string MimeType { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-    public string Encoding
-    {
-        get
-        {
-            return this.encodingField;
-        }
-
-        set
-        {
-            this.encodingField = value;
-        }
-    }
+    public string Encoding { get; set; }
 }

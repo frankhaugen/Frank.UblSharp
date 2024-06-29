@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ContractingParty", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ContractingPartyType
 {
-    private ContractingActivityType[] contractingActivityField;
-    private PartyType partyField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public BuyerProfileURIType BuyerProfileURI { get; set; }
@@ -19,30 +17,8 @@ public partial class ContractingPartyType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ContractingActivity")]
-    public ContractingActivityType[] ContractingActivity
-    {
-        get
-        {
-            return this.contractingActivityField;
-        }
-
-        set
-        {
-            this.contractingActivityField = value;
-        }
-    }
+    public ContractingActivityType[] ContractingActivity { get; set; }
 
     /// <remarks/>
-    public PartyType Party
-    {
-        get
-        {
-            return this.partyField;
-        }
-
-        set
-        {
-            this.partyField = value;
-        }
-    }
+    public PartyType Party { get; set; }
 }

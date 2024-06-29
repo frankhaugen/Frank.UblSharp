@@ -7,15 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TendererQualificationRequest", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TendererQualificationRequestType
 {
-    private PersonalSituationType[] personalSituationField;
-    private OperatingYearsQuantityType operatingYearsQuantityField;
-    private EmployeeQuantityType employeeQuantityField;
-    private DescriptionType[] descriptionField;
-    private ClassificationSchemeType[] requiredBusinessClassificationSchemeField;
-    private EvaluationCriterionType[] technicalEvaluationCriterionField;
-    private EvaluationCriterionType[] financialEvaluationCriterionField;
-    private TendererRequirementType[] specificTendererRequirementField;
-    private EconomicOperatorRoleType[] economicOperatorRoleField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CompanyLegalFormCodeType CompanyLegalFormCode { get; set; }
@@ -26,136 +17,37 @@ public partial class TendererQualificationRequestType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("PersonalSituation", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PersonalSituationType[] PersonalSituation
-    {
-        get
-        {
-            return this.personalSituationField;
-        }
-
-        set
-        {
-            this.personalSituationField = value;
-        }
-    }
+    public PersonalSituationType[] PersonalSituation { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public OperatingYearsQuantityType OperatingYearsQuantity
-    {
-        get
-        {
-            return this.operatingYearsQuantityField;
-        }
-
-        set
-        {
-            this.operatingYearsQuantityField = value;
-        }
-    }
+    public OperatingYearsQuantityType OperatingYearsQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public EmployeeQuantityType EmployeeQuantity
-    {
-        get
-        {
-            return this.employeeQuantityField;
-        }
-
-        set
-        {
-            this.employeeQuantityField = value;
-        }
-    }
+    public EmployeeQuantityType EmployeeQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("RequiredBusinessClassificationScheme")]
-    public ClassificationSchemeType[] RequiredBusinessClassificationScheme
-    {
-        get
-        {
-            return this.requiredBusinessClassificationSchemeField;
-        }
-
-        set
-        {
-            this.requiredBusinessClassificationSchemeField = value;
-        }
-    }
+    public ClassificationSchemeType[] RequiredBusinessClassificationScheme { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("TechnicalEvaluationCriterion")]
-    public EvaluationCriterionType[] TechnicalEvaluationCriterion
-    {
-        get
-        {
-            return this.technicalEvaluationCriterionField;
-        }
-
-        set
-        {
-            this.technicalEvaluationCriterionField = value;
-        }
-    }
+    public EvaluationCriterionType[] TechnicalEvaluationCriterion { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("FinancialEvaluationCriterion")]
-    public EvaluationCriterionType[] FinancialEvaluationCriterion
-    {
-        get
-        {
-            return this.financialEvaluationCriterionField;
-        }
-
-        set
-        {
-            this.financialEvaluationCriterionField = value;
-        }
-    }
+    public EvaluationCriterionType[] FinancialEvaluationCriterion { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("SpecificTendererRequirement")]
-    public TendererRequirementType[] SpecificTendererRequirement
-    {
-        get
-        {
-            return this.specificTendererRequirementField;
-        }
-
-        set
-        {
-            this.specificTendererRequirementField = value;
-        }
-    }
+    public TendererRequirementType[] SpecificTendererRequirement { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("EconomicOperatorRole")]
-    public EconomicOperatorRoleType[] EconomicOperatorRole
-    {
-        get
-        {
-            return this.economicOperatorRoleField;
-        }
-
-        set
-        {
-            this.economicOperatorRoleField = value;
-        }
-    }
+    public EconomicOperatorRoleType[] EconomicOperatorRole { get; set; }
 }

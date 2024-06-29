@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("CategorizesClassificationCategory", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ClassificationCategoryType
 {
-    private DescriptionType[] descriptionField;
-    private ClassificationCategoryType[] categorizesClassificationCategoryField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NameType1 Name { get; set; }
@@ -19,31 +17,9 @@ public partial class ClassificationCategoryType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("CategorizesClassificationCategory")]
-    public ClassificationCategoryType[] CategorizesClassificationCategory
-    {
-        get
-        {
-            return this.categorizesClassificationCategoryField;
-        }
-
-        set
-        {
-            this.categorizesClassificationCategoryField = value;
-        }
-    }
+    public ClassificationCategoryType[] CategorizesClassificationCategory { get; set; }
 }

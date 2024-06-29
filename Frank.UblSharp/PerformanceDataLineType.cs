@@ -7,10 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("PerformanceDataLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PerformanceDataLineType
 {
-    private PerformanceValueQuantityType performanceValueQuantityField;
-    private PerformanceMetricTypeCodeType performanceMetricTypeCodeField;
-    private PeriodType periodField;
-    private ItemType itemField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -21,59 +17,15 @@ public partial class PerformanceDataLineType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PerformanceValueQuantityType PerformanceValueQuantity
-    {
-        get
-        {
-            return this.performanceValueQuantityField;
-        }
-
-        set
-        {
-            this.performanceValueQuantityField = value;
-        }
-    }
+    public PerformanceValueQuantityType PerformanceValueQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PerformanceMetricTypeCodeType PerformanceMetricTypeCode
-    {
-        get
-        {
-            return this.performanceMetricTypeCodeField;
-        }
-
-        set
-        {
-            this.performanceMetricTypeCodeField = value;
-        }
-    }
+    public PerformanceMetricTypeCodeType PerformanceMetricTypeCode { get; set; }
 
     /// <remarks/>
-    public PeriodType Period
-    {
-        get
-        {
-            return this.periodField;
-        }
-
-        set
-        {
-            this.periodField = value;
-        }
-    }
+    public PeriodType Period { get; set; }
 
     /// <remarks/>
-    public ItemType Item
-    {
-        get
-        {
-            return this.itemField;
-        }
-
-        set
-        {
-            this.itemField = value;
-        }
-    }
+    public ItemType Item { get; set; }
 }

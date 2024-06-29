@@ -7,10 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TransportationSegment", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TransportationSegmentType
 {
-    private TransportationServiceType transportationServiceField;
-    private PartyType transportServiceProviderPartyField;
-    private ConsignmentType referencedConsignmentField;
-    private ShipmentStageType[] shipmentStageField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SequenceNumericType SequenceNumeric { get; set; }
@@ -20,59 +16,15 @@ public partial class TransportationSegmentType
     public TransportExecutionPlanReferenceIDType TransportExecutionPlanReferenceID { get; set; }
 
     /// <remarks/>
-    public TransportationServiceType TransportationService
-    {
-        get
-        {
-            return this.transportationServiceField;
-        }
-
-        set
-        {
-            this.transportationServiceField = value;
-        }
-    }
+    public TransportationServiceType TransportationService { get; set; }
 
     /// <remarks/>
-    public PartyType TransportServiceProviderParty
-    {
-        get
-        {
-            return this.transportServiceProviderPartyField;
-        }
-
-        set
-        {
-            this.transportServiceProviderPartyField = value;
-        }
-    }
+    public PartyType TransportServiceProviderParty { get; set; }
 
     /// <remarks/>
-    public ConsignmentType ReferencedConsignment
-    {
-        get
-        {
-            return this.referencedConsignmentField;
-        }
-
-        set
-        {
-            this.referencedConsignmentField = value;
-        }
-    }
+    public ConsignmentType ReferencedConsignment { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ShipmentStage")]
-    public ShipmentStageType[] ShipmentStage
-    {
-        get
-        {
-            return this.shipmentStageField;
-        }
-
-        set
-        {
-            this.shipmentStageField = value;
-        }
-    }
+    public ShipmentStageType[] ShipmentStage { get; set; }
 }

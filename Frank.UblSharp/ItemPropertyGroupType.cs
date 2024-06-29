@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ItemPropertyGroup", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ItemPropertyGroupType
 {
-    private ImportanceCodeType importanceCodeField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -18,16 +17,5 @@ public partial class ItemPropertyGroupType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ImportanceCodeType ImportanceCode
-    {
-        get
-        {
-            return this.importanceCodeField;
-        }
-
-        set
-        {
-            this.importanceCodeField = value;
-        }
-    }
+    public ImportanceCodeType ImportanceCode { get; set; }
 }

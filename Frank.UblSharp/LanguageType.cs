@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("DefaultLanguage", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class LanguageType
 {
-    private LocaleCodeType localeCodeField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -18,16 +17,5 @@ public partial class LanguageType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LocaleCodeType LocaleCode
-    {
-        get
-        {
-            return this.localeCodeField;
-        }
-
-        set
-        {
-            this.localeCodeField = value;
-        }
-    }
+    public LocaleCodeType LocaleCode { get; set; }
 }

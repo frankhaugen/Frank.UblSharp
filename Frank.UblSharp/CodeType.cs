@@ -221,14 +221,6 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
 public partial class CodeType
 {
-    private string listAgencyNameField;
-    private string listNameField;
-    private string listVersionIDField;
-    private string nameField;
-    private string languageIDField;
-    private string listURIField;
-    private string listSchemeURIField;
-    private string valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
     public string listID { get; set; }
@@ -239,121 +231,33 @@ public partial class CodeType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string listAgencyName
-    {
-        get
-        {
-            return this.listAgencyNameField;
-        }
-
-        set
-        {
-            this.listAgencyNameField = value;
-        }
-    }
+    public string listAgencyName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string listName
-    {
-        get
-        {
-            return this.listNameField;
-        }
-
-        set
-        {
-            this.listNameField = value;
-        }
-    }
+    public string listName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-    public string listVersionID
-    {
-        get
-        {
-            return this.listVersionIDField;
-        }
-
-        set
-        {
-            this.listVersionIDField = value;
-        }
-    }
+    public string listVersionID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string name
-    {
-        get
-        {
-            return this.nameField;
-        }
-
-        set
-        {
-            this.nameField = value;
-        }
-    }
+    public string name { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "language")]
-    public string languageID
-    {
-        get
-        {
-            return this.languageIDField;
-        }
-
-        set
-        {
-            this.languageIDField = value;
-        }
-    }
+    public string languageID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-    public string listURI
-    {
-        get
-        {
-            return this.listURIField;
-        }
-
-        set
-        {
-            this.listURIField = value;
-        }
-    }
+    public string listURI { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-    public string listSchemeURI
-    {
-        get
-        {
-            return this.listSchemeURIField;
-        }
-
-        set
-        {
-            this.listSchemeURIField = value;
-        }
-    }
+    public string listSchemeURI { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute(DataType = "normalizedString")]
-    public string Value
-    {
-        get
-        {
-            return this.valueField;
-        }
-
-        set
-        {
-            this.valueField = value;
-        }
-    }
+    public string Value { get; set; }
 }

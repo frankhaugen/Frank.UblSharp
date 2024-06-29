@@ -7,10 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("QualificationResolution", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class QualificationResolutionType
 {
-    private ResolutionType[] resolutionField;
-    private ResolutionDateType resolutionDateField;
-    private ResolutionTimeType resolutionTimeField;
-    private ProcurementProjectLotType procurementProjectLotField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AdmissionCodeType AdmissionCode { get; set; }
@@ -21,60 +17,16 @@ public partial class QualificationResolutionType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Resolution", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ResolutionType[] Resolution
-    {
-        get
-        {
-            return this.resolutionField;
-        }
-
-        set
-        {
-            this.resolutionField = value;
-        }
-    }
+    public ResolutionType[] Resolution { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ResolutionDateType ResolutionDate
-    {
-        get
-        {
-            return this.resolutionDateField;
-        }
-
-        set
-        {
-            this.resolutionDateField = value;
-        }
-    }
+    public ResolutionDateType ResolutionDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ResolutionTimeType ResolutionTime
-    {
-        get
-        {
-            return this.resolutionTimeField;
-        }
-
-        set
-        {
-            this.resolutionTimeField = value;
-        }
-    }
+    public ResolutionTimeType ResolutionTime { get; set; }
 
     /// <remarks/>
-    public ProcurementProjectLotType ProcurementProjectLot
-    {
-        get
-        {
-            return this.procurementProjectLotField;
-        }
-
-        set
-        {
-            this.procurementProjectLotField = value;
-        }
-    }
+    public ProcurementProjectLotType ProcurementProjectLot { get; set; }
 }

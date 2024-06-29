@@ -7,12 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ActivityDataLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ActivityDataLineType
 {
-    private CustomerPartyType buyerCustomerPartyField;
-    private SupplierPartyType sellerSupplierPartyField;
-    private PeriodType activityPeriodField;
-    private LocationType1 activityOriginLocationField;
-    private LocationType1 activityFinalLocationField;
-    private SalesItemType[] salesItemField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -22,87 +16,21 @@ public partial class ActivityDataLineType
     public SupplyChainActivityTypeCodeType SupplyChainActivityTypeCode { get; set; }
 
     /// <remarks/>
-    public CustomerPartyType BuyerCustomerParty
-    {
-        get
-        {
-            return this.buyerCustomerPartyField;
-        }
-
-        set
-        {
-            this.buyerCustomerPartyField = value;
-        }
-    }
+    public CustomerPartyType BuyerCustomerParty { get; set; }
 
     /// <remarks/>
-    public SupplierPartyType SellerSupplierParty
-    {
-        get
-        {
-            return this.sellerSupplierPartyField;
-        }
-
-        set
-        {
-            this.sellerSupplierPartyField = value;
-        }
-    }
+    public SupplierPartyType SellerSupplierParty { get; set; }
 
     /// <remarks/>
-    public PeriodType ActivityPeriod
-    {
-        get
-        {
-            return this.activityPeriodField;
-        }
-
-        set
-        {
-            this.activityPeriodField = value;
-        }
-    }
+    public PeriodType ActivityPeriod { get; set; }
 
     /// <remarks/>
-    public LocationType1 ActivityOriginLocation
-    {
-        get
-        {
-            return this.activityOriginLocationField;
-        }
-
-        set
-        {
-            this.activityOriginLocationField = value;
-        }
-    }
+    public LocationType1 ActivityOriginLocation { get; set; }
 
     /// <remarks/>
-    public LocationType1 ActivityFinalLocation
-    {
-        get
-        {
-            return this.activityFinalLocationField;
-        }
-
-        set
-        {
-            this.activityFinalLocationField = value;
-        }
-    }
+    public LocationType1 ActivityFinalLocation { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("SalesItem")]
-    public SalesItemType[] SalesItem
-    {
-        get
-        {
-            return this.salesItemField;
-        }
-
-        set
-        {
-            this.salesItemField = value;
-        }
-    }
+    public SalesItemType[] SalesItem { get; set; }
 }

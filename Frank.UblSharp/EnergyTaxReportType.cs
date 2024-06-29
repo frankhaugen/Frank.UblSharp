@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("EnergyTaxReport", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class EnergyTaxReportType
 {
-    private TaxEnergyBalanceAmountType taxEnergyBalanceAmountField;
-    private TaxSchemeType taxSchemeField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TaxEnergyAmountType TaxEnergyAmount { get; set; }
@@ -19,30 +17,8 @@ public partial class EnergyTaxReportType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TaxEnergyBalanceAmountType TaxEnergyBalanceAmount
-    {
-        get
-        {
-            return this.taxEnergyBalanceAmountField;
-        }
-
-        set
-        {
-            this.taxEnergyBalanceAmountField = value;
-        }
-    }
+    public TaxEnergyBalanceAmountType TaxEnergyBalanceAmount { get; set; }
 
     /// <remarks/>
-    public TaxSchemeType TaxScheme
-    {
-        get
-        {
-            return this.taxSchemeField;
-        }
-
-        set
-        {
-            this.taxSchemeField = value;
-        }
-    }
+    public TaxSchemeType TaxScheme { get; set; }
 }

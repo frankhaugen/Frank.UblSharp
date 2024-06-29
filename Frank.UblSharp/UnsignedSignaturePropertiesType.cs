@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("UnsignedSignatureProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
 public partial class UnsignedSignaturePropertiesType
 {
-    private string idField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAnyElementAttribute()]
     [System.Xml.Serialization.XmlElementAttribute("ArchiveTimeStamp", typeof(XAdESTimeStampType))]
@@ -33,16 +32,5 @@ public partial class UnsignedSignaturePropertiesType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
-    public string Id
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public string Id { get; set; }
 }

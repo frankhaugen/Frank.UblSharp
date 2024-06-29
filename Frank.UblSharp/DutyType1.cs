@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("CallDuty", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class DutyType1
 {
-    private DutyCodeType dutyCodeField;
-    private TaxCategoryType taxCategoryField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AmountType2 Amount { get; set; }
@@ -19,30 +17,8 @@ public partial class DutyType1
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DutyCodeType DutyCode
-    {
-        get
-        {
-            return this.dutyCodeField;
-        }
-
-        set
-        {
-            this.dutyCodeField = value;
-        }
-    }
+    public DutyCodeType DutyCode { get; set; }
 
     /// <remarks/>
-    public TaxCategoryType TaxCategory
-    {
-        get
-        {
-            return this.taxCategoryField;
-        }
-
-        set
-        {
-            this.taxCategoryField = value;
-        }
-    }
+    public TaxCategoryType TaxCategory { get; set; }
 }

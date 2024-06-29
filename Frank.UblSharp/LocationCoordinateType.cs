@@ -7,12 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("LocationCoordinate", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class LocationCoordinateType
 {
-    private LatitudeMinutesMeasureType latitudeMinutesMeasureField;
-    private LatitudeDirectionCodeType latitudeDirectionCodeField;
-    private LongitudeDegreesMeasureType longitudeDegreesMeasureField;
-    private LongitudeMinutesMeasureType longitudeMinutesMeasureField;
-    private LongitudeDirectionCodeType longitudeDirectionCodeField;
-    private AltitudeMeasureType altitudeMeasureField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CoordinateSystemCodeType CoordinateSystemCode { get; set; }
@@ -23,91 +17,25 @@ public partial class LocationCoordinateType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LatitudeMinutesMeasureType LatitudeMinutesMeasure
-    {
-        get
-        {
-            return this.latitudeMinutesMeasureField;
-        }
-
-        set
-        {
-            this.latitudeMinutesMeasureField = value;
-        }
-    }
+    public LatitudeMinutesMeasureType LatitudeMinutesMeasure { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LatitudeDirectionCodeType LatitudeDirectionCode
-    {
-        get
-        {
-            return this.latitudeDirectionCodeField;
-        }
-
-        set
-        {
-            this.latitudeDirectionCodeField = value;
-        }
-    }
+    public LatitudeDirectionCodeType LatitudeDirectionCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LongitudeDegreesMeasureType LongitudeDegreesMeasure
-    {
-        get
-        {
-            return this.longitudeDegreesMeasureField;
-        }
-
-        set
-        {
-            this.longitudeDegreesMeasureField = value;
-        }
-    }
+    public LongitudeDegreesMeasureType LongitudeDegreesMeasure { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LongitudeMinutesMeasureType LongitudeMinutesMeasure
-    {
-        get
-        {
-            return this.longitudeMinutesMeasureField;
-        }
-
-        set
-        {
-            this.longitudeMinutesMeasureField = value;
-        }
-    }
+    public LongitudeMinutesMeasureType LongitudeMinutesMeasure { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LongitudeDirectionCodeType LongitudeDirectionCode
-    {
-        get
-        {
-            return this.longitudeDirectionCodeField;
-        }
-
-        set
-        {
-            this.longitudeDirectionCodeField = value;
-        }
-    }
+    public LongitudeDirectionCodeType LongitudeDirectionCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AltitudeMeasureType AltitudeMeasure
-    {
-        get
-        {
-            return this.altitudeMeasureField;
-        }
-
-        set
-        {
-            this.altitudeMeasureField = value;
-        }
-    }
+    public AltitudeMeasureType AltitudeMeasure { get; set; }
 }

@@ -7,10 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("CollectedPayment", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PaymentType
 {
-    private ReceivedDateType receivedDateField;
-    private PaidDateType paidDateField;
-    private PaidTimeType paidTimeField;
-    private InstructionIDType instructionIDField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -21,61 +17,17 @@ public partial class PaymentType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ReceivedDateType ReceivedDate
-    {
-        get
-        {
-            return this.receivedDateField;
-        }
-
-        set
-        {
-            this.receivedDateField = value;
-        }
-    }
+    public ReceivedDateType ReceivedDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PaidDateType PaidDate
-    {
-        get
-        {
-            return this.paidDateField;
-        }
-
-        set
-        {
-            this.paidDateField = value;
-        }
-    }
+    public PaidDateType PaidDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PaidTimeType PaidTime
-    {
-        get
-        {
-            return this.paidTimeField;
-        }
-
-        set
-        {
-            this.paidTimeField = value;
-        }
-    }
+    public PaidTimeType PaidTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public InstructionIDType InstructionID
-    {
-        get
-        {
-            return this.instructionIDField;
-        }
-
-        set
-        {
-            this.instructionIDField = value;
-        }
-    }
+    public InstructionIDType InstructionID { get; set; }
 }

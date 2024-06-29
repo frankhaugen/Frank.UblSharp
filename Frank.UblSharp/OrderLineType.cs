@@ -7,14 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("OrderLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class OrderLineType
 {
-    private LineItemType lineItemField;
-    private LineItemType[] sellerProposedSubstituteLineItemField;
-    private LineItemType[] sellerSubstitutedLineItemField;
-    private LineItemType[] buyerProposedSubstituteLineItemField;
-    private LineReferenceType catalogueLineReferenceField;
-    private LineReferenceType quotationLineReferenceField;
-    private OrderLineReferenceType[] orderLineReferenceField;
-    private DocumentReferenceType[] documentReferenceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SubstitutionStatusCodeType SubstitutionStatusCode { get; set; }
@@ -24,119 +16,31 @@ public partial class OrderLineType
     public NoteType[] Note { get; set; }
 
     /// <remarks/>
-    public LineItemType LineItem
-    {
-        get
-        {
-            return this.lineItemField;
-        }
-
-        set
-        {
-            this.lineItemField = value;
-        }
-    }
+    public LineItemType LineItem { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("SellerProposedSubstituteLineItem")]
-    public LineItemType[] SellerProposedSubstituteLineItem
-    {
-        get
-        {
-            return this.sellerProposedSubstituteLineItemField;
-        }
-
-        set
-        {
-            this.sellerProposedSubstituteLineItemField = value;
-        }
-    }
+    public LineItemType[] SellerProposedSubstituteLineItem { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("SellerSubstitutedLineItem")]
-    public LineItemType[] SellerSubstitutedLineItem
-    {
-        get
-        {
-            return this.sellerSubstitutedLineItemField;
-        }
-
-        set
-        {
-            this.sellerSubstitutedLineItemField = value;
-        }
-    }
+    public LineItemType[] SellerSubstitutedLineItem { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("BuyerProposedSubstituteLineItem")]
-    public LineItemType[] BuyerProposedSubstituteLineItem
-    {
-        get
-        {
-            return this.buyerProposedSubstituteLineItemField;
-        }
-
-        set
-        {
-            this.buyerProposedSubstituteLineItemField = value;
-        }
-    }
+    public LineItemType[] BuyerProposedSubstituteLineItem { get; set; }
 
     /// <remarks/>
-    public LineReferenceType CatalogueLineReference
-    {
-        get
-        {
-            return this.catalogueLineReferenceField;
-        }
-
-        set
-        {
-            this.catalogueLineReferenceField = value;
-        }
-    }
+    public LineReferenceType CatalogueLineReference { get; set; }
 
     /// <remarks/>
-    public LineReferenceType QuotationLineReference
-    {
-        get
-        {
-            return this.quotationLineReferenceField;
-        }
-
-        set
-        {
-            this.quotationLineReferenceField = value;
-        }
-    }
+    public LineReferenceType QuotationLineReference { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("OrderLineReference")]
-    public OrderLineReferenceType[] OrderLineReference
-    {
-        get
-        {
-            return this.orderLineReferenceField;
-        }
-
-        set
-        {
-            this.orderLineReferenceField = value;
-        }
-    }
+    public OrderLineReferenceType[] OrderLineReference { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("DocumentReference")]
-    public DocumentReferenceType[] DocumentReference
-    {
-        get
-        {
-            return this.documentReferenceField;
-        }
-
-        set
-        {
-            this.documentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType[] DocumentReference { get; set; }
 }

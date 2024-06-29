@@ -7,23 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AdditionalInformationParty", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PartyType
 {
-    private WebsiteURIType websiteURIField;
-    private LogoReferenceIDType logoReferenceIDField;
-    private EndpointIDType endpointIDField;
-    private IndustryClassificationCodeType industryClassificationCodeField;
-    private PartyIdentificationType[] partyIdentificationField;
-    private PartyNameType[] partyNameField;
-    private LanguageType languageField;
-    private AddressType postalAddressField;
-    private LocationType1 physicalLocationField;
-    private PartyTaxSchemeType[] partyTaxSchemeField;
-    private PartyLegalEntityType[] partyLegalEntityField;
-    private ContactType contactField;
-    private PersonType[] personField;
-    private PartyType agentPartyField;
-    private ServiceProviderPartyType[] serviceProviderPartyField;
-    private PowerOfAttorneyType[] powerOfAttorneyField;
-    private FinancialAccountType financialAccountField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MarkCareIndicatorType MarkCareIndicator { get; set; }
@@ -34,250 +17,63 @@ public partial class PartyType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public WebsiteURIType WebsiteURI
-    {
-        get
-        {
-            return this.websiteURIField;
-        }
-
-        set
-        {
-            this.websiteURIField = value;
-        }
-    }
+    public WebsiteURIType WebsiteURI { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LogoReferenceIDType LogoReferenceID
-    {
-        get
-        {
-            return this.logoReferenceIDField;
-        }
-
-        set
-        {
-            this.logoReferenceIDField = value;
-        }
-    }
+    public LogoReferenceIDType LogoReferenceID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public EndpointIDType EndpointID
-    {
-        get
-        {
-            return this.endpointIDField;
-        }
-
-        set
-        {
-            this.endpointIDField = value;
-        }
-    }
+    public EndpointIDType EndpointID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IndustryClassificationCodeType IndustryClassificationCode
-    {
-        get
-        {
-            return this.industryClassificationCodeField;
-        }
-
-        set
-        {
-            this.industryClassificationCodeField = value;
-        }
-    }
+    public IndustryClassificationCodeType IndustryClassificationCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("PartyIdentification")]
-    public PartyIdentificationType[] PartyIdentification
-    {
-        get
-        {
-            return this.partyIdentificationField;
-        }
-
-        set
-        {
-            this.partyIdentificationField = value;
-        }
-    }
+    public PartyIdentificationType[] PartyIdentification { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("PartyName")]
-    public PartyNameType[] PartyName
-    {
-        get
-        {
-            return this.partyNameField;
-        }
-
-        set
-        {
-            this.partyNameField = value;
-        }
-    }
+    public PartyNameType[] PartyName { get; set; }
 
     /// <remarks/>
-    public LanguageType Language
-    {
-        get
-        {
-            return this.languageField;
-        }
-
-        set
-        {
-            this.languageField = value;
-        }
-    }
+    public LanguageType Language { get; set; }
 
     /// <remarks/>
-    public AddressType PostalAddress
-    {
-        get
-        {
-            return this.postalAddressField;
-        }
-
-        set
-        {
-            this.postalAddressField = value;
-        }
-    }
+    public AddressType PostalAddress { get; set; }
 
     /// <remarks/>
-    public LocationType1 PhysicalLocation
-    {
-        get
-        {
-            return this.physicalLocationField;
-        }
-
-        set
-        {
-            this.physicalLocationField = value;
-        }
-    }
+    public LocationType1 PhysicalLocation { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("PartyTaxScheme")]
-    public PartyTaxSchemeType[] PartyTaxScheme
-    {
-        get
-        {
-            return this.partyTaxSchemeField;
-        }
-
-        set
-        {
-            this.partyTaxSchemeField = value;
-        }
-    }
+    public PartyTaxSchemeType[] PartyTaxScheme { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("PartyLegalEntity")]
-    public PartyLegalEntityType[] PartyLegalEntity
-    {
-        get
-        {
-            return this.partyLegalEntityField;
-        }
-
-        set
-        {
-            this.partyLegalEntityField = value;
-        }
-    }
+    public PartyLegalEntityType[] PartyLegalEntity { get; set; }
 
     /// <remarks/>
-    public ContactType Contact
-    {
-        get
-        {
-            return this.contactField;
-        }
-
-        set
-        {
-            this.contactField = value;
-        }
-    }
+    public ContactType Contact { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Person")]
-    public PersonType[] Person
-    {
-        get
-        {
-            return this.personField;
-        }
-
-        set
-        {
-            this.personField = value;
-        }
-    }
+    public PersonType[] Person { get; set; }
 
     /// <remarks/>
-    public PartyType AgentParty
-    {
-        get
-        {
-            return this.agentPartyField;
-        }
-
-        set
-        {
-            this.agentPartyField = value;
-        }
-    }
+    public PartyType AgentParty { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ServiceProviderParty")]
-    public ServiceProviderPartyType[] ServiceProviderParty
-    {
-        get
-        {
-            return this.serviceProviderPartyField;
-        }
-
-        set
-        {
-            this.serviceProviderPartyField = value;
-        }
-    }
+    public ServiceProviderPartyType[] ServiceProviderParty { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("PowerOfAttorney")]
-    public PowerOfAttorneyType[] PowerOfAttorney
-    {
-        get
-        {
-            return this.powerOfAttorneyField;
-        }
-
-        set
-        {
-            this.powerOfAttorneyField = value;
-        }
-    }
+    public PowerOfAttorneyType[] PowerOfAttorney { get; set; }
 
     /// <remarks/>
-    public FinancialAccountType FinancialAccount
-    {
-        get
-        {
-            return this.financialAccountField;
-        }
-
-        set
-        {
-            this.financialAccountField = value;
-        }
-    }
+    public FinancialAccountType FinancialAccount { get; set; }
 }

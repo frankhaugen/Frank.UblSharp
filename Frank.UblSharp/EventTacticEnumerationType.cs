@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("EventTacticEnumeration", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class EventTacticEnumerationType
 {
-    private FeatureTacticTypeCodeType featureTacticTypeCodeField;
-    private TradeItemPackingLabelingTypeCodeType tradeItemPackingLabelingTypeCodeField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ConsumerIncentiveTacticTypeCodeType ConsumerIncentiveTacticTypeCode { get; set; }
@@ -19,31 +17,9 @@ public partial class EventTacticEnumerationType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public FeatureTacticTypeCodeType FeatureTacticTypeCode
-    {
-        get
-        {
-            return this.featureTacticTypeCodeField;
-        }
-
-        set
-        {
-            this.featureTacticTypeCodeField = value;
-        }
-    }
+    public FeatureTacticTypeCodeType FeatureTacticTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TradeItemPackingLabelingTypeCodeType TradeItemPackingLabelingTypeCode
-    {
-        get
-        {
-            return this.tradeItemPackingLabelingTypeCodeField;
-        }
-
-        set
-        {
-            this.tradeItemPackingLabelingTypeCodeField = value;
-        }
-    }
+    public TradeItemPackingLabelingTypeCodeType TradeItemPackingLabelingTypeCode { get; set; }
 }

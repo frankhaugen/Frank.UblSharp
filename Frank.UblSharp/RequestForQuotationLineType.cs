@@ -7,12 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("RequestForQuotationLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class RequestForQuotationLineType
 {
-    private NoteType[] noteField;
-    private OptionalLineItemIndicatorType optionalLineItemIndicatorField;
-    private PrivacyCodeType privacyCodeField;
-    private SecurityClassificationCodeType securityClassificationCodeField;
-    private DocumentReferenceType[] documentReferenceField;
-    private LineItemType lineItemField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -23,90 +17,24 @@ public partial class RequestForQuotationLineType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NoteType[] Note
-    {
-        get
-        {
-            return this.noteField;
-        }
-
-        set
-        {
-            this.noteField = value;
-        }
-    }
+    public NoteType[] Note { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public OptionalLineItemIndicatorType OptionalLineItemIndicator
-    {
-        get
-        {
-            return this.optionalLineItemIndicatorField;
-        }
-
-        set
-        {
-            this.optionalLineItemIndicatorField = value;
-        }
-    }
+    public OptionalLineItemIndicatorType OptionalLineItemIndicator { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PrivacyCodeType PrivacyCode
-    {
-        get
-        {
-            return this.privacyCodeField;
-        }
-
-        set
-        {
-            this.privacyCodeField = value;
-        }
-    }
+    public PrivacyCodeType PrivacyCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SecurityClassificationCodeType SecurityClassificationCode
-    {
-        get
-        {
-            return this.securityClassificationCodeField;
-        }
-
-        set
-        {
-            this.securityClassificationCodeField = value;
-        }
-    }
+    public SecurityClassificationCodeType SecurityClassificationCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("DocumentReference")]
-    public DocumentReferenceType[] DocumentReference
-    {
-        get
-        {
-            return this.documentReferenceField;
-        }
-
-        set
-        {
-            this.documentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType[] DocumentReference { get; set; }
 
     /// <remarks/>
-    public LineItemType LineItem
-    {
-        get
-        {
-            return this.lineItemField;
-        }
-
-        set
-        {
-            this.lineItemField = value;
-        }
-    }
+    public LineItemType LineItem { get; set; }
 }

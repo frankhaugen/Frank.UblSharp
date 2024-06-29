@@ -7,11 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AwardingCriterionResponse", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class AwardingCriterionResponseType
 {
-    private AwardingCriterionDescriptionType[] awardingCriterionDescriptionField;
-    private DescriptionType[] descriptionField;
-    private QuantityType2 quantityField;
-    private AmountType2 amountField;
-    private AwardingCriterionResponseType[] subordinateAwardingCriterionResponseField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -22,76 +17,21 @@ public partial class AwardingCriterionResponseType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("AwardingCriterionDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AwardingCriterionDescriptionType[] AwardingCriterionDescription
-    {
-        get
-        {
-            return this.awardingCriterionDescriptionField;
-        }
-
-        set
-        {
-            this.awardingCriterionDescriptionField = value;
-        }
-    }
+    public AwardingCriterionDescriptionType[] AwardingCriterionDescription { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public QuantityType2 Quantity
-    {
-        get
-        {
-            return this.quantityField;
-        }
-
-        set
-        {
-            this.quantityField = value;
-        }
-    }
+    public QuantityType2 Quantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AmountType2 Amount
-    {
-        get
-        {
-            return this.amountField;
-        }
-
-        set
-        {
-            this.amountField = value;
-        }
-    }
+    public AmountType2 Amount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("SubordinateAwardingCriterionResponse")]
-    public AwardingCriterionResponseType[] SubordinateAwardingCriterionResponse
-    {
-        get
-        {
-            return this.subordinateAwardingCriterionResponseField;
-        }
-
-        set
-        {
-            this.subordinateAwardingCriterionResponseField = value;
-        }
-    }
+    public AwardingCriterionResponseType[] SubordinateAwardingCriterionResponse { get; set; }
 }

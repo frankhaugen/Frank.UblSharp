@@ -7,14 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("UBLExtension", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2", IsNullable = false)]
 public partial class UBLExtensionType
 {
-    private ExtensionAgencyIDType extensionAgencyIDField;
-    private ExtensionAgencyNameType extensionAgencyNameField;
-    private ExtensionVersionIDType extensionVersionIDField;
-    private ExtensionAgencyURIType extensionAgencyURIField;
-    private ExtensionURIType extensionURIField;
-    private ExtensionReasonCodeType extensionReasonCodeField;
-    private ExtensionReasonType extensionReasonField;
-    private System.Xml.XmlElement extensionContentField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -24,114 +16,26 @@ public partial class UBLExtensionType
     public NameType1 Name { get; set; }
 
     /// <remarks/>
-    public ExtensionAgencyIDType ExtensionAgencyID
-    {
-        get
-        {
-            return this.extensionAgencyIDField;
-        }
-
-        set
-        {
-            this.extensionAgencyIDField = value;
-        }
-    }
+    public ExtensionAgencyIDType ExtensionAgencyID { get; set; }
 
     /// <remarks/>
-    public ExtensionAgencyNameType ExtensionAgencyName
-    {
-        get
-        {
-            return this.extensionAgencyNameField;
-        }
-
-        set
-        {
-            this.extensionAgencyNameField = value;
-        }
-    }
+    public ExtensionAgencyNameType ExtensionAgencyName { get; set; }
 
     /// <remarks/>
-    public ExtensionVersionIDType ExtensionVersionID
-    {
-        get
-        {
-            return this.extensionVersionIDField;
-        }
-
-        set
-        {
-            this.extensionVersionIDField = value;
-        }
-    }
+    public ExtensionVersionIDType ExtensionVersionID { get; set; }
 
     /// <remarks/>
-    public ExtensionAgencyURIType ExtensionAgencyURI
-    {
-        get
-        {
-            return this.extensionAgencyURIField;
-        }
-
-        set
-        {
-            this.extensionAgencyURIField = value;
-        }
-    }
+    public ExtensionAgencyURIType ExtensionAgencyURI { get; set; }
 
     /// <remarks/>
-    public ExtensionURIType ExtensionURI
-    {
-        get
-        {
-            return this.extensionURIField;
-        }
-
-        set
-        {
-            this.extensionURIField = value;
-        }
-    }
+    public ExtensionURIType ExtensionURI { get; set; }
 
     /// <remarks/>
-    public ExtensionReasonCodeType ExtensionReasonCode
-    {
-        get
-        {
-            return this.extensionReasonCodeField;
-        }
-
-        set
-        {
-            this.extensionReasonCodeField = value;
-        }
-    }
+    public ExtensionReasonCodeType ExtensionReasonCode { get; set; }
 
     /// <remarks/>
-    public ExtensionReasonType ExtensionReason
-    {
-        get
-        {
-            return this.extensionReasonField;
-        }
-
-        set
-        {
-            this.extensionReasonField = value;
-        }
-    }
+    public ExtensionReasonType ExtensionReason { get; set; }
 
     /// <remarks/>
-    public System.Xml.XmlElement ExtensionContent
-    {
-        get
-        {
-            return this.extensionContentField;
-        }
-
-        set
-        {
-            this.extensionContentField = value;
-        }
-    }
+    public System.Xml.XmlElement ExtensionContent { get; set; }
 }

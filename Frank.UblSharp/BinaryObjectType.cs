@@ -12,11 +12,6 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
 public partial class BinaryObjectType
 {
-    private string encodingCodeField;
-    private string characterSetCodeField;
-    private string uriField;
-    private string filenameField;
-    private byte[] valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
     public string format { get; set; }
@@ -27,76 +22,21 @@ public partial class BinaryObjectType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-    public string encodingCode
-    {
-        get
-        {
-            return this.encodingCodeField;
-        }
-
-        set
-        {
-            this.encodingCodeField = value;
-        }
-    }
+    public string encodingCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-    public string characterSetCode
-    {
-        get
-        {
-            return this.characterSetCodeField;
-        }
-
-        set
-        {
-            this.characterSetCodeField = value;
-        }
-    }
+    public string characterSetCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-    public string uri
-    {
-        get
-        {
-            return this.uriField;
-        }
-
-        set
-        {
-            this.uriField = value;
-        }
-    }
+    public string uri { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string filename
-    {
-        get
-        {
-            return this.filenameField;
-        }
-
-        set
-        {
-            this.filenameField = value;
-        }
-    }
+    public string filename { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute(DataType = "base64Binary")]
-    public byte[] Value
-    {
-        get
-        {
-            return this.valueField;
-        }
-
-        set
-        {
-            this.valueField = value;
-        }
-    }
+    public byte[] Value { get; set; }
 }

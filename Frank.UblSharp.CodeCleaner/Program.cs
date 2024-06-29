@@ -17,7 +17,11 @@ var outputDirectory = new DirectoryInfo(@"D:\frankrepos\Frank.UblSharp\Frank.Ubl
 // Console.WriteLine("Types extracted.");
 
 var directoryVisitor = new DirectoryVisitor();
-directoryVisitor.VisitDirectory(outputDirectory);
+
+for (var i = 0; i < 10; i++)
+{
+    directoryVisitor.VisitDirectory(outputDirectory);
+}
 
 
 internal class FileTypesExtractor

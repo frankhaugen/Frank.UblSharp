@@ -220,7 +220,6 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
 public partial class TextType
 {
-    private string valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "language")]
     public string languageID { get; set; }
@@ -231,16 +230,5 @@ public partial class TextType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute()]
-    public string Value
-    {
-        get
-        {
-            return this.valueField;
-        }
-
-        set
-        {
-            this.valueField = value;
-        }
-    }
+    public string Value { get; set; }
 }

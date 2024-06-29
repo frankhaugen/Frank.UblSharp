@@ -7,9 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TaxTotal", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TaxTotalType
 {
-    private TaxEvidenceIndicatorType taxEvidenceIndicatorField;
-    private TaxIncludedIndicatorType taxIncludedIndicatorField;
-    private TaxSubtotalType[] taxSubtotalField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TaxAmountType TaxAmount { get; set; }
@@ -20,46 +17,13 @@ public partial class TaxTotalType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TaxEvidenceIndicatorType TaxEvidenceIndicator
-    {
-        get
-        {
-            return this.taxEvidenceIndicatorField;
-        }
-
-        set
-        {
-            this.taxEvidenceIndicatorField = value;
-        }
-    }
+    public TaxEvidenceIndicatorType TaxEvidenceIndicator { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TaxIncludedIndicatorType TaxIncludedIndicator
-    {
-        get
-        {
-            return this.taxIncludedIndicatorField;
-        }
-
-        set
-        {
-            this.taxIncludedIndicatorField = value;
-        }
-    }
+    public TaxIncludedIndicatorType TaxIncludedIndicator { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("TaxSubtotal")]
-    public TaxSubtotalType[] TaxSubtotal
-    {
-        get
-        {
-            return this.taxSubtotalField;
-        }
-
-        set
-        {
-            this.taxSubtotalField = value;
-        }
-    }
+    public TaxSubtotalType[] TaxSubtotal { get; set; }
 }

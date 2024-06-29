@@ -7,14 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AlternativeConditionPrice", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PriceType
 {
-    private PriceChangeReasonType[] priceChangeReasonField;
-    private PriceTypeCodeType priceTypeCodeField;
-    private PriceTypeType priceType1Field;
-    private OrderableUnitFactorRateType orderableUnitFactorRateField;
-    private PeriodType[] validityPeriodField;
-    private PriceListType priceListField;
-    private AllowanceChargeType[] allowanceChargeField;
-    private ExchangeRateType pricingExchangeRateField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PriceAmountType PriceAmount { get; set; }
@@ -25,119 +17,31 @@ public partial class PriceType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("PriceChangeReason", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PriceChangeReasonType[] PriceChangeReason
-    {
-        get
-        {
-            return this.priceChangeReasonField;
-        }
-
-        set
-        {
-            this.priceChangeReasonField = value;
-        }
-    }
+    public PriceChangeReasonType[] PriceChangeReason { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PriceTypeCodeType PriceTypeCode
-    {
-        get
-        {
-            return this.priceTypeCodeField;
-        }
-
-        set
-        {
-            this.priceTypeCodeField = value;
-        }
-    }
+    public PriceTypeCodeType PriceTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("PriceType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PriceTypeType PriceType1
-    {
-        get
-        {
-            return this.priceType1Field;
-        }
-
-        set
-        {
-            this.priceType1Field = value;
-        }
-    }
+    public PriceTypeType PriceType1 { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public OrderableUnitFactorRateType OrderableUnitFactorRate
-    {
-        get
-        {
-            return this.orderableUnitFactorRateField;
-        }
-
-        set
-        {
-            this.orderableUnitFactorRateField = value;
-        }
-    }
+    public OrderableUnitFactorRateType OrderableUnitFactorRate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ValidityPeriod")]
-    public PeriodType[] ValidityPeriod
-    {
-        get
-        {
-            return this.validityPeriodField;
-        }
-
-        set
-        {
-            this.validityPeriodField = value;
-        }
-    }
+    public PeriodType[] ValidityPeriod { get; set; }
 
     /// <remarks/>
-    public PriceListType PriceList
-    {
-        get
-        {
-            return this.priceListField;
-        }
-
-        set
-        {
-            this.priceListField = value;
-        }
-    }
+    public PriceListType PriceList { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("AllowanceCharge")]
-    public AllowanceChargeType[] AllowanceCharge
-    {
-        get
-        {
-            return this.allowanceChargeField;
-        }
-
-        set
-        {
-            this.allowanceChargeField = value;
-        }
-    }
+    public AllowanceChargeType[] AllowanceCharge { get; set; }
 
     /// <remarks/>
-    public ExchangeRateType PricingExchangeRate
-    {
-        get
-        {
-            return this.pricingExchangeRateField;
-        }
-
-        set
-        {
-            this.pricingExchangeRateField = value;
-        }
-    }
+    public ExchangeRateType PricingExchangeRate { get; set; }
 }

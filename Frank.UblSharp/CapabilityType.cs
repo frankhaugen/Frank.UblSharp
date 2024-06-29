@@ -7,10 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Capability", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class CapabilityType
 {
-    private ValueAmountType valueAmountField;
-    private ValueQuantityType valueQuantityField;
-    private EvidenceSuppliedType[] evidenceSuppliedField;
-    private PeriodType validityPeriodField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CapabilityTypeCodeType CapabilityTypeCode { get; set; }
@@ -21,60 +17,16 @@ public partial class CapabilityType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ValueAmountType ValueAmount
-    {
-        get
-        {
-            return this.valueAmountField;
-        }
-
-        set
-        {
-            this.valueAmountField = value;
-        }
-    }
+    public ValueAmountType ValueAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ValueQuantityType ValueQuantity
-    {
-        get
-        {
-            return this.valueQuantityField;
-        }
-
-        set
-        {
-            this.valueQuantityField = value;
-        }
-    }
+    public ValueQuantityType ValueQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("EvidenceSupplied")]
-    public EvidenceSuppliedType[] EvidenceSupplied
-    {
-        get
-        {
-            return this.evidenceSuppliedField;
-        }
-
-        set
-        {
-            this.evidenceSuppliedField = value;
-        }
-    }
+    public EvidenceSuppliedType[] EvidenceSupplied { get; set; }
 
     /// <remarks/>
-    public PeriodType ValidityPeriod
-    {
-        get
-        {
-            return this.validityPeriodField;
-        }
-
-        set
-        {
-            this.validityPeriodField = value;
-        }
-    }
+    public PeriodType ValidityPeriod { get; set; }
 }

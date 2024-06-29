@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("EnergyWaterSupply", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class EnergyWaterSupplyType
 {
-    private ConsumptionAverageType[] consumptionAverageField;
-    private ConsumptionCorrectionType[] energyWaterConsumptionCorrectionField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ConsumptionReport")]
     public ConsumptionReportType[] ConsumptionReport { get; set; }
@@ -19,31 +17,9 @@ public partial class EnergyWaterSupplyType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ConsumptionAverage")]
-    public ConsumptionAverageType[] ConsumptionAverage
-    {
-        get
-        {
-            return this.consumptionAverageField;
-        }
-
-        set
-        {
-            this.consumptionAverageField = value;
-        }
-    }
+    public ConsumptionAverageType[] ConsumptionAverage { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("EnergyWaterConsumptionCorrection")]
-    public ConsumptionCorrectionType[] EnergyWaterConsumptionCorrection
-    {
-        get
-        {
-            return this.energyWaterConsumptionCorrectionField;
-        }
-
-        set
-        {
-            this.energyWaterConsumptionCorrectionField = value;
-        }
-    }
+    public ConsumptionCorrectionType[] EnergyWaterConsumptionCorrection { get; set; }
 }

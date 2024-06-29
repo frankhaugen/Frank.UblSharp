@@ -7,7 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("HaulageTradingTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TradingTermsType
 {
-    private AddressType applicableAddressField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Information", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public InformationType[] Information { get; set; }
@@ -17,16 +16,5 @@ public partial class TradingTermsType
     public ReferenceType Reference { get; set; }
 
     /// <remarks/>
-    public AddressType ApplicableAddress
-    {
-        get
-        {
-            return this.applicableAddressField;
-        }
-
-        set
-        {
-            this.applicableAddressField = value;
-        }
-    }
+    public AddressType ApplicableAddress { get; set; }
 }

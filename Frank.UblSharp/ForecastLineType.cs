@@ -7,10 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ForecastLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ForecastLineType
 {
-    private FrozenDocumentIndicatorType frozenDocumentIndicatorField;
-    private ForecastTypeCodeType forecastTypeCodeField;
-    private PeriodType forecastPeriodField;
-    private SalesItemType salesItemField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -21,59 +17,15 @@ public partial class ForecastLineType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public FrozenDocumentIndicatorType FrozenDocumentIndicator
-    {
-        get
-        {
-            return this.frozenDocumentIndicatorField;
-        }
-
-        set
-        {
-            this.frozenDocumentIndicatorField = value;
-        }
-    }
+    public FrozenDocumentIndicatorType FrozenDocumentIndicator { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ForecastTypeCodeType ForecastTypeCode
-    {
-        get
-        {
-            return this.forecastTypeCodeField;
-        }
-
-        set
-        {
-            this.forecastTypeCodeField = value;
-        }
-    }
+    public ForecastTypeCodeType ForecastTypeCode { get; set; }
 
     /// <remarks/>
-    public PeriodType ForecastPeriod
-    {
-        get
-        {
-            return this.forecastPeriodField;
-        }
-
-        set
-        {
-            this.forecastPeriodField = value;
-        }
-    }
+    public PeriodType ForecastPeriod { get; set; }
 
     /// <remarks/>
-    public SalesItemType SalesItem
-    {
-        get
-        {
-            return this.salesItemField;
-        }
-
-        set
-        {
-            this.salesItemField = value;
-        }
-    }
+    public SalesItemType SalesItem { get; set; }
 }

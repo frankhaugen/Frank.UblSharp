@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("RetailPlannedImpact", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class RetailPlannedImpactType
 {
-    private ForecastTypeCodeType forecastTypeCodeField;
-    private PeriodType periodField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AmountType2 Amount { get; set; }
@@ -19,30 +17,8 @@ public partial class RetailPlannedImpactType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ForecastTypeCodeType ForecastTypeCode
-    {
-        get
-        {
-            return this.forecastTypeCodeField;
-        }
-
-        set
-        {
-            this.forecastTypeCodeField = value;
-        }
-    }
+    public ForecastTypeCodeType ForecastTypeCode { get; set; }
 
     /// <remarks/>
-    public PeriodType Period
-    {
-        get
-        {
-            return this.periodField;
-        }
-
-        set
-        {
-            this.periodField = value;
-        }
-    }
+    public PeriodType Period { get; set; }
 }

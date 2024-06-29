@@ -7,14 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("PaymentMandate", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PaymentMandateType
 {
-    private MaximumPaymentInstructionsNumericType maximumPaymentInstructionsNumericField;
-    private MaximumPaidAmountType maximumPaidAmountField;
-    private SignatureIDType signatureIDField;
-    private PartyType payerPartyField;
-    private FinancialAccountType payerFinancialAccountField;
-    private PeriodType validityPeriodField;
-    private PeriodType paymentReversalPeriodField;
-    private ClauseType[] clauseField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -25,117 +17,29 @@ public partial class PaymentMandateType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MaximumPaymentInstructionsNumericType MaximumPaymentInstructionsNumeric
-    {
-        get
-        {
-            return this.maximumPaymentInstructionsNumericField;
-        }
-
-        set
-        {
-            this.maximumPaymentInstructionsNumericField = value;
-        }
-    }
+    public MaximumPaymentInstructionsNumericType MaximumPaymentInstructionsNumeric { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MaximumPaidAmountType MaximumPaidAmount
-    {
-        get
-        {
-            return this.maximumPaidAmountField;
-        }
-
-        set
-        {
-            this.maximumPaidAmountField = value;
-        }
-    }
+    public MaximumPaidAmountType MaximumPaidAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SignatureIDType SignatureID
-    {
-        get
-        {
-            return this.signatureIDField;
-        }
-
-        set
-        {
-            this.signatureIDField = value;
-        }
-    }
+    public SignatureIDType SignatureID { get; set; }
 
     /// <remarks/>
-    public PartyType PayerParty
-    {
-        get
-        {
-            return this.payerPartyField;
-        }
-
-        set
-        {
-            this.payerPartyField = value;
-        }
-    }
+    public PartyType PayerParty { get; set; }
 
     /// <remarks/>
-    public FinancialAccountType PayerFinancialAccount
-    {
-        get
-        {
-            return this.payerFinancialAccountField;
-        }
-
-        set
-        {
-            this.payerFinancialAccountField = value;
-        }
-    }
+    public FinancialAccountType PayerFinancialAccount { get; set; }
 
     /// <remarks/>
-    public PeriodType ValidityPeriod
-    {
-        get
-        {
-            return this.validityPeriodField;
-        }
-
-        set
-        {
-            this.validityPeriodField = value;
-        }
-    }
+    public PeriodType ValidityPeriod { get; set; }
 
     /// <remarks/>
-    public PeriodType PaymentReversalPeriod
-    {
-        get
-        {
-            return this.paymentReversalPeriodField;
-        }
-
-        set
-        {
-            this.paymentReversalPeriodField = value;
-        }
-    }
+    public PeriodType PaymentReversalPeriod { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Clause")]
-    public ClauseType[] Clause
-    {
-        get
-        {
-            return this.clauseField;
-        }
-
-        set
-        {
-            this.clauseField = value;
-        }
-    }
+    public ClauseType[] Clause { get; set; }
 }

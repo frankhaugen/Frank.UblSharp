@@ -7,9 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ForecastExceptionCriterionLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ForecastExceptionCriterionLineType
 {
-    private ComparisonDataSourceCodeType comparisonDataSourceCodeField;
-    private DataSourceCodeType dataSourceCodeField;
-    private TimeDeltaDaysQuantityType timeDeltaDaysQuantityField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ForecastPurposeCodeType ForecastPurposeCode { get; set; }
@@ -20,46 +17,13 @@ public partial class ForecastExceptionCriterionLineType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ComparisonDataSourceCodeType ComparisonDataSourceCode
-    {
-        get
-        {
-            return this.comparisonDataSourceCodeField;
-        }
-
-        set
-        {
-            this.comparisonDataSourceCodeField = value;
-        }
-    }
+    public ComparisonDataSourceCodeType ComparisonDataSourceCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DataSourceCodeType DataSourceCode
-    {
-        get
-        {
-            return this.dataSourceCodeField;
-        }
-
-        set
-        {
-            this.dataSourceCodeField = value;
-        }
-    }
+    public DataSourceCodeType DataSourceCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TimeDeltaDaysQuantityType TimeDeltaDaysQuantity
-    {
-        get
-        {
-            return this.timeDeltaDaysQuantityField;
-        }
-
-        set
-        {
-            this.timeDeltaDaysQuantityField = value;
-        }
-    }
+    public TimeDeltaDaysQuantityType TimeDeltaDaysQuantity { get; set; }
 }

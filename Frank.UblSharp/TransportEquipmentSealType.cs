@@ -7,9 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TransportEquipmentSeal", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TransportEquipmentSealType
 {
-    private ConditionType conditionField;
-    private SealStatusCodeType sealStatusCodeField;
-    private SealingPartyTypeType sealingPartyTypeField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -20,46 +17,13 @@ public partial class TransportEquipmentSealType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ConditionType Condition
-    {
-        get
-        {
-            return this.conditionField;
-        }
-
-        set
-        {
-            this.conditionField = value;
-        }
-    }
+    public ConditionType Condition { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SealStatusCodeType SealStatusCode
-    {
-        get
-        {
-            return this.sealStatusCodeField;
-        }
-
-        set
-        {
-            this.sealStatusCodeField = value;
-        }
-    }
+    public SealStatusCodeType SealStatusCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SealingPartyTypeType SealingPartyType
-    {
-        get
-        {
-            return this.sealingPartyTypeField;
-        }
-
-        set
-        {
-            this.sealingPartyTypeField = value;
-        }
-    }
+    public SealingPartyTypeType SealingPartyType { get; set; }
 }

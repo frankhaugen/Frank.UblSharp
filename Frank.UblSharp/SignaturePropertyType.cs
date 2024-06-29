@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("SignatureProperty", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
 public partial class SignaturePropertyType
 {
-    private string targetField;
-    private string idField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAnyElementAttribute()]
     public System.Xml.XmlElement[] Items { get; set; }
@@ -19,31 +17,9 @@ public partial class SignaturePropertyType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-    public string Target
-    {
-        get
-        {
-            return this.targetField;
-        }
-
-        set
-        {
-            this.targetField = value;
-        }
-    }
+    public string Target { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
-    public string Id
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public string Id { get; set; }
 }

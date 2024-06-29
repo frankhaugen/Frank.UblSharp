@@ -7,12 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("BillingReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class BillingReferenceType
 {
-    private DocumentReferenceType creditNoteDocumentReferenceField;
-    private DocumentReferenceType selfBilledCreditNoteDocumentReferenceField;
-    private DocumentReferenceType debitNoteDocumentReferenceField;
-    private DocumentReferenceType reminderDocumentReferenceField;
-    private DocumentReferenceType additionalDocumentReferenceField;
-    private BillingReferenceLineType[] billingReferenceLineField;
     /// <remarks/>
     public DocumentReferenceType InvoiceDocumentReference { get; set; }
 
@@ -20,87 +14,21 @@ public partial class BillingReferenceType
     public DocumentReferenceType SelfBilledInvoiceDocumentReference { get; set; }
 
     /// <remarks/>
-    public DocumentReferenceType CreditNoteDocumentReference
-    {
-        get
-        {
-            return this.creditNoteDocumentReferenceField;
-        }
-
-        set
-        {
-            this.creditNoteDocumentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType CreditNoteDocumentReference { get; set; }
 
     /// <remarks/>
-    public DocumentReferenceType SelfBilledCreditNoteDocumentReference
-    {
-        get
-        {
-            return this.selfBilledCreditNoteDocumentReferenceField;
-        }
-
-        set
-        {
-            this.selfBilledCreditNoteDocumentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType SelfBilledCreditNoteDocumentReference { get; set; }
 
     /// <remarks/>
-    public DocumentReferenceType DebitNoteDocumentReference
-    {
-        get
-        {
-            return this.debitNoteDocumentReferenceField;
-        }
-
-        set
-        {
-            this.debitNoteDocumentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType DebitNoteDocumentReference { get; set; }
 
     /// <remarks/>
-    public DocumentReferenceType ReminderDocumentReference
-    {
-        get
-        {
-            return this.reminderDocumentReferenceField;
-        }
-
-        set
-        {
-            this.reminderDocumentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType ReminderDocumentReference { get; set; }
 
     /// <remarks/>
-    public DocumentReferenceType AdditionalDocumentReference
-    {
-        get
-        {
-            return this.additionalDocumentReferenceField;
-        }
-
-        set
-        {
-            this.additionalDocumentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType AdditionalDocumentReference { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("BillingReferenceLine")]
-    public BillingReferenceLineType[] BillingReferenceLine
-    {
-        get
-        {
-            return this.billingReferenceLineField;
-        }
-
-        set
-        {
-            this.billingReferenceLineField = value;
-        }
-    }
+    public BillingReferenceLineType[] BillingReferenceLine { get; set; }
 }

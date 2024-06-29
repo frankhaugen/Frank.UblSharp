@@ -7,18 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ReminderLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ReminderLineType
 {
-    private UUIDType uUIDField;
-    private BalanceBroughtForwardIndicatorType balanceBroughtForwardIndicatorField;
-    private DebitLineAmountType debitLineAmountField;
-    private CreditLineAmountType creditLineAmountField;
-    private AccountingCostCodeType accountingCostCodeField;
-    private AccountingCostType accountingCostField;
-    private PenaltySurchargePercentType penaltySurchargePercentField;
-    private AmountType2 amountField;
-    private PaymentPurposeCodeType paymentPurposeCodeField;
-    private PeriodType[] reminderPeriodField;
-    private BillingReferenceType[] billingReferenceField;
-    private ExchangeRateType exchangeRateField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID { get; set; }
@@ -29,180 +17,48 @@ public partial class ReminderLineType
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public UUIDType UUID
-    {
-        get
-        {
-            return this.uUIDField;
-        }
-
-        set
-        {
-            this.uUIDField = value;
-        }
-    }
+    public UUIDType UUID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public BalanceBroughtForwardIndicatorType BalanceBroughtForwardIndicator
-    {
-        get
-        {
-            return this.balanceBroughtForwardIndicatorField;
-        }
-
-        set
-        {
-            this.balanceBroughtForwardIndicatorField = value;
-        }
-    }
+    public BalanceBroughtForwardIndicatorType BalanceBroughtForwardIndicator { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DebitLineAmountType DebitLineAmount
-    {
-        get
-        {
-            return this.debitLineAmountField;
-        }
-
-        set
-        {
-            this.debitLineAmountField = value;
-        }
-    }
+    public DebitLineAmountType DebitLineAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CreditLineAmountType CreditLineAmount
-    {
-        get
-        {
-            return this.creditLineAmountField;
-        }
-
-        set
-        {
-            this.creditLineAmountField = value;
-        }
-    }
+    public CreditLineAmountType CreditLineAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AccountingCostCodeType AccountingCostCode
-    {
-        get
-        {
-            return this.accountingCostCodeField;
-        }
-
-        set
-        {
-            this.accountingCostCodeField = value;
-        }
-    }
+    public AccountingCostCodeType AccountingCostCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AccountingCostType AccountingCost
-    {
-        get
-        {
-            return this.accountingCostField;
-        }
-
-        set
-        {
-            this.accountingCostField = value;
-        }
-    }
+    public AccountingCostType AccountingCost { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PenaltySurchargePercentType PenaltySurchargePercent
-    {
-        get
-        {
-            return this.penaltySurchargePercentField;
-        }
-
-        set
-        {
-            this.penaltySurchargePercentField = value;
-        }
-    }
+    public PenaltySurchargePercentType PenaltySurchargePercent { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AmountType2 Amount
-    {
-        get
-        {
-            return this.amountField;
-        }
-
-        set
-        {
-            this.amountField = value;
-        }
-    }
+    public AmountType2 Amount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PaymentPurposeCodeType PaymentPurposeCode
-    {
-        get
-        {
-            return this.paymentPurposeCodeField;
-        }
-
-        set
-        {
-            this.paymentPurposeCodeField = value;
-        }
-    }
+    public PaymentPurposeCodeType PaymentPurposeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ReminderPeriod")]
-    public PeriodType[] ReminderPeriod
-    {
-        get
-        {
-            return this.reminderPeriodField;
-        }
-
-        set
-        {
-            this.reminderPeriodField = value;
-        }
-    }
+    public PeriodType[] ReminderPeriod { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("BillingReference")]
-    public BillingReferenceType[] BillingReference
-    {
-        get
-        {
-            return this.billingReferenceField;
-        }
-
-        set
-        {
-            this.billingReferenceField = value;
-        }
-    }
+    public BillingReferenceType[] BillingReference { get; set; }
 
     /// <remarks/>
-    public ExchangeRateType ExchangeRate
-    {
-        get
-        {
-            return this.exchangeRateField;
-        }
-
-        set
-        {
-            this.exchangeRateField = value;
-        }
-    }
+    public ExchangeRateType ExchangeRate { get; set; }
 }
