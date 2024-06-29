@@ -17,6 +17,7 @@
 
     <ItemGroup>
         <AdditionalFiles Include="xsd\**\*" CopyToOutputDirectory="PreserveNewest" />
+        <EmbeddedResource Include="xsd\**\*" />
     </ItemGroup>
 
 </Project>
