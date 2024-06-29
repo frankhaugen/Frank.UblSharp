@@ -7,17 +7,17 @@ using Microsoft.CodeAnalysis.Formatting;
 
 var outputDirectory = new DirectoryInfo(@"D:\frankrepos\Frank.UblSharp\Frank.UblSharp");
 
-var fileTypesExtractor = new FileTypesExtractor();
+// var fileTypesExtractor = new FileTypesExtractor();
+//
+// var files = outputDirectory.GetFiles("*.cs", SearchOption.TopDirectoryOnly).ToList();
+// foreach (var file in files)
+// {
+//     await fileTypesExtractor.ExtractTypesAsync(file);
+// }
+// Console.WriteLine("Types extracted.");
 
-var files = outputDirectory.GetFiles("*.cs", SearchOption.TopDirectoryOnly).ToList();
-foreach (var file in files)
-{
-    await fileTypesExtractor.ExtractTypesAsync(file);
-}
-Console.WriteLine("Types extracted.");
-
-// var directoryVisitor = new DirectoryVisitor();
-// directoryVisitor.VisitDirectory(outputDirectory);
+var directoryVisitor = new DirectoryVisitor();
+directoryVisitor.VisitDirectory(outputDirectory);
 
 
 internal class FileTypesExtractor
@@ -44,7 +44,7 @@ internal class DirectoryVisitor
 {
     public void VisitDirectory(DirectoryInfo directory)
     {
-        var files = directory.GetFiles("*.cs", SearchOption.AllDirectories).ToList();
+        var files = directory.GetFiles("*.cs", SearchOption.TopDirectoryOnly).ToList();
         
         var parallelOptions = new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount };
         
