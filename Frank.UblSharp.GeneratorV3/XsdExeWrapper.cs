@@ -2,13 +2,17 @@ using System.Text;
 using CliWrap;
 using CliWrap.Buffered;
 
-public class XsdExeWrapper
+namespace Frank.UblSharp.GeneratorV3;
+
+public static class XsdExeWrapper
 {
     public static async Task GeneratePocoFromXsd(XsdExeOptions options)
     {
         var arguments = BuildArguments(options);
         var xsdExePath = @"C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8.1 Tools\xsd.exe";
         var xsdExe = new FileInfo(xsdExePath);
+        
+        Console.WriteLine($"Running xsd.exe at {xsdExe.FullName} with arguments:\n<args>{arguments}</args>");
 
         var result = await Cli.Wrap(xsdExe.FullName)
             .WithArguments(arguments)
@@ -17,17 +21,19 @@ public class XsdExeWrapper
 
         if (result.ExitCode != 0)
         {
-            throw new Exception(result.StandardError);
+            await Console.Error.WriteLineAsync(result.StandardError);
         }
-
-        Console.WriteLine(result.StandardOutput);
+        else
+        {
+            Console.WriteLine(result.StandardOutput);
+        }
     }
 
     private static string BuildArguments(XsdExeOptions options)
     {
         var args = new StringBuilder();
 
-        args.Append(options.XsdFilePath.FullName);
+        args.Append(string.Join(" ", options.XsdFilePaths.Select(x => $"\"{x.FullName}\"")));
 
         if (options.GenerateClasses)
             args.Append(" /classes");

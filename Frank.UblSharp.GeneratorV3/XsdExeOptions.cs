@@ -4,9 +4,9 @@
 public class XsdExeOptions
 {
     /// <summary>
-    /// Gets or sets the path to the XSD file to process.
+    /// Gets the paths to the XSD files to process.
     /// </summary>
-    public required FileInfo XsdFilePath { get; init; }
+    public List<FileInfo> XsdFilePaths { get; } = new();
 
     /// <summary>
     /// Gets or sets the output directory for the generated files.

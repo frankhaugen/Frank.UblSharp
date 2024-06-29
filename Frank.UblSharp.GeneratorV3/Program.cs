@@ -1,12 +1,38 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-var xsdExeOptions = new XsdExeOptions
-{
-    OutputDirectory = new DirectoryInfo("D:\\frankrepos\\Frank.UblSharp\\Frank.UblSharp"),
-    Namespace = "Frank.UblSharp",
-    XsdFilePath = new FileInfo("D:\\frankrepos\\Frank.UblSharp\\Frank.UblSharp.Resources\\xsd\\maindoc\\UBL-Invoice-2.1.xsd")
-    // XsdFilePath = new FileInfo("D:\\frankrepos\\Frank.UblSharp\\UBL-2.1\\exp\\UBL-Invoice-2.1.xsd")
-    // XsdFilePath = new FileInfo("D:\\frankrepos\\Frank.UblSharp\\UBL-2.1\\xsdrt\\maindoc\\UBL-Invoice-2.1.xsd")
-};
+using Frank.UblSharp.GeneratorV3;
+using Humanizer;
 
-await XsdExeWrapper.GeneratePocoFromXsd(xsdExeOptions);
+var commonFiles = new DirectoryInfo("D:\\frankrepos\\Frank.UblSharp\\Frank.UblSharp.Resources\\xsd\\common").GetFiles();
+var mainDocFiles = new DirectoryInfo("D:\\frankrepos\\Frank.UblSharp\\Frank.UblSharp.Resources\\xsd\\maindoc").GetFiles();
+var rootOutputDirectory = new DirectoryInfo("D:\\frankrepos\\Frank.UblSharp\\Frank.UblSharp");
+
+foreach (var mainDocFile in mainDocFiles)
+{
+    var ublDocumentName = mainDocFile.Name.Split('-')[1];
+    var outputSubDirectoryName = ublDocumentName.Pluralize();
+    var outputDirectory = new DirectoryInfo(Path.Combine(rootOutputDirectory.FullName, outputSubDirectoryName));
+    
+    if (!outputDirectory.Exists)
+    {
+        outputDirectory.Create();
+    }
+    else
+    {
+        foreach (var file in outputDirectory.GetFiles())
+        {
+            file.Delete();
+        }
+    }
+    
+    var xsdExeOptions = new XsdExeOptions
+    {
+        OutputDirectory = outputDirectory,
+        Namespace = "Frank.UblSharp." + outputSubDirectoryName,
+        Language = "CS",
+    };
+    xsdExeOptions.XsdFilePaths.AddRange(commonFiles);
+    xsdExeOptions.XsdFilePaths.Add(mainDocFile);
+    
+    await XsdExeWrapper.GeneratePocoFromXsd(xsdExeOptions);
+}
