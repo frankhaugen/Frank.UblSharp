@@ -16,8 +16,8 @@ foreach (var file in files)
 }
 Console.WriteLine("Types extracted.");
 
-var directoryVisitor = new DirectoryVisitor();
-directoryVisitor.VisitDirectory(outputDirectory);
+// var directoryVisitor = new DirectoryVisitor();
+// directoryVisitor.VisitDirectory(outputDirectory);
 
 
 internal class FileTypesExtractor
@@ -28,6 +28,7 @@ internal class FileTypesExtractor
         var syntaxTree = CSharpSyntaxTree.ParseText(code);
 
         var types = (await syntaxTree.GetRootAsync()).DescendantNodes().OfType<TypeDeclarationSyntax>().ToList();
+        
         foreach (var type in types)
         {
             var newSyntaxTree = CSharpSyntaxTree.ParseText(type.NormalizeWhitespace().ToFullString());
