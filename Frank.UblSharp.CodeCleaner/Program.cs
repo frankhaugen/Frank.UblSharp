@@ -6,14 +6,52 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
 
 var outputDirectory = new DirectoryInfo(@"D:\frankrepos\Frank.UblSharp\Frank.UblSharp");
-new DirectoryVisitor().VisitDirectory(outputDirectory);
+
+var fileTypesExtractor = new FileTypesExtractor();
+
+var files = outputDirectory.GetFiles("*.cs", SearchOption.AllDirectories).ToList();
+foreach (var file in files)
+{
+    await fileTypesExtractor.ExtractTypesAsync(file);
+}
+Console.WriteLine("Types extracted.");
+
+var subDirectories = outputDirectory.GetDirectories().ToList();
+var directoryVisitor = new DirectoryVisitor();
+foreach (var subDirectory in subDirectories)
+{
+    Console.WriteLine($"Visiting directory {subDirectory.FullName}");
+    directoryVisitor.VisitDirectory(subDirectory);
+}
+
+internal class FileTypesExtractor
+{
+    public async Task ExtractTypesAsync(FileInfo file)
+    {
+        var code = await File.ReadAllTextAsync(file.FullName);
+        var syntaxTree = CSharpSyntaxTree.ParseText(code);
+
+        var types = (await syntaxTree.GetRootAsync()).DescendantNodes().OfType<TypeDeclarationSyntax>().ToList();
+        foreach (var type in types)
+        {
+            var newSyntaxTree = CSharpSyntaxTree.ParseText(type.NormalizeWhitespace().ToFullString());
+            var newCode = Microsoft.CodeAnalysis.Formatting.Formatter.Format(await newSyntaxTree.GetRootAsync(), new AdhocWorkspace()).ToFullString();
+            await File.WriteAllTextAsync(Path.Combine(file.DirectoryName, $"{type.Identifier.ValueText}.cs"), newCode);
+        }
+        
+        file.Delete();
+    }
+}
 
 internal class DirectoryVisitor
 {
     public void VisitDirectory(DirectoryInfo directory)
     {
-        var files = directory.GetFiles("*.cs", SearchOption.AllDirectories);
-        foreach (var file in files) new FileVisitor().VisitFile(file);
+        var files = directory.GetFiles("*.cs", SearchOption.AllDirectories).ToList();
+        
+        var parallelOptions = new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount };
+        
+        Parallel.ForEach(files, parallelOptions, file => new FileVisitor().VisitFile(file));
     }
 }
 
