@@ -12,6 +12,7 @@ public class XsdExeWrapper
 
         var result = await Cli.Wrap(xsdExe.FullName)
             .WithArguments(arguments)
+            .WithValidation(CommandResultValidation.None)
             .ExecuteBufferedAsync();
 
         if (result.ExitCode != 0)
@@ -26,7 +27,7 @@ public class XsdExeWrapper
     {
         var args = new StringBuilder();
 
-        args.Append(options.XsdFilePath);
+        args.Append(options.XsdFilePath.FullName);
 
         if (options.GenerateClasses)
             args.Append(" /classes");
