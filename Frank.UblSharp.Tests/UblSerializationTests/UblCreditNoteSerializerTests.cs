@@ -1,5 +1,6 @@
 ﻿using System.Xml.Serialization;
 using FluentAssertions;
+using Frank.UblSharp.CreditNote;
 
 namespace Frank.UblSharp.Tests.UblSerializationTests;
 
@@ -17,8 +18,8 @@ public class UblCreditNoteSerializerTests
 		
 		// Assert
 		document.Should().NotBeNull();
-		document!.UBLVersionID.Value.Should().Be("2.1");
-		document.ID.Value.Should().Be("TOSL108");
+		document!.UblVersionId!.Value.Should().Be("2.1");
+		document.Id.Value.Should().Be("TOSL108");
 		document.IssueDate.Value.Should().Be(new DateTime(2009, 12, 15));
 	}
 

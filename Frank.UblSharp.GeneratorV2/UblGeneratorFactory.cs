@@ -7,7 +7,7 @@ namespace Frank.UblSharp.GeneratorV2;
 
 public static class UblGeneratorFactory
 {
-    public static Generator Create(DirectoryInfo outputDirectory, string rootNamespace, List<string> fileLog)
+    public static Generator Create(DirectoryInfo outputDirectory, string rootNamespace, List<string> fileLog, OutputWriter outputWriter)
     {
         return new Generator
         {
@@ -18,7 +18,7 @@ public static class UblGeneratorFactory
             CollectionImplementationType = typeof(List<>),
             CollectionType = typeof(List<>),
             NamingScheme = NamingScheme.PascalCase,
-            DataAnnotationMode = DataAnnotationMode.Partial,
+            DataAnnotationMode = DataAnnotationMode.All,
             CollectionSettersMode = CollectionSettersMode.PublicWithoutConstructorInitialization,
             CodeTypeReferenceOptions = CodeTypeReferenceOptions.GenericTypeParameter,
             NamespaceProvider = new NamespaceProvider
@@ -56,15 +56,15 @@ public static class UblGeneratorFactory
             GenerateInterfaces = true,
             NetCoreSpecificCode = true,
             SeparateClasses = true,
-            EntityFramework = false,
+            EntityFramework = true,
             EnumAsString = true,
             MapUnionToWidestCommonType = true,
             GenerateNullables = true,
             DoNotForceIsNullable = false,
-            EmitOrder = false,
-            SeparateNamespaceHierarchy = false,
+            EmitOrder = true,
+            SeparateNamespaceHierarchy = true,
             DisableComments = false,
-            GenerateDescriptionAttribute = false,
+            GenerateDescriptionAttribute = true,
             EnableNullableReferenceAttributes = true,
             CompactTypeNames = true,
             SeparateSubstitutes = true,
@@ -73,7 +73,12 @@ public static class UblGeneratorFactory
             AssemblyVisible = false,
             EnableUpaCheck = true,
             UseShouldSerializePattern = false,
-            GenerateDesignerCategoryAttribute = false
+            GenerateDesignerCategoryAttribute = false,
+            CommentLanguages = { "en" },
+            UseXElementForAny = false,
+            GenerateDebuggerStepThroughAttribute = true,
+            UniqueTypeNamesAcrossNamespaces = true
+            // OutputWriter = outputWriter,
         };
     }
 }
