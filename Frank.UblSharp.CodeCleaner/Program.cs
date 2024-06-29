@@ -9,20 +9,16 @@ var outputDirectory = new DirectoryInfo(@"D:\frankrepos\Frank.UblSharp\Frank.Ubl
 
 var fileTypesExtractor = new FileTypesExtractor();
 
-var files = outputDirectory.GetFiles("*.cs", SearchOption.AllDirectories).ToList();
+var files = outputDirectory.GetFiles("*.cs", SearchOption.TopDirectoryOnly).ToList();
 foreach (var file in files)
 {
     await fileTypesExtractor.ExtractTypesAsync(file);
 }
 Console.WriteLine("Types extracted.");
 
-var subDirectories = outputDirectory.GetDirectories().ToList();
 var directoryVisitor = new DirectoryVisitor();
-foreach (var subDirectory in subDirectories)
-{
-    Console.WriteLine($"Visiting directory {subDirectory.FullName}");
-    directoryVisitor.VisitDirectory(subDirectory);
-}
+directoryVisitor.VisitDirectory(outputDirectory);
+
 
 internal class FileTypesExtractor
 {
@@ -59,6 +55,7 @@ internal class FileVisitor
 {
     public void VisitFile(FileInfo file)
     {
+        Console.WriteLine($"Visiting file {file.Name}");
         var code = File.ReadAllText(file.FullName);
         var syntaxTree = CSharpSyntaxTree.ParseText(code);
 
