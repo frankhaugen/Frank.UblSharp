@@ -7,40 +7,16 @@
 [System.Xml.Serialization.XmlRootAttribute("TransportEquipmentSeal", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TransportEquipmentSealType
 {
-    private IDType idField;
-    private SealIssuerTypeCodeType sealIssuerTypeCodeField;
     private ConditionType conditionField;
     private SealStatusCodeType sealStatusCodeField;
     private SealingPartyTypeType sealingPartyTypeField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SealIssuerTypeCodeType SealIssuerTypeCode
-    {
-        get
-        {
-            return this.sealIssuerTypeCodeField;
-        }
-
-        set
-        {
-            this.sealIssuerTypeCodeField = value;
-        }
-    }
+    public SealIssuerTypeCodeType SealIssuerTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

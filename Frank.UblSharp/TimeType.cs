@@ -37,19 +37,7 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2")]
 public partial class TimeType
 {
-    private System.DateTime valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute(DataType = "time")]
-    public System.DateTime Value
-    {
-        get
-        {
-            return this.valueField;
-        }
-
-        set
-        {
-            this.valueField = value;
-        }
-    }
+    public System.DateTime Value { get; set; }
 }

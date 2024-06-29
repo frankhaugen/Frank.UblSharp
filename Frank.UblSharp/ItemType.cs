@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Item", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ItemType
 {
-    private DescriptionType[] descriptionField;
-    private PackQuantityType packQuantityField;
     private PackSizeNumericType packSizeNumericField;
     private CatalogueIndicatorType catalogueIndicatorField;
     private NameType1 nameField;
@@ -39,33 +37,11 @@ public partial class ItemType
     private DimensionType[] dimensionField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PackQuantityType PackQuantity
-    {
-        get
-        {
-            return this.packQuantityField;
-        }
-
-        set
-        {
-            this.packQuantityField = value;
-        }
-    }
+    public PackQuantityType PackQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

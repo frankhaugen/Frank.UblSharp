@@ -7,20 +7,8 @@
 [System.Xml.Serialization.XmlRootAttribute("SignaturePolicyIdentifier", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
 public partial class SignaturePolicyIdentifierType
 {
-    private object itemField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("SignaturePolicyId", typeof(SignaturePolicyIdType))]
     [System.Xml.Serialization.XmlElementAttribute("SignaturePolicyImplied", typeof(object))]
-    public object Item
-    {
-        get
-        {
-            return this.itemField;
-        }
-
-        set
-        {
-            this.itemField = value;
-        }
-    }
+    public object Item { get; set; }
 }

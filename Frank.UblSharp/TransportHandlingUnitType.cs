@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("PackagedTransportHandlingUnit", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TransportHandlingUnitType
 {
-    private IDType idField;
-    private TransportHandlingUnitTypeCodeType transportHandlingUnitTypeCodeField;
     private HandlingCodeType handlingCodeField;
     private HandlingInstructionsType[] handlingInstructionsField;
     private HazardousRiskIndicatorType hazardousRiskIndicatorField;
@@ -36,33 +34,11 @@ public partial class TransportHandlingUnitType
     private PackageType[] packageField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TransportHandlingUnitTypeCodeType TransportHandlingUnitTypeCode
-    {
-        get
-        {
-            return this.transportHandlingUnitTypeCodeField;
-        }
-
-        set
-        {
-            this.transportHandlingUnitTypeCodeField = value;
-        }
-    }
+    public TransportHandlingUnitTypeCodeType TransportHandlingUnitTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

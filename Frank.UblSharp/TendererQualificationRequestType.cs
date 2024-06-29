@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TendererQualificationRequest", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TendererQualificationRequestType
 {
-    private CompanyLegalFormCodeType companyLegalFormCodeField;
-    private CompanyLegalFormType companyLegalFormField;
     private PersonalSituationType[] personalSituationField;
     private OperatingYearsQuantityType operatingYearsQuantityField;
     private EmployeeQuantityType employeeQuantityField;
@@ -20,33 +18,11 @@ public partial class TendererQualificationRequestType
     private EconomicOperatorRoleType[] economicOperatorRoleField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CompanyLegalFormCodeType CompanyLegalFormCode
-    {
-        get
-        {
-            return this.companyLegalFormCodeField;
-        }
-
-        set
-        {
-            this.companyLegalFormCodeField = value;
-        }
-    }
+    public CompanyLegalFormCodeType CompanyLegalFormCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CompanyLegalFormType CompanyLegalForm
-    {
-        get
-        {
-            return this.companyLegalFormField;
-        }
-
-        set
-        {
-            this.companyLegalFormField = value;
-        }
-    }
+    public CompanyLegalFormType CompanyLegalForm { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("PersonalSituation", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

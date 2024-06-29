@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("PaymentMandate", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PaymentMandateType
 {
-    private IDType idField;
-    private MandateTypeCodeType mandateTypeCodeField;
     private MaximumPaymentInstructionsNumericType maximumPaymentInstructionsNumericField;
     private MaximumPaidAmountType maximumPaidAmountField;
     private SignatureIDType signatureIDField;
@@ -19,33 +17,11 @@ public partial class PaymentMandateType
     private ClauseType[] clauseField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MandateTypeCodeType MandateTypeCode
-    {
-        get
-        {
-            return this.mandateTypeCodeField;
-        }
-
-        set
-        {
-            this.mandateTypeCodeField = value;
-        }
-    }
+    public MandateTypeCodeType MandateTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

@@ -7,38 +7,14 @@
 [System.Xml.Serialization.XmlRootAttribute("PromotionalSpecification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PromotionalSpecificationType
 {
-    private SpecificationIDType specificationIDField;
-    private PromotionalEventLineItemType[] promotionalEventLineItemField;
     private EventTacticType[] eventTacticField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SpecificationIDType SpecificationID
-    {
-        get
-        {
-            return this.specificationIDField;
-        }
-
-        set
-        {
-            this.specificationIDField = value;
-        }
-    }
+    public SpecificationIDType SpecificationID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("PromotionalEventLineItem")]
-    public PromotionalEventLineItemType[] PromotionalEventLineItem
-    {
-        get
-        {
-            return this.promotionalEventLineItemField;
-        }
-
-        set
-        {
-            this.promotionalEventLineItemField = value;
-        }
-    }
+    public PromotionalEventLineItemType[] PromotionalEventLineItem { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("EventTactic")]

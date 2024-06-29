@@ -221,8 +221,6 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
 public partial class CodeType
 {
-    private string listIDField;
-    private string listAgencyIDField;
     private string listAgencyNameField;
     private string listNameField;
     private string listVersionIDField;
@@ -233,33 +231,11 @@ public partial class CodeType
     private string valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-    public string listID
-    {
-        get
-        {
-            return this.listIDField;
-        }
-
-        set
-        {
-            this.listIDField = value;
-        }
-    }
+    public string listID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-    public string listAgencyID
-    {
-        get
-        {
-            return this.listAgencyIDField;
-        }
-
-        set
-        {
-            this.listAgencyIDField = value;
-        }
-    }
+    public string listAgencyID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]

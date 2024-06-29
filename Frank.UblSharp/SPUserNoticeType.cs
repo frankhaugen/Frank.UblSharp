@@ -7,33 +7,9 @@
 [System.Xml.Serialization.XmlRootAttribute("SPUserNotice", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
 public partial class SPUserNoticeType
 {
-    private NoticeReferenceType noticeRefField;
-    private string explicitTextField;
     /// <remarks/>
-    public NoticeReferenceType NoticeRef
-    {
-        get
-        {
-            return this.noticeRefField;
-        }
-
-        set
-        {
-            this.noticeRefField = value;
-        }
-    }
+    public NoticeReferenceType NoticeRef { get; set; }
 
     /// <remarks/>
-    public string ExplicitText
-    {
-        get
-        {
-            return this.explicitTextField;
-        }
-
-        set
-        {
-            this.explicitTextField = value;
-        }
-    }
+    public string ExplicitText { get; set; }
 }

@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("CardAccount", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class CardAccountType
 {
-    private PrimaryAccountNumberIDType primaryAccountNumberIDField;
-    private NetworkIDType networkIDField;
     private CardTypeCodeType cardTypeCodeField;
     private ValidityStartDateType validityStartDateField;
     private ExpiryDateType expiryDateField;
@@ -20,33 +18,11 @@ public partial class CardAccountType
     private HolderNameType holderNameField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PrimaryAccountNumberIDType PrimaryAccountNumberID
-    {
-        get
-        {
-            return this.primaryAccountNumberIDField;
-        }
-
-        set
-        {
-            this.primaryAccountNumberIDField = value;
-        }
-    }
+    public PrimaryAccountNumberIDType PrimaryAccountNumberID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NetworkIDType NetworkID
-    {
-        get
-        {
-            return this.networkIDField;
-        }
-
-        set
-        {
-            this.networkIDField = value;
-        }
-    }
+    public NetworkIDType NetworkID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

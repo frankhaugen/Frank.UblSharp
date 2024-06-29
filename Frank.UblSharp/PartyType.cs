@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AdditionalInformationParty", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PartyType
 {
-    private MarkCareIndicatorType markCareIndicatorField;
-    private MarkAttentionIndicatorType markAttentionIndicatorField;
     private WebsiteURIType websiteURIField;
     private LogoReferenceIDType logoReferenceIDField;
     private EndpointIDType endpointIDField;
@@ -28,33 +26,11 @@ public partial class PartyType
     private FinancialAccountType financialAccountField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MarkCareIndicatorType MarkCareIndicator
-    {
-        get
-        {
-            return this.markCareIndicatorField;
-        }
-
-        set
-        {
-            this.markCareIndicatorField = value;
-        }
-    }
+    public MarkCareIndicatorType MarkCareIndicator { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MarkAttentionIndicatorType MarkAttentionIndicator
-    {
-        get
-        {
-            return this.markAttentionIndicatorField;
-        }
-
-        set
-        {
-            this.markAttentionIndicatorField = value;
-        }
-    }
+    public MarkAttentionIndicatorType MarkAttentionIndicator { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("CompletedTask", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class CompletedTaskType
 {
-    private AnnualAverageAmountType annualAverageAmountField;
-    private TotalTaskAmountType totalTaskAmountField;
     private PartyCapacityAmountType partyCapacityAmountField;
     private DescriptionType[] descriptionField;
     private EvidenceSuppliedType[] evidenceSuppliedField;
@@ -16,33 +14,11 @@ public partial class CompletedTaskType
     private CustomerPartyType recipientCustomerPartyField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AnnualAverageAmountType AnnualAverageAmount
-    {
-        get
-        {
-            return this.annualAverageAmountField;
-        }
-
-        set
-        {
-            this.annualAverageAmountField = value;
-        }
-    }
+    public AnnualAverageAmountType AnnualAverageAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TotalTaskAmountType TotalTaskAmount
-    {
-        get
-        {
-            return this.totalTaskAmountField;
-        }
-
-        set
-        {
-            this.totalTaskAmountField = value;
-        }
-    }
+    public TotalTaskAmountType TotalTaskAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

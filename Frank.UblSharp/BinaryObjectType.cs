@@ -12,8 +12,6 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
 public partial class BinaryObjectType
 {
-    private string formatField;
-    private string mimeCodeField;
     private string encodingCodeField;
     private string characterSetCodeField;
     private string uriField;
@@ -21,33 +19,11 @@ public partial class BinaryObjectType
     private byte[] valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string format
-    {
-        get
-        {
-            return this.formatField;
-        }
-
-        set
-        {
-            this.formatField = value;
-        }
-    }
+    public string format { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-    public string mimeCode
-    {
-        get
-        {
-            return this.mimeCodeField;
-        }
-
-        set
-        {
-            this.mimeCodeField = value;
-        }
-    }
+    public string mimeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]

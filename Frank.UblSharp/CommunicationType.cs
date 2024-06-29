@@ -7,38 +7,14 @@
 [System.Xml.Serialization.XmlRootAttribute("Communication", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class CommunicationType
 {
-    private ChannelCodeType channelCodeField;
-    private ChannelType channelField;
     private ValueType valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ChannelCodeType ChannelCode
-    {
-        get
-        {
-            return this.channelCodeField;
-        }
-
-        set
-        {
-            this.channelCodeField = value;
-        }
-    }
+    public ChannelCodeType ChannelCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ChannelType Channel
-    {
-        get
-        {
-            return this.channelField;
-        }
-
-        set
-        {
-            this.channelField = value;
-        }
-    }
+    public ChannelType Channel { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AdditionalQualifyingParty", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class QualifyingPartyType
 {
-    private ParticipationPercentType participationPercentField;
-    private PersonalSituationType[] personalSituationField;
     private OperatingYearsQuantityType operatingYearsQuantityField;
     private EmployeeQuantityType employeeQuantityField;
     private BusinessClassificationEvidenceIDType businessClassificationEvidenceIDField;
@@ -23,33 +21,11 @@ public partial class QualifyingPartyType
     private EconomicOperatorRoleType economicOperatorRoleField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ParticipationPercentType ParticipationPercent
-    {
-        get
-        {
-            return this.participationPercentField;
-        }
-
-        set
-        {
-            this.participationPercentField = value;
-        }
-    }
+    public ParticipationPercentType ParticipationPercent { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("PersonalSituation", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PersonalSituationType[] PersonalSituation
-    {
-        get
-        {
-            return this.personalSituationField;
-        }
-
-        set
-        {
-            this.personalSituationField = value;
-        }
-    }
+    public PersonalSituationType[] PersonalSituation { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

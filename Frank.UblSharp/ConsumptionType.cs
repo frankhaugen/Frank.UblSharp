@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Consumption", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ConsumptionType
 {
-    private UtilityStatementTypeCodeType utilityStatementTypeCodeField;
-    private PeriodType mainPeriodField;
     private AllowanceChargeType[] allowanceChargeField;
     private TaxTotalType[] taxTotalField;
     private EnergyWaterSupplyType energyWaterSupplyField;
@@ -16,32 +14,10 @@ public partial class ConsumptionType
     private MonetaryTotalType legalMonetaryTotalField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public UtilityStatementTypeCodeType UtilityStatementTypeCode
-    {
-        get
-        {
-            return this.utilityStatementTypeCodeField;
-        }
-
-        set
-        {
-            this.utilityStatementTypeCodeField = value;
-        }
-    }
+    public UtilityStatementTypeCodeType UtilityStatementTypeCode { get; set; }
 
     /// <remarks/>
-    public PeriodType MainPeriod
-    {
-        get
-        {
-            return this.mainPeriodField;
-        }
-
-        set
-        {
-            this.mainPeriodField = value;
-        }
-    }
+    public PeriodType MainPeriod { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("AllowanceCharge")]

@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("WorkPhaseReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class WorkPhaseReferenceType
 {
-    private IDType idField;
-    private WorkPhaseCodeType workPhaseCodeField;
     private WorkPhaseType[] workPhaseField;
     private ProgressPercentType progressPercentField;
     private StartDateType startDateField;
@@ -16,33 +14,11 @@ public partial class WorkPhaseReferenceType
     private DocumentReferenceType[] workOrderDocumentReferenceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public WorkPhaseCodeType WorkPhaseCode
-    {
-        get
-        {
-            return this.workPhaseCodeField;
-        }
-
-        set
-        {
-            this.workPhaseCodeField = value;
-        }
-    }
+    public WorkPhaseCodeType WorkPhaseCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("WorkPhase", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

@@ -7,19 +7,7 @@
 [System.Xml.Serialization.XmlRootAttribute("PartyName", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PartyNameType
 {
-    private NameType1 nameField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NameType1 Name
-    {
-        get
-        {
-            return this.nameField;
-        }
-
-        set
-        {
-            this.nameField = value;
-        }
-    }
+    public NameType1 Name { get; set; }
 }

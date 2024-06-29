@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Pickup", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PickupType
 {
-    private IDType idField;
-    private ActualPickupDateType actualPickupDateField;
     private ActualPickupTimeType actualPickupTimeField;
     private EarliestPickupDateType earliestPickupDateField;
     private EarliestPickupTimeType earliestPickupTimeField;
@@ -18,33 +16,11 @@ public partial class PickupType
     private PartyType pickupPartyField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ActualPickupDateType ActualPickupDate
-    {
-        get
-        {
-            return this.actualPickupDateField;
-        }
-
-        set
-        {
-            this.actualPickupDateField = value;
-        }
-    }
+    public ActualPickupDateType ActualPickupDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

@@ -7,34 +7,10 @@
 [System.Xml.Serialization.XmlRootAttribute("LineResponse", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class LineResponseType
 {
-    private LineReferenceType lineReferenceField;
-    private ResponseType[] responseField;
     /// <remarks/>
-    public LineReferenceType LineReference
-    {
-        get
-        {
-            return this.lineReferenceField;
-        }
-
-        set
-        {
-            this.lineReferenceField = value;
-        }
-    }
+    public LineReferenceType LineReference { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Response")]
-    public ResponseType[] Response
-    {
-        get
-        {
-            return this.responseField;
-        }
-
-        set
-        {
-            this.responseField = value;
-        }
-    }
+    public ResponseType[] Response { get; set; }
 }

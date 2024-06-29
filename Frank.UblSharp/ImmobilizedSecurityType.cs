@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ImmobilizedSecurity", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ImmobilizedSecurityType
 {
-    private ImmobilizationCertificateIDType immobilizationCertificateIDField;
-    private SecurityIDType securityIDField;
     private IssueDateType issueDateField;
     private FaceValueAmountType faceValueAmountField;
     private MarketValueAmountType marketValueAmountField;
@@ -16,33 +14,11 @@ public partial class ImmobilizedSecurityType
     private PartyType issuerPartyField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ImmobilizationCertificateIDType ImmobilizationCertificateID
-    {
-        get
-        {
-            return this.immobilizationCertificateIDField;
-        }
-
-        set
-        {
-            this.immobilizationCertificateIDField = value;
-        }
-    }
+    public ImmobilizationCertificateIDType ImmobilizationCertificateID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SecurityIDType SecurityID
-    {
-        get
-        {
-            return this.securityIDField;
-        }
-
-        set
-        {
-            this.securityIDField = value;
-        }
-    }
+    public SecurityIDType SecurityID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

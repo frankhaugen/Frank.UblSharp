@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("OrderLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class OrderLineType
 {
-    private SubstitutionStatusCodeType substitutionStatusCodeField;
-    private NoteType[] noteField;
     private LineItemType lineItemField;
     private LineItemType[] sellerProposedSubstituteLineItemField;
     private LineItemType[] sellerSubstitutedLineItemField;
@@ -19,33 +17,11 @@ public partial class OrderLineType
     private DocumentReferenceType[] documentReferenceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SubstitutionStatusCodeType SubstitutionStatusCode
-    {
-        get
-        {
-            return this.substitutionStatusCodeField;
-        }
-
-        set
-        {
-            this.substitutionStatusCodeField = value;
-        }
-    }
+    public SubstitutionStatusCodeType SubstitutionStatusCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NoteType[] Note
-    {
-        get
-        {
-            return this.noteField;
-        }
-
-        set
-        {
-            this.noteField = value;
-        }
-    }
+    public NoteType[] Note { get; set; }
 
     /// <remarks/>
     public LineItemType LineItem

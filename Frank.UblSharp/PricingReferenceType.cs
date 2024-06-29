@@ -7,34 +7,10 @@
 [System.Xml.Serialization.XmlRootAttribute("PricingReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PricingReferenceType
 {
-    private ItemLocationQuantityType originalItemLocationQuantityField;
-    private PriceType[] alternativeConditionPriceField;
     /// <remarks/>
-    public ItemLocationQuantityType OriginalItemLocationQuantity
-    {
-        get
-        {
-            return this.originalItemLocationQuantityField;
-        }
-
-        set
-        {
-            this.originalItemLocationQuantityField = value;
-        }
-    }
+    public ItemLocationQuantityType OriginalItemLocationQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("AlternativeConditionPrice")]
-    public PriceType[] AlternativeConditionPrice
-    {
-        get
-        {
-            return this.alternativeConditionPriceField;
-        }
-
-        set
-        {
-            this.alternativeConditionPriceField = value;
-        }
-    }
+    public PriceType[] AlternativeConditionPrice { get; set; }
 }

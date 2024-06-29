@@ -6,36 +6,12 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
 public partial class CertIDType
 {
-    private DigestAlgAndValueType certDigestField;
-    private X509IssuerSerialType issuerSerialField;
     private string uRIField;
     /// <remarks/>
-    public DigestAlgAndValueType CertDigest
-    {
-        get
-        {
-            return this.certDigestField;
-        }
-
-        set
-        {
-            this.certDigestField = value;
-        }
-    }
+    public DigestAlgAndValueType CertDigest { get; set; }
 
     /// <remarks/>
-    public X509IssuerSerialType IssuerSerial
-    {
-        get
-        {
-            return this.issuerSerialField;
-        }
-
-        set
-        {
-            this.issuerSerialField = value;
-        }
-    }
+    public X509IssuerSerialType IssuerSerial { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]

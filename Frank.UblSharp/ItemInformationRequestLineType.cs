@@ -7,41 +7,17 @@
 [System.Xml.Serialization.XmlRootAttribute("ItemInformationRequestLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ItemInformationRequestLineType
 {
-    private TimeFrequencyCodeType timeFrequencyCodeField;
-    private SupplyChainActivityTypeCodeType supplyChainActivityTypeCodeField;
     private ForecastTypeCodeType forecastTypeCodeField;
     private PerformanceMetricTypeCodeType performanceMetricTypeCodeField;
     private PeriodType[] periodField;
     private SalesItemType[] salesItemField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TimeFrequencyCodeType TimeFrequencyCode
-    {
-        get
-        {
-            return this.timeFrequencyCodeField;
-        }
-
-        set
-        {
-            this.timeFrequencyCodeField = value;
-        }
-    }
+    public TimeFrequencyCodeType TimeFrequencyCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SupplyChainActivityTypeCodeType SupplyChainActivityTypeCode
-    {
-        get
-        {
-            return this.supplyChainActivityTypeCodeField;
-        }
-
-        set
-        {
-            this.supplyChainActivityTypeCodeField = value;
-        }
-    }
+    public SupplyChainActivityTypeCodeType SupplyChainActivityTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

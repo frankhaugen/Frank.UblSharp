@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ActivityPeriod", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PeriodType
 {
-    private StartDateType startDateField;
-    private StartTimeType startTimeField;
     private EndDateType endDateField;
     private EndTimeType endTimeField;
     private DurationMeasureType durationMeasureField;
@@ -16,33 +14,11 @@ public partial class PeriodType
     private DescriptionType[] descriptionField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public StartDateType StartDate
-    {
-        get
-        {
-            return this.startDateField;
-        }
-
-        set
-        {
-            this.startDateField = value;
-        }
-    }
+    public StartDateType StartDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public StartTimeType StartTime
-    {
-        get
-        {
-            return this.startTimeField;
-        }
-
-        set
-        {
-            this.startTimeField = value;
-        }
-    }
+    public StartTimeType StartTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

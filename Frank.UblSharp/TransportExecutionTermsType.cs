@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TransportExecutionTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TransportExecutionTermsType
 {
-    private TransportUserSpecialTermsType[] transportUserSpecialTermsField;
-    private TransportServiceProviderSpecialTermsType[] transportServiceProviderSpecialTermsField;
     private ChangeConditionsType[] changeConditionsField;
     private PaymentTermsType[] paymentTermsField;
     private DeliveryTermsType[] deliveryTermsField;
@@ -20,33 +18,11 @@ public partial class TransportExecutionTermsType
     private PaymentTermsType serviceChargePaymentTermsField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("TransportUserSpecialTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TransportUserSpecialTermsType[] TransportUserSpecialTerms
-    {
-        get
-        {
-            return this.transportUserSpecialTermsField;
-        }
-
-        set
-        {
-            this.transportUserSpecialTermsField = value;
-        }
-    }
+    public TransportUserSpecialTermsType[] TransportUserSpecialTerms { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("TransportServiceProviderSpecialTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TransportServiceProviderSpecialTermsType[] TransportServiceProviderSpecialTerms
-    {
-        get
-        {
-            return this.transportServiceProviderSpecialTermsField;
-        }
-
-        set
-        {
-            this.transportServiceProviderSpecialTermsField = value;
-        }
-    }
+    public TransportServiceProviderSpecialTermsType[] TransportServiceProviderSpecialTerms { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ChangeConditions", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

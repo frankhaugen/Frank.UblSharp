@@ -66,19 +66,7 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2")]
 public partial class IndicatorType
 {
-    private bool valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute()]
-    public bool Value
-    {
-        get
-        {
-            return this.valueField;
-        }
-
-        set
-        {
-            this.valueField = value;
-        }
-    }
+    public bool Value { get; set; }
 }

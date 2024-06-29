@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ItemLocationQuantity", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ItemLocationQuantityType
 {
-    private LeadTimeMeasureType leadTimeMeasureField;
-    private MinimumQuantityType minimumQuantityField;
     private MaximumQuantityType maximumQuantityField;
     private HazardousRiskIndicatorType hazardousRiskIndicatorField;
     private TradingRestrictionsType[] tradingRestrictionsField;
@@ -21,33 +19,11 @@ public partial class ItemLocationQuantityType
     private DependentPriceReferenceType dependentPriceReferenceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LeadTimeMeasureType LeadTimeMeasure
-    {
-        get
-        {
-            return this.leadTimeMeasureField;
-        }
-
-        set
-        {
-            this.leadTimeMeasureField = value;
-        }
-    }
+    public LeadTimeMeasureType LeadTimeMeasure { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MinimumQuantityType MinimumQuantity
-    {
-        get
-        {
-            return this.minimumQuantityField;
-        }
-
-        set
-        {
-            this.minimumQuantityField = value;
-        }
-    }
+    public MinimumQuantityType MinimumQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

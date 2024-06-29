@@ -7,40 +7,16 @@
 [System.Xml.Serialization.XmlRootAttribute("MeterProperty", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class MeterPropertyType
 {
-    private NameType1 nameField;
-    private NameCodeType nameCodeField;
     private ValueType valueField;
     private ValueQuantityType valueQuantityField;
     private ValueQualifierType[] valueQualifierField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NameType1 Name
-    {
-        get
-        {
-            return this.nameField;
-        }
-
-        set
-        {
-            this.nameField = value;
-        }
-    }
+    public NameType1 Name { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NameCodeType NameCode
-    {
-        get
-        {
-            return this.nameCodeField;
-        }
-
-        set
-        {
-            this.nameCodeField = value;
-        }
-    }
+    public NameCodeType NameCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

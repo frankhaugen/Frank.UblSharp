@@ -7,40 +7,16 @@
 [System.Xml.Serialization.XmlRootAttribute("SpecificTendererRequirement", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TendererRequirementType
 {
-    private NameType1[] nameField;
-    private TendererRequirementTypeCodeType tendererRequirementTypeCodeField;
     private DescriptionType[] descriptionField;
     private LegalReferenceType legalReferenceField;
     private EvidenceType[] suggestedEvidenceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Name", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NameType1[] Name
-    {
-        get
-        {
-            return this.nameField;
-        }
-
-        set
-        {
-            this.nameField = value;
-        }
-    }
+    public NameType1[] Name { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TendererRequirementTypeCodeType TendererRequirementTypeCode
-    {
-        get
-        {
-            return this.tendererRequirementTypeCodeField;
-        }
-
-        set
-        {
-            this.tendererRequirementTypeCodeField = value;
-        }
-    }
+    public TendererRequirementTypeCodeType TendererRequirementTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

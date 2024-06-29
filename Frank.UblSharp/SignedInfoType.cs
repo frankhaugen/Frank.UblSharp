@@ -7,37 +7,13 @@
 [System.Xml.Serialization.XmlRootAttribute("SignedInfo", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
 public partial class SignedInfoType
 {
-    private CanonicalizationMethodType1 canonicalizationMethodField;
-    private SignatureMethodType1 signatureMethodField;
     private ReferenceType1[] referenceField;
     private string idField;
     /// <remarks/>
-    public CanonicalizationMethodType1 CanonicalizationMethod
-    {
-        get
-        {
-            return this.canonicalizationMethodField;
-        }
-
-        set
-        {
-            this.canonicalizationMethodField = value;
-        }
-    }
+    public CanonicalizationMethodType1 CanonicalizationMethod { get; set; }
 
     /// <remarks/>
-    public SignatureMethodType1 SignatureMethod
-    {
-        get
-        {
-            return this.signatureMethodField;
-        }
-
-        set
-        {
-            this.signatureMethodField = value;
-        }
-    }
+    public SignatureMethodType1 SignatureMethod { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Reference")]

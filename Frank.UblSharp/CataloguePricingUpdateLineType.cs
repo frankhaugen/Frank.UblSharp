@@ -7,38 +7,14 @@
 [System.Xml.Serialization.XmlRootAttribute("CataloguePricingUpdateLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class CataloguePricingUpdateLineType
 {
-    private IDType idField;
-    private CustomerPartyType contractorCustomerPartyField;
     private SupplierPartyType sellerSupplierPartyField;
     private ItemLocationQuantityType[] requiredItemLocationQuantityField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
-    public CustomerPartyType ContractorCustomerParty
-    {
-        get
-        {
-            return this.contractorCustomerPartyField;
-        }
-
-        set
-        {
-            this.contractorCustomerPartyField = value;
-        }
-    }
+    public CustomerPartyType ContractorCustomerParty { get; set; }
 
     /// <remarks/>
     public SupplierPartyType SellerSupplierParty

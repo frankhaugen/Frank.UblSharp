@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AlternativeConditionPrice", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PriceType
 {
-    private PriceAmountType priceAmountField;
-    private BaseQuantityType baseQuantityField;
     private PriceChangeReasonType[] priceChangeReasonField;
     private PriceTypeCodeType priceTypeCodeField;
     private PriceTypeType priceType1Field;
@@ -19,33 +17,11 @@ public partial class PriceType
     private ExchangeRateType pricingExchangeRateField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PriceAmountType PriceAmount
-    {
-        get
-        {
-            return this.priceAmountField;
-        }
-
-        set
-        {
-            this.priceAmountField = value;
-        }
-    }
+    public PriceAmountType PriceAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public BaseQuantityType BaseQuantity
-    {
-        get
-        {
-            return this.baseQuantityField;
-        }
-
-        set
-        {
-            this.baseQuantityField = value;
-        }
-    }
+    public BaseQuantityType BaseQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("PriceChangeReason", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

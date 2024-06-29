@@ -7,38 +7,14 @@
 [System.Xml.Serialization.XmlRootAttribute("WebSiteAccess", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class WebSiteAccessType
 {
-    private URIType uRIField;
-    private PasswordType passwordField;
     private LoginType loginField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public URIType URI
-    {
-        get
-        {
-            return this.uRIField;
-        }
-
-        set
-        {
-            this.uRIField = value;
-        }
-    }
+    public URIType URI { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PasswordType Password
-    {
-        get
-        {
-            return this.passwordField;
-        }
-
-        set
-        {
-            this.passwordField = value;
-        }
-    }
+    public PasswordType Password { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

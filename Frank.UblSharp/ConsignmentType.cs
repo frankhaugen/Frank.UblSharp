@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ChildConsignment", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ConsignmentType
 {
-    private IDType idField;
-    private CarrierAssignedIDType carrierAssignedIDField;
     private ConsigneeAssignedIDType consigneeAssignedIDField;
     private ConsignorAssignedIDType consignorAssignedIDField;
     private FreightForwarderAssignedIDType freightForwarderAssignedIDField;
@@ -109,33 +107,11 @@ public partial class ConsignmentType
     private LocationType1 lastExitPortLocationField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CarrierAssignedIDType CarrierAssignedID
-    {
-        get
-        {
-            return this.carrierAssignedIDField;
-        }
-
-        set
-        {
-            this.carrierAssignedIDField = value;
-        }
-    }
+    public CarrierAssignedIDType CarrierAssignedID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

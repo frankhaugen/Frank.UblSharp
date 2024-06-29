@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AlternativeLineItem", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class LineItemType
 {
-    private IDType idField;
-    private SalesOrderIDType salesOrderIDField;
     private UUIDType uUIDField;
     private NoteType[] noteField;
     private LineStatusCodeType lineStatusCodeField;
@@ -41,33 +39,11 @@ public partial class LineItemType
     private LineReferenceType[] lineReferenceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SalesOrderIDType SalesOrderID
-    {
-        get
-        {
-            return this.salesOrderIDField;
-        }
-
-        set
-        {
-            this.salesOrderIDField = value;
-        }
-    }
+    public SalesOrderIDType SalesOrderID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

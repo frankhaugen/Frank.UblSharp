@@ -6,33 +6,9 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
 public partial class CRLRefType
 {
-    private DigestAlgAndValueType digestAlgAndValueField;
-    private CRLIdentifierType cRLIdentifierField;
     /// <remarks/>
-    public DigestAlgAndValueType DigestAlgAndValue
-    {
-        get
-        {
-            return this.digestAlgAndValueField;
-        }
-
-        set
-        {
-            this.digestAlgAndValueField = value;
-        }
-    }
+    public DigestAlgAndValueType DigestAlgAndValue { get; set; }
 
     /// <remarks/>
-    public CRLIdentifierType CRLIdentifier
-    {
-        get
-        {
-            return this.cRLIdentifierField;
-        }
-
-        set
-        {
-            this.cRLIdentifierField = value;
-        }
-    }
+    public CRLIdentifierType CRLIdentifier { get; set; }
 }

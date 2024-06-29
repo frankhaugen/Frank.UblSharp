@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ContainedGoodsItem", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class GoodsItemType
 {
-    private IDType idField;
-    private SequenceNumberIDType sequenceNumberIDField;
     private DescriptionType[] descriptionField;
     private HazardousRiskIndicatorType hazardousRiskIndicatorField;
     private DeclaredCustomsValueAmountType declaredCustomsValueAmountField;
@@ -49,33 +47,11 @@ public partial class GoodsItemType
     private TemperatureType maximumTemperatureField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SequenceNumberIDType SequenceNumberID
-    {
-        get
-        {
-            return this.sequenceNumberIDField;
-        }
-
-        set
-        {
-            this.sequenceNumberIDField = value;
-        }
-    }
+    public SequenceNumberIDType SequenceNumberID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

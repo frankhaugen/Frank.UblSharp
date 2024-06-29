@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("OrderReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class OrderReferenceType
 {
-    private IDType idField;
-    private SalesOrderIDType salesOrderIDField;
     private CopyIndicatorType copyIndicatorField;
     private UUIDType uUIDField;
     private IssueDateType issueDateField;
@@ -18,33 +16,11 @@ public partial class OrderReferenceType
     private DocumentReferenceType documentReferenceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SalesOrderIDType SalesOrderID
-    {
-        get
-        {
-            return this.salesOrderIDField;
-        }
-
-        set
-        {
-            this.salesOrderIDField = value;
-        }
-    }
+    public SalesOrderIDType SalesOrderID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

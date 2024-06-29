@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("PaymentMeans", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PaymentMeansType
 {
-    private IDType idField;
-    private PaymentMeansCodeType paymentMeansCodeField;
     private PaymentDueDateType paymentDueDateField;
     private PaymentChannelCodeType paymentChannelCodeField;
     private InstructionIDType instructionIDField;
@@ -22,33 +20,11 @@ public partial class PaymentMeansType
     private TradeFinancingType tradeFinancingField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PaymentMeansCodeType PaymentMeansCode
-    {
-        get
-        {
-            return this.paymentMeansCodeField;
-        }
-
-        set
-        {
-            this.paymentMeansCodeField = value;
-        }
-    }
+    public PaymentMeansCodeType PaymentMeansCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

@@ -7,36 +7,12 @@
 [System.Xml.Serialization.XmlRootAttribute("ObjectIdentifier", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
 public partial class ObjectIdentifierType
 {
-    private IdentifierType2 identifierField;
-    private string descriptionField;
     private DocumentationReferencesType documentationReferencesField;
     /// <remarks/>
-    public IdentifierType2 Identifier
-    {
-        get
-        {
-            return this.identifierField;
-        }
-
-        set
-        {
-            this.identifierField = value;
-        }
-    }
+    public IdentifierType2 Identifier { get; set; }
 
     /// <remarks/>
-    public string Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public string Description { get; set; }
 
     /// <remarks/>
     public DocumentationReferencesType DocumentationReferences

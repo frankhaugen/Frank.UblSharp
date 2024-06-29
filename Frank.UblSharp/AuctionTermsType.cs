@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AuctionTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class AuctionTermsType
 {
-    private AuctionConstraintIndicatorType auctionConstraintIndicatorField;
-    private JustificationDescriptionType[] justificationDescriptionField;
     private DescriptionType[] descriptionField;
     private ProcessDescriptionType[] processDescriptionField;
     private ConditionsDescriptionType[] conditionsDescriptionField;
@@ -16,33 +14,11 @@ public partial class AuctionTermsType
     private AuctionURIType auctionURIField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AuctionConstraintIndicatorType AuctionConstraintIndicator
-    {
-        get
-        {
-            return this.auctionConstraintIndicatorField;
-        }
-
-        set
-        {
-            this.auctionConstraintIndicatorField = value;
-        }
-    }
+    public AuctionConstraintIndicatorType AuctionConstraintIndicator { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("JustificationDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public JustificationDescriptionType[] JustificationDescription
-    {
-        get
-        {
-            return this.justificationDescriptionField;
-        }
-
-        set
-        {
-            this.justificationDescriptionField = value;
-        }
-    }
+    public JustificationDescriptionType[] JustificationDescription { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

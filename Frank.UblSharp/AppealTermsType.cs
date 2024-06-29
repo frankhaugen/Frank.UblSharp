@@ -7,39 +7,15 @@
 [System.Xml.Serialization.XmlRootAttribute("AppealTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class AppealTermsType
 {
-    private DescriptionType[] descriptionField;
-    private PeriodType presentationPeriodField;
     private PartyType appealInformationPartyField;
     private PartyType appealReceiverPartyField;
     private PartyType mediationPartyField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
-    public PeriodType PresentationPeriod
-    {
-        get
-        {
-            return this.presentationPeriodField;
-        }
-
-        set
-        {
-            this.presentationPeriodField = value;
-        }
-    }
+    public PeriodType PresentationPeriod { get; set; }
 
     /// <remarks/>
     public PartyType AppealInformationParty

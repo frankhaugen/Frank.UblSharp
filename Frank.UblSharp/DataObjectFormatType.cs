@@ -7,38 +7,14 @@
 [System.Xml.Serialization.XmlRootAttribute("DataObjectFormat", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
 public partial class DataObjectFormatType
 {
-    private string descriptionField;
-    private ObjectIdentifierType objectIdentifierField;
     private string mimeTypeField;
     private string encodingField;
     private string objectReferenceField;
     /// <remarks/>
-    public string Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public string Description { get; set; }
 
     /// <remarks/>
-    public ObjectIdentifierType ObjectIdentifier
-    {
-        get
-        {
-            return this.objectIdentifierField;
-        }
-
-        set
-        {
-            this.objectIdentifierField = value;
-        }
-    }
+    public ObjectIdentifierType ObjectIdentifier { get; set; }
 
     /// <remarks/>
     public string MimeType

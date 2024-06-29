@@ -7,40 +7,16 @@
 [System.Xml.Serialization.XmlRootAttribute("ForecastExceptionCriterionLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ForecastExceptionCriterionLineType
 {
-    private ForecastPurposeCodeType forecastPurposeCodeField;
-    private ForecastTypeCodeType forecastTypeCodeField;
     private ComparisonDataSourceCodeType comparisonDataSourceCodeField;
     private DataSourceCodeType dataSourceCodeField;
     private TimeDeltaDaysQuantityType timeDeltaDaysQuantityField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ForecastPurposeCodeType ForecastPurposeCode
-    {
-        get
-        {
-            return this.forecastPurposeCodeField;
-        }
-
-        set
-        {
-            this.forecastPurposeCodeField = value;
-        }
-    }
+    public ForecastPurposeCodeType ForecastPurposeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ForecastTypeCodeType ForecastTypeCode
-    {
-        get
-        {
-            return this.forecastTypeCodeField;
-        }
-
-        set
-        {
-            this.forecastTypeCodeField = value;
-        }
-    }
+    public ForecastTypeCodeType ForecastTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

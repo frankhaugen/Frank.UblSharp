@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ActivityDataLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ActivityDataLineType
 {
-    private IDType idField;
-    private SupplyChainActivityTypeCodeType supplyChainActivityTypeCodeField;
     private CustomerPartyType buyerCustomerPartyField;
     private SupplierPartyType sellerSupplierPartyField;
     private PeriodType activityPeriodField;
@@ -17,33 +15,11 @@ public partial class ActivityDataLineType
     private SalesItemType[] salesItemField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SupplyChainActivityTypeCodeType SupplyChainActivityTypeCode
-    {
-        get
-        {
-            return this.supplyChainActivityTypeCodeField;
-        }
-
-        set
-        {
-            this.supplyChainActivityTypeCodeField = value;
-        }
-    }
+    public SupplyChainActivityTypeCodeType SupplyChainActivityTypeCode { get; set; }
 
     /// <remarks/>
     public CustomerPartyType BuyerCustomerParty

@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ApplicableTransportMeans", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TransportMeansType
 {
-    private JourneyIDType journeyIDField;
-    private RegistrationNationalityIDType registrationNationalityIDField;
     private RegistrationNationalityType[] registrationNationalityField;
     private DirectionCodeType directionCodeField;
     private TransportMeansTypeCodeType transportMeansTypeCodeField;
@@ -22,33 +20,11 @@ public partial class TransportMeansType
     private DimensionType[] measurementDimensionField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public JourneyIDType JourneyID
-    {
-        get
-        {
-            return this.journeyIDField;
-        }
-
-        set
-        {
-            this.journeyIDField = value;
-        }
-    }
+    public JourneyIDType JourneyID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public RegistrationNationalityIDType RegistrationNationalityID
-    {
-        get
-        {
-            return this.registrationNationalityIDField;
-        }
-
-        set
-        {
-            this.registrationNationalityIDField = value;
-        }
-    }
+    public RegistrationNationalityIDType RegistrationNationalityID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("RegistrationNationality", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

@@ -7,38 +7,14 @@
 [System.Xml.Serialization.XmlRootAttribute("MainOnAccountPayment", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class OnAccountPaymentType
 {
-    private EstimatedConsumedQuantityType estimatedConsumedQuantityField;
-    private NoteType[] noteField;
     private PaymentTermsType[] paymentTermsField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public EstimatedConsumedQuantityType EstimatedConsumedQuantity
-    {
-        get
-        {
-            return this.estimatedConsumedQuantityField;
-        }
-
-        set
-        {
-            this.estimatedConsumedQuantityField = value;
-        }
-    }
+    public EstimatedConsumedQuantityType EstimatedConsumedQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NoteType[] Note
-    {
-        get
-        {
-            return this.noteField;
-        }
-
-        set
-        {
-            this.noteField = value;
-        }
-    }
+    public NoteType[] Note { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("PaymentTerms")]

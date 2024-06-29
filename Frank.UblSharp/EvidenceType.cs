@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Evidence", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class EvidenceType
 {
-    private IDType idField;
-    private EvidenceTypeCodeType evidenceTypeCodeField;
     private DescriptionType[] descriptionField;
     private CandidateStatementType[] candidateStatementField;
     private PartyType evidenceIssuingPartyField;
@@ -16,33 +14,11 @@ public partial class EvidenceType
     private LanguageType languageField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public EvidenceTypeCodeType EvidenceTypeCode
-    {
-        get
-        {
-            return this.evidenceTypeCodeField;
-        }
-
-        set
-        {
-            this.evidenceTypeCodeField = value;
-        }
-    }
+    public EvidenceTypeCodeType EvidenceTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

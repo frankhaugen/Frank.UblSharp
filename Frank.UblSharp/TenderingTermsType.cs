@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TenderingTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TenderingTermsType
 {
-    private AwardingMethodTypeCodeType awardingMethodTypeCodeField;
-    private PriceEvaluationCodeType priceEvaluationCodeField;
     private MaximumVariantQuantityType maximumVariantQuantityField;
     private VariantConstraintIndicatorType variantConstraintIndicatorField;
     private AcceptedVariantsDescriptionType[] acceptedVariantsDescriptionField;
@@ -52,33 +50,11 @@ public partial class TenderingTermsType
     private DocumentReferenceType replacedNoticeDocumentReferenceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AwardingMethodTypeCodeType AwardingMethodTypeCode
-    {
-        get
-        {
-            return this.awardingMethodTypeCodeField;
-        }
-
-        set
-        {
-            this.awardingMethodTypeCodeField = value;
-        }
-    }
+    public AwardingMethodTypeCodeType AwardingMethodTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PriceEvaluationCodeType PriceEvaluationCode
-    {
-        get
-        {
-            return this.priceEvaluationCodeField;
-        }
-
-        set
-        {
-            this.priceEvaluationCodeField = value;
-        }
-    }
+    public PriceEvaluationCodeType PriceEvaluationCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

@@ -7,40 +7,16 @@
 [System.Xml.Serialization.XmlRootAttribute("ConsumptionReportReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ConsumptionReportReferenceType
 {
-    private ConsumptionReportIDType consumptionReportIDField;
-    private ConsumptionTypeType consumptionTypeField;
     private ConsumptionTypeCodeType consumptionTypeCodeField;
     private TotalConsumedQuantityType totalConsumedQuantityField;
     private PeriodType periodField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ConsumptionReportIDType ConsumptionReportID
-    {
-        get
-        {
-            return this.consumptionReportIDField;
-        }
-
-        set
-        {
-            this.consumptionReportIDField = value;
-        }
-    }
+    public ConsumptionReportIDType ConsumptionReportID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ConsumptionTypeType ConsumptionType
-    {
-        get
-        {
-            return this.consumptionTypeField;
-        }
-
-        set
-        {
-            this.consumptionTypeField = value;
-        }
-    }
+    public ConsumptionTypeType ConsumptionType { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

@@ -7,39 +7,15 @@
 [System.Xml.Serialization.XmlRootAttribute("EventTactic", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class EventTacticType
 {
-    private CommentType commentField;
-    private QuantityType2 quantityField;
     private EventTacticEnumerationType eventTacticEnumerationField;
     private PeriodType periodField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CommentType Comment
-    {
-        get
-        {
-            return this.commentField;
-        }
-
-        set
-        {
-            this.commentField = value;
-        }
-    }
+    public CommentType Comment { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public QuantityType2 Quantity
-    {
-        get
-        {
-            return this.quantityField;
-        }
-
-        set
-        {
-            this.quantityField = value;
-        }
-    }
+    public QuantityType2 Quantity { get; set; }
 
     /// <remarks/>
     public EventTacticEnumerationType EventTacticEnumeration

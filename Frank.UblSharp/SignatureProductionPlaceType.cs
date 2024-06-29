@@ -7,37 +7,13 @@
 [System.Xml.Serialization.XmlRootAttribute("SignatureProductionPlace", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
 public partial class SignatureProductionPlaceType
 {
-    private string cityField;
-    private string stateOrProvinceField;
     private string postalCodeField;
     private string countryNameField;
     /// <remarks/>
-    public string City
-    {
-        get
-        {
-            return this.cityField;
-        }
-
-        set
-        {
-            this.cityField = value;
-        }
-    }
+    public string City { get; set; }
 
     /// <remarks/>
-    public string StateOrProvince
-    {
-        get
-        {
-            return this.stateOrProvinceField;
-        }
-
-        set
-        {
-            this.stateOrProvinceField = value;
-        }
-    }
+    public string StateOrProvince { get; set; }
 
     /// <remarks/>
     public string PostalCode

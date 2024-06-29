@@ -7,40 +7,16 @@
 [System.Xml.Serialization.XmlRootAttribute("Condition", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ConditionType1
 {
-    private AttributeIDType attributeIDField;
-    private MeasureType2 measureField;
     private DescriptionType[] descriptionField;
     private MinimumMeasureType minimumMeasureField;
     private MaximumMeasureType maximumMeasureField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AttributeIDType AttributeID
-    {
-        get
-        {
-            return this.attributeIDField;
-        }
-
-        set
-        {
-            this.attributeIDField = value;
-        }
-    }
+    public AttributeIDType AttributeID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MeasureType2 Measure
-    {
-        get
-        {
-            return this.measureField;
-        }
-
-        set
-        {
-            this.measureField = value;
-        }
-    }
+    public MeasureType2 Measure { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

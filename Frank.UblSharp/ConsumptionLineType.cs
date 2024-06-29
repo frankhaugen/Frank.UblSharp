@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ConsumptionLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ConsumptionLineType
 {
-    private IDType idField;
-    private ParentDocumentLineReferenceIDType parentDocumentLineReferenceIDField;
     private InvoicedQuantityType invoicedQuantityField;
     private LineExtensionAmountType lineExtensionAmountField;
     private PeriodType periodField;
@@ -20,33 +18,11 @@ public partial class ConsumptionLineType
     private UnstructuredPriceType unstructuredPriceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ParentDocumentLineReferenceIDType ParentDocumentLineReferenceID
-    {
-        get
-        {
-            return this.parentDocumentLineReferenceIDField;
-        }
-
-        set
-        {
-            this.parentDocumentLineReferenceIDField = value;
-        }
-    }
+    public ParentDocumentLineReferenceIDType ParentDocumentLineReferenceID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

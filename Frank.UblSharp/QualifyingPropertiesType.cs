@@ -7,37 +7,13 @@
 [System.Xml.Serialization.XmlRootAttribute("QualifyingProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
 public partial class QualifyingPropertiesType
 {
-    private SignedPropertiesType signedPropertiesField;
-    private UnsignedPropertiesType unsignedPropertiesField;
     private string targetField;
     private string idField;
     /// <remarks/>
-    public SignedPropertiesType SignedProperties
-    {
-        get
-        {
-            return this.signedPropertiesField;
-        }
-
-        set
-        {
-            this.signedPropertiesField = value;
-        }
-    }
+    public SignedPropertiesType SignedProperties { get; set; }
 
     /// <remarks/>
-    public UnsignedPropertiesType UnsignedProperties
-    {
-        get
-        {
-            return this.unsignedPropertiesField;
-        }
-
-        set
-        {
-            this.unsignedPropertiesField = value;
-        }
-    }
+    public UnsignedPropertiesType UnsignedProperties { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]

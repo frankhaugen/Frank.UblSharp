@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ResultOfVerification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ResultOfVerificationType
 {
-    private ValidatorIDType validatorIDField;
-    private ValidationResultCodeType validationResultCodeField;
     private ValidationDateType validationDateField;
     private ValidationTimeType validationTimeField;
     private ValidateProcessType validateProcessField;
@@ -17,33 +15,11 @@ public partial class ResultOfVerificationType
     private PartyType signatoryPartyField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ValidatorIDType ValidatorID
-    {
-        get
-        {
-            return this.validatorIDField;
-        }
-
-        set
-        {
-            this.validatorIDField = value;
-        }
-    }
+    public ValidatorIDType ValidatorID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ValidationResultCodeType ValidationResultCode
-    {
-        get
-        {
-            return this.validationResultCodeField;
-        }
-
-        set
-        {
-            this.validationResultCodeField = value;
-        }
-    }
+    public ValidationResultCodeType ValidationResultCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

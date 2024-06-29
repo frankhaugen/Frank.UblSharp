@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TradeFinancing", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TradeFinancingType
 {
-    private IDType idField;
-    private FinancingInstrumentCodeType financingInstrumentCodeField;
     private DocumentReferenceType contractDocumentReferenceField;
     private DocumentReferenceType[] documentReferenceField;
     private PartyType financingPartyField;
@@ -16,33 +14,11 @@ public partial class TradeFinancingType
     private ClauseType[] clauseField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public FinancingInstrumentCodeType FinancingInstrumentCode
-    {
-        get
-        {
-            return this.financingInstrumentCodeField;
-        }
-
-        set
-        {
-            this.financingInstrumentCodeField = value;
-        }
-    }
+    public FinancingInstrumentCodeType FinancingInstrumentCode { get; set; }
 
     /// <remarks/>
     public DocumentReferenceType ContractDocumentReference

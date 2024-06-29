@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ConsumptionCorrection", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ConsumptionCorrectionType
 {
-    private CorrectionTypeType correctionTypeField;
-    private CorrectionTypeCodeType correctionTypeCodeField;
     private MeterNumberType meterNumberField;
     private GasPressureQuantityType gasPressureQuantityField;
     private ActualTemperatureReductionQuantityType actualTemperatureReductionQuantityField;
@@ -21,33 +19,11 @@ public partial class ConsumptionCorrectionType
     private CorrectionAmountType correctionAmountField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CorrectionTypeType CorrectionType
-    {
-        get
-        {
-            return this.correctionTypeField;
-        }
-
-        set
-        {
-            this.correctionTypeField = value;
-        }
-    }
+    public CorrectionTypeType CorrectionType { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CorrectionTypeCodeType CorrectionTypeCode
-    {
-        get
-        {
-            return this.correctionTypeCodeField;
-        }
-
-        set
-        {
-            this.correctionTypeCodeField = value;
-        }
-    }
+    public CorrectionTypeCodeType CorrectionTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

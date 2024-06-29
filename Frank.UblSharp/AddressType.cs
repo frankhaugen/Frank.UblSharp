@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Address", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class AddressType
 {
-    private IDType idField;
-    private AddressTypeCodeType addressTypeCodeField;
     private AddressFormatCodeType addressFormatCodeField;
     private PostboxType postboxField;
     private FloorType floorField;
@@ -36,33 +34,11 @@ public partial class AddressType
     private LocationCoordinateType[] locationCoordinateField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AddressTypeCodeType AddressTypeCode
-    {
-        get
-        {
-            return this.addressTypeCodeField;
-        }
-
-        set
-        {
-            this.addressTypeCodeField = value;
-        }
-    }
+    public AddressTypeCodeType AddressTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

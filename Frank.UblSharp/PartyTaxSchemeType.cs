@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("PartyTaxScheme", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PartyTaxSchemeType
 {
-    private RegistrationNameType registrationNameField;
-    private CompanyIDType companyIDField;
     private TaxLevelCodeType taxLevelCodeField;
     private ExemptionReasonCodeType exemptionReasonCodeField;
     private ExemptionReasonType[] exemptionReasonField;
@@ -16,33 +14,11 @@ public partial class PartyTaxSchemeType
     private TaxSchemeType taxSchemeField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public RegistrationNameType RegistrationName
-    {
-        get
-        {
-            return this.registrationNameField;
-        }
-
-        set
-        {
-            this.registrationNameField = value;
-        }
-    }
+    public RegistrationNameType RegistrationName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CompanyIDType CompanyID
-    {
-        get
-        {
-            return this.companyIDField;
-        }
-
-        set
-        {
-            this.companyIDField = value;
-        }
-    }
+    public CompanyIDType CompanyID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

@@ -7,38 +7,14 @@
 [System.Xml.Serialization.XmlRootAttribute("SignatureInformation", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2", IsNullable = false)]
 public partial class SignatureInformationType
 {
-    private IDType idField;
-    private ReferencedSignatureIDType referencedSignatureIDField;
     private SignatureType1 signatureField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2")]
-    public ReferencedSignatureIDType ReferencedSignatureID
-    {
-        get
-        {
-            return this.referencedSignatureIDField;
-        }
-
-        set
-        {
-            this.referencedSignatureIDField = value;
-        }
-    }
+    public ReferencedSignatureIDType ReferencedSignatureID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]

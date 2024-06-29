@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TaxSubtotal", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TaxSubtotalType
 {
-    private TaxableAmountType taxableAmountField;
-    private TaxAmountType taxAmountField;
     private CalculationSequenceNumericType calculationSequenceNumericField;
     private TransactionCurrencyTaxAmountType transactionCurrencyTaxAmountField;
     private PercentType1 percentField;
@@ -19,33 +17,11 @@ public partial class TaxSubtotalType
     private TaxCategoryType taxCategoryField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TaxableAmountType TaxableAmount
-    {
-        get
-        {
-            return this.taxableAmountField;
-        }
-
-        set
-        {
-            this.taxableAmountField = value;
-        }
-    }
+    public TaxableAmountType TaxableAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TaxAmountType TaxAmount
-    {
-        get
-        {
-            return this.taxAmountField;
-        }
-
-        set
-        {
-            this.taxAmountField = value;
-        }
-    }
+    public TaxAmountType TaxAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

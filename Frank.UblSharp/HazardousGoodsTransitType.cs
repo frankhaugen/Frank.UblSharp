@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("HazardousGoodsTransit", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class HazardousGoodsTransitType
 {
-    private TransportEmergencyCardCodeType transportEmergencyCardCodeField;
-    private PackingCriteriaCodeType packingCriteriaCodeField;
     private HazardousRegulationCodeType hazardousRegulationCodeField;
     private InhalationToxicityZoneCodeType inhalationToxicityZoneCodeField;
     private TransportAuthorizationCodeType transportAuthorizationCodeField;
@@ -16,33 +14,11 @@ public partial class HazardousGoodsTransitType
     private TemperatureType minimumTemperatureField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TransportEmergencyCardCodeType TransportEmergencyCardCode
-    {
-        get
-        {
-            return this.transportEmergencyCardCodeField;
-        }
-
-        set
-        {
-            this.transportEmergencyCardCodeField = value;
-        }
-    }
+    public TransportEmergencyCardCodeType TransportEmergencyCardCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PackingCriteriaCodeType PackingCriteriaCode
-    {
-        get
-        {
-            return this.packingCriteriaCodeField;
-        }
-
-        set
-        {
-            this.packingCriteriaCodeField = value;
-        }
-    }
+    public PackingCriteriaCodeType PackingCriteriaCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

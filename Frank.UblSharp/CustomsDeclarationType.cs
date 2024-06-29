@@ -7,34 +7,10 @@
 [System.Xml.Serialization.XmlRootAttribute("CustomsDeclaration", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class CustomsDeclarationType
 {
-    private IDType idField;
-    private PartyType issuerPartyField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
-    public PartyType IssuerParty
-    {
-        get
-        {
-            return this.issuerPartyField;
-        }
-
-        set
-        {
-            this.issuerPartyField = value;
-        }
-    }
+    public PartyType IssuerParty { get; set; }
 }

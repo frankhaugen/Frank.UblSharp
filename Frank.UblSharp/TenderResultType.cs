@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TenderResult", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TenderResultType
 {
-    private TenderResultCodeType tenderResultCodeField;
-    private DescriptionType[] descriptionField;
     private AdvertisementAmountType advertisementAmountField;
     private AwardDateType awardDateField;
     private AwardTimeType awardTimeField;
@@ -25,33 +23,11 @@ public partial class TenderResultType
     private WinningPartyType[] winningPartyField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TenderResultCodeType TenderResultCode
-    {
-        get
-        {
-            return this.tenderResultCodeField;
-        }
-
-        set
-        {
-            this.tenderResultCodeField = value;
-        }
-    }
+    public TenderResultCodeType TenderResultCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

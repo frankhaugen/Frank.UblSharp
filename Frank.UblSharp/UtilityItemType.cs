@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("UtilityItem", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class UtilityItemType
 {
-    private IDType idField;
-    private SubscriberIDType subscriberIDField;
     private SubscriberTypeType subscriberTypeField;
     private SubscriberTypeCodeType subscriberTypeCodeField;
     private DescriptionType[] descriptionField;
@@ -24,33 +22,11 @@ public partial class UtilityItemType
     private ContractType contractField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SubscriberIDType SubscriberID
-    {
-        get
-        {
-            return this.subscriberIDField;
-        }
-
-        set
-        {
-            this.subscriberIDField = value;
-        }
-    }
+    public SubscriberIDType SubscriberID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

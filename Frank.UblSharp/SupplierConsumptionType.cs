@@ -7,40 +7,16 @@
 [System.Xml.Serialization.XmlRootAttribute("SupplierConsumption", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class SupplierConsumptionType
 {
-    private DescriptionType[] descriptionField;
-    private PartyType utilitySupplierPartyField;
     private PartyType utilityCustomerPartyField;
     private ConsumptionType consumptionField;
     private ContractType contractField;
     private ConsumptionLineType[] consumptionLineField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
-    public PartyType UtilitySupplierParty
-    {
-        get
-        {
-            return this.utilitySupplierPartyField;
-        }
-
-        set
-        {
-            this.utilitySupplierPartyField = value;
-        }
-    }
+    public PartyType UtilitySupplierParty { get; set; }
 
     /// <remarks/>
     public PartyType UtilityCustomerParty

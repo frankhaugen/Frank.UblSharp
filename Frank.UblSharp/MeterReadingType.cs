@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("MeterReading", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class MeterReadingType
 {
-    private IDType idField;
-    private MeterReadingTypeType meterReadingType1Field;
     private MeterReadingTypeCodeType meterReadingTypeCodeField;
     private PreviousMeterReadingDateType previousMeterReadingDateField;
     private PreviousMeterQuantityType previousMeterQuantityField;
@@ -22,33 +20,11 @@ public partial class MeterReadingType
     private DeliveredQuantityType deliveredQuantityField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("MeterReadingType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MeterReadingTypeType MeterReadingType1
-    {
-        get
-        {
-            return this.meterReadingType1Field;
-        }
-
-        set
-        {
-            this.meterReadingType1Field = value;
-        }
-    }
+    public MeterReadingTypeType MeterReadingType1 { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

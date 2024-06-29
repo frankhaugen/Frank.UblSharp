@@ -7,40 +7,16 @@
 [System.Xml.Serialization.XmlRootAttribute("TaxTotal", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TaxTotalType
 {
-    private TaxAmountType taxAmountField;
-    private RoundingAmountType roundingAmountField;
     private TaxEvidenceIndicatorType taxEvidenceIndicatorField;
     private TaxIncludedIndicatorType taxIncludedIndicatorField;
     private TaxSubtotalType[] taxSubtotalField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TaxAmountType TaxAmount
-    {
-        get
-        {
-            return this.taxAmountField;
-        }
-
-        set
-        {
-            this.taxAmountField = value;
-        }
-    }
+    public TaxAmountType TaxAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public RoundingAmountType RoundingAmount
-    {
-        get
-        {
-            return this.roundingAmountField;
-        }
-
-        set
-        {
-            this.roundingAmountField = value;
-        }
-    }
+    public RoundingAmountType RoundingAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

@@ -7,19 +7,7 @@
 [System.Xml.Serialization.XmlRootAttribute("UBLDocumentSignatures", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2", IsNullable = false)]
 public partial class UBLDocumentSignaturesType
 {
-    private SignatureInformationType[] signatureInformationField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("SignatureInformation", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2")]
-    public SignatureInformationType[] SignatureInformation
-    {
-        get
-        {
-            return this.signatureInformationField;
-        }
-
-        set
-        {
-            this.signatureInformationField = value;
-        }
-    }
+    public SignatureInformationType[] SignatureInformation { get; set; }
 }

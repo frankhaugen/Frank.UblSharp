@@ -7,39 +7,15 @@
 [System.Xml.Serialization.XmlRootAttribute("EndorserParty", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class EndorserPartyType
 {
-    private RoleCodeType roleCodeField;
-    private SequenceNumericType sequenceNumericField;
     private PartyType partyField;
     private ContactType signatoryContactField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public RoleCodeType RoleCode
-    {
-        get
-        {
-            return this.roleCodeField;
-        }
-
-        set
-        {
-            this.roleCodeField = value;
-        }
-    }
+    public RoleCodeType RoleCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SequenceNumericType SequenceNumeric
-    {
-        get
-        {
-            return this.sequenceNumericField;
-        }
-
-        set
-        {
-            this.sequenceNumericField = value;
-        }
-    }
+    public SequenceNumericType SequenceNumeric { get; set; }
 
     /// <remarks/>
     public PartyType Party

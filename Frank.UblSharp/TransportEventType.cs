@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AcceptanceTransportEvent", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TransportEventType
 {
-    private IdentificationIDType identificationIDField;
-    private OccurrenceDateType occurrenceDateField;
     private OccurrenceTimeType occurrenceTimeField;
     private TransportEventTypeCodeType transportEventTypeCodeField;
     private DescriptionType[] descriptionField;
@@ -21,33 +19,11 @@ public partial class TransportEventType
     private PeriodType[] periodField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IdentificationIDType IdentificationID
-    {
-        get
-        {
-            return this.identificationIDField;
-        }
-
-        set
-        {
-            this.identificationIDField = value;
-        }
-    }
+    public IdentificationIDType IdentificationID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public OccurrenceDateType OccurrenceDate
-    {
-        get
-        {
-            return this.occurrenceDateField;
-        }
-
-        set
-        {
-            this.occurrenceDateField = value;
-        }
-    }
+    public OccurrenceDateType OccurrenceDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

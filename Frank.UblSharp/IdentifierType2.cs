@@ -6,38 +6,14 @@
 [System.Xml.Serialization.XmlTypeAttribute(TypeName = "IdentifierType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
 public partial class IdentifierType2
 {
-    private QualifierType qualifierField;
-    private bool qualifierFieldSpecified;
     private string valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public QualifierType Qualifier
-    {
-        get
-        {
-            return this.qualifierField;
-        }
-
-        set
-        {
-            this.qualifierField = value;
-        }
-    }
+    public QualifierType Qualifier { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlIgnoreAttribute()]
-    public bool QualifierSpecified
-    {
-        get
-        {
-            return this.qualifierFieldSpecified;
-        }
-
-        set
-        {
-            this.qualifierFieldSpecified = value;
-        }
-    }
+    public bool QualifierSpecified { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute(DataType = "anyURI")]

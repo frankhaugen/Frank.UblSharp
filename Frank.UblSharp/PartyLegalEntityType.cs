@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("PartyLegalEntity", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PartyLegalEntityType
 {
-    private RegistrationNameType registrationNameField;
-    private CompanyIDType companyIDField;
     private RegistrationDateType registrationDateField;
     private RegistrationExpirationDateType registrationExpirationDateField;
     private CompanyLegalFormCodeType companyLegalFormCodeField;
@@ -23,33 +21,11 @@ public partial class PartyLegalEntityType
     private ShareholderPartyType[] shareholderPartyField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public RegistrationNameType RegistrationName
-    {
-        get
-        {
-            return this.registrationNameField;
-        }
-
-        set
-        {
-            this.registrationNameField = value;
-        }
-    }
+    public RegistrationNameType RegistrationName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CompanyIDType CompanyID
-    {
-        get
-        {
-            return this.companyIDField;
-        }
-
-        set
-        {
-            this.companyIDField = value;
-        }
-    }
+    public CompanyIDType CompanyID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

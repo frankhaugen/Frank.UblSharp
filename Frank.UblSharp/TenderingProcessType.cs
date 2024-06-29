@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TenderingProcess", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TenderingProcessType
 {
-    private IDType idField;
-    private OriginalContractingSystemIDType originalContractingSystemIDField;
     private DescriptionType[] descriptionField;
     private NegotiationDescriptionType[] negotiationDescriptionField;
     private ProcedureCodeType procedureCodeField;
@@ -32,33 +30,11 @@ public partial class TenderingProcessType
     private FrameworkAgreementType frameworkAgreementField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public OriginalContractingSystemIDType OriginalContractingSystemID
-    {
-        get
-        {
-            return this.originalContractingSystemIDField;
-        }
-
-        set
-        {
-            this.originalContractingSystemIDField = value;
-        }
-    }
+    public OriginalContractingSystemIDType OriginalContractingSystemID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

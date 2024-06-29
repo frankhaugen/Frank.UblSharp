@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TelecommunicationsSupplyLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TelecommunicationsSupplyLineType
 {
-    private IDType idField;
-    private PhoneNumberType phoneNumberField;
     private DescriptionType[] descriptionField;
     private LineExtensionAmountType lineExtensionAmountField;
     private ExchangeRateType[] exchangeRateField;
@@ -17,33 +15,11 @@ public partial class TelecommunicationsSupplyLineType
     private TelecommunicationsServiceType[] telecommunicationsServiceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PhoneNumberType PhoneNumber
-    {
-        get
-        {
-            return this.phoneNumberField;
-        }
-
-        set
-        {
-            this.phoneNumberField = value;
-        }
-    }
+    public PhoneNumberType PhoneNumber { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

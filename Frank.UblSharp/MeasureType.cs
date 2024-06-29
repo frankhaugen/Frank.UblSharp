@@ -33,38 +33,14 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
 public partial class MeasureType
 {
-    private string unitCodeField;
-    private string unitCodeListVersionIDField;
     private decimal valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-    public string unitCode
-    {
-        get
-        {
-            return this.unitCodeField;
-        }
-
-        set
-        {
-            this.unitCodeField = value;
-        }
-    }
+    public string unitCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-    public string unitCodeListVersionID
-    {
-        get
-        {
-            return this.unitCodeListVersionIDField;
-        }
-
-        set
-        {
-            this.unitCodeListVersionIDField = value;
-        }
-    }
+    public string unitCodeListVersionID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute()]

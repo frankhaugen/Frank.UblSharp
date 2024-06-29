@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("DeliveryTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class DeliveryTermsType
 {
-    private IDType idField;
-    private SpecialTermsType[] specialTermsField;
     private LossRiskResponsibilityCodeType lossRiskResponsibilityCodeField;
     private LossRiskType[] lossRiskField;
     private AmountType2 amountField;
@@ -16,33 +14,11 @@ public partial class DeliveryTermsType
     private AllowanceChargeType allowanceChargeField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("SpecialTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SpecialTermsType[] SpecialTerms
-    {
-        get
-        {
-            return this.specialTermsField;
-        }
-
-        set
-        {
-            this.specialTermsField = value;
-        }
-    }
+    public SpecialTermsType[] SpecialTerms { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

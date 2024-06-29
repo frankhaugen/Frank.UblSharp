@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("CurrentStatus", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class StatusType
 {
-    private ConditionCodeType conditionCodeField;
-    private ReferenceDateType referenceDateField;
     private ReferenceTimeType referenceTimeField;
     private DescriptionType[] descriptionField;
     private StatusReasonCodeType statusReasonCodeField;
@@ -21,33 +19,11 @@ public partial class StatusType
     private ConditionType1[] conditionField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ConditionCodeType ConditionCode
-    {
-        get
-        {
-            return this.conditionCodeField;
-        }
-
-        set
-        {
-            this.conditionCodeField = value;
-        }
-    }
+    public ConditionCodeType ConditionCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ReferenceDateType ReferenceDate
-    {
-        get
-        {
-            return this.referenceDateField;
-        }
-
-        set
-        {
-            this.referenceDateField = value;
-        }
-    }
+    public ReferenceDateType ReferenceDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

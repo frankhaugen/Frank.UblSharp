@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("BonusPaymentTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PaymentTermsType
 {
-    private IDType idField;
-    private PaymentMeansIDType[] paymentMeansIDField;
     private PrepaidPaymentReferenceIDType prepaidPaymentReferenceIDField;
     private NoteType[] noteField;
     private ReferenceEventCodeType referenceEventCodeField;
@@ -28,33 +26,11 @@ public partial class PaymentTermsType
     private PeriodType validityPeriodField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("PaymentMeansID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PaymentMeansIDType[] PaymentMeansID
-    {
-        get
-        {
-            return this.paymentMeansIDField;
-        }
-
-        set
-        {
-            this.paymentMeansIDField = value;
-        }
-    }
+    public PaymentMeansIDType[] PaymentMeansID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

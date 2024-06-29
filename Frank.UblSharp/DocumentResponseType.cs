@@ -7,39 +7,15 @@
 [System.Xml.Serialization.XmlRootAttribute("AdditionalDocumentResponse", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class DocumentResponseType
 {
-    private ResponseType responseField;
-    private DocumentReferenceType[] documentReferenceField;
     private PartyType issuerPartyField;
     private PartyType recipientPartyField;
     private LineResponseType[] lineResponseField;
     /// <remarks/>
-    public ResponseType Response
-    {
-        get
-        {
-            return this.responseField;
-        }
-
-        set
-        {
-            this.responseField = value;
-        }
-    }
+    public ResponseType Response { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("DocumentReference")]
-    public DocumentReferenceType[] DocumentReference
-    {
-        get
-        {
-            return this.documentReferenceField;
-        }
-
-        set
-        {
-            this.documentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType[] DocumentReference { get; set; }
 
     /// <remarks/>
     public PartyType IssuerParty

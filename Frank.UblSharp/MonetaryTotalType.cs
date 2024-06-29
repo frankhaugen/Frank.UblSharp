@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AnticipatedMonetaryTotal", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class MonetaryTotalType
 {
-    private LineExtensionAmountType lineExtensionAmountField;
-    private TaxExclusiveAmountType taxExclusiveAmountField;
     private TaxInclusiveAmountType taxInclusiveAmountField;
     private AllowanceTotalAmountType allowanceTotalAmountField;
     private ChargeTotalAmountType chargeTotalAmountField;
@@ -18,33 +16,11 @@ public partial class MonetaryTotalType
     private PayableAlternativeAmountType payableAlternativeAmountField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LineExtensionAmountType LineExtensionAmount
-    {
-        get
-        {
-            return this.lineExtensionAmountField;
-        }
-
-        set
-        {
-            this.lineExtensionAmountField = value;
-        }
-    }
+    public LineExtensionAmountType LineExtensionAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TaxExclusiveAmountType TaxExclusiveAmount
-    {
-        get
-        {
-            return this.taxExclusiveAmountField;
-        }
-
-        set
-        {
-            this.taxExclusiveAmountField = value;
-        }
-    }
+    public TaxExclusiveAmountType TaxExclusiveAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

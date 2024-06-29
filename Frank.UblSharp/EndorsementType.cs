@@ -7,40 +7,16 @@
 [System.Xml.Serialization.XmlRootAttribute("EmbassyEndorsement", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class EndorsementType
 {
-    private DocumentIDType documentIDField;
-    private ApprovalStatusType approvalStatusField;
     private RemarksType[] remarksField;
     private EndorserPartyType endorserPartyField;
     private SignatureType[] signatureField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DocumentIDType DocumentID
-    {
-        get
-        {
-            return this.documentIDField;
-        }
-
-        set
-        {
-            this.documentIDField = value;
-        }
-    }
+    public DocumentIDType DocumentID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ApprovalStatusType ApprovalStatus
-    {
-        get
-        {
-            return this.approvalStatusField;
-        }
-
-        set
-        {
-            this.approvalStatusField = value;
-        }
-    }
+    public ApprovalStatusType ApprovalStatus { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Remarks", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

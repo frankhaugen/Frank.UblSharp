@@ -7,40 +7,16 @@
 [System.Xml.Serialization.XmlRootAttribute("PromotionalEvent", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PromotionalEventType
 {
-    private PromotionalEventTypeCodeType promotionalEventTypeCodeField;
-    private SubmissionDateType submissionDateField;
     private FirstShipmentAvailibilityDateType firstShipmentAvailibilityDateField;
     private LatestProposalAcceptanceDateType latestProposalAcceptanceDateField;
     private PromotionalSpecificationType[] promotionalSpecificationField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PromotionalEventTypeCodeType PromotionalEventTypeCode
-    {
-        get
-        {
-            return this.promotionalEventTypeCodeField;
-        }
-
-        set
-        {
-            this.promotionalEventTypeCodeField = value;
-        }
-    }
+    public PromotionalEventTypeCodeType PromotionalEventTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SubmissionDateType SubmissionDate
-    {
-        get
-        {
-            return this.submissionDateField;
-        }
-
-        set
-        {
-            this.submissionDateField = value;
-        }
-    }
+    public SubmissionDateType SubmissionDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

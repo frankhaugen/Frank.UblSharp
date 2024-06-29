@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("UnsignedSignatureProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
 public partial class UnsignedSignaturePropertiesType
 {
-    private object[] itemsField;
-    private ItemsChoiceType3[] itemsElementNameField;
     private string idField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAnyElementAttribute()]
@@ -26,34 +24,12 @@ public partial class UnsignedSignaturePropertiesType
     [System.Xml.Serialization.XmlElementAttribute("SigAndRefsTimeStamp", typeof(XAdESTimeStampType))]
     [System.Xml.Serialization.XmlElementAttribute("SignatureTimeStamp", typeof(XAdESTimeStampType))]
     [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
-    public object[] Items
-    {
-        get
-        {
-            return this.itemsField;
-        }
-
-        set
-        {
-            this.itemsField = value;
-        }
-    }
+    public object[] Items { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
     [System.Xml.Serialization.XmlIgnoreAttribute()]
-    public ItemsChoiceType3[] ItemsElementName
-    {
-        get
-        {
-            return this.itemsElementNameField;
-        }
-
-        set
-        {
-            this.itemsElementNameField = value;
-        }
-    }
+    public ItemsChoiceType3[] ItemsElementName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]

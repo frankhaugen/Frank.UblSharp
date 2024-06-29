@@ -7,38 +7,14 @@
 [System.Xml.Serialization.XmlRootAttribute("EncapsulatedPKIData", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
 public partial class EncapsulatedPKIDataType
 {
-    private string idField;
-    private string encodingField;
     private byte[] valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
-    public string Id
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public string Id { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-    public string Encoding
-    {
-        get
-        {
-            return this.encodingField;
-        }
-
-        set
-        {
-            this.encodingField = value;
-        }
-    }
+    public string Encoding { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute(DataType = "base64Binary")]

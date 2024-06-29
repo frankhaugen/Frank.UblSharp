@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Certificate", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class CertificateType
 {
-    private IDType idField;
-    private CertificateTypeCodeType certificateTypeCodeField;
     private CertificateTypeType certificateType1Field;
     private RemarksType[] remarksField;
     private PartyType issuerPartyField;
@@ -16,33 +14,11 @@ public partial class CertificateType
     private SignatureType[] signatureField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CertificateTypeCodeType CertificateTypeCode
-    {
-        get
-        {
-            return this.certificateTypeCodeField;
-        }
-
-        set
-        {
-            this.certificateTypeCodeField = value;
-        }
-    }
+    public CertificateTypeCodeType CertificateTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("CertificateType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

@@ -7,40 +7,16 @@
 [System.Xml.Serialization.XmlRootAttribute("SecondaryHazard", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class SecondaryHazardType
 {
-    private IDType idField;
-    private PlacardNotationType placardNotationField;
     private PlacardEndorsementType placardEndorsementField;
     private EmergencyProceduresCodeType emergencyProceduresCodeField;
     private ExtensionType[] extensionField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PlacardNotationType PlacardNotation
-    {
-        get
-        {
-            return this.placardNotationField;
-        }
-
-        set
-        {
-            this.placardNotationField = value;
-        }
-    }
+    public PlacardNotationType PlacardNotation { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

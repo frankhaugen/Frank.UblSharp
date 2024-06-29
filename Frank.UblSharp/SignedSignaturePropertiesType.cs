@@ -7,41 +7,17 @@
 [System.Xml.Serialization.XmlRootAttribute("SignedSignatureProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
 public partial class SignedSignaturePropertiesType
 {
-    private System.DateTime signingTimeField;
-    private bool signingTimeFieldSpecified;
     private CertIDType[] signingCertificateField;
     private SignaturePolicyIdentifierType signaturePolicyIdentifierField;
     private SignatureProductionPlaceType signatureProductionPlaceField;
     private SignerRoleType signerRoleField;
     private string idField;
     /// <remarks/>
-    public System.DateTime SigningTime
-    {
-        get
-        {
-            return this.signingTimeField;
-        }
-
-        set
-        {
-            this.signingTimeField = value;
-        }
-    }
+    public System.DateTime SigningTime { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlIgnoreAttribute()]
-    public bool SigningTimeSpecified
-    {
-        get
-        {
-            return this.signingTimeFieldSpecified;
-        }
-
-        set
-        {
-            this.signingTimeFieldSpecified = value;
-        }
-    }
+    public bool SigningTimeSpecified { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayItemAttribute("Cert", IsNullable = false)]

@@ -7,40 +7,16 @@
 [System.Xml.Serialization.XmlRootAttribute("FinalFinancialGuarantee", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class FinancialGuaranteeType
 {
-    private GuaranteeTypeCodeType guaranteeTypeCodeField;
-    private DescriptionType[] descriptionField;
     private LiabilityAmountType liabilityAmountField;
     private AmountRateType amountRateField;
     private PeriodType constitutionPeriodField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public GuaranteeTypeCodeType GuaranteeTypeCode
-    {
-        get
-        {
-            return this.guaranteeTypeCodeField;
-        }
-
-        set
-        {
-            this.guaranteeTypeCodeField = value;
-        }
-    }
+    public GuaranteeTypeCodeType GuaranteeTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

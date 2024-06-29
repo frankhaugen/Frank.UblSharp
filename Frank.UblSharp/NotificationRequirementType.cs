@@ -7,41 +7,17 @@
 [System.Xml.Serialization.XmlRootAttribute("NotificationRequirement", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class NotificationRequirementType
 {
-    private NotificationTypeCodeType notificationTypeCodeField;
-    private PostEventNotificationDurationMeasureType postEventNotificationDurationMeasureField;
     private PreEventNotificationDurationMeasureType preEventNotificationDurationMeasureField;
     private PartyType[] notifyPartyField;
     private PeriodType[] notificationPeriodField;
     private LocationType1[] notificationLocationField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public NotificationTypeCodeType NotificationTypeCode
-    {
-        get
-        {
-            return this.notificationTypeCodeField;
-        }
-
-        set
-        {
-            this.notificationTypeCodeField = value;
-        }
-    }
+    public NotificationTypeCodeType NotificationTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PostEventNotificationDurationMeasureType PostEventNotificationDurationMeasure
-    {
-        get
-        {
-            return this.postEventNotificationDurationMeasureField;
-        }
-
-        set
-        {
-            this.postEventNotificationDurationMeasureField = value;
-        }
-    }
+    public PostEventNotificationDurationMeasureType PostEventNotificationDurationMeasure { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

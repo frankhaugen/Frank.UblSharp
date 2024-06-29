@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ItemManagementProfile", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ItemManagementProfileType
 {
-    private FrozenPeriodDaysNumericType frozenPeriodDaysNumericField;
-    private MinimumInventoryQuantityType minimumInventoryQuantityField;
     private MultipleOrderQuantityType multipleOrderQuantityField;
     private OrderIntervalDaysNumericType orderIntervalDaysNumericField;
     private ReplenishmentOwnerDescriptionType[] replenishmentOwnerDescriptionField;
@@ -19,33 +17,11 @@ public partial class ItemManagementProfileType
     private ItemLocationQuantityType itemLocationQuantityField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public FrozenPeriodDaysNumericType FrozenPeriodDaysNumeric
-    {
-        get
-        {
-            return this.frozenPeriodDaysNumericField;
-        }
-
-        set
-        {
-            this.frozenPeriodDaysNumericField = value;
-        }
-    }
+    public FrozenPeriodDaysNumericType FrozenPeriodDaysNumeric { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MinimumInventoryQuantityType MinimumInventoryQuantity
-    {
-        get
-        {
-            return this.minimumInventoryQuantityField;
-        }
-
-        set
-        {
-            this.minimumInventoryQuantityField = value;
-        }
-    }
+    public MinimumInventoryQuantityType MinimumInventoryQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

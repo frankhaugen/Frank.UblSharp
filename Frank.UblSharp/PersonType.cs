@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("CrewMemberPerson", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PersonType
 {
-    private IDType idField;
-    private FirstNameType firstNameField;
     private FamilyNameType familyNameField;
     private TitleType titleField;
     private MiddleNameType middleNameField;
@@ -26,33 +24,11 @@ public partial class PersonType
     private AddressType residenceAddressField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public FirstNameType FirstName
-    {
-        get
-        {
-            return this.firstNameField;
-        }
-
-        set
-        {
-            this.firstNameField = value;
-        }
-    }
+    public FirstNameType FirstName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

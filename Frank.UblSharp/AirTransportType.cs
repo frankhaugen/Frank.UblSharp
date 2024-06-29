@@ -7,19 +7,7 @@
 [System.Xml.Serialization.XmlRootAttribute("AirTransport", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class AirTransportType
 {
-    private AircraftIDType aircraftIDField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AircraftIDType AircraftID
-    {
-        get
-        {
-            return this.aircraftIDField;
-        }
-
-        set
-        {
-            this.aircraftIDField = value;
-        }
-    }
+    public AircraftIDType AircraftID { get; set; }
 }

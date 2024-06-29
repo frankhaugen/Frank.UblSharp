@@ -6,33 +6,9 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
 public partial class OCSPRefType
 {
-    private OCSPIdentifierType oCSPIdentifierField;
-    private DigestAlgAndValueType digestAlgAndValueField;
     /// <remarks/>
-    public OCSPIdentifierType OCSPIdentifier
-    {
-        get
-        {
-            return this.oCSPIdentifierField;
-        }
-
-        set
-        {
-            this.oCSPIdentifierField = value;
-        }
-    }
+    public OCSPIdentifierType OCSPIdentifier { get; set; }
 
     /// <remarks/>
-    public DigestAlgAndValueType DigestAlgAndValue
-    {
-        get
-        {
-            return this.digestAlgAndValueField;
-        }
-
-        set
-        {
-            this.digestAlgAndValueField = value;
-        }
-    }
+    public DigestAlgAndValueType DigestAlgAndValue { get; set; }
 }

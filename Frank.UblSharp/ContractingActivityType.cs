@@ -7,35 +7,11 @@
 [System.Xml.Serialization.XmlRootAttribute("ContractingActivity", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ContractingActivityType
 {
-    private ActivityTypeCodeType activityTypeCodeField;
-    private ActivityTypeType activityTypeField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ActivityTypeCodeType ActivityTypeCode
-    {
-        get
-        {
-            return this.activityTypeCodeField;
-        }
-
-        set
-        {
-            this.activityTypeCodeField = value;
-        }
-    }
+    public ActivityTypeCodeType ActivityTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ActivityTypeType ActivityType
-    {
-        get
-        {
-            return this.activityTypeField;
-        }
-
-        set
-        {
-            this.activityTypeField = value;
-        }
-    }
+    public ActivityTypeType ActivityType { get; set; }
 }

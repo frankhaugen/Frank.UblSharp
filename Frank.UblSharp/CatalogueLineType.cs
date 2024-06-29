@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("CatalogueLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class CatalogueLineType
 {
-    private IDType idField;
-    private ActionCodeType actionCodeField;
     private LifeCycleStatusCodeType lifeCycleStatusCodeField;
     private ContractSubdivisionType contractSubdivisionField;
     private NoteType[] noteField;
@@ -40,33 +38,11 @@ public partial class CatalogueLineType
     private DocumentReferenceType callForTendersDocumentReferenceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ActionCodeType ActionCode
-    {
-        get
-        {
-            return this.actionCodeField;
-        }
-
-        set
-        {
-            this.actionCodeField = value;
-        }
-    }
+    public ActionCodeType ActionCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

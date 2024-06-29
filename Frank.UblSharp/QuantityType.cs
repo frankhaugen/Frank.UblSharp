@@ -72,40 +72,16 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
 public partial class QuantityType
 {
-    private string unitCodeField;
-    private string unitCodeListIDField;
     private string unitCodeListAgencyIDField;
     private string unitCodeListAgencyNameField;
     private decimal valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-    public string unitCode
-    {
-        get
-        {
-            return this.unitCodeField;
-        }
-
-        set
-        {
-            this.unitCodeField = value;
-        }
-    }
+    public string unitCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-    public string unitCodeListID
-    {
-        get
-        {
-            return this.unitCodeListIDField;
-        }
-
-        set
-        {
-            this.unitCodeListIDField = value;
-        }
-    }
+    public string unitCodeListID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]

@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("BillingReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class BillingReferenceType
 {
-    private DocumentReferenceType invoiceDocumentReferenceField;
-    private DocumentReferenceType selfBilledInvoiceDocumentReferenceField;
     private DocumentReferenceType creditNoteDocumentReferenceField;
     private DocumentReferenceType selfBilledCreditNoteDocumentReferenceField;
     private DocumentReferenceType debitNoteDocumentReferenceField;
@@ -16,32 +14,10 @@ public partial class BillingReferenceType
     private DocumentReferenceType additionalDocumentReferenceField;
     private BillingReferenceLineType[] billingReferenceLineField;
     /// <remarks/>
-    public DocumentReferenceType InvoiceDocumentReference
-    {
-        get
-        {
-            return this.invoiceDocumentReferenceField;
-        }
-
-        set
-        {
-            this.invoiceDocumentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType InvoiceDocumentReference { get; set; }
 
     /// <remarks/>
-    public DocumentReferenceType SelfBilledInvoiceDocumentReference
-    {
-        get
-        {
-            return this.selfBilledInvoiceDocumentReferenceField;
-        }
-
-        set
-        {
-            this.selfBilledInvoiceDocumentReferenceField = value;
-        }
-    }
+    public DocumentReferenceType SelfBilledInvoiceDocumentReference { get; set; }
 
     /// <remarks/>
     public DocumentReferenceType CreditNoteDocumentReference

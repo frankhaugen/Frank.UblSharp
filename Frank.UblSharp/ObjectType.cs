@@ -7,40 +7,16 @@
 [System.Xml.Serialization.XmlRootAttribute("Object", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
 public partial class ObjectType
 {
-    private System.Xml.XmlNode[] anyField;
-    private string idField;
     private string mimeTypeField;
     private string encodingField;
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute()]
     [System.Xml.Serialization.XmlAnyElementAttribute()]
-    public System.Xml.XmlNode[] Any
-    {
-        get
-        {
-            return this.anyField;
-        }
-
-        set
-        {
-            this.anyField = value;
-        }
-    }
+    public System.Xml.XmlNode[] Any { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
-    public string Id
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public string Id { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]

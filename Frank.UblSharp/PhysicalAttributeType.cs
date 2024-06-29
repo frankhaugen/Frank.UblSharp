@@ -7,39 +7,15 @@
 [System.Xml.Serialization.XmlRootAttribute("PhysicalAttribute", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PhysicalAttributeType
 {
-    private AttributeIDType attributeIDField;
-    private PositionCodeType positionCodeField;
     private DescriptionCodeType descriptionCodeField;
     private DescriptionType[] descriptionField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AttributeIDType AttributeID
-    {
-        get
-        {
-            return this.attributeIDField;
-        }
-
-        set
-        {
-            this.attributeIDField = value;
-        }
-    }
+    public AttributeIDType AttributeID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PositionCodeType PositionCode
-    {
-        get
-        {
-            return this.positionCodeField;
-        }
-
-        set
-        {
-            this.positionCodeField = value;
-        }
-    }
+    public PositionCodeType PositionCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

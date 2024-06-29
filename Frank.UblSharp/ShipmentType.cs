@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ConsolidatedShipment", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ShipmentType
 {
-    private IDType idField;
-    private ShippingPriorityLevelCodeType shippingPriorityLevelCodeField;
     private HandlingCodeType handlingCodeField;
     private HandlingInstructionsType[] handlingInstructionsField;
     private InformationType[] informationField;
@@ -41,33 +39,11 @@ public partial class ShipmentType
     private AllowanceChargeType[] freightAllowanceChargeField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ShippingPriorityLevelCodeType ShippingPriorityLevelCode
-    {
-        get
-        {
-            return this.shippingPriorityLevelCodeField;
-        }
-
-        set
-        {
-            this.shippingPriorityLevelCodeField = value;
-        }
-    }
+    public ShippingPriorityLevelCodeType ShippingPriorityLevelCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

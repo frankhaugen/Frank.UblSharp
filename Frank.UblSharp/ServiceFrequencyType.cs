@@ -7,19 +7,7 @@
 [System.Xml.Serialization.XmlRootAttribute("ScheduledServiceFrequency", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ServiceFrequencyType
 {
-    private WeekDayCodeType weekDayCodeField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public WeekDayCodeType WeekDayCode
-    {
-        get
-        {
-            return this.weekDayCodeField;
-        }
-
-        set
-        {
-            this.weekDayCodeField = value;
-        }
-    }
+    public WeekDayCodeType WeekDayCode { get; set; }
 }

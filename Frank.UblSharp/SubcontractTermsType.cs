@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AllowedSubcontractTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class SubcontractTermsType
 {
-    private RateType1 rateField;
-    private UnknownPriceIndicatorType unknownPriceIndicatorField;
     private DescriptionType[] descriptionField;
     private AmountType2 amountField;
     private SubcontractingConditionsCodeType subcontractingConditionsCodeField;
@@ -16,33 +14,11 @@ public partial class SubcontractTermsType
     private MinimumPercentType minimumPercentField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public RateType1 Rate
-    {
-        get
-        {
-            return this.rateField;
-        }
-
-        set
-        {
-            this.rateField = value;
-        }
-    }
+    public RateType1 Rate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public UnknownPriceIndicatorType UnknownPriceIndicator
-    {
-        get
-        {
-            return this.unknownPriceIndicatorField;
-        }
-
-        set
-        {
-            this.unknownPriceIndicatorField = value;
-        }
-    }
+    public UnknownPriceIndicatorType UnknownPriceIndicator { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

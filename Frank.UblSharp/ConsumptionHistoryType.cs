@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ConsumptionHistory", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ConsumptionHistoryType
 {
-    private MeterNumberType meterNumberField;
-    private QuantityType2 quantityField;
     private AmountType2 amountField;
     private ConsumptionLevelCodeType consumptionLevelCodeField;
     private ConsumptionLevelType consumptionLevelField;
@@ -16,33 +14,11 @@ public partial class ConsumptionHistoryType
     private PeriodType periodField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MeterNumberType MeterNumber
-    {
-        get
-        {
-            return this.meterNumberField;
-        }
-
-        set
-        {
-            this.meterNumberField = value;
-        }
-    }
+    public MeterNumberType MeterNumber { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public QuantityType2 Quantity
-    {
-        get
-        {
-            return this.quantityField;
-        }
-
-        set
-        {
-            this.quantityField = value;
-        }
-    }
+    public QuantityType2 Quantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

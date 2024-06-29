@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ForecastException", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ForecastExceptionType
 {
-    private ForecastPurposeCodeType forecastPurposeCodeField;
-    private ForecastTypeCodeType forecastTypeCodeField;
     private IssueDateType issueDateField;
     private IssueTimeType issueTimeField;
     private DataSourceCodeType dataSourceCodeField;
@@ -17,33 +15,11 @@ public partial class ForecastExceptionType
     private ComparisonForecastIssueDateType comparisonForecastIssueDateField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ForecastPurposeCodeType ForecastPurposeCode
-    {
-        get
-        {
-            return this.forecastPurposeCodeField;
-        }
-
-        set
-        {
-            this.forecastPurposeCodeField = value;
-        }
-    }
+    public ForecastPurposeCodeType ForecastPurposeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ForecastTypeCodeType ForecastTypeCode
-    {
-        get
-        {
-            return this.forecastTypeCodeField;
-        }
-
-        set
-        {
-            this.forecastTypeCodeField = value;
-        }
-    }
+    public ForecastTypeCodeType ForecastTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

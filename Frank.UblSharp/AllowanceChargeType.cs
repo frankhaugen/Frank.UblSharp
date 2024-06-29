@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AllowanceCharge", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class AllowanceChargeType
 {
-    private IDType idField;
-    private ChargeIndicatorType chargeIndicatorField;
     private AllowanceChargeReasonCodeType allowanceChargeReasonCodeField;
     private AllowanceChargeReasonType[] allowanceChargeReasonField;
     private MultiplierFactorNumericType multiplierFactorNumericField;
@@ -24,33 +22,11 @@ public partial class AllowanceChargeType
     private PaymentMeansType[] paymentMeansField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ChargeIndicatorType ChargeIndicator
-    {
-        get
-        {
-            return this.chargeIndicatorField;
-        }
-
-        set
-        {
-            this.chargeIndicatorField = value;
-        }
-    }
+    public ChargeIndicatorType ChargeIndicator { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

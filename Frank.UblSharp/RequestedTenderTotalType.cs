@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("RequestedTenderTotal", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class RequestedTenderTotalType
 {
-    private EstimatedOverallContractAmountType estimatedOverallContractAmountField;
-    private TotalAmountType totalAmountField;
     private TaxIncludedIndicatorType taxIncludedIndicatorField;
     private MinimumAmountType minimumAmountField;
     private MaximumAmountType maximumAmountField;
@@ -17,33 +15,11 @@ public partial class RequestedTenderTotalType
     private TaxCategoryType[] applicableTaxCategoryField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public EstimatedOverallContractAmountType EstimatedOverallContractAmount
-    {
-        get
-        {
-            return this.estimatedOverallContractAmountField;
-        }
-
-        set
-        {
-            this.estimatedOverallContractAmountField = value;
-        }
-    }
+    public EstimatedOverallContractAmountType EstimatedOverallContractAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TotalAmountType TotalAmount
-    {
-        get
-        {
-            return this.totalAmountField;
-        }
-
-        set
-        {
-            this.totalAmountField = value;
-        }
-    }
+    public TotalAmountType TotalAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

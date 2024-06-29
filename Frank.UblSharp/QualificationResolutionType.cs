@@ -7,41 +7,17 @@
 [System.Xml.Serialization.XmlRootAttribute("QualificationResolution", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class QualificationResolutionType
 {
-    private AdmissionCodeType admissionCodeField;
-    private ExclusionReasonType[] exclusionReasonField;
     private ResolutionType[] resolutionField;
     private ResolutionDateType resolutionDateField;
     private ResolutionTimeType resolutionTimeField;
     private ProcurementProjectLotType procurementProjectLotField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AdmissionCodeType AdmissionCode
-    {
-        get
-        {
-            return this.admissionCodeField;
-        }
-
-        set
-        {
-            this.admissionCodeField = value;
-        }
-    }
+    public AdmissionCodeType AdmissionCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ExclusionReason", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ExclusionReasonType[] ExclusionReason
-    {
-        get
-        {
-            return this.exclusionReasonField;
-        }
-
-        set
-        {
-            this.exclusionReasonField = value;
-        }
-    }
+    public ExclusionReasonType[] ExclusionReason { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Resolution", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

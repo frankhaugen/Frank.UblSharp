@@ -7,40 +7,16 @@
 [System.Xml.Serialization.XmlRootAttribute("Reference", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
 public partial class ReferenceType1
 {
-    private TransformType[] transformsField;
-    private DigestMethodType digestMethodField;
     private byte[] digestValueField;
     private string idField;
     private string uRIField;
     private string typeField;
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayItemAttribute("Transform", IsNullable = false)]
-    public TransformType[] Transforms
-    {
-        get
-        {
-            return this.transformsField;
-        }
-
-        set
-        {
-            this.transformsField = value;
-        }
-    }
+    public TransformType[] Transforms { get; set; }
 
     /// <remarks/>
-    public DigestMethodType DigestMethod
-    {
-        get
-        {
-            return this.digestMethodField;
-        }
-
-        set
-        {
-            this.digestMethodField = value;
-        }
-    }
+    public DigestMethodType DigestMethod { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]

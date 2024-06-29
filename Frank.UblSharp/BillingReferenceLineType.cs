@@ -7,38 +7,14 @@
 [System.Xml.Serialization.XmlRootAttribute("BillingReferenceLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class BillingReferenceLineType
 {
-    private IDType idField;
-    private AmountType2 amountField;
     private AllowanceChargeType[] allowanceChargeField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AmountType2 Amount
-    {
-        get
-        {
-            return this.amountField;
-        }
-
-        set
-        {
-            this.amountField = value;
-        }
-    }
+    public AmountType2 Amount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("AllowanceCharge")]

@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AttachedTransportEquipment", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TransportEquipmentType
 {
-    private IDType idField;
-    private ReferencedConsignmentIDType[] referencedConsignmentIDField;
     private TransportEquipmentTypeCodeType transportEquipmentTypeCodeField;
     private ProviderTypeCodeType providerTypeCodeField;
     private OwnerTypeCodeType ownerTypeCodeField;
@@ -70,33 +68,11 @@ public partial class TransportEquipmentType
     private GoodsItemType[] goodsItemField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("ReferencedConsignmentID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ReferencedConsignmentIDType[] ReferencedConsignmentID
-    {
-        get
-        {
-            return this.referencedConsignmentIDField;
-        }
-
-        set
-        {
-            this.referencedConsignmentIDField = value;
-        }
-    }
+    public ReferencedConsignmentIDType[] ReferencedConsignmentID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

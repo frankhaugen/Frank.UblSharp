@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AdditionalTransportationService", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TransportationServiceType
 {
-    private TransportServiceCodeType transportServiceCodeField;
-    private TariffClassCodeType tariffClassCodeField;
     private PriorityType priorityField;
     private FreightRateClassCodeType freightRateClassCodeField;
     private TransportationServiceDescriptionType[] transportationServiceDescriptionField;
@@ -32,33 +30,11 @@ public partial class TransportationServiceType
     private ServiceFrequencyType[] scheduledServiceFrequencyField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TransportServiceCodeType TransportServiceCode
-    {
-        get
-        {
-            return this.transportServiceCodeField;
-        }
-
-        set
-        {
-            this.transportServiceCodeField = value;
-        }
-    }
+    public TransportServiceCodeType TransportServiceCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TariffClassCodeType TariffClassCode
-    {
-        get
-        {
-            return this.tariffClassCodeField;
-        }
-
-        set
-        {
-            this.tariffClassCodeField = value;
-        }
-    }
+    public TariffClassCodeType TariffClassCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

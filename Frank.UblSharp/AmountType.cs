@@ -75,38 +75,14 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
 public partial class AmountType
 {
-    private string currencyIDField;
-    private string currencyCodeListVersionIDField;
     private decimal valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-    public string currencyID
-    {
-        get
-        {
-            return this.currencyIDField;
-        }
-
-        set
-        {
-            this.currencyIDField = value;
-        }
-    }
+    public string currencyID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-    public string currencyCodeListVersionID
-    {
-        get
-        {
-            return this.currencyCodeListVersionIDField;
-        }
-
-        set
-        {
-            this.currencyCodeListVersionIDField = value;
-        }
-    }
+    public string currencyCodeListVersionID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute()]

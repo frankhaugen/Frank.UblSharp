@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AwardingTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class AwardingTermsType
 {
-    private WeightingAlgorithmCodeType weightingAlgorithmCodeField;
-    private DescriptionType[] descriptionField;
     private TechnicalCommitteeDescriptionType[] technicalCommitteeDescriptionField;
     private LowTendersDescriptionType[] lowTendersDescriptionField;
     private PrizeIndicatorType prizeIndicatorField;
@@ -20,33 +18,11 @@ public partial class AwardingTermsType
     private PersonType[] technicalCommitteePersonField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public WeightingAlgorithmCodeType WeightingAlgorithmCode
-    {
-        get
-        {
-            return this.weightingAlgorithmCodeField;
-        }
-
-        set
-        {
-            this.weightingAlgorithmCodeField = value;
-        }
-    }
+    public WeightingAlgorithmCodeType WeightingAlgorithmCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("TechnicalCommitteeDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

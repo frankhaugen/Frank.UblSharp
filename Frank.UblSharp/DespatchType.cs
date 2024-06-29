@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Despatch", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class DespatchType
 {
-    private IDType idField;
-    private RequestedDespatchDateType requestedDespatchDateField;
     private RequestedDespatchTimeType requestedDespatchTimeField;
     private EstimatedDespatchDateType estimatedDespatchDateField;
     private EstimatedDespatchTimeType estimatedDespatchTimeField;
@@ -28,33 +26,11 @@ public partial class DespatchType
     private PeriodType requestedDespatchPeriodField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public RequestedDespatchDateType RequestedDespatchDate
-    {
-        get
-        {
-            return this.requestedDespatchDateField;
-        }
-
-        set
-        {
-            this.requestedDespatchDateField = value;
-        }
-    }
+    public RequestedDespatchDateType RequestedDespatchDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

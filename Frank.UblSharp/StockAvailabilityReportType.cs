@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("StockAvailabilityReport", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:StockAvailabilityReport-2", IsNullable = false)]
 public partial class StockAvailabilityReportType
 {
-    private UBLExtensionType[] uBLExtensionsField;
-    private UBLVersionIDType uBLVersionIDField;
     private CustomizationIDType customizationIDField;
     private ProfileIDType profileIDField;
     private ProfileExecutionIDType profileExecutionIDField;
@@ -29,33 +27,11 @@ public partial class StockAvailabilityReportType
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
     [System.Xml.Serialization.XmlArrayItemAttribute("UBLExtension", IsNullable = false)]
-    public UBLExtensionType[] UBLExtensions
-    {
-        get
-        {
-            return this.uBLExtensionsField;
-        }
-
-        set
-        {
-            this.uBLExtensionsField = value;
-        }
-    }
+    public UBLExtensionType[] UBLExtensions { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public UBLVersionIDType UBLVersionID
-    {
-        get
-        {
-            return this.uBLVersionIDField;
-        }
-
-        set
-        {
-            this.uBLVersionIDField = value;
-        }
-    }
+    public UBLVersionIDType UBLVersionID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

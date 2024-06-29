@@ -120,8 +120,6 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
 public partial class IdentifierType
 {
-    private string schemeIDField;
-    private string schemeNameField;
     private string schemeAgencyIDField;
     private string schemeAgencyNameField;
     private string schemeVersionIDField;
@@ -130,33 +128,11 @@ public partial class IdentifierType
     private string valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-    public string schemeID
-    {
-        get
-        {
-            return this.schemeIDField;
-        }
-
-        set
-        {
-            this.schemeIDField = value;
-        }
-    }
+    public string schemeID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string schemeName
-    {
-        get
-        {
-            return this.schemeNameField;
-        }
-
-        set
-        {
-            this.schemeNameField = value;
-        }
-    }
+    public string schemeName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]

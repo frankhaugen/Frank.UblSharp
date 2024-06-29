@@ -7,41 +7,17 @@
 [System.Xml.Serialization.XmlRootAttribute("FrameworkAgreement", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class FrameworkAgreementType
 {
-    private ExpectedOperatorQuantityType expectedOperatorQuantityField;
-    private MaximumOperatorQuantityType maximumOperatorQuantityField;
     private JustificationType[] justificationField;
     private FrequencyType[] frequencyField;
     private PeriodType durationPeriodField;
     private TenderRequirementType[] subsequentProcessTenderRequirementField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ExpectedOperatorQuantityType ExpectedOperatorQuantity
-    {
-        get
-        {
-            return this.expectedOperatorQuantityField;
-        }
-
-        set
-        {
-            this.expectedOperatorQuantityField = value;
-        }
-    }
+    public ExpectedOperatorQuantityType ExpectedOperatorQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MaximumOperatorQuantityType MaximumOperatorQuantity
-    {
-        get
-        {
-            return this.maximumOperatorQuantityField;
-        }
-
-        set
-        {
-            this.maximumOperatorQuantityField = value;
-        }
-    }
+    public MaximumOperatorQuantityType MaximumOperatorQuantity { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Justification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

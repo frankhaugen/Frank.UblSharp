@@ -7,39 +7,15 @@
 [System.Xml.Serialization.XmlRootAttribute("RevocationValues", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
 public partial class RevocationValuesType
 {
-    private EncapsulatedPKIDataType[] cRLValuesField;
-    private EncapsulatedPKIDataType[] oCSPValuesField;
     private AnyType[] otherValuesField;
     private string idField;
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayItemAttribute("EncapsulatedCRLValue", IsNullable = false)]
-    public EncapsulatedPKIDataType[] CRLValues
-    {
-        get
-        {
-            return this.cRLValuesField;
-        }
-
-        set
-        {
-            this.cRLValuesField = value;
-        }
-    }
+    public EncapsulatedPKIDataType[] CRLValues { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayItemAttribute("EncapsulatedOCSPValue", IsNullable = false)]
-    public EncapsulatedPKIDataType[] OCSPValues
-    {
-        get
-        {
-            return this.oCSPValuesField;
-        }
-
-        set
-        {
-            this.oCSPValuesField = value;
-        }
-    }
+    public EncapsulatedPKIDataType[] OCSPValues { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayItemAttribute("OtherValue", IsNullable = false)]

@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TelecommunicationsService", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TelecommunicationsServiceType
 {
-    private IDType idField;
-    private CallDateType callDateField;
     private CallTimeType callTimeField;
     private ServiceNumberCalledType serviceNumberCalledField;
     private TelecommunicationsServiceCategoryType telecommunicationsServiceCategoryField;
@@ -30,33 +28,11 @@ public partial class TelecommunicationsServiceType
     private DutyType1[] timeDutyField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CallDateType CallDate
-    {
-        get
-        {
-            return this.callDateField;
-        }
-
-        set
-        {
-            this.callDateField = value;
-        }
-    }
+    public CallDateType CallDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

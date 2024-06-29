@@ -7,41 +7,17 @@
 [System.Xml.Serialization.XmlRootAttribute("TenderPreparation", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TenderPreparationType
 {
-    private TenderEnvelopeIDType tenderEnvelopeIDField;
-    private TenderEnvelopeTypeCodeType tenderEnvelopeTypeCodeField;
     private DescriptionType[] descriptionField;
     private OpenTenderIDType openTenderIDField;
     private ProcurementProjectLotType[] procurementProjectLotField;
     private TenderRequirementType[] documentTenderRequirementField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TenderEnvelopeIDType TenderEnvelopeID
-    {
-        get
-        {
-            return this.tenderEnvelopeIDField;
-        }
-
-        set
-        {
-            this.tenderEnvelopeIDField = value;
-        }
-    }
+    public TenderEnvelopeIDType TenderEnvelopeID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TenderEnvelopeTypeCodeType TenderEnvelopeTypeCode
-    {
-        get
-        {
-            return this.tenderEnvelopeTypeCodeField;
-        }
-
-        set
-        {
-            this.tenderEnvelopeTypeCodeField = value;
-        }
-    }
+    public TenderEnvelopeTypeCodeType TenderEnvelopeTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

@@ -47,35 +47,11 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
 public partial class NumericType
 {
-    private string formatField;
-    private decimal valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string format
-    {
-        get
-        {
-            return this.formatField;
-        }
-
-        set
-        {
-            this.formatField = value;
-        }
-    }
+    public string format { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute()]
-    public decimal Value
-    {
-        get
-        {
-            return this.valueField;
-        }
-
-        set
-        {
-            this.valueField = value;
-        }
-    }
+    public decimal Value { get; set; }
 }

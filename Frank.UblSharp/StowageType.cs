@@ -7,38 +7,14 @@
 [System.Xml.Serialization.XmlRootAttribute("Stowage", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class StowageType
 {
-    private LocationIDType locationIDField;
-    private LocationType[] locationField;
     private DimensionType[] measurementDimensionField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LocationIDType LocationID
-    {
-        get
-        {
-            return this.locationIDField;
-        }
-
-        set
-        {
-            this.locationIDField = value;
-        }
-    }
+    public LocationIDType LocationID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Location", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LocationType[] Location
-    {
-        get
-        {
-            return this.locationField;
-        }
-
-        set
-        {
-            this.locationField = value;
-        }
-    }
+    public LocationType[] Location { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("MeasurementDimension")]

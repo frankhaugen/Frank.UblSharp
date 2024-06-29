@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AwardingCriterion", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class AwardingCriterionType
 {
-    private IDType idField;
-    private AwardingCriterionTypeCodeType awardingCriterionTypeCodeField;
     private DescriptionType[] descriptionField;
     private WeightNumericType weightNumericField;
     private WeightType[] weightField;
@@ -22,33 +20,11 @@ public partial class AwardingCriterionType
     private AwardingCriterionType[] subordinateAwardingCriterionField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public AwardingCriterionTypeCodeType AwardingCriterionTypeCode
-    {
-        get
-        {
-            return this.awardingCriterionTypeCodeField;
-        }
-
-        set
-        {
-            this.awardingCriterionTypeCodeField = value;
-        }
-    }
+    public AwardingCriterionTypeCodeType AwardingCriterionTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

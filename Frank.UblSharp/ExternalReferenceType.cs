@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ExternalReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ExternalReferenceType
 {
-    private URIType uRIField;
-    private DocumentHashType documentHashField;
     private HashAlgorithmMethodType hashAlgorithmMethodField;
     private ExpiryDateType expiryDateField;
     private ExpiryTimeType expiryTimeField;
@@ -20,33 +18,11 @@ public partial class ExternalReferenceType
     private DescriptionType[] descriptionField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public URIType URI
-    {
-        get
-        {
-            return this.uRIField;
-        }
-
-        set
-        {
-            this.uRIField = value;
-        }
-    }
+    public URIType URI { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DocumentHashType DocumentHash
-    {
-        get
-        {
-            return this.documentHashField;
-        }
-
-        set
-        {
-            this.documentHashField = value;
-        }
-    }
+    public DocumentHashType DocumentHash { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

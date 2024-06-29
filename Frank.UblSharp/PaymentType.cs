@@ -7,41 +7,17 @@
 [System.Xml.Serialization.XmlRootAttribute("CollectedPayment", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class PaymentType
 {
-    private IDType idField;
-    private PaidAmountType paidAmountField;
     private ReceivedDateType receivedDateField;
     private PaidDateType paidDateField;
     private PaidTimeType paidTimeField;
     private InstructionIDType instructionIDField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PaidAmountType PaidAmount
-    {
-        get
-        {
-            return this.paidAmountField;
-        }
-
-        set
-        {
-            this.paidAmountField = value;
-        }
-    }
+    public PaidAmountType PaidAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

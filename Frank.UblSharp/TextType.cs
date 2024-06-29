@@ -220,38 +220,14 @@
 [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
 public partial class TextType
 {
-    private string languageIDField;
-    private string languageLocaleIDField;
     private string valueField;
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "language")]
-    public string languageID
-    {
-        get
-        {
-            return this.languageIDField;
-        }
-
-        set
-        {
-            this.languageIDField = value;
-        }
-    }
+    public string languageID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-    public string languageLocaleID
-    {
-        get
-        {
-            return this.languageLocaleIDField;
-        }
-
-        set
-        {
-            this.languageLocaleIDField = value;
-        }
-    }
+    public string languageLocaleID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute()]

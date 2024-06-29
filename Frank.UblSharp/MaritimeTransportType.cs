@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("MaritimeTransport", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class MaritimeTransportType
 {
-    private VesselIDType vesselIDField;
-    private VesselNameType vesselNameField;
     private RadioCallSignIDType radioCallSignIDField;
     private ShipsRequirementsType[] shipsRequirementsField;
     private GrossTonnageMeasureType grossTonnageMeasureField;
@@ -17,33 +15,11 @@ public partial class MaritimeTransportType
     private LocationType1 registryPortLocationField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public VesselIDType VesselID
-    {
-        get
-        {
-            return this.vesselIDField;
-        }
-
-        set
-        {
-            this.vesselIDField = value;
-        }
-    }
+    public VesselIDType VesselID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public VesselNameType VesselName
-    {
-        get
-        {
-            return this.vesselNameField;
-        }
-
-        set
-        {
-            this.vesselNameField = value;
-        }
-    }
+    public VesselNameType VesselName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

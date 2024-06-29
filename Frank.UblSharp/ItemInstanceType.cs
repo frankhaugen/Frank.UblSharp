@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ItemInstance", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ItemInstanceType
 {
-    private ProductTraceIDType productTraceIDField;
-    private ManufactureDateType manufactureDateField;
     private ManufactureTimeType manufactureTimeField;
     private BestBeforeDateType bestBeforeDateField;
     private RegistrationIDType registrationIDField;
@@ -17,33 +15,11 @@ public partial class ItemInstanceType
     private LotIdentificationType lotIdentificationField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ProductTraceIDType ProductTraceID
-    {
-        get
-        {
-            return this.productTraceIDField;
-        }
-
-        set
-        {
-            this.productTraceIDField = value;
-        }
-    }
+    public ProductTraceIDType ProductTraceID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ManufactureDateType ManufactureDate
-    {
-        get
-        {
-            return this.manufactureDateField;
-        }
-
-        set
-        {
-            this.manufactureDateField = value;
-        }
-    }
+    public ManufactureDateType ManufactureDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

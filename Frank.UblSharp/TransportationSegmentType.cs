@@ -7,41 +7,17 @@
 [System.Xml.Serialization.XmlRootAttribute("TransportationSegment", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TransportationSegmentType
 {
-    private SequenceNumericType sequenceNumericField;
-    private TransportExecutionPlanReferenceIDType transportExecutionPlanReferenceIDField;
     private TransportationServiceType transportationServiceField;
     private PartyType transportServiceProviderPartyField;
     private ConsignmentType referencedConsignmentField;
     private ShipmentStageType[] shipmentStageField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SequenceNumericType SequenceNumeric
-    {
-        get
-        {
-            return this.sequenceNumericField;
-        }
-
-        set
-        {
-            this.sequenceNumericField = value;
-        }
-    }
+    public SequenceNumericType SequenceNumeric { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TransportExecutionPlanReferenceIDType TransportExecutionPlanReferenceID
-    {
-        get
-        {
-            return this.transportExecutionPlanReferenceIDField;
-        }
-
-        set
-        {
-            this.transportExecutionPlanReferenceIDField = value;
-        }
-    }
+    public TransportExecutionPlanReferenceIDType TransportExecutionPlanReferenceID { get; set; }
 
     /// <remarks/>
     public TransportationServiceType TransportationService

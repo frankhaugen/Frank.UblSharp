@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("SubscriberConsumption", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class SubscriberConsumptionType
 {
-    private ConsumptionIDType consumptionIDField;
-    private SpecificationTypeCodeType specificationTypeCodeField;
     private NoteType[] noteField;
     private TotalMeteredQuantityType totalMeteredQuantityField;
     private PartyType subscriberPartyField;
@@ -18,33 +16,11 @@ public partial class SubscriberConsumptionType
     private SupplierConsumptionType[] supplierConsumptionField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ConsumptionIDType ConsumptionID
-    {
-        get
-        {
-            return this.consumptionIDField;
-        }
-
-        set
-        {
-            this.consumptionIDField = value;
-        }
-    }
+    public ConsumptionIDType ConsumptionID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SpecificationTypeCodeType SpecificationTypeCode
-    {
-        get
-        {
-            return this.specificationTypeCodeField;
-        }
-
-        set
-        {
-            this.specificationTypeCodeField = value;
-        }
-    }
+    public SpecificationTypeCodeType SpecificationTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

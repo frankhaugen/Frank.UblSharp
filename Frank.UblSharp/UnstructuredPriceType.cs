@@ -7,35 +7,11 @@
 [System.Xml.Serialization.XmlRootAttribute("UnstructuredPrice", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class UnstructuredPriceType
 {
-    private PriceAmountType priceAmountField;
-    private TimeAmountType timeAmountField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PriceAmountType PriceAmount
-    {
-        get
-        {
-            return this.priceAmountField;
-        }
-
-        set
-        {
-            this.priceAmountField = value;
-        }
-    }
+    public PriceAmountType PriceAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public TimeAmountType TimeAmount
-    {
-        get
-        {
-            return this.timeAmountField;
-        }
-
-        set
-        {
-            this.timeAmountField = value;
-        }
-    }
+    public TimeAmountType TimeAmount { get; set; }
 }

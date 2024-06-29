@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("Meter", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class MeterType
 {
-    private MeterNumberType meterNumberField;
-    private MeterNameType meterNameField;
     private MeterConstantType meterConstantField;
     private MeterConstantCodeType meterConstantCodeField;
     private TotalDeliveredQuantityType totalDeliveredQuantityField;
@@ -16,33 +14,11 @@ public partial class MeterType
     private MeterPropertyType[] meterPropertyField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MeterNumberType MeterNumber
-    {
-        get
-        {
-            return this.meterNumberField;
-        }
-
-        set
-        {
-            this.meterNumberField = value;
-        }
-    }
+    public MeterNumberType MeterNumber { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MeterNameType MeterName
-    {
-        get
-        {
-            return this.meterNameField;
-        }
-
-        set
-        {
-            this.meterNameField = value;
-        }
-    }
+    public MeterNameType MeterName { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

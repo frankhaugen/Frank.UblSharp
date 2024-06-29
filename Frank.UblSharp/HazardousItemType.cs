@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("HazardousItem", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class HazardousItemType
 {
-    private IDType idField;
-    private PlacardNotationType placardNotationField;
     private PlacardEndorsementType placardEndorsementField;
     private AdditionalInformationType[] additionalInformationField;
     private UNDGCodeType uNDGCodeField;
@@ -32,33 +30,11 @@ public partial class HazardousItemType
     private TemperatureType[] additionalTemperatureField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public PlacardNotationType PlacardNotation
-    {
-        get
-        {
-            return this.placardNotationField;
-        }
-
-        set
-        {
-            this.placardNotationField = value;
-        }
-    }
+    public PlacardNotationType PlacardNotation { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

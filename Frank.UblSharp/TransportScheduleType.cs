@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("TransportSchedule", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TransportScheduleType
 {
-    private SequenceNumericType sequenceNumericField;
-    private ReferenceDateType referenceDateField;
     private ReferenceTimeType referenceTimeField;
     private ReliabilityPercentType reliabilityPercentField;
     private RemarksType[] remarksField;
@@ -21,33 +19,11 @@ public partial class TransportScheduleType
     private TransportEventType plannedArrivalTransportEventField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SequenceNumericType SequenceNumeric
-    {
-        get
-        {
-            return this.sequenceNumericField;
-        }
-
-        set
-        {
-            this.sequenceNumericField = value;
-        }
-    }
+    public SequenceNumericType SequenceNumeric { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ReferenceDateType ReferenceDate
-    {
-        get
-        {
-            return this.referenceDateField;
-        }
-
-        set
-        {
-            this.referenceDateField = value;
-        }
-    }
+    public ReferenceDateType ReferenceDate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

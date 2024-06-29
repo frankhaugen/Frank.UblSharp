@@ -7,40 +7,16 @@
 [System.Xml.Serialization.XmlRootAttribute("ContractExtension", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ContractExtensionType
 {
-    private OptionsDescriptionType[] optionsDescriptionField;
-    private MinimumNumberNumericType minimumNumberNumericField;
     private MaximumNumberNumericType maximumNumberNumericField;
     private PeriodType optionValidityPeriodField;
     private RenewalType[] renewalField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("OptionsDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public OptionsDescriptionType[] OptionsDescription
-    {
-        get
-        {
-            return this.optionsDescriptionField;
-        }
-
-        set
-        {
-            this.optionsDescriptionField = value;
-        }
-    }
+    public OptionsDescriptionType[] OptionsDescription { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public MinimumNumberNumericType MinimumNumberNumeric
-    {
-        get
-        {
-            return this.minimumNumberNumericField;
-        }
-
-        set
-        {
-            this.minimumNumberNumericField = value;
-        }
-    }
+    public MinimumNumberNumericType MinimumNumberNumeric { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

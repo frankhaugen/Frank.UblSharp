@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("AwardedTenderedProject", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class TenderedProjectType
 {
-    private VariantIDType variantIDField;
-    private FeeAmountType feeAmountField;
     private FeeDescriptionType[] feeDescriptionField;
     private TenderEnvelopeIDType tenderEnvelopeIDField;
     private TenderEnvelopeTypeCodeType tenderEnvelopeTypeCodeField;
@@ -20,33 +18,11 @@ public partial class TenderedProjectType
     private AwardingCriterionResponseType[] awardingCriterionResponseField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public VariantIDType VariantID
-    {
-        get
-        {
-            return this.variantIDField;
-        }
-
-        set
-        {
-            this.variantIDField = value;
-        }
-    }
+    public VariantIDType VariantID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public FeeAmountType FeeAmount
-    {
-        get
-        {
-            return this.feeAmountField;
-        }
-
-        set
-        {
-            this.feeAmountField = value;
-        }
-    }
+    public FeeAmountType FeeAmount { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("FeeDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

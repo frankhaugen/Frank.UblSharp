@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("DSAKeyValue", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
 public partial class DSAKeyValueType
 {
-    private byte[] pField;
-    private byte[] qField;
     private byte[] gField;
     private byte[] yField;
     private byte[] jField;
@@ -16,33 +14,11 @@ public partial class DSAKeyValueType
     private byte[] pgenCounterField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
-    public byte[] P
-    {
-        get
-        {
-            return this.pField;
-        }
-
-        set
-        {
-            this.pField = value;
-        }
-    }
+    public byte[] P { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
-    public byte[] Q
-    {
-        get
-        {
-            return this.qField;
-        }
-
-        set
-        {
-            this.qField = value;
-        }
-    }
+    public byte[] Q { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]

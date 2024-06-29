@@ -7,19 +7,7 @@
 [System.Xml.Serialization.XmlRootAttribute("UBLExtensions", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2", IsNullable = false)]
 public partial class UBLExtensionsType
 {
-    private UBLExtensionType[] uBLExtensionField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("UBLExtension")]
-    public UBLExtensionType[] UBLExtension
-    {
-        get
-        {
-            return this.uBLExtensionField;
-        }
-
-        set
-        {
-            this.uBLExtensionField = value;
-        }
-    }
+    public UBLExtensionType[] UBLExtension { get; set; }
 }

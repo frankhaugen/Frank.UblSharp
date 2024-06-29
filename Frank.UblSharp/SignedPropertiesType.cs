@@ -7,36 +7,12 @@
 [System.Xml.Serialization.XmlRootAttribute("SignedProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
 public partial class SignedPropertiesType
 {
-    private SignedSignaturePropertiesType signedSignaturePropertiesField;
-    private SignedDataObjectPropertiesType signedDataObjectPropertiesField;
     private string idField;
     /// <remarks/>
-    public SignedSignaturePropertiesType SignedSignatureProperties
-    {
-        get
-        {
-            return this.signedSignaturePropertiesField;
-        }
-
-        set
-        {
-            this.signedSignaturePropertiesField = value;
-        }
-    }
+    public SignedSignaturePropertiesType SignedSignatureProperties { get; set; }
 
     /// <remarks/>
-    public SignedDataObjectPropertiesType SignedDataObjectProperties
-    {
-        get
-        {
-            return this.signedDataObjectPropertiesField;
-        }
-
-        set
-        {
-            this.signedDataObjectPropertiesField = value;
-        }
-    }
+    public SignedDataObjectPropertiesType SignedDataObjectProperties { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]

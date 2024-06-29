@@ -7,41 +7,17 @@
 [System.Xml.Serialization.XmlRootAttribute("CatalogueRequestLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class CatalogueRequestLineType
 {
-    private IDType idField;
-    private ContractSubdivisionType contractSubdivisionField;
     private NoteType[] noteField;
     private PeriodType lineValidityPeriodField;
     private ItemLocationQuantityType[] requiredItemLocationQuantityField;
     private ItemType itemField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ContractSubdivisionType ContractSubdivision
-    {
-        get
-        {
-            return this.contractSubdivisionField;
-        }
-
-        set
-        {
-            this.contractSubdivisionField = value;
-        }
-    }
+    public ContractSubdivisionType ContractSubdivision { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("CertificateOfOriginApplication", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class CertificateOfOriginApplicationType
 {
-    private ReferenceIDType referenceIDField;
-    private CertificateTypeType certificateTypeField;
     private ApplicationStatusCodeType applicationStatusCodeField;
     private OriginalJobIDType originalJobIDField;
     private PreviousJobIDType previousJobIDField;
@@ -25,33 +23,11 @@ public partial class CertificateOfOriginApplicationType
     private SignatureType[] signatureField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ReferenceIDType ReferenceID
-    {
-        get
-        {
-            return this.referenceIDField;
-        }
-
-        set
-        {
-            this.referenceIDField = value;
-        }
-    }
+    public ReferenceIDType ReferenceID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CertificateTypeType CertificateType
-    {
-        get
-        {
-            return this.certificateTypeField;
-        }
-
-        set
-        {
-            this.certificateTypeField = value;
-        }
-    }
+    public CertificateTypeType CertificateType { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

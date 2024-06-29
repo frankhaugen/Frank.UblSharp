@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("LocationCoordinate", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class LocationCoordinateType
 {
-    private CoordinateSystemCodeType coordinateSystemCodeField;
-    private LatitudeDegreesMeasureType latitudeDegreesMeasureField;
     private LatitudeMinutesMeasureType latitudeMinutesMeasureField;
     private LatitudeDirectionCodeType latitudeDirectionCodeField;
     private LongitudeDegreesMeasureType longitudeDegreesMeasureField;
@@ -17,33 +15,11 @@ public partial class LocationCoordinateType
     private AltitudeMeasureType altitudeMeasureField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public CoordinateSystemCodeType CoordinateSystemCode
-    {
-        get
-        {
-            return this.coordinateSystemCodeField;
-        }
-
-        set
-        {
-            this.coordinateSystemCodeField = value;
-        }
-    }
+    public CoordinateSystemCodeType CoordinateSystemCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public LatitudeDegreesMeasureType LatitudeDegreesMeasure
-    {
-        get
-        {
-            return this.latitudeDegreesMeasureField;
-        }
-
-        set
-        {
-            this.latitudeDegreesMeasureField = value;
-        }
-    }
+    public LatitudeDegreesMeasureType LatitudeDegreesMeasure { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

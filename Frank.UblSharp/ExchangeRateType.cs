@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("ExchangeRate", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ExchangeRateType
 {
-    private SourceCurrencyCodeType sourceCurrencyCodeField;
-    private SourceCurrencyBaseRateType sourceCurrencyBaseRateField;
     private TargetCurrencyCodeType targetCurrencyCodeField;
     private TargetCurrencyBaseRateType targetCurrencyBaseRateField;
     private ExchangeMarketIDType exchangeMarketIDField;
@@ -18,33 +16,11 @@ public partial class ExchangeRateType
     private ContractType foreignExchangeContractField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SourceCurrencyCodeType SourceCurrencyCode
-    {
-        get
-        {
-            return this.sourceCurrencyCodeField;
-        }
-
-        set
-        {
-            this.sourceCurrencyCodeField = value;
-        }
-    }
+    public SourceCurrencyCodeType SourceCurrencyCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public SourceCurrencyBaseRateType SourceCurrencyBaseRate
-    {
-        get
-        {
-            return this.sourceCurrencyBaseRateField;
-        }
-
-        set
-        {
-            this.sourceCurrencyBaseRateField = value;
-        }
-    }
+    public SourceCurrencyBaseRateType SourceCurrencyBaseRate { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]

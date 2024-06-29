@@ -7,35 +7,11 @@
 [System.Xml.Serialization.XmlRootAttribute("Clause", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class ClauseType
 {
-    private IDType idField;
-    private ContentType[] contentField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public IDType ID
-    {
-        get
-        {
-            return this.idField;
-        }
-
-        set
-        {
-            this.idField = value;
-        }
-    }
+    public IDType ID { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Content", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public ContentType[] Content
-    {
-        get
-        {
-            return this.contentField;
-        }
-
-        set
-        {
-            this.contentField = value;
-        }
-    }
+    public ContentType[] Content { get; set; }
 }

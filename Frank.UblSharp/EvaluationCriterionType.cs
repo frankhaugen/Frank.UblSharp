@@ -7,8 +7,6 @@
 [System.Xml.Serialization.XmlRootAttribute("EvaluationCriterion", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
 public partial class EvaluationCriterionType
 {
-    private EvaluationCriterionTypeCodeType evaluationCriterionTypeCodeField;
-    private DescriptionType[] descriptionField;
     private ThresholdAmountType thresholdAmountField;
     private ThresholdQuantityType thresholdQuantityField;
     private ExpressionCodeType expressionCodeField;
@@ -17,33 +15,11 @@ public partial class EvaluationCriterionType
     private EvidenceType[] suggestedEvidenceField;
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public EvaluationCriterionTypeCodeType EvaluationCriterionTypeCode
-    {
-        get
-        {
-            return this.evaluationCriterionTypeCodeField;
-        }
-
-        set
-        {
-            this.evaluationCriterionTypeCodeField = value;
-        }
-    }
+    public EvaluationCriterionTypeCodeType EvaluationCriterionTypeCode { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-    public DescriptionType[] Description
-    {
-        get
-        {
-            return this.descriptionField;
-        }
-
-        set
-        {
-            this.descriptionField = value;
-        }
-    }
+    public DescriptionType[] Description { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
