@@ -21,56 +21,43 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("CapabilityType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlTypeAttribute("CapabilityType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     [DebuggerStepThroughAttribute()]
     [XmlIncludeAttribute(typeof(Capability))]
     [XmlIncludeAttribute(typeof(FinancialCapability))]
     [XmlIncludeAttribute(typeof(TechnicalCapability))]
     public partial class CapabilityType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Capability. Capability Type Code. Code</ccts:DictionaryEntryName><ccts:Definition>This class can be used as Financial or Technical capabilities. For instance, "Turnover" or "Qualified Engineers" are two possible codes.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Capability</ccts:ObjectClass><ccts:PropertyTerm>Capability Type Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Capability. Capability Type Code. Code</ccts:DictionaryEntryName><ccts:Definition>This class can be used as Financial or Technical capabilities. For instance, ""Turnover"" or ""Qualified Engineers"" are two possible codes.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Capability</ccts:ObjectClass><ccts:PropertyTerm>Capability Type Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("CapabilityTypeCode", Order=0, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("CapabilityTypeCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.CapabilityTypeCodeType CapabilityTypeCode { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DescriptionType> _description;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Capability. Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing this capability.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Capability</ccts:ObjectClass><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Capability. Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing this capability.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Capability</ccts:ObjectClass><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("Description", Order=1, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DescriptionType> Description
-        {
-            get
-            {
-                return _description;
-            }
-            set
-            {
-                _description = value;
-            }
-        }
-        
+        [XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DescriptionType> Description { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Description collection is empty.</para>
         /// </summary>
@@ -80,49 +67,36 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.Description != null) 
+                return ((this.Description != null)
                             && (this.Description.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Capability. Value. Amount</ccts:DictionaryEntryName><ccts:Definition>A monetary amount as a measure of this capability.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Capability</ccts:ObjectClass><ccts:PropertyTerm>Value</ccts:PropertyTerm><ccts:RepresentationTerm>Amount</ccts:RepresentationTerm><ccts:DataType>Amount. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Capability. Value. Amount</ccts:DictionaryEntryName><ccts:Definition>A monetary amount as a measure of this capability.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Capability</ccts:ObjectClass><ccts:PropertyTerm>Value</ccts:PropertyTerm><ccts:RepresentationTerm>Amount</ccts:RepresentationTerm><ccts:DataType>Amount. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ValueAmount", Order=2, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("ValueAmount", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ValueAmountType ValueAmount { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Capability. Value_ Quantity. Quantity</ccts:DictionaryEntryName><ccts:Definition>A quantity as a measure of this capability.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Capability</ccts:ObjectClass><ccts:PropertyTermQualifier>Value</ccts:PropertyTermQualifier><ccts:PropertyTerm>Quantity</ccts:PropertyTerm><ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm><ccts:DataType>Quantity. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Capability. Value_ Quantity. Quantity</ccts:DictionaryEntryName><ccts:Definition>A quantity as a measure of this capability.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Capability</ccts:ObjectClass><ccts:PropertyTermQualifier>Value</ccts:PropertyTermQualifier><ccts:PropertyTerm>Quantity</ccts:PropertyTerm><ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm><ccts:DataType>Quantity. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ValueQuantity", Order=3, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("ValueQuantity", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ValueQuantityType ValueQuantity { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<EvidenceSuppliedType> _evidenceSupplied;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Capability. Evidence Supplied</ccts:DictionaryEntryName><ccts:Definition>The evidence that supports the capability claim.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Capability</ccts:ObjectClass><ccts:PropertyTerm>Evidence Supplied</ccts:PropertyTerm><ccts:AssociatedObjectClass>Evidence Supplied</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Evidence Supplied</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Capability. Evidence Supplied</ccts:DictionaryEntryName><ccts:Definition>The evidence that supports the capability claim.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Capability</ccts:ObjectClass><ccts:PropertyTerm>Evidence Supplied</ccts:PropertyTerm><ccts:AssociatedObjectClass>Evidence Supplied</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Evidence Supplied</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("EvidenceSupplied", Order=4)]
-        public List<EvidenceSuppliedType> EvidenceSupplied
-        {
-            get
-            {
-                return _evidenceSupplied;
-            }
-            set
-            {
-                _evidenceSupplied = value;
-            }
-        }
-        
+        [XmlElementAttribute("EvidenceSupplied")]
+        public Collection<EvidenceSuppliedType> EvidenceSupplied { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the EvidenceSupplied collection is empty.</para>
         /// </summary>
@@ -132,18 +106,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.EvidenceSupplied != null) 
+                return ((this.EvidenceSupplied != null)
                             && (this.EvidenceSupplied.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Capability. Validity_ Period. Period</ccts:DictionaryEntryName><ccts:Definition>The period of time for which this capability is (or has been) valid.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Capability</ccts:ObjectClass><ccts:PropertyTermQualifier>Validity</ccts:PropertyTermQualifier><ccts:PropertyTerm>Period</ccts:PropertyTerm><ccts:AssociatedObjectClass>Period</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Period</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Capability. Validity_ Period. Period</ccts:DictionaryEntryName><ccts:Definition>The period of time for which this capability is (or has been) valid.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Capability</ccts:ObjectClass><ccts:PropertyTermQualifier>Validity</ccts:PropertyTermQualifier><ccts:PropertyTerm>Period</ccts:PropertyTerm><ccts:AssociatedObjectClass>Period</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Period</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ValidityPeriod", Order=5)]
+        [XmlElementAttribute("ValidityPeriod")]
         public PeriodType ValidityPeriod { get; set; }
     }
 }

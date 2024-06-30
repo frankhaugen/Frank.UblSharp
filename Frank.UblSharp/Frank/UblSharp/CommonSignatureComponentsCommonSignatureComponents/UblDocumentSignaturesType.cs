@@ -21,48 +21,35 @@ namespace Frank.UblSharp.CommonSignatureComponentsCommonSignatureComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>UBL Document Signatures. Details</ccts:DictionaryEntryName><ccts:Definition>This class collects all signature information for a document.</ccts:Definition><ccts:ObjectClass>UBL Document Signatures</ccts:ObjectClass></ccts:Component></para>
     /// </summary>
     [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>UBL Document Signatures. Details</ccts:DictionaryEntryName><ccts:Definition>This class collects all signature information for a document.</ccts:Definition><ccts:ObjectClass>UBL Document Signatures</ccts:ObjectClass></ccts:Component>")]
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("UBLDocumentSignaturesType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2")]
+    [XmlTypeAttribute("UBLDocumentSignaturesType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("UBLDocumentSignatures", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2")]
+    [XmlRootAttribute("UBLDocumentSignatures", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2")]
     public partial class UblDocumentSignaturesType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.SignatureAggregateComponentsSignatureAggregateComponents.SignatureInformationType> _signatureInformation;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>UBL Document Signatures. Signature Information</ccts:DictionaryEntryName><ccts:Definition>Each of these is scaffolding for a single digital signature.</ccts:Definition><ccts:Cardinality>1..n</ccts:Cardinality><ccts:ObjectClass>UBL Document Signatures</ccts:ObjectClass><ccts:PropertyTerm>Signature Information</ccts:PropertyTerm><ccts:AssociatedObjectClass>Signature Information</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Signature Information</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>UBL Document Signatures. Signature Information</ccts:DictionaryEntryName><ccts:Definition>Each of these is scaffolding for a single digital signature.</ccts:Definition><ccts:Cardinality>1..n</ccts:Cardinality><ccts:ObjectClass>UBL Document Signatures</ccts:ObjectClass><ccts:PropertyTerm>Signature Information</ccts:PropertyTerm><ccts:AssociatedObjectClass>Signature Information</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Signature Information</ccts:RepresentationTerm></ccts:Component>")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("SignatureInformation", Order=0, Namespace="urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2")]
-        public List<Frank.UblSharp.SignatureAggregateComponentsSignatureAggregateComponents.SignatureInformationType> SignatureInformation
-        {
-            get
-            {
-                return _signatureInformation;
-            }
-            set
-            {
-                _signatureInformation = value;
-            }
-        }
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("SignatureInformation", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2")]
+        public Collection<Frank.UblSharp.SignatureAggregateComponentsSignatureAggregateComponents.SignatureInformationType> SignatureInformation { get; set; }
     }
 }

@@ -21,41 +21,28 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("X509DataType", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlTypeAttribute("X509DataType", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("X509Data", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlRootAttribute("X509Data", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     public partial class X509DataType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<X509IssuerSerialType> _x509IssuerSerial;
-        
-        [XmlElementAttribute("X509IssuerSerial", Order=0)]
-        public List<X509IssuerSerialType> X509IssuerSerial
-        {
-            get
-            {
-                return _x509IssuerSerial;
-            }
-            set
-            {
-                _x509IssuerSerial = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("X509IssuerSerial")]
+        public Collection<X509IssuerSerialType> X509IssuerSerial { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the X509IssuerSerial collection is empty.</para>
         /// </summary>
@@ -65,27 +52,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.X509IssuerSerial != null) 
+                return ((this.X509IssuerSerial != null)
                             && (this.X509IssuerSerial.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<Byte[]> _x509Ski;
-        
-        [XmlElementAttribute("X509SKI", Order=1, DataType="base64Binary")]
-        public List<Byte[]> X509Ski
-        {
-            get
-            {
-                return _x509Ski;
-            }
-            set
-            {
-                _x509Ski = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("X509SKI", DataType = "base64Binary")]
+        public Collection<Byte[]> X509Ski { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the X509Ski collection is empty.</para>
         /// </summary>
@@ -95,27 +69,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.X509Ski != null) 
+                return ((this.X509Ski != null)
                             && (this.X509Ski.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<string> _x509SubjectName;
-        
-        [XmlElementAttribute("X509SubjectName", Order=2)]
-        public List<string> X509SubjectName
-        {
-            get
-            {
-                return _x509SubjectName;
-            }
-            set
-            {
-                _x509SubjectName = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("X509SubjectName")]
+        public Collection<string> X509SubjectName { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the X509SubjectName collection is empty.</para>
         /// </summary>
@@ -125,27 +86,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.X509SubjectName != null) 
+                return ((this.X509SubjectName != null)
                             && (this.X509SubjectName.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<Byte[]> _x509Certificate;
-        
-        [XmlElementAttribute("X509Certificate", Order=3, DataType="base64Binary")]
-        public List<Byte[]> X509Certificate
-        {
-            get
-            {
-                return _x509Certificate;
-            }
-            set
-            {
-                _x509Certificate = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("X509Certificate", DataType = "base64Binary")]
+        public Collection<Byte[]> X509Certificate { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the X509Certificate collection is empty.</para>
         /// </summary>
@@ -155,27 +103,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.X509Certificate != null) 
+                return ((this.X509Certificate != null)
                             && (this.X509Certificate.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<Byte[]> _x509Crl;
-        
-        [XmlElementAttribute("X509CRL", Order=4, DataType="base64Binary")]
-        public List<Byte[]> X509Crl
-        {
-            get
-            {
-                return _x509Crl;
-            }
-            set
-            {
-                _x509Crl = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("X509CRL", DataType = "base64Binary")]
+        public Collection<Byte[]> X509Crl { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the X509Crl collection is empty.</para>
         /// </summary>
@@ -185,28 +120,15 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.X509Crl != null) 
+                return ((this.X509Crl != null)
                             && (this.X509Crl.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<XmlElement> _any;
-        
-        [XmlAnyElementAttribute(Order=5)]
+
+        [XmlAnyElementAttribute()]
         [System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute()]
-        public List<XmlElement> Any
-        {
-            get
-            {
-                return _any;
-            }
-            set
-            {
-                _any = value;
-            }
-        }
-        
+        public Collection<System.Xml.Linq.XElement> Any { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Any collection is empty.</para>
         /// </summary>
@@ -216,7 +138,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.Any != null) 
+                return ((this.Any != null)
                             && (this.Any.Count != 0));
             }
         }

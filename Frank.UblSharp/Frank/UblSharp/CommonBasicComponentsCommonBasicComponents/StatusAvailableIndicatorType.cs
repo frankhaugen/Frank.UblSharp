@@ -21,13 +21,13 @@ namespace Frank.UblSharp.CommonBasicComponentsCommonBasicComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("StatusAvailableIndicatorType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    [XmlTypeAttribute("StatusAvailableIndicatorType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("StatusAvailableIndicator", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    [XmlRootAttribute("StatusAvailableIndicator", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public partial class StatusAvailableIndicatorType : Frank.UblSharp.UnqualifiedDataTypesUnqualifiedDataTypes.IndicatorType_2
     {
     }

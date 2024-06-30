@@ -21,13 +21,13 @@ namespace Frank.UblSharp.CommonBasicComponentsCommonBasicComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("ShortageActionCodeType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    [XmlTypeAttribute("ShortageActionCodeType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("ShortageActionCode", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    [XmlRootAttribute("ShortageActionCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public partial class ShortageActionCodeType : Frank.UblSharp.UnqualifiedDataTypesUnqualifiedDataTypes.CodeType_2
     {
     }

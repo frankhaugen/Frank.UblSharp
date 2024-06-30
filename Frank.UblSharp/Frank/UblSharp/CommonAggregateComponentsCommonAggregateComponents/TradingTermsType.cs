@@ -21,46 +21,33 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("TradingTermsType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlTypeAttribute("TradingTermsType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     [DebuggerStepThroughAttribute()]
     [XmlIncludeAttribute(typeof(HaulageTradingTerms))]
     [XmlIncludeAttribute(typeof(TradingTerms))]
     public partial class TradingTermsType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.InformationType> _information;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Trading Terms. Information. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing the terms of a trade agreement.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Trading Terms</ccts:ObjectClass><ccts:PropertyTerm>Information</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType><ccts:Examples>Unless credit terms have been expressly agreed by Dell, payment for the products or services shall be made in full before physical delivery of products or services. Customer shall pay for all shipping and handling charges. </ccts:Examples></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Trading Terms. Information. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing the terms of a trade agreement.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Trading Terms</ccts:ObjectClass><ccts:PropertyTerm>Information</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType><ccts:Examples>Unless credit terms have been expressly agreed by Dell, payment for the products or services shall be made in full before physical delivery of products or services. Customer shall pay for all shipping and handling charges. </ccts:Examples></ccts:Component>")]
-        [XmlElementAttribute("Information", Order=0, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.InformationType> Information
-        {
-            get
-            {
-                return _information;
-            }
-            set
-            {
-                _information = value;
-            }
-        }
-        
+        [XmlElementAttribute("Information", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.InformationType> Information { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Information collection is empty.</para>
         /// </summary>
@@ -70,27 +57,27 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.Information != null) 
+                return ((this.Information != null)
                             && (this.Information.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Trading Terms. Reference. Text</ccts:DictionaryEntryName><ccts:Definition>A reference quoting the basis of the terms</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Trading Terms</ccts:ObjectClass><ccts:PropertyTerm>Reference</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType><ccts:Examples>http://www1.ap.dell.com/content/topics/topic.aspx/ap/policy/en/au/sales_terms_au?c=au&amp;l=en&amp;s=gen</ccts:Examples></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Trading Terms. Reference. Text</ccts:DictionaryEntryName><ccts:Definition>A reference quoting the basis of the terms</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Trading Terms</ccts:ObjectClass><ccts:PropertyTerm>Reference</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType><ccts:Examples>http://www1.ap.dell.com/content/topics/topic.aspx/ap/policy/en/au/sales_terms_au?c=au&amp;l=en&amp;s=gen</ccts:Examples></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("Reference", Order=1, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("Reference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ReferenceType Reference { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Trading Terms. Applicable_ Address. Address</ccts:DictionaryEntryName><ccts:Definition>The address at which these trading terms apply.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Trading Terms</ccts:ObjectClass><ccts:PropertyTermQualifier>Applicable</ccts:PropertyTermQualifier><ccts:PropertyTerm>Address</ccts:PropertyTerm><ccts:AssociatedObjectClass>Address</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Address</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Trading Terms. Applicable_ Address. Address</ccts:DictionaryEntryName><ccts:Definition>The address at which these trading terms apply.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Trading Terms</ccts:ObjectClass><ccts:PropertyTermQualifier>Applicable</ccts:PropertyTermQualifier><ccts:PropertyTerm>Address</ccts:PropertyTerm><ccts:AssociatedObjectClass>Address</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Address</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ApplicableAddress", Order=2)]
+        [XmlElementAttribute("ApplicableAddress")]
         public AddressType ApplicableAddress { get; set; }
     }
 }

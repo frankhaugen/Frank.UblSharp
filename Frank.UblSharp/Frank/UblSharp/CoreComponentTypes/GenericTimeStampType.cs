@@ -21,11 +21,11 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("GenericTimeStampType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("GenericTimeStampType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
     [XmlIncludeAttribute(typeof(AllDataObjectsTimeStamp))]
     [XmlIncludeAttribute(typeof(ArchiveTimeStamp))]
@@ -39,23 +39,10 @@ namespace Frank.UblSharp.CoreComponentTypes
     [XmlIncludeAttribute(typeof(XAdEsTimeStampType))]
     public abstract partial class GenericTimeStampType
     {
-        
-        [XmlIgnoreAttribute()]
-        private List<IncludeType> _include;
-        
-        [XmlElementAttribute("Include", Order=0)]
-        public List<IncludeType> Include
-        {
-            get
-            {
-                return _include;
-            }
-            set
-            {
-                _include = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("Include")]
+        public Collection<IncludeType> Include { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Include collection is empty.</para>
         /// </summary>
@@ -65,27 +52,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.Include != null) 
+                return ((this.Include != null)
                             && (this.Include.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<ReferenceInfoType> _referenceInfo;
-        
-        [XmlElementAttribute("ReferenceInfo", Order=1)]
-        public List<ReferenceInfoType> ReferenceInfo
-        {
-            get
-            {
-                return _referenceInfo;
-            }
-            set
-            {
-                _referenceInfo = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("ReferenceInfo")]
+        public Collection<ReferenceInfoType> ReferenceInfo { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the ReferenceInfo collection is empty.</para>
         /// </summary>
@@ -95,32 +69,19 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.ReferenceInfo != null) 
+                return ((this.ReferenceInfo != null)
                             && (this.ReferenceInfo.Count != 0));
             }
         }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("CanonicalizationMethod", Order=2, Namespace="http://www.w3.org/2000/09/xmldsig#")]
+        [XmlElementAttribute("CanonicalizationMethod", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
         public Frank.UblSharp.CoreComponentTypes.CanonicalizationMethodType_2 CanonicalizationMethod { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<EncapsulatedPkiDataType> _encapsulatedTimeStamp;
-        
-        [XmlElementAttribute("EncapsulatedTimeStamp", Order=3)]
-        public List<EncapsulatedPkiDataType> EncapsulatedTimeStamp
-        {
-            get
-            {
-                return _encapsulatedTimeStamp;
-            }
-            set
-            {
-                _encapsulatedTimeStamp = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("EncapsulatedTimeStamp")]
+        public Collection<EncapsulatedPkiDataType> EncapsulatedTimeStamp { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the EncapsulatedTimeStamp collection is empty.</para>
         /// </summary>
@@ -130,27 +91,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.EncapsulatedTimeStamp != null) 
+                return ((this.EncapsulatedTimeStamp != null)
                             && (this.EncapsulatedTimeStamp.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<AnyType> _xmlTimeStamp;
-        
-        [XmlElementAttribute("XMLTimeStamp", Order=4)]
-        public List<AnyType> XmlTimeStamp
-        {
-            get
-            {
-                return _xmlTimeStamp;
-            }
-            set
-            {
-                _xmlTimeStamp = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("XMLTimeStamp")]
+        public Collection<AnyType> XmlTimeStamp { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the XmlTimeStamp collection is empty.</para>
         /// </summary>
@@ -160,11 +108,11 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.XmlTimeStamp != null) 
+                return ((this.XmlTimeStamp != null)
                             && (this.XmlTimeStamp.Count != 0));
             }
         }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("Id")]

@@ -21,67 +21,54 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Details</ccts:DictionaryEntryName><ccts:Definition>The evaluation that the Contracting Authority party requests to fulfill to the tenderers.</ccts:Definition><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass></ccts:Component></para>
     /// </summary>
     [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Details</ccts:DictionaryEntryName><ccts:Definition>The evaluation that the Contracting Authority party requests to fulfill to the tenderers.</ccts:Definition><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass></ccts:Component>")]
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("TendererQualificationRequestType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlTypeAttribute("TendererQualificationRequestType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("TendererQualificationRequest", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlRootAttribute("TendererQualificationRequest", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public partial class TendererQualificationRequestType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Company Legal Form Code. Code</ccts:DictionaryEntryName><ccts:Definition>The legal status requested for potential tenderers, expressed as a code.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTerm>Company Legal Form Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Company Legal Form Code. Code</ccts:DictionaryEntryName><ccts:Definition>The legal status requested for potential tenderers, expressed as a code.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTerm>Company Legal Form Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("CompanyLegalFormCode", Order=0, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("CompanyLegalFormCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.CompanyLegalFormCodeType CompanyLegalFormCode { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Company Legal Form. Text</ccts:DictionaryEntryName><ccts:Definition>The legal status requested for potential tenderers, expressed as text</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTerm>Company Legal Form</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Company Legal Form. Text</ccts:DictionaryEntryName><ccts:Definition>The legal status requested for potential tenderers, expressed as text</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTerm>Company Legal Form</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("CompanyLegalForm", Order=1, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("CompanyLegalForm", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.CompanyLegalFormType CompanyLegalForm { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.PersonalSituationType> _personalSituation;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Personal Situation. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing the personal situation of the economic operators in this tendering process.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTerm>Personal Situation</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Personal Situation. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing the personal situation of the economic operators in this tendering process.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTerm>Personal Situation</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("PersonalSituation", Order=2, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.PersonalSituationType> PersonalSituation
-        {
-            get
-            {
-                return _personalSituation;
-            }
-            set
-            {
-                _personalSituation = value;
-            }
-        }
-        
+        [XmlElementAttribute("PersonalSituation", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.PersonalSituationType> PersonalSituation { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the PersonalSituation collection is empty.</para>
         /// </summary>
@@ -91,49 +78,36 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.PersonalSituation != null) 
+                return ((this.PersonalSituation != null)
                             && (this.PersonalSituation.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Operating Years. Quantity</ccts:DictionaryEntryName><ccts:Definition>Textual description of the legal form required for potential tenderers.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTerm>Operating Years</ccts:PropertyTerm><ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm><ccts:DataType>Quantity. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Operating Years. Quantity</ccts:DictionaryEntryName><ccts:Definition>Textual description of the legal form required for potential tenderers.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTerm>Operating Years</ccts:PropertyTerm><ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm><ccts:DataType>Quantity. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("OperatingYearsQuantity", Order=3, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("OperatingYearsQuantity", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.OperatingYearsQuantityType OperatingYearsQuantity { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Employee. Quantity</ccts:DictionaryEntryName><ccts:Definition>Textual description of the legal form required for potential tenderers.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTerm>Employee</ccts:PropertyTerm><ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm><ccts:DataType>Quantity. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Employee. Quantity</ccts:DictionaryEntryName><ccts:Definition>Textual description of the legal form required for potential tenderers.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTerm>Employee</ccts:PropertyTerm><ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm><ccts:DataType>Quantity. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("EmployeeQuantity", Order=4, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("EmployeeQuantity", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.EmployeeQuantityType EmployeeQuantity { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DescriptionType> _description;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing the evaluation requirements for this tenderer.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing the evaluation requirements for this tenderer.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("Description", Order=5, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DescriptionType> Description
-        {
-            get
-            {
-                return _description;
-            }
-            set
-            {
-                _description = value;
-            }
-        }
-        
+        [XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DescriptionType> Description { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Description collection is empty.</para>
         /// </summary>
@@ -143,31 +117,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.Description != null) 
+                return ((this.Description != null)
                             && (this.Description.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<ClassificationSchemeType> _requiredBusinessClassificationScheme;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Required Business_ Classification Scheme. Classification Scheme</ccts:DictionaryEntryName><ccts:Definition>A classification scheme for the business profile.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTermQualifier>Required Business</ccts:PropertyTermQualifier><ccts:PropertyTerm>Classification Scheme</ccts:PropertyTerm><ccts:AssociatedObjectClass>Classification Scheme</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Classification Scheme</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Required Business_ Classification Scheme. Classification Scheme</ccts:DictionaryEntryName><ccts:Definition>A classification scheme for the business profile.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTermQualifier>Required Business</ccts:PropertyTermQualifier><ccts:PropertyTerm>Classification Scheme</ccts:PropertyTerm><ccts:AssociatedObjectClass>Classification Scheme</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Classification Scheme</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("RequiredBusinessClassificationScheme", Order=6)]
-        public List<ClassificationSchemeType> RequiredBusinessClassificationScheme
-        {
-            get
-            {
-                return _requiredBusinessClassificationScheme;
-            }
-            set
-            {
-                _requiredBusinessClassificationScheme = value;
-            }
-        }
-        
+        [XmlElementAttribute("RequiredBusinessClassificationScheme")]
+        public Collection<ClassificationSchemeType> RequiredBusinessClassificationScheme { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the RequiredBusinessClassificationScheme collection is empty.</para>
         /// </summary>
@@ -177,31 +138,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.RequiredBusinessClassificationScheme != null) 
+                return ((this.RequiredBusinessClassificationScheme != null)
                             && (this.RequiredBusinessClassificationScheme.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<EvaluationCriterionType> _technicalEvaluationCriterion;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Technical_ Evaluation Criterion. Evaluation Criterion</ccts:DictionaryEntryName><ccts:Definition>A technical evaluation criterion required for an economic operator in a tendering process.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTermQualifier>Technical</ccts:PropertyTermQualifier><ccts:PropertyTerm>Evaluation Criterion</ccts:PropertyTerm><ccts:AssociatedObjectClass>Evaluation Criterion</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Evaluation Criterion</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Technical_ Evaluation Criterion. Evaluation Criterion</ccts:DictionaryEntryName><ccts:Definition>A technical evaluation criterion required for an economic operator in a tendering process.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTermQualifier>Technical</ccts:PropertyTermQualifier><ccts:PropertyTerm>Evaluation Criterion</ccts:PropertyTerm><ccts:AssociatedObjectClass>Evaluation Criterion</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Evaluation Criterion</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("TechnicalEvaluationCriterion", Order=7)]
-        public List<EvaluationCriterionType> TechnicalEvaluationCriterion
-        {
-            get
-            {
-                return _technicalEvaluationCriterion;
-            }
-            set
-            {
-                _technicalEvaluationCriterion = value;
-            }
-        }
-        
+        [XmlElementAttribute("TechnicalEvaluationCriterion")]
+        public Collection<EvaluationCriterionType> TechnicalEvaluationCriterion { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the TechnicalEvaluationCriterion collection is empty.</para>
         /// </summary>
@@ -211,31 +159,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.TechnicalEvaluationCriterion != null) 
+                return ((this.TechnicalEvaluationCriterion != null)
                             && (this.TechnicalEvaluationCriterion.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<EvaluationCriterionType> _financialEvaluationCriterion;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Financial_ Evaluation Criterion. Evaluation Criterion</ccts:DictionaryEntryName><ccts:Definition>A financial evaluation criterion required for an economic operator in a tendering process.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTermQualifier>Financial</ccts:PropertyTermQualifier><ccts:PropertyTerm>Evaluation Criterion</ccts:PropertyTerm><ccts:AssociatedObjectClass>Evaluation Criterion</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Evaluation Criterion</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Financial_ Evaluation Criterion. Evaluation Criterion</ccts:DictionaryEntryName><ccts:Definition>A financial evaluation criterion required for an economic operator in a tendering process.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTermQualifier>Financial</ccts:PropertyTermQualifier><ccts:PropertyTerm>Evaluation Criterion</ccts:PropertyTerm><ccts:AssociatedObjectClass>Evaluation Criterion</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Evaluation Criterion</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("FinancialEvaluationCriterion", Order=8)]
-        public List<EvaluationCriterionType> FinancialEvaluationCriterion
-        {
-            get
-            {
-                return _financialEvaluationCriterion;
-            }
-            set
-            {
-                _financialEvaluationCriterion = value;
-            }
-        }
-        
+        [XmlElementAttribute("FinancialEvaluationCriterion")]
+        public Collection<EvaluationCriterionType> FinancialEvaluationCriterion { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the FinancialEvaluationCriterion collection is empty.</para>
         /// </summary>
@@ -245,31 +180,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.FinancialEvaluationCriterion != null) 
+                return ((this.FinancialEvaluationCriterion != null)
                             && (this.FinancialEvaluationCriterion.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<TendererRequirementType> _specificTendererRequirement;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Specific_ Tenderer Requirement. Tenderer Requirement</ccts:DictionaryEntryName><ccts:Definition>A requirement to be met by a tenderer.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTermQualifier>Specific</ccts:PropertyTermQualifier><ccts:PropertyTerm>Tenderer Requirement</ccts:PropertyTerm><ccts:AssociatedObjectClass>Tenderer Requirement</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Tenderer Requirement</ccts:RepresentationTerm><ccts:Examples>Preregistration in a Business Registry</ccts:Examples></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Specific_ Tenderer Requirement. Tenderer Requirement</ccts:DictionaryEntryName><ccts:Definition>A requirement to be met by a tenderer.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTermQualifier>Specific</ccts:PropertyTermQualifier><ccts:PropertyTerm>Tenderer Requirement</ccts:PropertyTerm><ccts:AssociatedObjectClass>Tenderer Requirement</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Tenderer Requirement</ccts:RepresentationTerm><ccts:Examples>Preregistration in a Business Registry</ccts:Examples></ccts:Component>")]
-        [XmlElementAttribute("SpecificTendererRequirement", Order=9)]
-        public List<TendererRequirementType> SpecificTendererRequirement
-        {
-            get
-            {
-                return _specificTendererRequirement;
-            }
-            set
-            {
-                _specificTendererRequirement = value;
-            }
-        }
-        
+        [XmlElementAttribute("SpecificTendererRequirement")]
+        public Collection<TendererRequirementType> SpecificTendererRequirement { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the SpecificTendererRequirement collection is empty.</para>
         /// </summary>
@@ -279,31 +201,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.SpecificTendererRequirement != null) 
+                return ((this.SpecificTendererRequirement != null)
                             && (this.SpecificTendererRequirement.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<EconomicOperatorRoleType> _economicOperatorRole;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Economic Operator Role</ccts:DictionaryEntryName><ccts:Definition>A class to describe the tenderer contracting role.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTerm>Economic Operator Role</ccts:PropertyTerm><ccts:AssociatedObjectClass>Economic Operator Role</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Economic Operator Role</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Tenderer Qualification Request. Economic Operator Role</ccts:DictionaryEntryName><ccts:Definition>A class to describe the tenderer contracting role.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Tenderer Qualification Request</ccts:ObjectClass><ccts:PropertyTerm>Economic Operator Role</ccts:PropertyTerm><ccts:AssociatedObjectClass>Economic Operator Role</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Economic Operator Role</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("EconomicOperatorRole", Order=10)]
-        public List<EconomicOperatorRoleType> EconomicOperatorRole
-        {
-            get
-            {
-                return _economicOperatorRole;
-            }
-            set
-            {
-                _economicOperatorRole = value;
-            }
-        }
-        
+        [XmlElementAttribute("EconomicOperatorRole")]
+        public Collection<EconomicOperatorRoleType> EconomicOperatorRole { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the EconomicOperatorRole collection is empty.</para>
         /// </summary>
@@ -313,7 +222,7 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.EconomicOperatorRole != null) 
+                return ((this.EconomicOperatorRole != null)
                             && (this.EconomicOperatorRole.Count != 0));
             }
         }

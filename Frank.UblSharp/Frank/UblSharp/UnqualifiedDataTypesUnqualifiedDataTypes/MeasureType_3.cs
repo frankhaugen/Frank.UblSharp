@@ -21,8 +21,8 @@ namespace Frank.UblSharp.UnqualifiedDataTypesUnqualifiedDataTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para xml:lang="en"><ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:2">UBLUDT0000013</ccts:UniqueID></para>
     /// <para xml:lang="en"><ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:2">UDT</ccts:CategoryCode></para>
@@ -36,9 +36,9 @@ namespace Frank.UblSharp.UnqualifiedDataTypesUnqualifiedDataTypes
     [DescriptionAttribute(@"<ccts:UniqueID xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">UBLUDT0000013</ccts:UniqueID> <ccts:CategoryCode xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">UDT</ccts:CategoryCode> <ccts:DictionaryEntryName xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">Measure. Type</ccts:DictionaryEntryName> <ccts:VersionID xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">1.0</ccts:VersionID> <ccts:Definition xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">A numeric value determined by measuring an object using a specified unit of measure.</ccts:Definition> <ccts:RepresentationTermName xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">Measure</ccts:RepresentationTermName> <ccts:PropertyTermName xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">Type</ccts:PropertyTermName> <ccts:PrimitiveType xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">decimal</ccts:PrimitiveType>")]
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("MeasureType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2")]
+    [XmlTypeAttribute("MeasureType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("MeasureType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2")]
+    [XmlRootAttribute("MeasureType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2")]
     [XmlIncludeAttribute(typeof(Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.AltitudeMeasureType))]
     [XmlIncludeAttribute(typeof(Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.BaseUnitMeasureType))]
     [XmlIncludeAttribute(typeof(Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ChargeableWeightMeasureType))]

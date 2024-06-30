@@ -21,8 +21,8 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Financial Guarantee. Details</ccts:DictionaryEntryName><ccts:Definition>A class to describe the bond guarantee of a tenderer or bid submitter's actual entry into a contract in the event that it is the successful bidder.</ccts:Definition><ccts:ObjectClass>Financial Guarantee</ccts:ObjectClass></ccts:Component></para>
     /// </summary>
@@ -30,7 +30,7 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("FinalFinancialGuarantee", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlRootAttribute("FinalFinancialGuarantee", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public partial class FinalFinancialGuarantee : FinancialGuaranteeType
     {
     }

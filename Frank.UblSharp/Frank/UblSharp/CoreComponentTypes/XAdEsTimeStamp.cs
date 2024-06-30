@@ -21,13 +21,13 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("XAdESTimeStamp", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("XAdESTimeStamp", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("XAdESTimeStamp", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlRootAttribute("XAdESTimeStamp", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     public partial class XAdEsTimeStamp : XAdEsTimeStampType
     {
     }

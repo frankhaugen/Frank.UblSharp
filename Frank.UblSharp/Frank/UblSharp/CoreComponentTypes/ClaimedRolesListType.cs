@@ -21,39 +21,26 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("ClaimedRolesListType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("ClaimedRolesListType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
     public partial class ClaimedRolesListType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<AnyType> _claimedRole;
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("ClaimedRole", Order=0)]
-        public List<AnyType> ClaimedRole
-        {
-            get
-            {
-                return _claimedRole;
-            }
-            set
-            {
-                _claimedRole = value;
-            }
-        }
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("ClaimedRole")]
+        public Collection<AnyType> ClaimedRole { get; set; }
     }
 }

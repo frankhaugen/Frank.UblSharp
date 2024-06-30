@@ -21,25 +21,25 @@ namespace Frank.UblSharp.CommonExtensionComponentsCommonExtensionComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("ExtensionContentType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
+    [XmlTypeAttribute("ExtensionContentType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("ExtensionContent", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
+    [XmlRootAttribute("ExtensionContent", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
     public partial class ExtensionContentType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
+
         /// <summary>
         /// <para>Any element in any namespace other than the UBL extension
         ///            namespace is allowed to be the apex element of an extension.
@@ -50,9 +50,9 @@ namespace Frank.UblSharp.CommonExtensionComponentsCommonExtensionComponents
         ///            treated as a schema constraint violation.</para>
         /// </summary>
         [DescriptionAttribute(@"Any element in any namespace other than the UBL extension namespace is allowed to be the apex element of an extension. Only those elements found in the UBL schemas and in the trees of schemas imported in this module are validated. Any element for which there is no schema declaration in any of the trees of schemas passes validation and is not treated as a schema constraint violation.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlAnyElementAttribute(Order=0)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlAnyElementAttribute()]
         [System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute()]
-        public XmlElement Any { get; set; }
+        public System.Xml.Linq.XElement Any { get; set; }
     }
 }

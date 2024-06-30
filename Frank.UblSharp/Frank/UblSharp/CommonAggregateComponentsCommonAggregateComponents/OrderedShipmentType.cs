@@ -21,57 +21,44 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Ordered Shipment. Details</ccts:DictionaryEntryName><ccts:Definition>A class to describe an ordered shipment.</ccts:Definition><ccts:ObjectClass>Ordered Shipment</ccts:ObjectClass></ccts:Component></para>
     /// </summary>
     [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Ordered Shipment. Details</ccts:DictionaryEntryName><ccts:Definition>A class to describe an ordered shipment.</ccts:Definition><ccts:ObjectClass>Ordered Shipment</ccts:ObjectClass></ccts:Component>")]
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("OrderedShipmentType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlTypeAttribute("OrderedShipmentType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("OrderedShipment", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlRootAttribute("OrderedShipment", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public partial class OrderedShipmentType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Ordered Shipment. Shipment</ccts:DictionaryEntryName><ccts:Definition>The ordered shipment.</ccts:Definition><ccts:Cardinality>1</ccts:Cardinality><ccts:ObjectClass>Ordered Shipment</ccts:ObjectClass><ccts:PropertyTerm>Shipment</ccts:PropertyTerm><ccts:AssociatedObjectClass>Shipment</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Shipment</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Ordered Shipment. Shipment</ccts:DictionaryEntryName><ccts:Definition>The ordered shipment.</ccts:Definition><ccts:Cardinality>1</ccts:Cardinality><ccts:ObjectClass>Ordered Shipment</ccts:ObjectClass><ccts:PropertyTerm>Shipment</ccts:PropertyTerm><ccts:AssociatedObjectClass>Shipment</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Shipment</ccts:RepresentationTerm></ccts:Component>")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("Shipment", Order=0)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("Shipment")]
         public ShipmentType Shipment { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<PackageType> _package;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Ordered Shipment. Package</ccts:DictionaryEntryName><ccts:Definition>A package in this ordered shipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Ordered Shipment</ccts:ObjectClass><ccts:PropertyTerm>Package</ccts:PropertyTerm><ccts:AssociatedObjectClass>Package</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Package</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Ordered Shipment. Package</ccts:DictionaryEntryName><ccts:Definition>A package in this ordered shipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Ordered Shipment</ccts:ObjectClass><ccts:PropertyTerm>Package</ccts:PropertyTerm><ccts:AssociatedObjectClass>Package</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Package</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("Package", Order=1)]
-        public List<PackageType> Package
-        {
-            get
-            {
-                return _package;
-            }
-            set
-            {
-                _package = value;
-            }
-        }
-        
+        [XmlElementAttribute("Package")]
+        public Collection<PackageType> Package { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Package collection is empty.</para>
         /// </summary>
@@ -81,7 +68,7 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.Package != null) 
+                return ((this.Package != null)
                             && (this.Package.Count != 0));
             }
         }

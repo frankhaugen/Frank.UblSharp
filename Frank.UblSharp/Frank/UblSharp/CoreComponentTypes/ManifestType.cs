@@ -21,33 +21,19 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("ManifestType", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlTypeAttribute("ManifestType", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("Manifest", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlRootAttribute("Manifest", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     public partial class ManifestType
     {
-        
-        [XmlIgnoreAttribute()]
-        private List<ReferenceType_2> _reference;
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("Reference", Order=0)]
-        public List<ReferenceType_2> Reference
-        {
-            get
-            {
-                return _reference;
-            }
-            set
-            {
-                _reference = value;
-            }
-        }
-        
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("Reference")]
+        public Collection<ReferenceType_2> Reference { get; set; }
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("Id")]

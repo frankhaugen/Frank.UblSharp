@@ -21,13 +21,13 @@ namespace Frank.UblSharp.CommonBasicComponentsCommonBasicComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("CurrentChargeTypeType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    [XmlTypeAttribute("CurrentChargeTypeType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("CurrentChargeType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    [XmlRootAttribute("CurrentChargeType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public partial class CurrentChargeTypeType : Frank.UblSharp.UnqualifiedDataTypesUnqualifiedDataTypes.TextType_3
     {
     }

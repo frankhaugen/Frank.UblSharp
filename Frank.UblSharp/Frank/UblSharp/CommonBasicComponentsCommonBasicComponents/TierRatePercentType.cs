@@ -21,13 +21,13 @@ namespace Frank.UblSharp.CommonBasicComponentsCommonBasicComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("TierRatePercentType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    [XmlTypeAttribute("TierRatePercentType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("TierRatePercent", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    [XmlRootAttribute("TierRatePercent", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public partial class TierRatePercentType : Frank.UblSharp.UnqualifiedDataTypesUnqualifiedDataTypes.PercentType_2
     {
     }

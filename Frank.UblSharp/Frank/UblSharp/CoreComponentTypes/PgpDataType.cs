@@ -21,46 +21,33 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("PGPDataType", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlTypeAttribute("PGPDataType", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("PGPData", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlRootAttribute("PGPData", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     public partial class PgpDataType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("PGPKeyID", Order=0, DataType="base64Binary")]
+        [XmlElementAttribute("PGPKeyID", DataType = "base64Binary")]
         public Byte[] PgpKeyId { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<Byte[]> _pgpKeyPacket;
-        
-        [XmlElementAttribute("PGPKeyPacket", Order=1, DataType="base64Binary")]
-        public List<Byte[]> PgpKeyPacket
-        {
-            get
-            {
-                return _pgpKeyPacket;
-            }
-            set
-            {
-                _pgpKeyPacket = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("PGPKeyPacket", DataType = "base64Binary")]
+        public Collection<Byte[]> PgpKeyPacket { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the PgpKeyPacket collection is empty.</para>
         /// </summary>
@@ -70,28 +57,15 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.PgpKeyPacket != null) 
+                return ((this.PgpKeyPacket != null)
                             && (this.PgpKeyPacket.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<XmlElement> _any;
-        
-        [XmlAnyElementAttribute(Order=2)]
+
+        [XmlAnyElementAttribute()]
         [System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute()]
-        public List<XmlElement> Any
-        {
-            get
-            {
-                return _any;
-            }
-            set
-            {
-                _any = value;
-            }
-        }
-        
+        public Collection<System.Xml.Linq.XElement> Any { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Any collection is empty.</para>
         /// </summary>
@@ -101,7 +75,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.Any != null) 
+                return ((this.Any != null)
                             && (this.Any.Count != 0));
             }
         }

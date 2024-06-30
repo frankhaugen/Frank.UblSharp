@@ -21,58 +21,45 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Auction Terms. Details</ccts:DictionaryEntryName><ccts:Definition>A class to describe the terms to be fulfilled by tenderers if an auction is to be executed before the awarding of a tender.</ccts:Definition><ccts:ObjectClass>Auction Terms</ccts:ObjectClass></ccts:Component></para>
     /// </summary>
     [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Auction Terms. Details</ccts:DictionaryEntryName><ccts:Definition>A class to describe the terms to be fulfilled by tenderers if an auction is to be executed before the awarding of a tender.</ccts:Definition><ccts:ObjectClass>Auction Terms</ccts:ObjectClass></ccts:Component>")]
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("AuctionTermsType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlTypeAttribute("AuctionTermsType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("AuctionTerms", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlRootAttribute("AuctionTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public partial class AuctionTermsType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Auction Terms. Auction_ Constraint. Indicator</ccts:DictionaryEntryName><ccts:Definition>Indicates whether an electronic auction will be used before the awarding of a contract (true) or not (false).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Auction Terms</ccts:ObjectClass><ccts:PropertyTermQualifier>Auction</ccts:PropertyTermQualifier><ccts:PropertyTerm>Constraint</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Auction Terms. Auction_ Constraint. Indicator</ccts:DictionaryEntryName><ccts:Definition>Indicates whether an electronic auction will be used before the awarding of a contract (true) or not (false).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Auction Terms</ccts:ObjectClass><ccts:PropertyTermQualifier>Auction</ccts:PropertyTermQualifier><ccts:PropertyTerm>Constraint</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("AuctionConstraintIndicator", Order=0, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("AuctionConstraintIndicator", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.AuctionConstraintIndicatorType AuctionConstraintIndicator { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.JustificationDescriptionType> _justificationDescription;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Auction Terms. Justification_ Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing a justification for the use of an auction in awarding the tender.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Auction Terms</ccts:ObjectClass><ccts:PropertyTermQualifier>Justification</ccts:PropertyTermQualifier><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Auction Terms. Justification_ Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing a justification for the use of an auction in awarding the tender.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Auction Terms</ccts:ObjectClass><ccts:PropertyTermQualifier>Justification</ccts:PropertyTermQualifier><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("JustificationDescription", Order=1, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.JustificationDescriptionType> JustificationDescription
-        {
-            get
-            {
-                return _justificationDescription;
-            }
-            set
-            {
-                _justificationDescription = value;
-            }
-        }
-        
+        [XmlElementAttribute("JustificationDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.JustificationDescriptionType> JustificationDescription { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the JustificationDescription collection is empty.</para>
         /// </summary>
@@ -82,31 +69,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.JustificationDescription != null) 
+                return ((this.JustificationDescription != null)
                             && (this.JustificationDescription.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DescriptionType> _description;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Auction Terms. Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text for tenderers describing terms governing the auction.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Auction Terms</ccts:ObjectClass><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Auction Terms. Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text for tenderers describing terms governing the auction.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Auction Terms</ccts:ObjectClass><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("Description", Order=2, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DescriptionType> Description
-        {
-            get
-            {
-                return _description;
-            }
-            set
-            {
-                _description = value;
-            }
-        }
-        
+        [XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DescriptionType> Description { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Description collection is empty.</para>
         /// </summary>
@@ -116,31 +90,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.Description != null) 
+                return ((this.Description != null)
                             && (this.Description.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ProcessDescriptionType> _processDescription;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Auction Terms. Process_ Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing the auction process.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Auction Terms</ccts:ObjectClass><ccts:PropertyTermQualifier>Process</ccts:PropertyTermQualifier><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Auction Terms. Process_ Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing the auction process.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Auction Terms</ccts:ObjectClass><ccts:PropertyTermQualifier>Process</ccts:PropertyTermQualifier><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("ProcessDescription", Order=3, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ProcessDescriptionType> ProcessDescription
-        {
-            get
-            {
-                return _processDescription;
-            }
-            set
-            {
-                _processDescription = value;
-            }
-        }
-        
+        [XmlElementAttribute("ProcessDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ProcessDescriptionType> ProcessDescription { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the ProcessDescription collection is empty.</para>
         /// </summary>
@@ -150,31 +111,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.ProcessDescription != null) 
+                return ((this.ProcessDescription != null)
                             && (this.ProcessDescription.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ConditionsDescriptionType> _conditionsDescription;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Auction Terms. Conditions_ Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing the conditions under which the tenderers will be able to bid as part of the auction.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Auction Terms</ccts:ObjectClass><ccts:PropertyTermQualifier>Conditions</ccts:PropertyTermQualifier><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Auction Terms. Conditions_ Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing the conditions under which the tenderers will be able to bid as part of the auction.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Auction Terms</ccts:ObjectClass><ccts:PropertyTermQualifier>Conditions</ccts:PropertyTermQualifier><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("ConditionsDescription", Order=4, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ConditionsDescriptionType> ConditionsDescription
-        {
-            get
-            {
-                return _conditionsDescription;
-            }
-            set
-            {
-                _conditionsDescription = value;
-            }
-        }
-        
+        [XmlElementAttribute("ConditionsDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ConditionsDescriptionType> ConditionsDescription { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the ConditionsDescription collection is empty.</para>
         /// </summary>
@@ -184,31 +132,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.ConditionsDescription != null) 
+                return ((this.ConditionsDescription != null)
                             && (this.ConditionsDescription.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ElectronicDeviceDescriptionType> _electronicDeviceDescription;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Auction Terms. Electronic Device_ Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing an electronic device used for the auction, including associated connectivity specifications.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Auction Terms</ccts:ObjectClass><ccts:PropertyTermQualifier>Electronic Device</ccts:PropertyTermQualifier><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Auction Terms. Electronic Device_ Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing an electronic device used for the auction, including associated connectivity specifications.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Auction Terms</ccts:ObjectClass><ccts:PropertyTermQualifier>Electronic Device</ccts:PropertyTermQualifier><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("ElectronicDeviceDescription", Order=5, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ElectronicDeviceDescriptionType> ElectronicDeviceDescription
-        {
-            get
-            {
-                return _electronicDeviceDescription;
-            }
-            set
-            {
-                _electronicDeviceDescription = value;
-            }
-        }
-        
+        [XmlElementAttribute("ElectronicDeviceDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ElectronicDeviceDescriptionType> ElectronicDeviceDescription { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the ElectronicDeviceDescription collection is empty.</para>
         /// </summary>
@@ -218,18 +153,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.ElectronicDeviceDescription != null) 
+                return ((this.ElectronicDeviceDescription != null)
                             && (this.ElectronicDeviceDescription.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Auction Terms. Auction_ URI. Identifier</ccts:DictionaryEntryName><ccts:Definition>The Uniform Resource Identifier (URI) of the electronic device used for the auction.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Auction Terms</ccts:ObjectClass><ccts:PropertyTermQualifier>Auction</ccts:PropertyTermQualifier><ccts:PropertyTerm>URI</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Auction Terms. Auction_ URI. Identifier</ccts:DictionaryEntryName><ccts:Definition>The Uniform Resource Identifier (URI) of the electronic device used for the auction.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Auction Terms</ccts:ObjectClass><ccts:PropertyTermQualifier>Auction</ccts:PropertyTermQualifier><ccts:PropertyTerm>URI</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("AuctionURI", Order=6, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("AuctionURI", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.AuctionUriType AuctionUri { get; set; }
     }
 }

@@ -21,49 +21,36 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Energy Water Supply. Details</ccts:DictionaryEntryName><ccts:Definition>A class to describe the supply (and therefore consumption) of an amount of energy or water.</ccts:Definition><ccts:ObjectClass>Energy Water Supply</ccts:ObjectClass></ccts:Component></para>
     /// </summary>
     [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Energy Water Supply. Details</ccts:DictionaryEntryName><ccts:Definition>A class to describe the supply (and therefore consumption) of an amount of energy or water.</ccts:Definition><ccts:ObjectClass>Energy Water Supply</ccts:ObjectClass></ccts:Component>")]
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("EnergyWaterSupplyType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlTypeAttribute("EnergyWaterSupplyType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("EnergyWaterSupply", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlRootAttribute("EnergyWaterSupply", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public partial class EnergyWaterSupplyType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<ConsumptionReportType> _consumptionReport;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Energy Water Supply. Consumption Report</ccts:DictionaryEntryName><ccts:Definition>An amount of energy or water consumed.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Energy Water Supply</ccts:ObjectClass><ccts:PropertyTerm>Consumption Report</ccts:PropertyTerm><ccts:AssociatedObjectClass>Consumption Report</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Consumption Report</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Energy Water Supply. Consumption Report</ccts:DictionaryEntryName><ccts:Definition>An amount of energy or water consumed.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Energy Water Supply</ccts:ObjectClass><ccts:PropertyTerm>Consumption Report</ccts:PropertyTerm><ccts:AssociatedObjectClass>Consumption Report</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Consumption Report</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("ConsumptionReport", Order=0)]
-        public List<ConsumptionReportType> ConsumptionReport
-        {
-            get
-            {
-                return _consumptionReport;
-            }
-            set
-            {
-                _consumptionReport = value;
-            }
-        }
-        
+        [XmlElementAttribute("ConsumptionReport")]
+        public Collection<ConsumptionReportType> ConsumptionReport { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the ConsumptionReport collection is empty.</para>
         /// </summary>
@@ -73,31 +60,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.ConsumptionReport != null) 
+                return ((this.ConsumptionReport != null)
                             && (this.ConsumptionReport.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<EnergyTaxReportType> _energyTaxReport;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Energy Water Supply. Energy Tax Report</ccts:DictionaryEntryName><ccts:Definition>A tax on the consumption of energy or water.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Energy Water Supply</ccts:ObjectClass><ccts:PropertyTerm>Energy Tax Report</ccts:PropertyTerm><ccts:AssociatedObjectClass>Energy Tax Report</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Energy Tax Report</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Energy Water Supply. Energy Tax Report</ccts:DictionaryEntryName><ccts:Definition>A tax on the consumption of energy or water.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Energy Water Supply</ccts:ObjectClass><ccts:PropertyTerm>Energy Tax Report</ccts:PropertyTerm><ccts:AssociatedObjectClass>Energy Tax Report</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Energy Tax Report</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("EnergyTaxReport", Order=1)]
-        public List<EnergyTaxReportType> EnergyTaxReport
-        {
-            get
-            {
-                return _energyTaxReport;
-            }
-            set
-            {
-                _energyTaxReport = value;
-            }
-        }
-        
+        [XmlElementAttribute("EnergyTaxReport")]
+        public Collection<EnergyTaxReportType> EnergyTaxReport { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the EnergyTaxReport collection is empty.</para>
         /// </summary>
@@ -107,31 +81,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.EnergyTaxReport != null) 
+                return ((this.EnergyTaxReport != null)
                             && (this.EnergyTaxReport.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<ConsumptionAverageType> _consumptionAverage;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Energy Water Supply. Consumption Average</ccts:DictionaryEntryName><ccts:Definition>A consumption average.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Energy Water Supply</ccts:ObjectClass><ccts:PropertyTerm>Consumption Average</ccts:PropertyTerm><ccts:AssociatedObjectClass>Consumption Average</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Consumption Average</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Energy Water Supply. Consumption Average</ccts:DictionaryEntryName><ccts:Definition>A consumption average.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Energy Water Supply</ccts:ObjectClass><ccts:PropertyTerm>Consumption Average</ccts:PropertyTerm><ccts:AssociatedObjectClass>Consumption Average</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Consumption Average</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("ConsumptionAverage", Order=2)]
-        public List<ConsumptionAverageType> ConsumptionAverage
-        {
-            get
-            {
-                return _consumptionAverage;
-            }
-            set
-            {
-                _consumptionAverage = value;
-            }
-        }
-        
+        [XmlElementAttribute("ConsumptionAverage")]
+        public Collection<ConsumptionAverageType> ConsumptionAverage { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the ConsumptionAverage collection is empty.</para>
         /// </summary>
@@ -141,31 +102,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.ConsumptionAverage != null) 
+                return ((this.ConsumptionAverage != null)
                             && (this.ConsumptionAverage.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<ConsumptionCorrectionType> _energyWaterConsumptionCorrection;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Energy Water Supply. Energy Water_ Consumption Correction. Consumption Correction</ccts:DictionaryEntryName><ccts:Definition>Describes any corrections or adjustments to the supply of energy or water.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Energy Water Supply</ccts:ObjectClass><ccts:PropertyTermQualifier>Energy Water</ccts:PropertyTermQualifier><ccts:PropertyTerm>Consumption Correction</ccts:PropertyTerm><ccts:AssociatedObjectClass>Consumption Correction</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Consumption Correction</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Energy Water Supply. Energy Water_ Consumption Correction. Consumption Correction</ccts:DictionaryEntryName><ccts:Definition>Describes any corrections or adjustments to the supply of energy or water.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Energy Water Supply</ccts:ObjectClass><ccts:PropertyTermQualifier>Energy Water</ccts:PropertyTermQualifier><ccts:PropertyTerm>Consumption Correction</ccts:PropertyTerm><ccts:AssociatedObjectClass>Consumption Correction</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Consumption Correction</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("EnergyWaterConsumptionCorrection", Order=3)]
-        public List<ConsumptionCorrectionType> EnergyWaterConsumptionCorrection
-        {
-            get
-            {
-                return _energyWaterConsumptionCorrection;
-            }
-            set
-            {
-                _energyWaterConsumptionCorrection = value;
-            }
-        }
-        
+        [XmlElementAttribute("EnergyWaterConsumptionCorrection")]
+        public Collection<ConsumptionCorrectionType> EnergyWaterConsumptionCorrection { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the EnergyWaterConsumptionCorrection collection is empty.</para>
         /// </summary>
@@ -175,7 +123,7 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.EnergyWaterConsumptionCorrection != null) 
+                return ((this.EnergyWaterConsumptionCorrection != null)
                             && (this.EnergyWaterConsumptionCorrection.Count != 0));
             }
         }

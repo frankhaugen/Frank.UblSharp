@@ -21,85 +21,72 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Party Tax Scheme. Details</ccts:DictionaryEntryName><ccts:Definition>A class to describe a taxation scheme applying to a party.</ccts:Definition><ccts:ObjectClass>Party Tax Scheme</ccts:ObjectClass></ccts:Component></para>
     /// </summary>
     [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Party Tax Scheme. Details</ccts:DictionaryEntryName><ccts:Definition>A class to describe a taxation scheme applying to a party.</ccts:Definition><ccts:ObjectClass>Party Tax Scheme</ccts:ObjectClass></ccts:Component>")]
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("PartyTaxSchemeType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlTypeAttribute("PartyTaxSchemeType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("PartyTaxScheme", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlRootAttribute("PartyTaxScheme", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public partial class PartyTaxSchemeType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Party Tax Scheme. Registration_ Name. Name</ccts:DictionaryEntryName><ccts:Definition>The name of the party as registered with the relevant fiscal authority.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Party Tax Scheme</ccts:ObjectClass><ccts:PropertyTermQualifier>Registration</ccts:PropertyTermQualifier><ccts:PropertyTerm>Name</ccts:PropertyTerm><ccts:RepresentationTerm>Name</ccts:RepresentationTerm><ccts:DataType>Name. Type</ccts:DataType><ccts:Examples>Microsoft Corporation </ccts:Examples></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Party Tax Scheme. Registration_ Name. Name</ccts:DictionaryEntryName><ccts:Definition>The name of the party as registered with the relevant fiscal authority.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Party Tax Scheme</ccts:ObjectClass><ccts:PropertyTermQualifier>Registration</ccts:PropertyTermQualifier><ccts:PropertyTerm>Name</ccts:PropertyTerm><ccts:RepresentationTerm>Name</ccts:RepresentationTerm><ccts:DataType>Name. Type</ccts:DataType><ccts:Examples>Microsoft Corporation </ccts:Examples></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("RegistrationName", Order=0, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("RegistrationName", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.RegistrationNameType RegistrationName { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Party Tax Scheme. Company Identifier. Identifier</ccts:DictionaryEntryName><ccts:Definition>An identifier for the party assigned for tax purposes by the taxation authority.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Party Tax Scheme</ccts:ObjectClass><ccts:PropertyTerm>Company Identifier</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType><ccts:AlternativeBusinessTerms>VAT Number</ccts:AlternativeBusinessTerms><ccts:Examples>3556625 </ccts:Examples></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Party Tax Scheme. Company Identifier. Identifier</ccts:DictionaryEntryName><ccts:Definition>An identifier for the party assigned for tax purposes by the taxation authority.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Party Tax Scheme</ccts:ObjectClass><ccts:PropertyTerm>Company Identifier</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType><ccts:AlternativeBusinessTerms>VAT Number</ccts:AlternativeBusinessTerms><ccts:Examples>3556625 </ccts:Examples></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("CompanyID", Order=1, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("CompanyID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.CompanyIdType CompanyId { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Party Tax Scheme. Tax Level Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the tax level applicable to the party within this taxation scheme.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Party Tax Scheme</ccts:ObjectClass><ccts:PropertyTerm>Tax Level Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Party Tax Scheme. Tax Level Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the tax level applicable to the party within this taxation scheme.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Party Tax Scheme</ccts:ObjectClass><ccts:PropertyTerm>Tax Level Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("TaxLevelCode", Order=2, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("TaxLevelCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.TaxLevelCodeType TaxLevelCode { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Party Tax Scheme. Exemption Reason Code. Code</ccts:DictionaryEntryName><ccts:Definition>A reason for the party's exemption from tax, expressed as a code.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Party Tax Scheme</ccts:ObjectClass><ccts:PropertyTerm>Exemption Reason Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Party Tax Scheme. Exemption Reason Code. Code</ccts:DictionaryEntryName><ccts:Definition>A reason for the party's exemption from tax, expressed as a code.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Party Tax Scheme</ccts:ObjectClass><ccts:PropertyTerm>Exemption Reason Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ExemptionReasonCode", Order=3, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("ExemptionReasonCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ExemptionReasonCodeType ExemptionReasonCode { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ExemptionReasonType> _exemptionReason;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Party Tax Scheme. Exemption_ Reason. Text</ccts:DictionaryEntryName><ccts:Definition>A reason for the party's exemption from tax, expressed as text.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Party Tax Scheme</ccts:ObjectClass><ccts:PropertyTermQualifier>Exemption</ccts:PropertyTermQualifier><ccts:PropertyTerm>Reason</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Party Tax Scheme. Exemption_ Reason. Text</ccts:DictionaryEntryName><ccts:Definition>A reason for the party's exemption from tax, expressed as text.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Party Tax Scheme</ccts:ObjectClass><ccts:PropertyTermQualifier>Exemption</ccts:PropertyTermQualifier><ccts:PropertyTerm>Reason</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("ExemptionReason", Order=4, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ExemptionReasonType> ExemptionReason
-        {
-            get
-            {
-                return _exemptionReason;
-            }
-            set
-            {
-                _exemptionReason = value;
-            }
-        }
-        
+        [XmlElementAttribute("ExemptionReason", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ExemptionReasonType> ExemptionReason { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the ExemptionReason collection is empty.</para>
         /// </summary>
@@ -109,26 +96,26 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.ExemptionReason != null) 
+                return ((this.ExemptionReason != null)
                             && (this.ExemptionReason.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Party Tax Scheme. Registration_ Address. Address</ccts:DictionaryEntryName><ccts:Definition>The address of the party as registered for tax purposes.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Party Tax Scheme</ccts:ObjectClass><ccts:PropertyTermQualifier>Registration</ccts:PropertyTermQualifier><ccts:PropertyTerm>Address</ccts:PropertyTerm><ccts:AssociatedObjectClass>Address</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Address</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Party Tax Scheme. Registration_ Address. Address</ccts:DictionaryEntryName><ccts:Definition>The address of the party as registered for tax purposes.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Party Tax Scheme</ccts:ObjectClass><ccts:PropertyTermQualifier>Registration</ccts:PropertyTermQualifier><ccts:PropertyTerm>Address</ccts:PropertyTerm><ccts:AssociatedObjectClass>Address</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Address</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("RegistrationAddress", Order=5)]
+        [XmlElementAttribute("RegistrationAddress")]
         public AddressType RegistrationAddress { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Party Tax Scheme. Tax Scheme</ccts:DictionaryEntryName><ccts:Definition>The taxation scheme applicable to the party.</ccts:Definition><ccts:Cardinality>1</ccts:Cardinality><ccts:ObjectClass>Party Tax Scheme</ccts:ObjectClass><ccts:PropertyTerm>Tax Scheme</ccts:PropertyTerm><ccts:AssociatedObjectClass>Tax Scheme</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Tax Scheme</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Party Tax Scheme. Tax Scheme</ccts:DictionaryEntryName><ccts:Definition>The taxation scheme applicable to the party.</ccts:Definition><ccts:Cardinality>1</ccts:Cardinality><ccts:ObjectClass>Party Tax Scheme</ccts:ObjectClass><ccts:PropertyTerm>Tax Scheme</ccts:PropertyTerm><ccts:AssociatedObjectClass>Tax Scheme</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Tax Scheme</ccts:RepresentationTerm></ccts:Component>")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("TaxScheme", Order=6)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("TaxScheme")]
         public TaxSchemeType TaxScheme { get; set; }
     }
 }

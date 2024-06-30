@@ -21,59 +21,46 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Quotation Line. Details</ccts:DictionaryEntryName><ccts:Definition>A class to define a line in a Request for Quotation.</ccts:Definition><ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass></ccts:Component></para>
     /// </summary>
     [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Quotation Line. Details</ccts:DictionaryEntryName><ccts:Definition>A class to define a line in a Request for Quotation.</ccts:Definition><ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass></ccts:Component>")]
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("RequestForQuotationLineType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlTypeAttribute("RequestForQuotationLineType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("RequestForQuotationLine", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlRootAttribute("RequestForQuotationLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public partial class RequestForQuotationLineType
     {
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Quotation Line. Identifier</ccts:DictionaryEntryName><ccts:Definition>An identifier for this line in the request for quotation.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass><ccts:PropertyTerm>Identifier</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Quotation Line. Identifier</ccts:DictionaryEntryName><ccts:Definition>An identifier for this line in the request for quotation.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass><ccts:PropertyTerm>Identifier</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ID", Order=0, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("ID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         [KeyAttribute()]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.IdType Id { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Quotation Line. UUID. Identifier</ccts:DictionaryEntryName><ccts:Definition>A universally unique identifier for this line in the request for quotation.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass><ccts:PropertyTerm>UUID</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Quotation Line. UUID. Identifier</ccts:DictionaryEntryName><ccts:Definition>A universally unique identifier for this line in the request for quotation.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass><ccts:PropertyTerm>UUID</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("UUID", Order=1, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("UUID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.UuidType Uuid { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.NoteType> _note;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Quotation Line. Note. Text</ccts:DictionaryEntryName><ccts:Definition>Free-form text conveying information that is not contained explicitly in other structures.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass><ccts:PropertyTerm>Note</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Quotation Line. Note. Text</ccts:DictionaryEntryName><ccts:Definition>Free-form text conveying information that is not contained explicitly in other structures.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass><ccts:PropertyTerm>Note</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("Note", Order=2, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.NoteType> Note
-        {
-            get
-            {
-                return _note;
-            }
-            set
-            {
-                _note = value;
-            }
-        }
-        
+        [XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.NoteType> Note { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Note collection is empty.</para>
         /// </summary>
@@ -83,58 +70,45 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.Note != null) 
+                return ((this.Note != null)
                             && (this.Note.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Quotation Line. Optional_ Line Item Indicator. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indication whether this line is optional (true) or not (false) for purposes of this request for quotation.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass><ccts:PropertyTermQualifier>Optional</ccts:PropertyTermQualifier><ccts:PropertyTerm>Line Item Indicator</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Quotation Line. Optional_ Line Item Indicator. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indication whether this line is optional (true) or not (false) for purposes of this request for quotation.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass><ccts:PropertyTermQualifier>Optional</ccts:PropertyTermQualifier><ccts:PropertyTerm>Line Item Indicator</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("OptionalLineItemIndicator", Order=3, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("OptionalLineItemIndicator", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.OptionalLineItemIndicatorType OptionalLineItemIndicator { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Quotation Line. Privacy Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the level of confidentiality of this request for quotation line.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass><ccts:PropertyTerm>Privacy Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Quotation Line. Privacy Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the level of confidentiality of this request for quotation line.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass><ccts:PropertyTerm>Privacy Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("PrivacyCode", Order=4, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("PrivacyCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.PrivacyCodeType PrivacyCode { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Quotation Line. Security Classification Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the security classification of this request for quotation line.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass><ccts:PropertyTerm>Security Classification Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Quotation Line. Security Classification Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the security classification of this request for quotation line.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass><ccts:PropertyTerm>Security Classification Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("SecurityClassificationCode", Order=5, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("SecurityClassificationCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.SecurityClassificationCodeType SecurityClassificationCode { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<DocumentReferenceType> _documentReference;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Quotation Line. Document Reference</ccts:DictionaryEntryName><ccts:Definition>A document associated with this request for quotation line.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass><ccts:PropertyTerm>Document Reference</ccts:PropertyTerm><ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Quotation Line. Document Reference</ccts:DictionaryEntryName><ccts:Definition>A document associated with this request for quotation line.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass><ccts:PropertyTerm>Document Reference</ccts:PropertyTerm><ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("DocumentReference", Order=6)]
-        public List<DocumentReferenceType> DocumentReference
-        {
-            get
-            {
-                return _documentReference;
-            }
-            set
-            {
-                _documentReference = value;
-            }
-        }
-        
+        [XmlElementAttribute("DocumentReference")]
+        public Collection<DocumentReferenceType> DocumentReference { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the DocumentReference collection is empty.</para>
         /// </summary>
@@ -144,17 +118,17 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.DocumentReference != null) 
+                return ((this.DocumentReference != null)
                             && (this.DocumentReference.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Quotation Line. Line Item</ccts:DictionaryEntryName><ccts:Definition>A description of the item for which a quotation is requested.</ccts:Definition><ccts:Cardinality>1</ccts:Cardinality><ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass><ccts:PropertyTerm>Line Item</ccts:PropertyTerm><ccts:AssociatedObjectClass>Line Item</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Line Item</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Quotation Line. Line Item</ccts:DictionaryEntryName><ccts:Definition>A description of the item for which a quotation is requested.</ccts:Definition><ccts:Cardinality>1</ccts:Cardinality><ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass><ccts:PropertyTerm>Line Item</ccts:PropertyTerm><ccts:AssociatedObjectClass>Line Item</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Line Item</ccts:RepresentationTerm></ccts:Component>")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("LineItem", Order=7)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("LineItem")]
         public LineItemType LineItem { get; set; }
     }
 }

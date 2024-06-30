@@ -21,32 +21,32 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("CertIDType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("CertIDType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
     public partial class CertIdType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("CertDigest", Order=0)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("CertDigest")]
         public DigestAlgAndValueType CertDigest { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("IssuerSerial", Order=1)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("IssuerSerial")]
         public Frank.UblSharp.CoreComponentTypes.X509IssuerSerialType IssuerSerial { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("URI")]

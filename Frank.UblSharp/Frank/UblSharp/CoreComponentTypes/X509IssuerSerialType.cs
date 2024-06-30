@@ -21,30 +21,30 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("X509IssuerSerialType", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlTypeAttribute("X509IssuerSerialType", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     [DebuggerStepThroughAttribute()]
     public partial class X509IssuerSerialType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("X509IssuerName", Order=0)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("X509IssuerName")]
         public string X509IssuerName { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("X509SerialNumber", Order=1)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("X509SerialNumber")]
         public int X509SerialNumber { get; set; }
     }
 }

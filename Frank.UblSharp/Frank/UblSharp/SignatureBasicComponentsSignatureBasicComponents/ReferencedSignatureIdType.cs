@@ -21,13 +21,13 @@ namespace Frank.UblSharp.SignatureBasicComponentsSignatureBasicComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("ReferencedSignatureIDType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2")]
+    [XmlTypeAttribute("ReferencedSignatureIDType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("ReferencedSignatureID", Namespace="urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2")]
+    [XmlRootAttribute("ReferencedSignatureID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2")]
     public partial class ReferencedSignatureIdType : Frank.UblSharp.UnqualifiedDataTypesUnqualifiedDataTypes.IdentifierType_2
     {
     }

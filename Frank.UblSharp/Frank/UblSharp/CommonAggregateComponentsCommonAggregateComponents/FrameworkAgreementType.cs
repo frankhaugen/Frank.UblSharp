@@ -21,67 +21,54 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Framework Agreement. Details</ccts:DictionaryEntryName><ccts:Definition>A class to describe a tendering framework agreement.</ccts:Definition><ccts:ObjectClass>Framework Agreement</ccts:ObjectClass></ccts:Component></para>
     /// </summary>
     [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Framework Agreement. Details</ccts:DictionaryEntryName><ccts:Definition>A class to describe a tendering framework agreement.</ccts:Definition><ccts:ObjectClass>Framework Agreement</ccts:ObjectClass></ccts:Component>")]
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("FrameworkAgreementType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlTypeAttribute("FrameworkAgreementType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("FrameworkAgreement", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlRootAttribute("FrameworkAgreement", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public partial class FrameworkAgreementType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Framework Agreement. Expected_ Operator. Quantity</ccts:DictionaryEntryName><ccts:Definition>The number of economic operators expected to participate in this framework agreement.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Framework Agreement</ccts:ObjectClass><ccts:PropertyTermQualifier>Expected</ccts:PropertyTermQualifier><ccts:PropertyTerm>Operator</ccts:PropertyTerm><ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm><ccts:DataType>Quantity. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Framework Agreement. Expected_ Operator. Quantity</ccts:DictionaryEntryName><ccts:Definition>The number of economic operators expected to participate in this framework agreement.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Framework Agreement</ccts:ObjectClass><ccts:PropertyTermQualifier>Expected</ccts:PropertyTermQualifier><ccts:PropertyTerm>Operator</ccts:PropertyTerm><ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm><ccts:DataType>Quantity. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ExpectedOperatorQuantity", Order=0, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("ExpectedOperatorQuantity", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ExpectedOperatorQuantityType ExpectedOperatorQuantity { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Framework Agreement. Maximum_ Operator. Quantity</ccts:DictionaryEntryName><ccts:Definition>The maximum number of economic operators allowed to participate in this framework agreement.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Framework Agreement</ccts:ObjectClass><ccts:PropertyTermQualifier>Maximum</ccts:PropertyTermQualifier><ccts:PropertyTerm>Operator</ccts:PropertyTerm><ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm><ccts:DataType>Quantity. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Framework Agreement. Maximum_ Operator. Quantity</ccts:DictionaryEntryName><ccts:Definition>The maximum number of economic operators allowed to participate in this framework agreement.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Framework Agreement</ccts:ObjectClass><ccts:PropertyTermQualifier>Maximum</ccts:PropertyTermQualifier><ccts:PropertyTerm>Operator</ccts:PropertyTerm><ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm><ccts:DataType>Quantity. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("MaximumOperatorQuantity", Order=1, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("MaximumOperatorQuantity", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.MaximumOperatorQuantityType MaximumOperatorQuantity { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.JustificationType> _justification;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Framework Agreement. Justification. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing the justification for this framework agreement.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Framework Agreement</ccts:ObjectClass><ccts:PropertyTerm>Justification</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Framework Agreement. Justification. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing the justification for this framework agreement.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Framework Agreement</ccts:ObjectClass><ccts:PropertyTerm>Justification</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("Justification", Order=2, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.JustificationType> Justification
-        {
-            get
-            {
-                return _justification;
-            }
-            set
-            {
-                _justification = value;
-            }
-        }
-        
+        [XmlElementAttribute("Justification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.JustificationType> Justification { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Justification collection is empty.</para>
         /// </summary>
@@ -91,31 +78,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.Justification != null) 
+                return ((this.Justification != null)
                             && (this.Justification.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.FrequencyType> _frequency;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Framework Agreement. Frequency. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing the frequency with which subsequent contracts will be awarded.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Framework Agreement</ccts:ObjectClass><ccts:PropertyTerm>Frequency</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Framework Agreement. Frequency. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing the frequency with which subsequent contracts will be awarded.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Framework Agreement</ccts:ObjectClass><ccts:PropertyTerm>Frequency</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("Frequency", Order=3, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.FrequencyType> Frequency
-        {
-            get
-            {
-                return _frequency;
-            }
-            set
-            {
-                _frequency = value;
-            }
-        }
-        
+        [XmlElementAttribute("Frequency", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.FrequencyType> Frequency { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Frequency collection is empty.</para>
         /// </summary>
@@ -125,40 +99,27 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.Frequency != null) 
+                return ((this.Frequency != null)
                             && (this.Frequency.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Framework Agreement. Duration_ Period. Period</ccts:DictionaryEntryName><ccts:Definition>The period during which this framework agreement applies.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Framework Agreement</ccts:ObjectClass><ccts:PropertyTermQualifier>Duration</ccts:PropertyTermQualifier><ccts:PropertyTerm>Period</ccts:PropertyTerm><ccts:AssociatedObjectClass>Period</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Period</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Framework Agreement. Duration_ Period. Period</ccts:DictionaryEntryName><ccts:Definition>The period during which this framework agreement applies.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Framework Agreement</ccts:ObjectClass><ccts:PropertyTermQualifier>Duration</ccts:PropertyTermQualifier><ccts:PropertyTerm>Period</ccts:PropertyTerm><ccts:AssociatedObjectClass>Period</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Period</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("DurationPeriod", Order=4)]
+        [XmlElementAttribute("DurationPeriod")]
         public PeriodType DurationPeriod { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<TenderRequirementType> _subsequentProcessTenderRequirement;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Framework Agreement. Subsequent Process_ Tender Requirement. Tender Requirement</ccts:DictionaryEntryName><ccts:Definition>A tender requirement intended for consumption by downstream tendering processes derived from the establishment of this framework agreement.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Framework Agreement</ccts:ObjectClass><ccts:PropertyTermQualifier>Subsequent Process</ccts:PropertyTermQualifier><ccts:PropertyTerm>Tender Requirement</ccts:PropertyTerm><ccts:AssociatedObjectClass>Tender Requirement</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Tender Requirement</ccts:RepresentationTerm><ccts:Examples>Curricula required</ccts:Examples></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Framework Agreement. Subsequent Process_ Tender Requirement. Tender Requirement</ccts:DictionaryEntryName><ccts:Definition>A tender requirement intended for consumption by downstream tendering processes derived from the establishment of this framework agreement.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Framework Agreement</ccts:ObjectClass><ccts:PropertyTermQualifier>Subsequent Process</ccts:PropertyTermQualifier><ccts:PropertyTerm>Tender Requirement</ccts:PropertyTerm><ccts:AssociatedObjectClass>Tender Requirement</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Tender Requirement</ccts:RepresentationTerm><ccts:Examples>Curricula required</ccts:Examples></ccts:Component>")]
-        [XmlElementAttribute("SubsequentProcessTenderRequirement", Order=5)]
-        public List<TenderRequirementType> SubsequentProcessTenderRequirement
-        {
-            get
-            {
-                return _subsequentProcessTenderRequirement;
-            }
-            set
-            {
-                _subsequentProcessTenderRequirement = value;
-            }
-        }
-        
+        [XmlElementAttribute("SubsequentProcessTenderRequirement")]
+        public Collection<TenderRequirementType> SubsequentProcessTenderRequirement { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the SubsequentProcessTenderRequirement collection is empty.</para>
         /// </summary>
@@ -168,7 +129,7 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.SubsequentProcessTenderRequirement != null) 
+                return ((this.SubsequentProcessTenderRequirement != null)
                             && (this.SubsequentProcessTenderRequirement.Count != 0));
             }
         }

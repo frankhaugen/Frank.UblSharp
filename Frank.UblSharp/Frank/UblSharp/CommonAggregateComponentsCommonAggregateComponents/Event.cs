@@ -21,8 +21,8 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Event. Details</ccts:DictionaryEntryName><ccts:Definition>A class to describe a significant occurrence relating to an object, process, or person.</ccts:Definition><ccts:ObjectClass>Event</ccts:ObjectClass></ccts:Component></para>
     /// </summary>
@@ -30,7 +30,7 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("Event", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlRootAttribute("Event", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public partial class Event : EventType
     {
     }

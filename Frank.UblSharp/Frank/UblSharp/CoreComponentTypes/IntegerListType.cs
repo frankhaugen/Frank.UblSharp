@@ -21,40 +21,27 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("IntegerListType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("IntegerListType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
     public partial class IntegerListType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<int> _int;
-        
-        [XmlElementAttribute("int", Order=0)]
-        public List<int> Int
-        {
-            get
-            {
-                return _int;
-            }
-            set
-            {
-                _int = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("int")]
+        public Collection<int> Int { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Int collection is empty.</para>
         /// </summary>
@@ -64,7 +51,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.Int != null) 
+                return ((this.Int != null)
                             && (this.Int.Count != 0));
             }
         }

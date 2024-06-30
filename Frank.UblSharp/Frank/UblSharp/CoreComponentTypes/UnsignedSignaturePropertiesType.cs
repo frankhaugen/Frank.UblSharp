@@ -21,32 +21,19 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("UnsignedSignaturePropertiesType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("UnsignedSignaturePropertiesType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("UnsignedSignatureProperties", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlRootAttribute("UnsignedSignatureProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     public partial class UnsignedSignaturePropertiesType
     {
-        
-        [XmlIgnoreAttribute()]
-        private List<CounterSignatureType> _counterSignature;
-        
-        [XmlElementAttribute("CounterSignature", Order=0)]
-        public List<CounterSignatureType> CounterSignature
-        {
-            get
-            {
-                return _counterSignature;
-            }
-            set
-            {
-                _counterSignature = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("CounterSignature")]
+        public Collection<CounterSignatureType> CounterSignature { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the CounterSignature collection is empty.</para>
         /// </summary>
@@ -56,27 +43,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.CounterSignature != null) 
+                return ((this.CounterSignature != null)
                             && (this.CounterSignature.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<XAdEsTimeStampType> _signatureTimeStamp;
-        
-        [XmlElementAttribute("SignatureTimeStamp", Order=1)]
-        public List<XAdEsTimeStampType> SignatureTimeStamp
-        {
-            get
-            {
-                return _signatureTimeStamp;
-            }
-            set
-            {
-                _signatureTimeStamp = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("SignatureTimeStamp")]
+        public Collection<XAdEsTimeStampType> SignatureTimeStamp { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the SignatureTimeStamp collection is empty.</para>
         /// </summary>
@@ -86,27 +60,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.SignatureTimeStamp != null) 
+                return ((this.SignatureTimeStamp != null)
                             && (this.SignatureTimeStamp.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<CompleteCertificateRefsType> _completeCertificateRefs;
-        
-        [XmlElementAttribute("CompleteCertificateRefs", Order=2)]
-        public List<CompleteCertificateRefsType> CompleteCertificateRefs
-        {
-            get
-            {
-                return _completeCertificateRefs;
-            }
-            set
-            {
-                _completeCertificateRefs = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("CompleteCertificateRefs")]
+        public Collection<CompleteCertificateRefsType> CompleteCertificateRefs { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the CompleteCertificateRefs collection is empty.</para>
         /// </summary>
@@ -116,27 +77,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.CompleteCertificateRefs != null) 
+                return ((this.CompleteCertificateRefs != null)
                             && (this.CompleteCertificateRefs.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<CompleteRevocationRefsType> _completeRevocationRefs;
-        
-        [XmlElementAttribute("CompleteRevocationRefs", Order=3)]
-        public List<CompleteRevocationRefsType> CompleteRevocationRefs
-        {
-            get
-            {
-                return _completeRevocationRefs;
-            }
-            set
-            {
-                _completeRevocationRefs = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("CompleteRevocationRefs")]
+        public Collection<CompleteRevocationRefsType> CompleteRevocationRefs { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the CompleteRevocationRefs collection is empty.</para>
         /// </summary>
@@ -146,27 +94,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.CompleteRevocationRefs != null) 
+                return ((this.CompleteRevocationRefs != null)
                             && (this.CompleteRevocationRefs.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<CompleteCertificateRefsType> _attributeCertificateRefs;
-        
-        [XmlElementAttribute("AttributeCertificateRefs", Order=4)]
-        public List<CompleteCertificateRefsType> AttributeCertificateRefs
-        {
-            get
-            {
-                return _attributeCertificateRefs;
-            }
-            set
-            {
-                _attributeCertificateRefs = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("AttributeCertificateRefs")]
+        public Collection<CompleteCertificateRefsType> AttributeCertificateRefs { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the AttributeCertificateRefs collection is empty.</para>
         /// </summary>
@@ -176,27 +111,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.AttributeCertificateRefs != null) 
+                return ((this.AttributeCertificateRefs != null)
                             && (this.AttributeCertificateRefs.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<CompleteRevocationRefsType> _attributeRevocationRefs;
-        
-        [XmlElementAttribute("AttributeRevocationRefs", Order=5)]
-        public List<CompleteRevocationRefsType> AttributeRevocationRefs
-        {
-            get
-            {
-                return _attributeRevocationRefs;
-            }
-            set
-            {
-                _attributeRevocationRefs = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("AttributeRevocationRefs")]
+        public Collection<CompleteRevocationRefsType> AttributeRevocationRefs { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the AttributeRevocationRefs collection is empty.</para>
         /// </summary>
@@ -206,27 +128,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.AttributeRevocationRefs != null) 
+                return ((this.AttributeRevocationRefs != null)
                             && (this.AttributeRevocationRefs.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<XAdEsTimeStampType> _sigAndRefsTimeStamp;
-        
-        [XmlElementAttribute("SigAndRefsTimeStamp", Order=6)]
-        public List<XAdEsTimeStampType> SigAndRefsTimeStamp
-        {
-            get
-            {
-                return _sigAndRefsTimeStamp;
-            }
-            set
-            {
-                _sigAndRefsTimeStamp = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("SigAndRefsTimeStamp")]
+        public Collection<XAdEsTimeStampType> SigAndRefsTimeStamp { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the SigAndRefsTimeStamp collection is empty.</para>
         /// </summary>
@@ -236,27 +145,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.SigAndRefsTimeStamp != null) 
+                return ((this.SigAndRefsTimeStamp != null)
                             && (this.SigAndRefsTimeStamp.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<XAdEsTimeStampType> _refsOnlyTimeStamp;
-        
-        [XmlElementAttribute("RefsOnlyTimeStamp", Order=7)]
-        public List<XAdEsTimeStampType> RefsOnlyTimeStamp
-        {
-            get
-            {
-                return _refsOnlyTimeStamp;
-            }
-            set
-            {
-                _refsOnlyTimeStamp = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("RefsOnlyTimeStamp")]
+        public Collection<XAdEsTimeStampType> RefsOnlyTimeStamp { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the RefsOnlyTimeStamp collection is empty.</para>
         /// </summary>
@@ -266,27 +162,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.RefsOnlyTimeStamp != null) 
+                return ((this.RefsOnlyTimeStamp != null)
                             && (this.RefsOnlyTimeStamp.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<CertificateValuesType> _certificateValues;
-        
-        [XmlElementAttribute("CertificateValues", Order=8)]
-        public List<CertificateValuesType> CertificateValues
-        {
-            get
-            {
-                return _certificateValues;
-            }
-            set
-            {
-                _certificateValues = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("CertificateValues")]
+        public Collection<CertificateValuesType> CertificateValues { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the CertificateValues collection is empty.</para>
         /// </summary>
@@ -296,27 +179,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.CertificateValues != null) 
+                return ((this.CertificateValues != null)
                             && (this.CertificateValues.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<RevocationValuesType> _revocationValues;
-        
-        [XmlElementAttribute("RevocationValues", Order=9)]
-        public List<RevocationValuesType> RevocationValues
-        {
-            get
-            {
-                return _revocationValues;
-            }
-            set
-            {
-                _revocationValues = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("RevocationValues")]
+        public Collection<RevocationValuesType> RevocationValues { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the RevocationValues collection is empty.</para>
         /// </summary>
@@ -326,27 +196,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.RevocationValues != null) 
+                return ((this.RevocationValues != null)
                             && (this.RevocationValues.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<CertificateValuesType> _attrAuthoritiesCertValues;
-        
-        [XmlElementAttribute("AttrAuthoritiesCertValues", Order=10)]
-        public List<CertificateValuesType> AttrAuthoritiesCertValues
-        {
-            get
-            {
-                return _attrAuthoritiesCertValues;
-            }
-            set
-            {
-                _attrAuthoritiesCertValues = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("AttrAuthoritiesCertValues")]
+        public Collection<CertificateValuesType> AttrAuthoritiesCertValues { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the AttrAuthoritiesCertValues collection is empty.</para>
         /// </summary>
@@ -356,27 +213,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.AttrAuthoritiesCertValues != null) 
+                return ((this.AttrAuthoritiesCertValues != null)
                             && (this.AttrAuthoritiesCertValues.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<RevocationValuesType> _attributeRevocationValues;
-        
-        [XmlElementAttribute("AttributeRevocationValues", Order=11)]
-        public List<RevocationValuesType> AttributeRevocationValues
-        {
-            get
-            {
-                return _attributeRevocationValues;
-            }
-            set
-            {
-                _attributeRevocationValues = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("AttributeRevocationValues")]
+        public Collection<RevocationValuesType> AttributeRevocationValues { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the AttributeRevocationValues collection is empty.</para>
         /// </summary>
@@ -386,27 +230,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.AttributeRevocationValues != null) 
+                return ((this.AttributeRevocationValues != null)
                             && (this.AttributeRevocationValues.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<XAdEsTimeStampType> _archiveTimeStamp;
-        
-        [XmlElementAttribute("ArchiveTimeStamp", Order=12)]
-        public List<XAdEsTimeStampType> ArchiveTimeStamp
-        {
-            get
-            {
-                return _archiveTimeStamp;
-            }
-            set
-            {
-                _archiveTimeStamp = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("ArchiveTimeStamp")]
+        public Collection<XAdEsTimeStampType> ArchiveTimeStamp { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the ArchiveTimeStamp collection is empty.</para>
         /// </summary>
@@ -416,28 +247,15 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.ArchiveTimeStamp != null) 
+                return ((this.ArchiveTimeStamp != null)
                             && (this.ArchiveTimeStamp.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<XmlElement> _any;
-        
-        [XmlAnyElementAttribute(Order=13)]
+
+        [XmlAnyElementAttribute()]
         [System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute()]
-        public List<XmlElement> Any
-        {
-            get
-            {
-                return _any;
-            }
-            set
-            {
-                _any = value;
-            }
-        }
-        
+        public Collection<System.Xml.Linq.XElement> Any { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Any collection is empty.</para>
         /// </summary>
@@ -447,11 +265,11 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.Any != null) 
+                return ((this.Any != null)
                             && (this.Any.Count != 0));
             }
         }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("Id")]

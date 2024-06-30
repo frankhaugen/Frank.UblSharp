@@ -1,4 +1,5 @@
 ﻿using System.CodeDom;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Text.RegularExpressions;
 using XmlSchemaClassGenerator;
@@ -7,28 +8,25 @@ namespace Frank.UblSharp.GeneratorV2;
 
 public static class UblGeneratorFactory
 {
-    public static Generator Create(DirectoryInfo outputDirectory, string rootNamespace, List<string> fileLog, OutputWriter outputWriter)
+    public static Generator Create(DirectoryInfo outputDirectory, Action<string> logAction, OutputWriter? outputWriter = null)
     {
         return new Generator
         {
             OutputFolder = outputDirectory.FullName,
-            Log = fileLog.Add,
+            Log = logAction,
             PrivateMemberPrefix = "_",
             IntegerDataType = typeof(int),
-            CollectionImplementationType = typeof(List<>),
-            CollectionType = typeof(List<>),
+            CollectionImplementationType = typeof(Collection<>),
+            CollectionType = typeof(Collection<>),
             NamingScheme = NamingScheme.PascalCase,
             DataAnnotationMode = DataAnnotationMode.All,
             CollectionSettersMode = CollectionSettersMode.PublicWithoutConstructorInitialization,
-            CodeTypeReferenceOptions = CodeTypeReferenceOptions.GenericTypeParameter,
+            CodeTypeReferenceOptions = CodeTypeReferenceOptions.GlobalReference,
             NamespaceProvider = new NamespaceProvider
             {
                 GenerateNamespace = x =>
                 {
                     var namespaceBuilder = new StringBuilder();
-
-                    namespaceBuilder.Append(rootNamespace);
-                    namespaceBuilder.Append(".");
 
                     var customNamespace = new Regex("[^a-zA-Z0-9]").Replace(x.XmlSchemaNamespace, "_");
 
@@ -61,24 +59,24 @@ public static class UblGeneratorFactory
             MapUnionToWidestCommonType = true,
             GenerateNullables = true,
             DoNotForceIsNullable = false,
-            EmitOrder = true,
+            EmitOrder = false,
             SeparateNamespaceHierarchy = true,
             DisableComments = false,
-            GenerateDescriptionAttribute = true,
+            GenerateDescriptionAttribute = false,
             EnableNullableReferenceAttributes = true,
             CompactTypeNames = true,
             SeparateSubstitutes = true,
-            GenerateSerializableAttribute = true,
+            GenerateSerializableAttribute = false,
             CreateGeneratedCodeAttributeVersion = true,
             AssemblyVisible = false,
             EnableUpaCheck = true,
             UseShouldSerializePattern = false,
             GenerateDesignerCategoryAttribute = false,
             CommentLanguages = { "en" },
-            UseXElementForAny = false,
+            UseXElementForAny = true,
             GenerateDebuggerStepThroughAttribute = true,
-            UniqueTypeNamesAcrossNamespaces = true
-            // OutputWriter = outputWriter,
+            UniqueTypeNamesAcrossNamespaces = true,
+            OutputWriter = outputWriter,
         };
     }
 }

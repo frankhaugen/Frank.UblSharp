@@ -21,51 +21,38 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("ObjectIdentifierType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("ObjectIdentifierType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("ObjectIdentifier", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlRootAttribute("ObjectIdentifier", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     public partial class ObjectIdentifierType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("Identifier", Order=0)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("Identifier")]
         public IdentifierType_3 Identifier { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("Description", Order=1)]
+        [XmlElementAttribute("Description")]
         public string Description { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<string> _documentationReferences;
-        
-        [XmlArrayAttribute("DocumentationReferences", Order=2)]
-        [XmlArrayItemAttribute("DocumentationReference", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
-        public List<string> DocumentationReferences
-        {
-            get
-            {
-                return _documentationReferences;
-            }
-            set
-            {
-                _documentationReferences = value;
-            }
-        }
-        
+
+        [XmlArrayAttribute("DocumentationReferences")]
+        [XmlArrayItemAttribute("DocumentationReference", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+        public Collection<string> DocumentationReferences { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the DocumentationReferences collection is empty.</para>
         /// </summary>
@@ -75,7 +62,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.DocumentationReferences != null) 
+                return ((this.DocumentationReferences != null)
                             && (this.DocumentationReferences.Count != 0));
             }
         }

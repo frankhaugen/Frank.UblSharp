@@ -21,31 +21,31 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("IdentifierType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("IdentifierType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("IdentifierType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlRootAttribute("IdentifierType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     public partial class IdentifierType_3
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets the text value.</para>
         /// </summary>
         [XmlTextAttribute()]
         public string Value { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("Qualifier")]

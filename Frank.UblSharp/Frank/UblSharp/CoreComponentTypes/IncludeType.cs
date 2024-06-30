@@ -21,34 +21,34 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("IncludeType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("IncludeType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("Include", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlRootAttribute("Include", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     public partial class IncludeType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlAttributeAttribute("URI")]
         public string Uri { get; set; }
-        
+
         [EditorBrowsableAttribute(EditorBrowsableState.Never)]
         [System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute()]
         [XmlAttributeAttribute("referencedData")]
         public bool ReferencedDataValue { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value indicating whether the ReferencedData property is specified.</para>
         /// </summary>
@@ -56,7 +56,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         [System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute()]
         [EditorBrowsableAttribute(EditorBrowsableState.Never)]
         public bool ReferencedDataValueSpecified { get; set; }
-        
+
         [XmlIgnoreAttribute()]
         public Nullable<bool> ReferencedData
         {

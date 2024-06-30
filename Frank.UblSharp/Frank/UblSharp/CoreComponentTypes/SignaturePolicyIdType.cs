@@ -21,54 +21,41 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("SignaturePolicyIdType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("SignaturePolicyIdType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
     public partial class SignaturePolicyIdType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("SigPolicyId", Order=0)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("SigPolicyId")]
         public ObjectIdentifierType SigPolicyId { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("Transforms", Order=1, Namespace="http://www.w3.org/2000/09/xmldsig#")]
+        [XmlElementAttribute("Transforms", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
         public Frank.UblSharp.CoreComponentTypes.TransformsType Transforms { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("SigPolicyHash", Order=2)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("SigPolicyHash")]
         public DigestAlgAndValueType SigPolicyHash { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<AnyType> _sigPolicyQualifiers;
-        
-        [XmlArrayAttribute("SigPolicyQualifiers", Order=3)]
-        [XmlArrayItemAttribute("SigPolicyQualifier", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
-        public List<AnyType> SigPolicyQualifiers
-        {
-            get
-            {
-                return _sigPolicyQualifiers;
-            }
-            set
-            {
-                _sigPolicyQualifiers = value;
-            }
-        }
-        
+
+        [XmlArrayAttribute("SigPolicyQualifiers")]
+        [XmlArrayItemAttribute("SigPolicyQualifier", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+        public Collection<AnyType> SigPolicyQualifiers { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the SigPolicyQualifiers collection is empty.</para>
         /// </summary>
@@ -78,7 +65,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.SigPolicyQualifiers != null) 
+                return ((this.SigPolicyQualifiers != null)
                             && (this.SigPolicyQualifiers.Count != 0));
             }
         }

@@ -21,45 +21,32 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("SignatureType", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlTypeAttribute("SignatureType", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("Signature", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlRootAttribute("Signature", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     public partial class SignatureType_2
     {
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("SignedInfo", Order=0)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("SignedInfo")]
         public SignedInfoType SignedInfo { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("SignatureValue", Order=1)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("SignatureValue")]
         public SignatureValueType SignatureValue { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("KeyInfo", Order=2)]
+        [XmlElementAttribute("KeyInfo")]
         public KeyInfoType KeyInfo { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<ObjectType> _object;
-        
-        [XmlElementAttribute("Object", Order=3)]
-        public List<ObjectType> Object
-        {
-            get
-            {
-                return _object;
-            }
-            set
-            {
-                _object = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("Object")]
+        public Collection<ObjectType> Object { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Object collection is empty.</para>
         /// </summary>
@@ -69,11 +56,11 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.Object != null) 
+                return ((this.Object != null)
                             && (this.Object.Count != 0));
             }
         }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("Id")]

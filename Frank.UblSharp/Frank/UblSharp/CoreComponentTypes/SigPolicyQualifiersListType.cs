@@ -21,39 +21,26 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("SigPolicyQualifiersListType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("SigPolicyQualifiersListType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
     public partial class SigPolicyQualifiersListType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<AnyType> _sigPolicyQualifier;
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("SigPolicyQualifier", Order=0)]
-        public List<AnyType> SigPolicyQualifier
-        {
-            get
-            {
-                return _sigPolicyQualifier;
-            }
-            set
-            {
-                _sigPolicyQualifier = value;
-            }
-        }
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("SigPolicyQualifier")]
+        public Collection<AnyType> SigPolicyQualifier { get; set; }
     }
 }

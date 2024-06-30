@@ -21,13 +21,13 @@ namespace Frank.UblSharp.CommonExtensionComponentsCommonExtensionComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("ExtensionReasonCodeType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
+    [XmlTypeAttribute("ExtensionReasonCodeType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("ExtensionReasonCode", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
+    [XmlRootAttribute("ExtensionReasonCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
     public partial class ExtensionReasonCodeType : Frank.UblSharp.UnqualifiedDataTypesUnqualifiedDataTypes.CodeType_2
     {
     }

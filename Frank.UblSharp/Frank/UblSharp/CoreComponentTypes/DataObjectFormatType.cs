@@ -21,46 +21,46 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("DataObjectFormatType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("DataObjectFormatType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("DataObjectFormat", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlRootAttribute("DataObjectFormat", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     public partial class DataObjectFormatType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("Description", Order=0)]
+        [XmlElementAttribute("Description")]
         public string Description { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ObjectIdentifier", Order=1)]
+        [XmlElementAttribute("ObjectIdentifier")]
         public ObjectIdentifierType ObjectIdentifier { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("MimeType", Order=2)]
+        [XmlElementAttribute("MimeType")]
         public string MimeType { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("Encoding", Order=3)]
+        [XmlElementAttribute("Encoding")]
         public string Encoding { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlAttributeAttribute("ObjectReference")]
         public string ObjectReference { get; set; }
     }

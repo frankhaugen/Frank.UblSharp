@@ -21,8 +21,8 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para xml:lang="en"><ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:2">UNDT000002</ccts:UniqueID></para>
     /// <para xml:lang="en"><ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:2">CCT</ccts:CategoryCode></para>
@@ -35,9 +35,9 @@ namespace Frank.UblSharp.CoreComponentTypes
     [DescriptionAttribute(@"<ccts:UniqueID xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">UNDT000002</ccts:UniqueID> <ccts:CategoryCode xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">CCT</ccts:CategoryCode> <ccts:DictionaryEntryName xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">Binary Object. Type</ccts:DictionaryEntryName> <ccts:VersionID xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">1.0</ccts:VersionID> <ccts:Definition xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">A set of finite-length sequences of binary octets.</ccts:Definition> <ccts:RepresentationTermName xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">Binary Object</ccts:RepresentationTermName> <ccts:PrimitiveType xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">binary</ccts:PrimitiveType>")]
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("BinaryObjectType", Namespace="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
+    [XmlTypeAttribute("BinaryObjectType", Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("BinaryObjectType", Namespace="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
+    [XmlRootAttribute("BinaryObjectType", Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
     [XmlIncludeAttribute(typeof(Frank.UblSharp.UnqualifiedDataTypesUnqualifiedDataTypes.BinaryObjectType_2))]
     [XmlIncludeAttribute(typeof(Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.EmbeddedDocumentBinaryObjectType))]
     [XmlIncludeAttribute(typeof(Frank.UblSharp.UnqualifiedDataTypesUnqualifiedDataTypes.GraphicType))]
@@ -46,22 +46,22 @@ namespace Frank.UblSharp.CoreComponentTypes
     [XmlIncludeAttribute(typeof(Frank.UblSharp.UnqualifiedDataTypesUnqualifiedDataTypes.VideoType))]
     public partial class BinaryObjectType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets the text value.</para>
         /// </summary>
-        [XmlTextAttribute(DataType="base64Binary")]
+        [XmlTextAttribute(DataType = "base64Binary")]
         public Byte[] Value { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en"><ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:2">UNDT000002-SC2</ccts:UniqueID></para>
         /// <para xml:lang="en"><ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:2">SC</ccts:CategoryCode></para>
@@ -77,7 +77,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("format")]
         public string Format { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en"><ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:2">UNDT000002-SC3</ccts:UniqueID></para>
         /// <para xml:lang="en"><ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:2">SC</ccts:CategoryCode></para>
@@ -93,7 +93,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("mimeCode")]
         public string MimeCode { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en"><ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:2">UNDT000002-SC4</ccts:UniqueID></para>
         /// <para xml:lang="en"><ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:2">SC</ccts:CategoryCode></para>
@@ -109,7 +109,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("encodingCode")]
         public string EncodingCode { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en"><ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:2">UNDT000002-SC5</ccts:UniqueID></para>
         /// <para xml:lang="en"><ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:2">SC</ccts:CategoryCode></para>
@@ -125,7 +125,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("characterSetCode")]
         public string CharacterSetCode { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en"><ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:2">UNDT000002-SC6</ccts:UniqueID></para>
         /// <para xml:lang="en"><ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:2">SC</ccts:CategoryCode></para>
@@ -141,7 +141,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("uri")]
         public string Uri { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en"><ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:2">UNDT000002-SC7</ccts:UniqueID></para>
         /// <para xml:lang="en"><ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:2">SC</ccts:CategoryCode></para>

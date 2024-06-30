@@ -21,41 +21,27 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("SignedInfoType", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlTypeAttribute("SignedInfoType", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("SignedInfo", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlRootAttribute("SignedInfo", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     public partial class SignedInfoType
     {
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("CanonicalizationMethod", Order=0)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("CanonicalizationMethod")]
         public CanonicalizationMethodType_2 CanonicalizationMethod { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("SignatureMethod", Order=1)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("SignatureMethod")]
         public SignatureMethodType_2 SignatureMethod { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<ReferenceType_2> _reference;
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("Reference", Order=2)]
-        public List<ReferenceType_2> Reference
-        {
-            get
-            {
-                return _reference;
-            }
-            set
-            {
-                _reference = value;
-            }
-        }
-        
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("Reference")]
+        public Collection<ReferenceType_2> Reference { get; set; }
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("Id")]

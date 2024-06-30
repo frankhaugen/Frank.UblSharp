@@ -21,31 +21,31 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("RSAKeyValueType", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlTypeAttribute("RSAKeyValueType", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("RSAKeyValue", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlRootAttribute("RSAKeyValue", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     public partial class RsaKeyValueType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("Modulus", Order=0, DataType="base64Binary")]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("Modulus", DataType = "base64Binary")]
         public Byte[] Modulus { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("Exponent", Order=1, DataType="base64Binary")]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("Exponent", DataType = "base64Binary")]
         public Byte[] Exponent { get; set; }
     }
 }

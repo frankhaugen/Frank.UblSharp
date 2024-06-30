@@ -21,37 +21,37 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("CRLIdentifierType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("CRLIdentifierType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
     public partial class CrlIdentifierType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("Issuer", Order=0)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("Issuer")]
         public string Issuer { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("IssueTime", Order=1, DataType="dateTime")]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("IssueTime", DataType = "dateTime")]
         public DateTime IssueTime { get; set; }
-        
+
         [EditorBrowsableAttribute(EditorBrowsableState.Never)]
         [System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute()]
-        [XmlElementAttribute("Number", Order=2)]
+        [XmlElementAttribute("Number")]
         public int NumberValue { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value indicating whether the Number property is specified.</para>
         /// </summary>
@@ -59,7 +59,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         [System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute()]
         [EditorBrowsableAttribute(EditorBrowsableState.Never)]
         public bool NumberValueSpecified { get; set; }
-        
+
         [XmlIgnoreAttribute()]
         public Nullable<int> Number
         {
@@ -80,7 +80,7 @@ namespace Frank.UblSharp.CoreComponentTypes
                 this.NumberValueSpecified = value.HasValue;
             }
         }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("URI")]

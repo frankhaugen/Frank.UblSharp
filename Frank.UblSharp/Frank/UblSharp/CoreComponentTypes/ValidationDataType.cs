@@ -21,32 +21,32 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("ValidationDataType", Namespace="http://uri.etsi.org/01903/v1.4.1#")]
+    [XmlTypeAttribute("ValidationDataType", Namespace = "http://uri.etsi.org/01903/v1.4.1#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("TimeStampValidationData", Namespace="http://uri.etsi.org/01903/v1.4.1#")]
+    [XmlRootAttribute("TimeStampValidationData", Namespace = "http://uri.etsi.org/01903/v1.4.1#")]
     public partial class ValidationDataType
     {
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("CertificateValues", Order=0, Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+        [XmlElementAttribute("CertificateValues", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
         public Frank.UblSharp.CoreComponentTypes.CertificateValuesType CertificateValues { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("RevocationValues", Order=1, Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+        [XmlElementAttribute("RevocationValues", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
         public Frank.UblSharp.CoreComponentTypes.RevocationValuesType RevocationValues { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("Id")]
         [KeyAttribute()]
         public string Id { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("UR")]

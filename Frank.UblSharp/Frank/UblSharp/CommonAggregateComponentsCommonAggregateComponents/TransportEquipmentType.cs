@@ -21,11 +21,11 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("TransportEquipmentType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlTypeAttribute("TransportEquipmentType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     [DebuggerStepThroughAttribute()]
     [XmlIncludeAttribute(typeof(AttachedTransportEquipment))]
     [XmlIncludeAttribute(typeof(ContainedInTransportEquipment))]
@@ -36,37 +36,24 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     [XmlIncludeAttribute(typeof(UnsupportedTransportEquipment))]
     public partial class TransportEquipmentType
     {
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Identifier</ccts:DictionaryEntryName><ccts:Definition>An identifier for this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Identifier</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType><ccts:Examples>OCLU 1234567 </ccts:Examples></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Identifier</ccts:DictionaryEntryName><ccts:Definition>An identifier for this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Identifier</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType><ccts:Examples>OCLU 1234567 </ccts:Examples></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ID", Order=0, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("ID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         [KeyAttribute()]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.IdType Id { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ReferencedConsignmentIdType> _referencedConsignmentId;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Referenced_ Consignment Identifier. Identifier</ccts:DictionaryEntryName><ccts:Definition>An identifier for the consignment contained by this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Referenced</ccts:PropertyTermQualifier><ccts:PropertyTerm>Consignment Identifier</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Referenced_ Consignment Identifier. Identifier</ccts:DictionaryEntryName><ccts:Definition>An identifier for the consignment contained by this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Referenced</ccts:PropertyTermQualifier><ccts:PropertyTerm>Consignment Identifier</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("ReferencedConsignmentID", Order=1, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ReferencedConsignmentIdType> ReferencedConsignmentId
-        {
-            get
-            {
-                return _referencedConsignmentId;
-            }
-            set
-            {
-                _referencedConsignmentId = value;
-            }
-        }
-        
+        [XmlElementAttribute("ReferencedConsignmentID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ReferencedConsignmentIdType> ReferencedConsignmentId { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the ReferencedConsignmentId collection is empty.</para>
         /// </summary>
@@ -76,94 +63,81 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.ReferencedConsignmentId != null) 
+                return ((this.ReferencedConsignmentId != null)
                             && (this.ReferencedConsignmentId.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Transport Equipment Type Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the type of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Transport Equipment Type Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataTypeQualifier>Transport Equipment Type</ccts:DataTypeQualifier><ccts:DataType>Transport Equipment Type_ Code. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Transport Equipment Type Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the type of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Transport Equipment Type Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataTypeQualifier>Transport Equipment Type</ccts:DataTypeQualifier><ccts:DataType>Transport Equipment Type_ Code. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("TransportEquipmentTypeCode", Order=2, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("TransportEquipmentTypeCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.TransportEquipmentTypeCodeType TransportEquipmentTypeCode { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Provider Type Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the type of provider of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Provider Type Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Provider Type Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the type of provider of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Provider Type Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ProviderTypeCode", Order=3, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("ProviderTypeCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ProviderTypeCodeType ProviderTypeCode { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Owner Type Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the type of owner of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Owner Type Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Owner Type Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the type of owner of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Owner Type Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("OwnerTypeCode", Order=4, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("OwnerTypeCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.OwnerTypeCodeType OwnerTypeCode { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Size Type Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the size and type of this piece of piece of transport equipment. When the piece of transport equipment is a shipping container, it is recommended to use ContainerSizeTypeCode for validation.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Size Type Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType><ccts:AlternativeBusinessTerms>Container Size Type Code</ccts:AlternativeBusinessTerms></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Size Type Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the size and type of this piece of piece of transport equipment. When the piece of transport equipment is a shipping container, it is recommended to use ContainerSizeTypeCode for validation.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Size Type Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType><ccts:AlternativeBusinessTerms>Container Size Type Code</ccts:AlternativeBusinessTerms></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("SizeTypeCode", Order=5, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("SizeTypeCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.SizeTypeCodeType SizeTypeCode { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Disposition Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the current disposition of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Disposition Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType><ccts:AlternativeBusinessTerms>Status</ccts:AlternativeBusinessTerms></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Disposition Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the current disposition of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Disposition Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType><ccts:AlternativeBusinessTerms>Status</ccts:AlternativeBusinessTerms></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("DispositionCode", Order=6, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("DispositionCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DispositionCodeType DispositionCode { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Fullness Indication Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying whether this piece of transport equipment is full, partially full, or empty.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Fullness Indication Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Fullness Indication Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying whether this piece of transport equipment is full, partially full, or empty.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Fullness Indication Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("FullnessIndicationCode", Order=7, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("FullnessIndicationCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.FullnessIndicationCodeType FullnessIndicationCode { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Refrigeration On_ Indicator. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indicator that this piece of transport equipment's refrigeration is on (true) or off (false).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Refrigeration On</ccts:PropertyTermQualifier><ccts:PropertyTerm>Indicator</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Refrigeration On_ Indicator. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indicator that this piece of transport equipment's refrigeration is on (true) or off (false).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Refrigeration On</ccts:PropertyTermQualifier><ccts:PropertyTerm>Indicator</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("RefrigerationOnIndicator", Order=8, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("RefrigerationOnIndicator", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.RefrigerationOnIndicatorType RefrigerationOnIndicator { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.InformationType> _information;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Information. Text</ccts:DictionaryEntryName><ccts:Definition>Additional information about this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Information</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Information. Text</ccts:DictionaryEntryName><ccts:Definition>Additional information about this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Information</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("Information", Order=9, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.InformationType> Information
-        {
-            get
-            {
-                return _information;
-            }
-            set
-            {
-                _information = value;
-            }
-        }
-        
+        [XmlElementAttribute("Information", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.InformationType> Information { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Information collection is empty.</para>
         /// </summary>
@@ -173,112 +147,99 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.Information != null) 
+                return ((this.Information != null)
                             && (this.Information.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Returnability_ Indicator. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indicator that this piece of transport equipment is returnable (true) or not (false).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Returnability</ccts:PropertyTermQualifier><ccts:PropertyTerm>Indicator</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Returnability_ Indicator. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indicator that this piece of transport equipment is returnable (true) or not (false).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Returnability</ccts:PropertyTermQualifier><ccts:PropertyTerm>Indicator</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ReturnabilityIndicator", Order=10, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("ReturnabilityIndicator", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ReturnabilityIndicatorType ReturnabilityIndicator { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Legal Status_ Indicator. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indication of the legal status of this piece of transport equipment with respect to the Container Convention Code.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Legal Status</ccts:PropertyTermQualifier><ccts:PropertyTerm>Indicator</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Legal Status_ Indicator. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indication of the legal status of this piece of transport equipment with respect to the Container Convention Code.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Legal Status</ccts:PropertyTermQualifier><ccts:PropertyTerm>Indicator</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("LegalStatusIndicator", Order=11, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("LegalStatusIndicator", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.LegalStatusIndicatorType LegalStatusIndicator { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Air Flow Percent. Percent</ccts:DictionaryEntryName><ccts:Definition>The percent of the airflow within this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Air Flow Percent</ccts:PropertyTerm><ccts:RepresentationTerm>Percent</ccts:RepresentationTerm><ccts:DataType>Percent. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Air Flow Percent. Percent</ccts:DictionaryEntryName><ccts:Definition>The percent of the airflow within this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Air Flow Percent</ccts:PropertyTerm><ccts:RepresentationTerm>Percent</ccts:RepresentationTerm><ccts:DataType>Percent. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("AirFlowPercent", Order=12, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("AirFlowPercent", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.AirFlowPercentType AirFlowPercent { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Humidity Percent. Percent</ccts:DictionaryEntryName><ccts:Definition>The percent humidity within this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Humidity Percent</ccts:PropertyTerm><ccts:RepresentationTerm>Percent</ccts:RepresentationTerm><ccts:DataType>Percent. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Humidity Percent. Percent</ccts:DictionaryEntryName><ccts:Definition>The percent humidity within this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Humidity Percent</ccts:PropertyTerm><ccts:RepresentationTerm>Percent</ccts:RepresentationTerm><ccts:DataType>Percent. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("HumidityPercent", Order=13, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("HumidityPercent", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.HumidityPercentType HumidityPercent { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Animal Food_ Approved Indicator. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indicator that this piece of transport equipment is approved for animal food (true) or not (false).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Animal Food</ccts:PropertyTermQualifier><ccts:PropertyTerm>Approved Indicator</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Animal Food_ Approved Indicator. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indicator that this piece of transport equipment is approved for animal food (true) or not (false).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Animal Food</ccts:PropertyTermQualifier><ccts:PropertyTerm>Approved Indicator</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("AnimalFoodApprovedIndicator", Order=14, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("AnimalFoodApprovedIndicator", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.AnimalFoodApprovedIndicatorType AnimalFoodApprovedIndicator { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Human Food_ Approved Indicator. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indicator that this piece of transport equipment is approved for human food (true) or not (false).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Human Food</ccts:PropertyTermQualifier><ccts:PropertyTerm>Approved Indicator</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Human Food_ Approved Indicator. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indicator that this piece of transport equipment is approved for human food (true) or not (false).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Human Food</ccts:PropertyTermQualifier><ccts:PropertyTerm>Approved Indicator</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("HumanFoodApprovedIndicator", Order=15, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("HumanFoodApprovedIndicator", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.HumanFoodApprovedIndicatorType HumanFoodApprovedIndicator { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Dangerous Goods_ Approved Indicator. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indicator that this piece of transport equipment is approved for dangerous goods (true) or not (false).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Dangerous Goods</ccts:PropertyTermQualifier><ccts:PropertyTerm>Approved Indicator</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Dangerous Goods_ Approved Indicator. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indicator that this piece of transport equipment is approved for dangerous goods (true) or not (false).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Dangerous Goods</ccts:PropertyTermQualifier><ccts:PropertyTerm>Approved Indicator</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("DangerousGoodsApprovedIndicator", Order=16, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("DangerousGoodsApprovedIndicator", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DangerousGoodsApprovedIndicatorType DangerousGoodsApprovedIndicator { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Refrigerated_ Indicator. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indicator that this piece of transport equipment is refrigerated (true) or not (false).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Refrigerated</ccts:PropertyTermQualifier><ccts:PropertyTerm>Indicator</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Refrigerated_ Indicator. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indicator that this piece of transport equipment is refrigerated (true) or not (false).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Refrigerated</ccts:PropertyTermQualifier><ccts:PropertyTerm>Indicator</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("RefrigeratedIndicator", Order=17, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("RefrigeratedIndicator", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.RefrigeratedIndicatorType RefrigeratedIndicator { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Characteristics. Text</ccts:DictionaryEntryName><ccts:Definition>Characteristics of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Characteristics</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Characteristics. Text</ccts:DictionaryEntryName><ccts:Definition>Characteristics of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Characteristics</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("Characteristics", Order=18, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("Characteristics", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.CharacteristicsType Characteristics { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DamageRemarksType> _damageRemarks;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Damage_ Remarks. Text</ccts:DictionaryEntryName><ccts:Definition>Damage associated with this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Damage</ccts:PropertyTermQualifier><ccts:PropertyTerm>Remarks</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Damage_ Remarks. Text</ccts:DictionaryEntryName><ccts:Definition>Damage associated with this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Damage</ccts:PropertyTermQualifier><ccts:PropertyTerm>Remarks</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("DamageRemarks", Order=19, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DamageRemarksType> DamageRemarks
-        {
-            get
-            {
-                return _damageRemarks;
-            }
-            set
-            {
-                _damageRemarks = value;
-            }
-        }
-        
+        [XmlElementAttribute("DamageRemarks", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DamageRemarksType> DamageRemarks { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the DamageRemarks collection is empty.</para>
         /// </summary>
@@ -288,31 +249,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.DamageRemarks != null) 
+                return ((this.DamageRemarks != null)
                             && (this.DamageRemarks.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DescriptionType> _description;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("Description", Order=20, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DescriptionType> Description
-        {
-            get
-            {
-                return _description;
-            }
-            set
-            {
-                _description = value;
-            }
-        }
-        
+        [XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DescriptionType> Description { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Description collection is empty.</para>
         /// </summary>
@@ -322,31 +270,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.Description != null) 
+                return ((this.Description != null)
                             && (this.Description.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.SpecialTransportRequirementsType> _specialTransportRequirements;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Special_ Transport Requirements. Text</ccts:DictionaryEntryName><ccts:Definition>Special transport requirements expressed as text.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Special</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Requirements</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Special_ Transport Requirements. Text</ccts:DictionaryEntryName><ccts:Definition>Special transport requirements expressed as text.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Special</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Requirements</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("SpecialTransportRequirements", Order=21, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.SpecialTransportRequirementsType> SpecialTransportRequirements
-        {
-            get
-            {
-                return _specialTransportRequirements;
-            }
-            set
-            {
-                _specialTransportRequirements = value;
-            }
-        }
-        
+        [XmlElementAttribute("SpecialTransportRequirements", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.SpecialTransportRequirementsType> SpecialTransportRequirements { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the SpecialTransportRequirements collection is empty.</para>
         /// </summary>
@@ -356,85 +291,72 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.SpecialTransportRequirements != null) 
+                return ((this.SpecialTransportRequirements != null)
                             && (this.SpecialTransportRequirements.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Gross_ Weight. Measure</ccts:DictionaryEntryName><ccts:Definition>The gross weight of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Gross</ccts:PropertyTermQualifier><ccts:PropertyTerm>Weight</ccts:PropertyTerm><ccts:RepresentationTerm>Measure</ccts:RepresentationTerm><ccts:DataType>Measure. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Gross_ Weight. Measure</ccts:DictionaryEntryName><ccts:Definition>The gross weight of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Gross</ccts:PropertyTermQualifier><ccts:PropertyTerm>Weight</ccts:PropertyTerm><ccts:RepresentationTerm>Measure</ccts:RepresentationTerm><ccts:DataType>Measure. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("GrossWeightMeasure", Order=22, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("GrossWeightMeasure", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.GrossWeightMeasureType GrossWeightMeasure { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Gross_ Volume. Measure</ccts:DictionaryEntryName><ccts:Definition>The gross volume of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Gross</ccts:PropertyTermQualifier><ccts:PropertyTerm>Volume</ccts:PropertyTerm><ccts:RepresentationTerm>Measure</ccts:RepresentationTerm><ccts:DataType>Measure. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Gross_ Volume. Measure</ccts:DictionaryEntryName><ccts:Definition>The gross volume of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Gross</ccts:PropertyTermQualifier><ccts:PropertyTerm>Volume</ccts:PropertyTerm><ccts:RepresentationTerm>Measure</ccts:RepresentationTerm><ccts:DataType>Measure. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("GrossVolumeMeasure", Order=23, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("GrossVolumeMeasure", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.GrossVolumeMeasureType GrossVolumeMeasure { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Tare_ Weight. Measure</ccts:DictionaryEntryName><ccts:Definition>The weight of this piece of transport equipment when empty.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Tare</ccts:PropertyTermQualifier><ccts:PropertyTerm>Weight</ccts:PropertyTerm><ccts:RepresentationTerm>Measure</ccts:RepresentationTerm><ccts:DataType>Measure. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Tare_ Weight. Measure</ccts:DictionaryEntryName><ccts:Definition>The weight of this piece of transport equipment when empty.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Tare</ccts:PropertyTermQualifier><ccts:PropertyTerm>Weight</ccts:PropertyTerm><ccts:RepresentationTerm>Measure</ccts:RepresentationTerm><ccts:DataType>Measure. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("TareWeightMeasure", Order=24, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("TareWeightMeasure", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.TareWeightMeasureType TareWeightMeasure { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Tracking Device Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the tracking device for this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Tracking Device Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Tracking Device Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the tracking device for this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Tracking Device Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("TrackingDeviceCode", Order=25, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("TrackingDeviceCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.TrackingDeviceCodeType TrackingDeviceCode { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Power. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indicator that this piece of transport equipment can supply power (true) or not (false).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Power</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Power. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indicator that this piece of transport equipment can supply power (true) or not (false).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Power</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("PowerIndicator", Order=26, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("PowerIndicator", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.PowerIndicatorType PowerIndicator { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Trace_ Identifier. Identifier</ccts:DictionaryEntryName><ccts:Definition>An identifier for use in tracing this piece of transport equipment, such as the EPC number used in RFID.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Trace</ccts:PropertyTermQualifier><ccts:PropertyTerm>Identifier</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Trace_ Identifier. Identifier</ccts:DictionaryEntryName><ccts:Definition>An identifier for use in tracing this piece of transport equipment, such as the EPC number used in RFID.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Trace</ccts:PropertyTermQualifier><ccts:PropertyTerm>Identifier</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("TraceID", Order=27, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("TraceID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.TraceIdType TraceId { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<DimensionType> _measurementDimension;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Measurement_ Dimension. Dimension</ccts:DictionaryEntryName><ccts:Definition>A measurable dimension (length, mass, weight, or volume) of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Measurement</ccts:PropertyTermQualifier><ccts:PropertyTerm>Dimension</ccts:PropertyTerm><ccts:AssociatedObjectClass>Dimension</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Dimension</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Measurement_ Dimension. Dimension</ccts:DictionaryEntryName><ccts:Definition>A measurable dimension (length, mass, weight, or volume) of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Measurement</ccts:PropertyTermQualifier><ccts:PropertyTerm>Dimension</ccts:PropertyTerm><ccts:AssociatedObjectClass>Dimension</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Dimension</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("MeasurementDimension", Order=28)]
-        public List<DimensionType> MeasurementDimension
-        {
-            get
-            {
-                return _measurementDimension;
-            }
-            set
-            {
-                _measurementDimension = value;
-            }
-        }
-        
+        [XmlElementAttribute("MeasurementDimension")]
+        public Collection<DimensionType> MeasurementDimension { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the MeasurementDimension collection is empty.</para>
         /// </summary>
@@ -444,31 +366,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.MeasurementDimension != null) 
+                return ((this.MeasurementDimension != null)
                             && (this.MeasurementDimension.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<TransportEquipmentSealType> _transportEquipmentSeal;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Transport Equipment Seal</ccts:DictionaryEntryName><ccts:Definition>A seal securing the door of a piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Transport Equipment Seal</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Equipment Seal</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Equipment Seal</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Transport Equipment Seal</ccts:DictionaryEntryName><ccts:Definition>A seal securing the door of a piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Transport Equipment Seal</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Equipment Seal</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Equipment Seal</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("TransportEquipmentSeal", Order=29)]
-        public List<TransportEquipmentSealType> TransportEquipmentSeal
-        {
-            get
-            {
-                return _transportEquipmentSeal;
-            }
-            set
-            {
-                _transportEquipmentSeal = value;
-            }
-        }
-        
+        [XmlElementAttribute("TransportEquipmentSeal")]
+        public Collection<TransportEquipmentSealType> TransportEquipmentSeal { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the TransportEquipmentSeal collection is empty.</para>
         /// </summary>
@@ -478,121 +387,108 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.TransportEquipmentSeal != null) 
+                return ((this.TransportEquipmentSeal != null)
                             && (this.TransportEquipmentSeal.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Minimum_ Temperature. Temperature</ccts:DictionaryEntryName><ccts:Definition>In the case of a refrigeration unit, the minimum allowable operating temperature for this container.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Minimum</ccts:PropertyTermQualifier><ccts:PropertyTerm>Temperature</ccts:PropertyTerm><ccts:AssociatedObjectClass>Temperature</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Temperature</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Minimum_ Temperature. Temperature</ccts:DictionaryEntryName><ccts:Definition>In the case of a refrigeration unit, the minimum allowable operating temperature for this container.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Minimum</ccts:PropertyTermQualifier><ccts:PropertyTerm>Temperature</ccts:PropertyTerm><ccts:AssociatedObjectClass>Temperature</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Temperature</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("MinimumTemperature", Order=30)]
+        [XmlElementAttribute("MinimumTemperature")]
         public TemperatureType MinimumTemperature { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Maximum_ Temperature. Temperature</ccts:DictionaryEntryName><ccts:Definition>In the case of a refrigeration unit, the maximum allowable operating temperature for this container.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Maximum</ccts:PropertyTermQualifier><ccts:PropertyTerm>Temperature</ccts:PropertyTerm><ccts:AssociatedObjectClass>Temperature</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Temperature</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Maximum_ Temperature. Temperature</ccts:DictionaryEntryName><ccts:Definition>In the case of a refrigeration unit, the maximum allowable operating temperature for this container.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Maximum</ccts:PropertyTermQualifier><ccts:PropertyTerm>Temperature</ccts:PropertyTerm><ccts:AssociatedObjectClass>Temperature</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Temperature</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("MaximumTemperature", Order=31)]
+        [XmlElementAttribute("MaximumTemperature")]
         public TemperatureType MaximumTemperature { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Provider_ Party. Party</ccts:DictionaryEntryName><ccts:Definition>The party providing this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Provider</ccts:PropertyTermQualifier><ccts:PropertyTerm>Party</ccts:PropertyTerm><ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Party</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Provider_ Party. Party</ccts:DictionaryEntryName><ccts:Definition>The party providing this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Provider</ccts:PropertyTermQualifier><ccts:PropertyTerm>Party</ccts:PropertyTerm><ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Party</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ProviderParty", Order=32)]
+        [XmlElementAttribute("ProviderParty")]
         public PartyType ProviderParty { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Loading Proof_ Party. Party</ccts:DictionaryEntryName><ccts:Definition>The authorized party responsible for certifying that the goods were loaded into this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Loading Proof</ccts:PropertyTermQualifier><ccts:PropertyTerm>Party</ccts:PropertyTerm><ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Party</ccts:RepresentationTerm><ccts:AlternativeBusinessTerms>Party responsible for proof of vanning (WCO ID 059)</ccts:AlternativeBusinessTerms></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Loading Proof_ Party. Party</ccts:DictionaryEntryName><ccts:Definition>The authorized party responsible for certifying that the goods were loaded into this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Loading Proof</ccts:PropertyTermQualifier><ccts:PropertyTerm>Party</ccts:PropertyTerm><ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Party</ccts:RepresentationTerm><ccts:AlternativeBusinessTerms>Party responsible for proof of vanning (WCO ID 059)</ccts:AlternativeBusinessTerms></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("LoadingProofParty", Order=33)]
+        [XmlElementAttribute("LoadingProofParty")]
         public PartyType LoadingProofParty { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Supplier Party</ccts:DictionaryEntryName><ccts:Definition>The party that supplies this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Supplier Party</ccts:PropertyTerm><ccts:AssociatedObjectClass>Supplier Party</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Supplier Party</ccts:RepresentationTerm><ccts:AlternativeBusinessTerms>Party responsible for proof of vanning (WCO ID 059)</ccts:AlternativeBusinessTerms></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Supplier Party</ccts:DictionaryEntryName><ccts:Definition>The party that supplies this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Supplier Party</ccts:PropertyTerm><ccts:AssociatedObjectClass>Supplier Party</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Supplier Party</ccts:RepresentationTerm><ccts:AlternativeBusinessTerms>Party responsible for proof of vanning (WCO ID 059)</ccts:AlternativeBusinessTerms></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("SupplierParty", Order=34)]
+        [XmlElementAttribute("SupplierParty")]
         public SupplierPartyType SupplierParty { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Owner_ Party. Party</ccts:DictionaryEntryName><ccts:Definition>The party that owns this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Owner</ccts:PropertyTermQualifier><ccts:PropertyTerm>Party</ccts:PropertyTerm><ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Party</ccts:RepresentationTerm><ccts:AlternativeBusinessTerms>Party responsible for proof of vanning (WCO ID 059)</ccts:AlternativeBusinessTerms></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Owner_ Party. Party</ccts:DictionaryEntryName><ccts:Definition>The party that owns this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Owner</ccts:PropertyTermQualifier><ccts:PropertyTerm>Party</ccts:PropertyTerm><ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Party</ccts:RepresentationTerm><ccts:AlternativeBusinessTerms>Party responsible for proof of vanning (WCO ID 059)</ccts:AlternativeBusinessTerms></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("OwnerParty", Order=35)]
+        [XmlElementAttribute("OwnerParty")]
         public PartyType OwnerParty { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Operating_ Party. Party</ccts:DictionaryEntryName><ccts:Definition>The party that operates this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Operating</ccts:PropertyTermQualifier><ccts:PropertyTerm>Party</ccts:PropertyTerm><ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Party</ccts:RepresentationTerm><ccts:AlternativeBusinessTerms>Party responsible for proof of vanning (WCO ID 059)</ccts:AlternativeBusinessTerms></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Operating_ Party. Party</ccts:DictionaryEntryName><ccts:Definition>The party that operates this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Operating</ccts:PropertyTermQualifier><ccts:PropertyTerm>Party</ccts:PropertyTerm><ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Party</ccts:RepresentationTerm><ccts:AlternativeBusinessTerms>Party responsible for proof of vanning (WCO ID 059)</ccts:AlternativeBusinessTerms></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("OperatingParty", Order=36)]
+        [XmlElementAttribute("OperatingParty")]
         public PartyType OperatingParty { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Loading_ Location. Location</ccts:DictionaryEntryName><ccts:Definition>The location where this piece of transport equipment is loaded.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Loading</ccts:PropertyTermQualifier><ccts:PropertyTerm>Location</ccts:PropertyTerm><ccts:AssociatedObjectClass>Location</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Location</ccts:RepresentationTerm><ccts:AlternativeBusinessTerms>Vanning address (WCO ID 068), Stuffing location</ccts:AlternativeBusinessTerms></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Loading_ Location. Location</ccts:DictionaryEntryName><ccts:Definition>The location where this piece of transport equipment is loaded.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Loading</ccts:PropertyTermQualifier><ccts:PropertyTerm>Location</ccts:PropertyTerm><ccts:AssociatedObjectClass>Location</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Location</ccts:RepresentationTerm><ccts:AlternativeBusinessTerms>Vanning address (WCO ID 068), Stuffing location</ccts:AlternativeBusinessTerms></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("LoadingLocation", Order=37)]
+        [XmlElementAttribute("LoadingLocation")]
         public LocationType LoadingLocation { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Unloading_ Location. Location</ccts:DictionaryEntryName><ccts:Definition>The location where this piece of transport equipment is unloaded.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Unloading</ccts:PropertyTermQualifier><ccts:PropertyTerm>Location</ccts:PropertyTerm><ccts:AssociatedObjectClass>Location</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Location</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Unloading_ Location. Location</ccts:DictionaryEntryName><ccts:Definition>The location where this piece of transport equipment is unloaded.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Unloading</ccts:PropertyTermQualifier><ccts:PropertyTerm>Location</ccts:PropertyTerm><ccts:AssociatedObjectClass>Location</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Location</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("UnloadingLocation", Order=38)]
+        [XmlElementAttribute("UnloadingLocation")]
         public LocationType UnloadingLocation { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Storage_ Location. Location</ccts:DictionaryEntryName><ccts:Definition>The location where this piece of transport equipment is being stored.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Storage</ccts:PropertyTermQualifier><ccts:PropertyTerm>Location</ccts:PropertyTerm><ccts:AssociatedObjectClass>Location</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Location</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Storage_ Location. Location</ccts:DictionaryEntryName><ccts:Definition>The location where this piece of transport equipment is being stored.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Storage</ccts:PropertyTermQualifier><ccts:PropertyTerm>Location</ccts:PropertyTerm><ccts:AssociatedObjectClass>Location</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Location</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("StorageLocation", Order=39)]
+        [XmlElementAttribute("StorageLocation")]
         public LocationType StorageLocation { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<TransportEventType> _positioningTransportEvent;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Positioning_ Transport Event. Transport Event</ccts:DictionaryEntryName><ccts:Definition>A positioning of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Positioning</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Event</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Event</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Event</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Positioning_ Transport Event. Transport Event</ccts:DictionaryEntryName><ccts:Definition>A positioning of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Positioning</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Event</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Event</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Event</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("PositioningTransportEvent", Order=40)]
-        public List<TransportEventType> PositioningTransportEvent
-        {
-            get
-            {
-                return _positioningTransportEvent;
-            }
-            set
-            {
-                _positioningTransportEvent = value;
-            }
-        }
-        
+        [XmlElementAttribute("PositioningTransportEvent")]
+        public Collection<TransportEventType> PositioningTransportEvent { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the PositioningTransportEvent collection is empty.</para>
         /// </summary>
@@ -602,31 +498,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.PositioningTransportEvent != null) 
+                return ((this.PositioningTransportEvent != null)
                             && (this.PositioningTransportEvent.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<TransportEventType> _quarantineTransportEvent;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Quarantine_ Transport Event. Transport Event</ccts:DictionaryEntryName><ccts:Definition>A quarantine of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Quarantine</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Event</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Event</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Event</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Quarantine_ Transport Event. Transport Event</ccts:DictionaryEntryName><ccts:Definition>A quarantine of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Quarantine</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Event</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Event</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Event</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("QuarantineTransportEvent", Order=41)]
-        public List<TransportEventType> QuarantineTransportEvent
-        {
-            get
-            {
-                return _quarantineTransportEvent;
-            }
-            set
-            {
-                _quarantineTransportEvent = value;
-            }
-        }
-        
+        [XmlElementAttribute("QuarantineTransportEvent")]
+        public Collection<TransportEventType> QuarantineTransportEvent { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the QuarantineTransportEvent collection is empty.</para>
         /// </summary>
@@ -636,31 +519,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.QuarantineTransportEvent != null) 
+                return ((this.QuarantineTransportEvent != null)
                             && (this.QuarantineTransportEvent.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<TransportEventType> _deliveryTransportEvent;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Delivery_ Transport Event. Transport Event</ccts:DictionaryEntryName><ccts:Definition>A delivery of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Delivery</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Event</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Event</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Event</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Delivery_ Transport Event. Transport Event</ccts:DictionaryEntryName><ccts:Definition>A delivery of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Delivery</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Event</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Event</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Event</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("DeliveryTransportEvent", Order=42)]
-        public List<TransportEventType> DeliveryTransportEvent
-        {
-            get
-            {
-                return _deliveryTransportEvent;
-            }
-            set
-            {
-                _deliveryTransportEvent = value;
-            }
-        }
-        
+        [XmlElementAttribute("DeliveryTransportEvent")]
+        public Collection<TransportEventType> DeliveryTransportEvent { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the DeliveryTransportEvent collection is empty.</para>
         /// </summary>
@@ -670,31 +540,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.DeliveryTransportEvent != null) 
+                return ((this.DeliveryTransportEvent != null)
                             && (this.DeliveryTransportEvent.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<TransportEventType> _pickupTransportEvent;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Pickup_ Transport Event. Transport Event</ccts:DictionaryEntryName><ccts:Definition>A pickup of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Pickup</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Event</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Event</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Event</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Pickup_ Transport Event. Transport Event</ccts:DictionaryEntryName><ccts:Definition>A pickup of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Pickup</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Event</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Event</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Event</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("PickupTransportEvent", Order=43)]
-        public List<TransportEventType> PickupTransportEvent
-        {
-            get
-            {
-                return _pickupTransportEvent;
-            }
-            set
-            {
-                _pickupTransportEvent = value;
-            }
-        }
-        
+        [XmlElementAttribute("PickupTransportEvent")]
+        public Collection<TransportEventType> PickupTransportEvent { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the PickupTransportEvent collection is empty.</para>
         /// </summary>
@@ -704,31 +561,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.PickupTransportEvent != null) 
+                return ((this.PickupTransportEvent != null)
                             && (this.PickupTransportEvent.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<TransportEventType> _handlingTransportEvent;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Handling_ Transport Event. Transport Event</ccts:DictionaryEntryName><ccts:Definition>A handling of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Handling</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Event</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Event</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Event</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Handling_ Transport Event. Transport Event</ccts:DictionaryEntryName><ccts:Definition>A handling of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Handling</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Event</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Event</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Event</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("HandlingTransportEvent", Order=44)]
-        public List<TransportEventType> HandlingTransportEvent
-        {
-            get
-            {
-                return _handlingTransportEvent;
-            }
-            set
-            {
-                _handlingTransportEvent = value;
-            }
-        }
-        
+        [XmlElementAttribute("HandlingTransportEvent")]
+        public Collection<TransportEventType> HandlingTransportEvent { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the HandlingTransportEvent collection is empty.</para>
         /// </summary>
@@ -738,31 +582,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.HandlingTransportEvent != null) 
+                return ((this.HandlingTransportEvent != null)
                             && (this.HandlingTransportEvent.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<TransportEventType> _loadingTransportEvent;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Loading_ Transport Event. Transport Event</ccts:DictionaryEntryName><ccts:Definition>A loading of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Loading</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Event</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Event</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Event</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Loading_ Transport Event. Transport Event</ccts:DictionaryEntryName><ccts:Definition>A loading of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Loading</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Event</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Event</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Event</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("LoadingTransportEvent", Order=45)]
-        public List<TransportEventType> LoadingTransportEvent
-        {
-            get
-            {
-                return _loadingTransportEvent;
-            }
-            set
-            {
-                _loadingTransportEvent = value;
-            }
-        }
-        
+        [XmlElementAttribute("LoadingTransportEvent")]
+        public Collection<TransportEventType> LoadingTransportEvent { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the LoadingTransportEvent collection is empty.</para>
         /// </summary>
@@ -772,31 +603,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.LoadingTransportEvent != null) 
+                return ((this.LoadingTransportEvent != null)
                             && (this.LoadingTransportEvent.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<TransportEventType> _transportEvent;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Transport Event</ccts:DictionaryEntryName><ccts:Definition>A transport event associated with this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Transport Event</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Event</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Event</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Transport Event</ccts:DictionaryEntryName><ccts:Definition>A transport event associated with this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Transport Event</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Event</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Event</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("TransportEvent", Order=46)]
-        public List<TransportEventType> TransportEvent
-        {
-            get
-            {
-                return _transportEvent;
-            }
-            set
-            {
-                _transportEvent = value;
-            }
-        }
-        
+        [XmlElementAttribute("TransportEvent")]
+        public Collection<TransportEventType> TransportEvent { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the TransportEvent collection is empty.</para>
         /// </summary>
@@ -806,40 +624,27 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.TransportEvent != null) 
+                return ((this.TransportEvent != null)
                             && (this.TransportEvent.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Applicable_ Transport Means. Transport Means</ccts:DictionaryEntryName><ccts:Definition>The applicable transport means associated with this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Applicable</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Means</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Means</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Means</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Applicable_ Transport Means. Transport Means</ccts:DictionaryEntryName><ccts:Definition>The applicable transport means associated with this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Applicable</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Means</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Means</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Means</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ApplicableTransportMeans", Order=47)]
+        [XmlElementAttribute("ApplicableTransportMeans")]
         public TransportMeansType ApplicableTransportMeans { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<TradingTermsType> _haulageTradingTerms;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Haulage_ Trading Terms. Trading Terms</ccts:DictionaryEntryName><ccts:Definition>A set of haulage trading terms associated with this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Haulage</ccts:PropertyTermQualifier><ccts:PropertyTerm>Trading Terms</ccts:PropertyTerm><ccts:AssociatedObjectClass>Trading Terms</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Trading Terms</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Haulage_ Trading Terms. Trading Terms</ccts:DictionaryEntryName><ccts:Definition>A set of haulage trading terms associated with this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Haulage</ccts:PropertyTermQualifier><ccts:PropertyTerm>Trading Terms</ccts:PropertyTerm><ccts:AssociatedObjectClass>Trading Terms</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Trading Terms</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("HaulageTradingTerms", Order=48)]
-        public List<TradingTermsType> HaulageTradingTerms
-        {
-            get
-            {
-                return _haulageTradingTerms;
-            }
-            set
-            {
-                _haulageTradingTerms = value;
-            }
-        }
-        
+        [XmlElementAttribute("HaulageTradingTerms")]
+        public Collection<TradingTermsType> HaulageTradingTerms { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the HaulageTradingTerms collection is empty.</para>
         /// </summary>
@@ -849,31 +654,31 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.HaulageTradingTerms != null) 
+                return ((this.HaulageTradingTerms != null)
                             && (this.HaulageTradingTerms.Count != 0));
             }
         }
-        
+
         [XmlIgnoreAttribute()]
-        private List<HazardousGoodsTransitType> _hazardousGoodsTransit;
-        
+        private Collection<HazardousGoodsTransitType> _hazardousGoodsTransit;
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Hazardous Goods Transit</ccts:DictionaryEntryName><ccts:Definition>Transit-related information regarding a type of hazardous goods contained in this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Hazardous Goods Transit</ccts:PropertyTerm><ccts:AssociatedObjectClass>Hazardous Goods Transit</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Hazardous Goods Transit</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Hazardous Goods Transit</ccts:DictionaryEntryName><ccts:Definition>Transit-related information regarding a type of hazardous goods contained in this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Hazardous Goods Transit</ccts:PropertyTerm><ccts:AssociatedObjectClass>Hazardous Goods Transit</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Hazardous Goods Transit</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("HazardousGoodsTransit", Order=49)]
-        public List<HazardousGoodsTransitType> HazardousGoodsTransit
+        [XmlElementAttribute("HazardousGoodsTransit")]
+        public Collection<HazardousGoodsTransitType> HazardousGoodsTransit
         {
             get
             {
                 return _hazardousGoodsTransit;
             }
-            set
+            init
             {
                 _hazardousGoodsTransit = value;
             }
         }
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the HazardousGoodsTransit collection is empty.</para>
         /// </summary>
@@ -883,31 +688,31 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.HazardousGoodsTransit != null) 
+                return ((this.HazardousGoodsTransit != null)
                             && (this.HazardousGoodsTransit.Count != 0));
             }
         }
-        
+
         [XmlIgnoreAttribute()]
-        private List<TransportHandlingUnitType> _packagedTransportHandlingUnit;
-        
+        private Collection<TransportHandlingUnitType> _packagedTransportHandlingUnit;
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Packaged_ Transport Handling Unit. Transport Handling Unit</ccts:DictionaryEntryName><ccts:Definition>A packaged transport handling unit associated with this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Packaged</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Handling Unit</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Handling Unit</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Handling Unit</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Packaged_ Transport Handling Unit. Transport Handling Unit</ccts:DictionaryEntryName><ccts:Definition>A packaged transport handling unit associated with this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Packaged</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Handling Unit</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Handling Unit</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Handling Unit</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("PackagedTransportHandlingUnit", Order=50)]
-        public List<TransportHandlingUnitType> PackagedTransportHandlingUnit
+        [XmlElementAttribute("PackagedTransportHandlingUnit")]
+        public Collection<TransportHandlingUnitType> PackagedTransportHandlingUnit
         {
             get
             {
                 return _packagedTransportHandlingUnit;
             }
-            set
+            init
             {
                 _packagedTransportHandlingUnit = value;
             }
         }
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the PackagedTransportHandlingUnit collection is empty.</para>
         /// </summary>
@@ -917,31 +722,31 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.PackagedTransportHandlingUnit != null) 
+                return ((this.PackagedTransportHandlingUnit != null)
                             && (this.PackagedTransportHandlingUnit.Count != 0));
             }
         }
-        
+
         [XmlIgnoreAttribute()]
-        private List<AllowanceChargeType> _serviceAllowanceCharge;
-        
+        private Collection<AllowanceChargeType> _serviceAllowanceCharge;
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Service_ Allowance Charge. Allowance Charge</ccts:DictionaryEntryName><ccts:Definition>A service allowance charge associated with this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Service</ccts:PropertyTermQualifier><ccts:PropertyTerm>Allowance Charge</ccts:PropertyTerm><ccts:AssociatedObjectClass>Allowance Charge</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Allowance Charge</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Service_ Allowance Charge. Allowance Charge</ccts:DictionaryEntryName><ccts:Definition>A service allowance charge associated with this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Service</ccts:PropertyTermQualifier><ccts:PropertyTerm>Allowance Charge</ccts:PropertyTerm><ccts:AssociatedObjectClass>Allowance Charge</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Allowance Charge</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("ServiceAllowanceCharge", Order=51)]
-        public List<AllowanceChargeType> ServiceAllowanceCharge
+        [XmlElementAttribute("ServiceAllowanceCharge")]
+        public Collection<AllowanceChargeType> ServiceAllowanceCharge
         {
             get
             {
                 return _serviceAllowanceCharge;
             }
-            set
+            init
             {
                 _serviceAllowanceCharge = value;
             }
         }
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the ServiceAllowanceCharge collection is empty.</para>
         /// </summary>
@@ -951,31 +756,31 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.ServiceAllowanceCharge != null) 
+                return ((this.ServiceAllowanceCharge != null)
                             && (this.ServiceAllowanceCharge.Count != 0));
             }
         }
-        
+
         [XmlIgnoreAttribute()]
-        private List<AllowanceChargeType> _freightAllowanceCharge;
-        
+        private Collection<AllowanceChargeType> _freightAllowanceCharge;
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Freight_ Allowance Charge. Allowance Charge</ccts:DictionaryEntryName><ccts:Definition>A freight allowance charge associated with this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Freight</ccts:PropertyTermQualifier><ccts:PropertyTerm>Allowance Charge</ccts:PropertyTerm><ccts:AssociatedObjectClass>Allowance Charge</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Allowance Charge</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Freight_ Allowance Charge. Allowance Charge</ccts:DictionaryEntryName><ccts:Definition>A freight allowance charge associated with this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Freight</ccts:PropertyTermQualifier><ccts:PropertyTerm>Allowance Charge</ccts:PropertyTerm><ccts:AssociatedObjectClass>Allowance Charge</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Allowance Charge</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("FreightAllowanceCharge", Order=52)]
-        public List<AllowanceChargeType> FreightAllowanceCharge
+        [XmlElementAttribute("FreightAllowanceCharge")]
+        public Collection<AllowanceChargeType> FreightAllowanceCharge
         {
             get
             {
                 return _freightAllowanceCharge;
             }
-            set
+            init
             {
                 _freightAllowanceCharge = value;
             }
         }
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the FreightAllowanceCharge collection is empty.</para>
         /// </summary>
@@ -985,31 +790,31 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.FreightAllowanceCharge != null) 
+                return ((this.FreightAllowanceCharge != null)
                             && (this.FreightAllowanceCharge.Count != 0));
             }
         }
-        
+
         [XmlIgnoreAttribute()]
-        private List<TransportEquipmentType> _attachedTransportEquipment;
-        
+        private Collection<TransportEquipmentType> _attachedTransportEquipment;
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Attached_ Transport Equipment. Transport Equipment</ccts:DictionaryEntryName><ccts:Definition>A piece of transport equipment attached to this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Attached</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Equipment</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Equipment</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Equipment</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Attached_ Transport Equipment. Transport Equipment</ccts:DictionaryEntryName><ccts:Definition>A piece of transport equipment attached to this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Attached</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Equipment</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Equipment</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Equipment</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("AttachedTransportEquipment", Order=53)]
-        public List<TransportEquipmentType> AttachedTransportEquipment
+        [XmlElementAttribute("AttachedTransportEquipment")]
+        public Collection<TransportEquipmentType> AttachedTransportEquipment
         {
             get
             {
                 return _attachedTransportEquipment;
             }
-            set
+            init
             {
                 _attachedTransportEquipment = value;
             }
         }
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the AttachedTransportEquipment collection is empty.</para>
         /// </summary>
@@ -1019,58 +824,58 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.AttachedTransportEquipment != null) 
+                return ((this.AttachedTransportEquipment != null)
                             && (this.AttachedTransportEquipment.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Delivery</ccts:DictionaryEntryName><ccts:Definition>The delivery of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Delivery</ccts:PropertyTerm><ccts:AssociatedObjectClass>Delivery</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Delivery</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Delivery</ccts:DictionaryEntryName><ccts:Definition>The delivery of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Delivery</ccts:PropertyTerm><ccts:AssociatedObjectClass>Delivery</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Delivery</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("Delivery", Order=54)]
+        [XmlElementAttribute("Delivery")]
         public DeliveryType Delivery { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Pickup</ccts:DictionaryEntryName><ccts:Definition>The pickup of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Pickup</ccts:PropertyTerm><ccts:AssociatedObjectClass>Pickup</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Pickup</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Pickup</ccts:DictionaryEntryName><ccts:Definition>The pickup of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Pickup</ccts:PropertyTerm><ccts:AssociatedObjectClass>Pickup</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Pickup</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("Pickup", Order=55)]
+        [XmlElementAttribute("Pickup")]
         public PickupType Pickup { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Despatch</ccts:DictionaryEntryName><ccts:Definition>The despatch of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Despatch</ccts:PropertyTerm><ccts:AssociatedObjectClass>Despatch</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Despatch</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Despatch</ccts:DictionaryEntryName><ccts:Definition>The despatch of this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Despatch</ccts:PropertyTerm><ccts:AssociatedObjectClass>Despatch</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Despatch</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("Despatch", Order=56)]
+        [XmlElementAttribute("Despatch")]
         public DespatchType Despatch { get; set; }
-        
+
         [XmlIgnoreAttribute()]
-        private List<DocumentReferenceType> _shipmentDocumentReference;
-        
+        private Collection<DocumentReferenceType> _shipmentDocumentReference;
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Shipment_ Document Reference. Document Reference</ccts:DictionaryEntryName><ccts:Definition>A reference to a shipping document associated with this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Shipment</ccts:PropertyTermQualifier><ccts:PropertyTerm>Document Reference</ccts:PropertyTerm><ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Shipment_ Document Reference. Document Reference</ccts:DictionaryEntryName><ccts:Definition>A reference to a shipping document associated with this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Shipment</ccts:PropertyTermQualifier><ccts:PropertyTerm>Document Reference</ccts:PropertyTerm><ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("ShipmentDocumentReference", Order=57)]
-        public List<DocumentReferenceType> ShipmentDocumentReference
+        [XmlElementAttribute("ShipmentDocumentReference")]
+        public Collection<DocumentReferenceType> ShipmentDocumentReference
         {
             get
             {
                 return _shipmentDocumentReference;
             }
-            set
+            init
             {
                 _shipmentDocumentReference = value;
             }
         }
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the ShipmentDocumentReference collection is empty.</para>
         /// </summary>
@@ -1080,31 +885,31 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.ShipmentDocumentReference != null) 
+                return ((this.ShipmentDocumentReference != null)
                             && (this.ShipmentDocumentReference.Count != 0));
             }
         }
-        
+
         [XmlIgnoreAttribute()]
-        private List<TransportEquipmentType> _containedInTransportEquipment;
-        
+        private Collection<TransportEquipmentType> _containedInTransportEquipment;
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Contained In_ Transport Equipment. Transport Equipment</ccts:DictionaryEntryName><ccts:Definition>A piece of transport equipment contained in this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Contained In</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Equipment</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Equipment</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Equipment</ccts:RepresentationTerm><ccts:Examples>e.g. pallets inside containers</ccts:Examples></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Contained In_ Transport Equipment. Transport Equipment</ccts:DictionaryEntryName><ccts:Definition>A piece of transport equipment contained in this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTermQualifier>Contained In</ccts:PropertyTermQualifier><ccts:PropertyTerm>Transport Equipment</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transport Equipment</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transport Equipment</ccts:RepresentationTerm><ccts:Examples>e.g. pallets inside containers</ccts:Examples></ccts:Component>")]
-        [XmlElementAttribute("ContainedInTransportEquipment", Order=58)]
-        public List<TransportEquipmentType> ContainedInTransportEquipment
+        [XmlElementAttribute("ContainedInTransportEquipment")]
+        public Collection<TransportEquipmentType> ContainedInTransportEquipment
         {
             get
             {
                 return _containedInTransportEquipment;
             }
-            set
+            init
             {
                 _containedInTransportEquipment = value;
             }
         }
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the ContainedInTransportEquipment collection is empty.</para>
         /// </summary>
@@ -1114,31 +919,31 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.ContainedInTransportEquipment != null) 
+                return ((this.ContainedInTransportEquipment != null)
                             && (this.ContainedInTransportEquipment.Count != 0));
             }
         }
-        
+
         [XmlIgnoreAttribute()]
-        private List<PackageType> _package;
-        
+        private Collection<PackageType> _package;
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Package</ccts:DictionaryEntryName><ccts:Definition>A package contained in this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Package</ccts:PropertyTerm><ccts:AssociatedObjectClass>Package</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Package</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Package</ccts:DictionaryEntryName><ccts:Definition>A package contained in this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Package</ccts:PropertyTerm><ccts:AssociatedObjectClass>Package</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Package</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("Package", Order=59)]
-        public List<PackageType> Package
+        [XmlElementAttribute("Package")]
+        public Collection<PackageType> Package
         {
             get
             {
                 return _package;
             }
-            set
+            init
             {
                 _package = value;
             }
         }
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Package collection is empty.</para>
         /// </summary>
@@ -1148,31 +953,31 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.Package != null) 
+                return ((this.Package != null)
                             && (this.Package.Count != 0));
             }
         }
-        
+
         [XmlIgnoreAttribute()]
-        private List<GoodsItemType> _goodsItem;
-        
+        private Collection<GoodsItemType> _goodsItem;
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Goods Item</ccts:DictionaryEntryName><ccts:Definition>A goods item contained in this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Goods Item</ccts:PropertyTerm><ccts:AssociatedObjectClass>Goods Item</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Goods Item</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transport Equipment. Goods Item</ccts:DictionaryEntryName><ccts:Definition>A goods item contained in this piece of transport equipment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transport Equipment</ccts:ObjectClass><ccts:PropertyTerm>Goods Item</ccts:PropertyTerm><ccts:AssociatedObjectClass>Goods Item</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Goods Item</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("GoodsItem", Order=60)]
-        public List<GoodsItemType> GoodsItem
+        [XmlElementAttribute("GoodsItem")]
+        public Collection<GoodsItemType> GoodsItem
         {
             get
             {
                 return _goodsItem;
             }
-            set
+            init
             {
                 _goodsItem = value;
             }
         }
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the GoodsItem collection is empty.</para>
         /// </summary>
@@ -1182,7 +987,7 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.GoodsItem != null) 
+                return ((this.GoodsItem != null)
                             && (this.GoodsItem.Count != 0));
             }
         }

@@ -21,8 +21,8 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Request For Tender Line. Details</ccts:DictionaryEntryName><ccts:Definition>A class to define a line in a Request for Tender describing an item of goods or a service solicited in the Request for Tender.</ccts:Definition><ccts:ObjectClass>Request For Tender Line</ccts:ObjectClass></ccts:Component></para>
     /// </summary>
@@ -30,7 +30,7 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("RequestForTenderLine", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlRootAttribute("RequestForTenderLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public partial class RequestForTenderLine : RequestForTenderLineType
     {
     }

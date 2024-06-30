@@ -21,33 +21,20 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("ReferenceType", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlTypeAttribute("ReferenceType", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("Reference", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlRootAttribute("Reference", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     public partial class ReferenceType_2
     {
-        
-        [XmlIgnoreAttribute()]
-        private List<TransformType> _transforms;
-        
-        [XmlArrayAttribute("Transforms", Order=0)]
-        [XmlArrayItemAttribute("Transform", Namespace="http://www.w3.org/2000/09/xmldsig#")]
-        public List<TransformType> Transforms
-        {
-            get
-            {
-                return _transforms;
-            }
-            set
-            {
-                _transforms = value;
-            }
-        }
-        
+
+        [XmlArrayAttribute("Transforms")]
+        [XmlArrayItemAttribute("Transform", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
+        public Collection<TransformType> Transforms { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Transforms collection is empty.</para>
         /// </summary>
@@ -57,30 +44,30 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.Transforms != null) 
+                return ((this.Transforms != null)
                             && (this.Transforms.Count != 0));
             }
         }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("DigestMethod", Order=1)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("DigestMethod")]
         public DigestMethodType DigestMethod { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("DigestValue", Order=2, DataType="base64Binary")]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("DigestValue", DataType = "base64Binary")]
         public Byte[] DigestValue { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("Id")]
         [KeyAttribute()]
         public string Id { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("URI")]
         public string Uri { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("Type")]

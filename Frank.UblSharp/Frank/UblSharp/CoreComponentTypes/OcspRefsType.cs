@@ -21,39 +21,26 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("OCSPRefsType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("OCSPRefsType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
     public partial class OcspRefsType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<OcspRefType> _ocspRef;
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("OCSPRef", Order=0)]
-        public List<OcspRefType> OcspRef
-        {
-            get
-            {
-                return _ocspRef;
-            }
-            set
-            {
-                _ocspRef = value;
-            }
-        }
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("OCSPRef")]
+        public Collection<OcspRefType> OcspRef { get; set; }
     }
 }

@@ -21,11 +21,11 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("ItemLocationQuantityType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlTypeAttribute("ItemLocationQuantityType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     [DebuggerStepThroughAttribute()]
     [XmlIncludeAttribute(typeof(ItemLocationQuantity))]
     [XmlIncludeAttribute(typeof(OfferedItemLocationQuantity))]
@@ -33,72 +33,59 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     [XmlIncludeAttribute(typeof(RequiredItemLocationQuantity))]
     public partial class ItemLocationQuantityType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Lead Time. Measure</ccts:DictionaryEntryName><ccts:Definition>The lead time, i.e., the time taken from the time at which an item is ordered to the time of its delivery.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTerm>Lead Time</ccts:PropertyTerm><ccts:RepresentationTerm>Measure</ccts:RepresentationTerm><ccts:DataType>Measure. Type</ccts:DataType><ccts:Examples>2 days , 24 hours </ccts:Examples></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Lead Time. Measure</ccts:DictionaryEntryName><ccts:Definition>The lead time, i.e., the time taken from the time at which an item is ordered to the time of its delivery.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTerm>Lead Time</ccts:PropertyTerm><ccts:RepresentationTerm>Measure</ccts:RepresentationTerm><ccts:DataType>Measure. Type</ccts:DataType><ccts:Examples>2 days , 24 hours </ccts:Examples></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("LeadTimeMeasure", Order=0, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("LeadTimeMeasure", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.LeadTimeMeasureType LeadTimeMeasure { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Minimum_ Quantity. Quantity</ccts:DictionaryEntryName><ccts:Definition>The minimum quantity that can be ordered to qualify for a specific price.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTermQualifier>Minimum</ccts:PropertyTermQualifier><ccts:PropertyTerm>Quantity</ccts:PropertyTerm><ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm><ccts:DataType>Quantity. Type</ccts:DataType><ccts:Examples>10 boxes , 1 carton , 1000 sheets </ccts:Examples></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Minimum_ Quantity. Quantity</ccts:DictionaryEntryName><ccts:Definition>The minimum quantity that can be ordered to qualify for a specific price.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTermQualifier>Minimum</ccts:PropertyTermQualifier><ccts:PropertyTerm>Quantity</ccts:PropertyTerm><ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm><ccts:DataType>Quantity. Type</ccts:DataType><ccts:Examples>10 boxes , 1 carton , 1000 sheets </ccts:Examples></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("MinimumQuantity", Order=1, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("MinimumQuantity", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.MinimumQuantityType MinimumQuantity { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Maximum_ Quantity. Quantity</ccts:DictionaryEntryName><ccts:Definition>The maximum quantity that can be ordered to qualify for a specific price.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTermQualifier>Maximum</ccts:PropertyTermQualifier><ccts:PropertyTerm>Quantity</ccts:PropertyTerm><ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm><ccts:DataType>Quantity. Type</ccts:DataType><ccts:Examples>10 boxes , 1 carton , 1000 sheets </ccts:Examples></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Maximum_ Quantity. Quantity</ccts:DictionaryEntryName><ccts:Definition>The maximum quantity that can be ordered to qualify for a specific price.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTermQualifier>Maximum</ccts:PropertyTermQualifier><ccts:PropertyTerm>Quantity</ccts:PropertyTerm><ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm><ccts:DataType>Quantity. Type</ccts:DataType><ccts:Examples>10 boxes , 1 carton , 1000 sheets </ccts:Examples></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("MaximumQuantity", Order=2, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("MaximumQuantity", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.MaximumQuantityType MaximumQuantity { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Hazardous Risk_ Indicator. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indication that the transported item, as delivered, in the stated quantity to the stated location, is subject to an international regulation concerning the carriage of dangerous goods (true) or not (false).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTermQualifier>Hazardous Risk</ccts:PropertyTermQualifier><ccts:PropertyTerm>Indicator</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType><ccts:Examples>Default is negative</ccts:Examples></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Hazardous Risk_ Indicator. Indicator</ccts:DictionaryEntryName><ccts:Definition>An indication that the transported item, as delivered, in the stated quantity to the stated location, is subject to an international regulation concerning the carriage of dangerous goods (true) or not (false).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTermQualifier>Hazardous Risk</ccts:PropertyTermQualifier><ccts:PropertyTerm>Indicator</ccts:PropertyTerm><ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm><ccts:DataType>Indicator. Type</ccts:DataType><ccts:Examples>Default is negative</ccts:Examples></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("HazardousRiskIndicator", Order=3, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("HazardousRiskIndicator", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.HazardousRiskIndicatorType HazardousRiskIndicator { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.TradingRestrictionsType> _tradingRestrictions;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Trading Restrictions. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing trade restrictions on the quantity of this item or on the item itself.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTerm>Trading Restrictions</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType><ccts:Examples>not for export </ccts:Examples></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Trading Restrictions. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing trade restrictions on the quantity of this item or on the item itself.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTerm>Trading Restrictions</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType><ccts:Examples>not for export </ccts:Examples></ccts:Component>")]
-        [XmlElementAttribute("TradingRestrictions", Order=4, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.TradingRestrictionsType> TradingRestrictions
-        {
-            get
-            {
-                return _tradingRestrictions;
-            }
-            set
-            {
-                _tradingRestrictions = value;
-            }
-        }
-        
+        [XmlElementAttribute("TradingRestrictions", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.TradingRestrictionsType> TradingRestrictions { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the TradingRestrictions collection is empty.</para>
         /// </summary>
@@ -108,31 +95,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.TradingRestrictions != null) 
+                return ((this.TradingRestrictions != null)
                             && (this.TradingRestrictions.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<AddressType> _applicableTerritoryAddress;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Applicable Territory_ Address. Address</ccts:DictionaryEntryName><ccts:Definition>The applicable sales territory.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTermQualifier>Applicable Territory</ccts:PropertyTermQualifier><ccts:PropertyTerm>Address</ccts:PropertyTerm><ccts:AssociatedObjectClass>Address</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Address</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Applicable Territory_ Address. Address</ccts:DictionaryEntryName><ccts:Definition>The applicable sales territory.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTermQualifier>Applicable Territory</ccts:PropertyTermQualifier><ccts:PropertyTerm>Address</ccts:PropertyTerm><ccts:AssociatedObjectClass>Address</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Address</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("ApplicableTerritoryAddress", Order=5)]
-        public List<AddressType> ApplicableTerritoryAddress
-        {
-            get
-            {
-                return _applicableTerritoryAddress;
-            }
-            set
-            {
-                _applicableTerritoryAddress = value;
-            }
-        }
-        
+        [XmlElementAttribute("ApplicableTerritoryAddress")]
+        public Collection<AddressType> ApplicableTerritoryAddress { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the ApplicableTerritoryAddress collection is empty.</para>
         /// </summary>
@@ -142,40 +116,27 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.ApplicableTerritoryAddress != null) 
+                return ((this.ApplicableTerritoryAddress != null)
                             && (this.ApplicableTerritoryAddress.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Price</ccts:DictionaryEntryName><ccts:Definition>The price associated with the given location.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTerm>Price</ccts:PropertyTerm><ccts:AssociatedObjectClass>Price</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Price</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Price</ccts:DictionaryEntryName><ccts:Definition>The price associated with the given location.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTerm>Price</ccts:PropertyTerm><ccts:AssociatedObjectClass>Price</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Price</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("Price", Order=6)]
+        [XmlElementAttribute("Price")]
         public PriceType Price { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<DeliveryUnitType> _deliveryUnit;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Delivery Unit</ccts:DictionaryEntryName><ccts:Definition>A delivery unit in which the item is located.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTerm>Delivery Unit</ccts:PropertyTerm><ccts:AssociatedObjectClass>Delivery Unit</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Delivery Unit</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Delivery Unit</ccts:DictionaryEntryName><ccts:Definition>A delivery unit in which the item is located.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTerm>Delivery Unit</ccts:PropertyTerm><ccts:AssociatedObjectClass>Delivery Unit</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Delivery Unit</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("DeliveryUnit", Order=7)]
-        public List<DeliveryUnitType> DeliveryUnit
-        {
-            get
-            {
-                return _deliveryUnit;
-            }
-            set
-            {
-                _deliveryUnit = value;
-            }
-        }
-        
+        [XmlElementAttribute("DeliveryUnit")]
+        public Collection<DeliveryUnitType> DeliveryUnit { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the DeliveryUnit collection is empty.</para>
         /// </summary>
@@ -185,31 +146,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.DeliveryUnit != null) 
+                return ((this.DeliveryUnit != null)
                             && (this.DeliveryUnit.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<TaxCategoryType> _applicableTaxCategory;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Applicable_ Tax Category. Tax Category</ccts:DictionaryEntryName><ccts:Definition>A tax category applicable to this item location quantity.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTermQualifier>Applicable</ccts:PropertyTermQualifier><ccts:PropertyTerm>Tax Category</ccts:PropertyTerm><ccts:AssociatedObjectClass>Tax Category</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Tax Category</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Applicable_ Tax Category. Tax Category</ccts:DictionaryEntryName><ccts:Definition>A tax category applicable to this item location quantity.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTermQualifier>Applicable</ccts:PropertyTermQualifier><ccts:PropertyTerm>Tax Category</ccts:PropertyTerm><ccts:AssociatedObjectClass>Tax Category</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Tax Category</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("ApplicableTaxCategory", Order=8)]
-        public List<TaxCategoryType> ApplicableTaxCategory
-        {
-            get
-            {
-                return _applicableTaxCategory;
-            }
-            set
-            {
-                _applicableTaxCategory = value;
-            }
-        }
-        
+        [XmlElementAttribute("ApplicableTaxCategory")]
+        public Collection<TaxCategoryType> ApplicableTaxCategory { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the ApplicableTaxCategory collection is empty.</para>
         /// </summary>
@@ -219,40 +167,27 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.ApplicableTaxCategory != null) 
+                return ((this.ApplicableTaxCategory != null)
                             && (this.ApplicableTaxCategory.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Package</ccts:DictionaryEntryName><ccts:Definition>The package to which this price applies.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTerm>Package</ccts:PropertyTerm><ccts:AssociatedObjectClass>Package</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Package</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Package</ccts:DictionaryEntryName><ccts:Definition>The package to which this price applies.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTerm>Package</ccts:PropertyTerm><ccts:AssociatedObjectClass>Package</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Package</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("Package", Order=9)]
+        [XmlElementAttribute("Package")]
         public PackageType Package { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<AllowanceChargeType> _allowanceCharge;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Allowance Charge</ccts:DictionaryEntryName><ccts:Definition>An allowance or charge associated with this item location quantity.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTerm>Allowance Charge</ccts:PropertyTerm><ccts:AssociatedObjectClass>Allowance Charge</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Allowance Charge</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Allowance Charge</ccts:DictionaryEntryName><ccts:Definition>An allowance or charge associated with this item location quantity.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTerm>Allowance Charge</ccts:PropertyTerm><ccts:AssociatedObjectClass>Allowance Charge</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Allowance Charge</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("AllowanceCharge", Order=10)]
-        public List<AllowanceChargeType> AllowanceCharge
-        {
-            get
-            {
-                return _allowanceCharge;
-            }
-            set
-            {
-                _allowanceCharge = value;
-            }
-        }
-        
+        [XmlElementAttribute("AllowanceCharge")]
+        public Collection<AllowanceChargeType> AllowanceCharge { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the AllowanceCharge collection is empty.</para>
         /// </summary>
@@ -262,18 +197,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.AllowanceCharge != null) 
+                return ((this.AllowanceCharge != null)
                             && (this.AllowanceCharge.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Dependent Price Reference</ccts:DictionaryEntryName><ccts:Definition>The price of the item as a percentage of the price of some other item.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTerm>Dependent Price Reference</ccts:PropertyTerm><ccts:AssociatedObjectClass>Dependent Price Reference</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Dependent Price Reference</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Item Location Quantity. Dependent Price Reference</ccts:DictionaryEntryName><ccts:Definition>The price of the item as a percentage of the price of some other item.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass><ccts:PropertyTerm>Dependent Price Reference</ccts:PropertyTerm><ccts:AssociatedObjectClass>Dependent Price Reference</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Dependent Price Reference</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("DependentPriceReference", Order=11)]
+        [XmlElementAttribute("DependentPriceReference")]
         public DependentPriceReferenceType DependentPriceReference { get; set; }
     }
 }

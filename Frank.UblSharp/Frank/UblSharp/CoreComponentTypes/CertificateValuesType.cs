@@ -21,33 +21,20 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("CertificateValuesType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("CertificateValuesType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
     [XmlIncludeAttribute(typeof(AttrAuthoritiesCertValues))]
     [XmlIncludeAttribute(typeof(CertificateValues))]
     public partial class CertificateValuesType
     {
-        
-        [XmlIgnoreAttribute()]
-        private List<EncapsulatedPkiDataType> _encapsulatedX509Certificate;
-        
-        [XmlElementAttribute("EncapsulatedX509Certificate", Order=0)]
-        public List<EncapsulatedPkiDataType> EncapsulatedX509Certificate
-        {
-            get
-            {
-                return _encapsulatedX509Certificate;
-            }
-            set
-            {
-                _encapsulatedX509Certificate = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("EncapsulatedX509Certificate")]
+        public Collection<EncapsulatedPkiDataType> EncapsulatedX509Certificate { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the EncapsulatedX509Certificate collection is empty.</para>
         /// </summary>
@@ -57,27 +44,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.EncapsulatedX509Certificate != null) 
+                return ((this.EncapsulatedX509Certificate != null)
                             && (this.EncapsulatedX509Certificate.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<AnyType> _otherCertificate;
-        
-        [XmlElementAttribute("OtherCertificate", Order=1)]
-        public List<AnyType> OtherCertificate
-        {
-            get
-            {
-                return _otherCertificate;
-            }
-            set
-            {
-                _otherCertificate = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("OtherCertificate")]
+        public Collection<AnyType> OtherCertificate { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the OtherCertificate collection is empty.</para>
         /// </summary>
@@ -87,11 +61,11 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.OtherCertificate != null) 
+                return ((this.OtherCertificate != null)
                             && (this.OtherCertificate.Count != 0));
             }
         }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("Id")]

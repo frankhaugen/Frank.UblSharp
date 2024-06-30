@@ -21,34 +21,21 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("RevocationValuesType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("RevocationValuesType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
     [XmlIncludeAttribute(typeof(AttributeRevocationValues))]
     [XmlIncludeAttribute(typeof(RevocationValues))]
     public partial class RevocationValuesType
     {
-        
-        [XmlIgnoreAttribute()]
-        private List<EncapsulatedPkiDataType> _crlValues;
-        
-        [XmlArrayAttribute("CRLValues", Order=0)]
-        [XmlArrayItemAttribute("EncapsulatedCRLValue", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
-        public List<EncapsulatedPkiDataType> CrlValues
-        {
-            get
-            {
-                return _crlValues;
-            }
-            set
-            {
-                _crlValues = value;
-            }
-        }
-        
+
+        [XmlArrayAttribute("CRLValues")]
+        [XmlArrayItemAttribute("EncapsulatedCRLValue", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+        public Collection<EncapsulatedPkiDataType> CrlValues { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the CrlValues collection is empty.</para>
         /// </summary>
@@ -58,28 +45,15 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.CrlValues != null) 
+                return ((this.CrlValues != null)
                             && (this.CrlValues.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<EncapsulatedPkiDataType> _ocspValues;
-        
-        [XmlArrayAttribute("OCSPValues", Order=1)]
-        [XmlArrayItemAttribute("EncapsulatedOCSPValue", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
-        public List<EncapsulatedPkiDataType> OcspValues
-        {
-            get
-            {
-                return _ocspValues;
-            }
-            set
-            {
-                _ocspValues = value;
-            }
-        }
-        
+
+        [XmlArrayAttribute("OCSPValues")]
+        [XmlArrayItemAttribute("EncapsulatedOCSPValue", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+        public Collection<EncapsulatedPkiDataType> OcspValues { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the OcspValues collection is empty.</para>
         /// </summary>
@@ -89,28 +63,15 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.OcspValues != null) 
+                return ((this.OcspValues != null)
                             && (this.OcspValues.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<AnyType> _otherValues;
-        
-        [XmlArrayAttribute("OtherValues", Order=2)]
-        [XmlArrayItemAttribute("OtherValue", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
-        public List<AnyType> OtherValues
-        {
-            get
-            {
-                return _otherValues;
-            }
-            set
-            {
-                _otherValues = value;
-            }
-        }
-        
+
+        [XmlArrayAttribute("OtherValues")]
+        [XmlArrayItemAttribute("OtherValue", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+        public Collection<AnyType> OtherValues { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the OtherValues collection is empty.</para>
         /// </summary>
@@ -120,11 +81,11 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.OtherValues != null) 
+                return ((this.OtherValues != null)
                             && (this.OtherValues.Count != 0));
             }
         }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("Id")]

@@ -21,21 +21,21 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("SignedSignaturePropertiesType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("SignedSignaturePropertiesType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("SignedSignatureProperties", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlRootAttribute("SignedSignatureProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     public partial class SignedSignaturePropertiesType
     {
-        
+
         [EditorBrowsableAttribute(EditorBrowsableState.Never)]
         [System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute()]
-        [XmlElementAttribute("SigningTime", Order=0, DataType="dateTime")]
+        [XmlElementAttribute("SigningTime", DataType = "dateTime")]
         public DateTime SigningTimeValue { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value indicating whether the SigningTime property is specified.</para>
         /// </summary>
@@ -43,7 +43,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         [System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute()]
         [EditorBrowsableAttribute(EditorBrowsableState.Never)]
         public bool SigningTimeValueSpecified { get; set; }
-        
+
         [XmlIgnoreAttribute()]
         public Nullable<DateTime> SigningTime
         {
@@ -64,24 +64,11 @@ namespace Frank.UblSharp.CoreComponentTypes
                 this.SigningTimeValueSpecified = value.HasValue;
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<CertIdType> _signingCertificate;
-        
-        [XmlArrayAttribute("SigningCertificate", Order=1)]
-        [XmlArrayItemAttribute("Cert", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
-        public List<CertIdType> SigningCertificate
-        {
-            get
-            {
-                return _signingCertificate;
-            }
-            set
-            {
-                _signingCertificate = value;
-            }
-        }
-        
+
+        [XmlArrayAttribute("SigningCertificate")]
+        [XmlArrayItemAttribute("Cert", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+        public Collection<CertIdType> SigningCertificate { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the SigningCertificate collection is empty.</para>
         /// </summary>
@@ -91,26 +78,26 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.SigningCertificate != null) 
+                return ((this.SigningCertificate != null)
                             && (this.SigningCertificate.Count != 0));
             }
         }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("SignaturePolicyIdentifier", Order=2)]
+        [XmlElementAttribute("SignaturePolicyIdentifier")]
         public SignaturePolicyIdentifierType SignaturePolicyIdentifier { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("SignatureProductionPlace", Order=3)]
+        [XmlElementAttribute("SignatureProductionPlace")]
         public SignatureProductionPlaceType SignatureProductionPlace { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("SignerRole", Order=4)]
+        [XmlElementAttribute("SignerRole")]
         public SignerRoleType SignerRole { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("Id")]

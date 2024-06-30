@@ -21,30 +21,30 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("QualifyingPropertiesType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("QualifyingPropertiesType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("QualifyingProperties", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlRootAttribute("QualifyingProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     public partial class QualifyingPropertiesType
     {
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("SignedProperties", Order=0)]
+        [XmlElementAttribute("SignedProperties")]
         public SignedPropertiesType SignedProperties { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("UnsignedProperties", Order=1)]
+        [XmlElementAttribute("UnsignedProperties")]
         public UnsignedPropertiesType UnsignedProperties { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlAttributeAttribute("Target")]
         public string Target { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("Id")]

@@ -21,8 +21,8 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para xml:lang="en"><ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:2">UNDT000011</ccts:UniqueID></para>
     /// <para xml:lang="en"><ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:2">CCT</ccts:CategoryCode></para>
@@ -35,9 +35,9 @@ namespace Frank.UblSharp.CoreComponentTypes
     [DescriptionAttribute(@"<ccts:UniqueID xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">UNDT000011</ccts:UniqueID> <ccts:CategoryCode xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">CCT</ccts:CategoryCode> <ccts:DictionaryEntryName xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">Identifier. Type</ccts:DictionaryEntryName> <ccts:VersionID xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">1.0</ccts:VersionID> <ccts:Definition xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">A character string to identify and distinguish uniquely, one instance of an object in an identification scheme from all other objects in the same scheme together with relevant supplementary information.</ccts:Definition> <ccts:RepresentationTermName xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">Identifier</ccts:RepresentationTermName> <ccts:PrimitiveType xmlns:ccts=""urn:un:unece:uncefact:documentation:2"">string</ccts:PrimitiveType>")]
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("IdentifierType", Namespace="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
+    [XmlTypeAttribute("IdentifierType", Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("IdentifierType", Namespace="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
+    [XmlRootAttribute("IdentifierType", Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
     [XmlIncludeAttribute(typeof(Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.AccountIdType))]
     [XmlIncludeAttribute(typeof(Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.AdditionalAccountIdType))]
     [XmlIncludeAttribute(typeof(Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.AgencyIdType))]
@@ -154,22 +154,22 @@ namespace Frank.UblSharp.CoreComponentTypes
     [XmlIncludeAttribute(typeof(Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.WebsiteUriType))]
     public partial class IdentifierType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets the text value.</para>
         /// </summary>
         [XmlTextAttribute()]
         public string Value { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en"><ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:2">UNDT000011-SC2</ccts:UniqueID></para>
         /// <para xml:lang="en"><ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:2">SC</ccts:CategoryCode></para>
@@ -185,7 +185,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("schemeID")]
         public string SchemeId { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en"><ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:2">UNDT000011-SC3</ccts:UniqueID></para>
         /// <para xml:lang="en"><ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:2">SC</ccts:CategoryCode></para>
@@ -201,7 +201,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("schemeName")]
         public string SchemeName { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en"><ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:2">UNDT000011-SC4</ccts:UniqueID></para>
         /// <para xml:lang="en"><ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:2">SC</ccts:CategoryCode></para>
@@ -218,7 +218,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("schemeAgencyID")]
         public string SchemeAgencyId { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en"><ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:2">UNDT000011-SC5</ccts:UniqueID></para>
         /// <para xml:lang="en"><ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:2">SC</ccts:CategoryCode></para>
@@ -234,7 +234,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("schemeAgencyName")]
         public string SchemeAgencyName { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en"><ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:2">UNDT000011-SC6</ccts:UniqueID></para>
         /// <para xml:lang="en"><ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:2">SC</ccts:CategoryCode></para>
@@ -250,7 +250,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("schemeVersionID")]
         public string SchemeVersionId { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en"><ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:2">UNDT000011-SC7</ccts:UniqueID></para>
         /// <para xml:lang="en"><ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:2">SC</ccts:CategoryCode></para>
@@ -266,7 +266,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("schemeDataURI")]
         public string SchemeDataUri { get; set; }
-        
+
         /// <summary>
         /// <para xml:lang="en"><ccts:UniqueID xmlns:ccts="urn:un:unece:uncefact:documentation:2">UNDT000011-SC8</ccts:UniqueID></para>
         /// <para xml:lang="en"><ccts:CategoryCode xmlns:ccts="urn:un:unece:uncefact:documentation:2">SC</ccts:CategoryCode></para>

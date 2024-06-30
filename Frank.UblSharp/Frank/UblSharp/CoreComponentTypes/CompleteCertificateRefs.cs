@@ -21,12 +21,12 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("CompleteCertificateRefs", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlRootAttribute("CompleteCertificateRefs", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     public partial class CompleteCertificateRefs : CompleteCertificateRefsType
     {
     }

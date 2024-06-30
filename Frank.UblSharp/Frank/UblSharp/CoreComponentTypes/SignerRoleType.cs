@@ -21,42 +21,29 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("SignerRoleType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("SignerRoleType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("SignerRole", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlRootAttribute("SignerRole", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     public partial class SignerRoleType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<AnyType> _claimedRoles;
-        
-        [XmlArrayAttribute("ClaimedRoles", Order=0)]
-        [XmlArrayItemAttribute("ClaimedRole", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
-        public List<AnyType> ClaimedRoles
-        {
-            get
-            {
-                return _claimedRoles;
-            }
-            set
-            {
-                _claimedRoles = value;
-            }
-        }
-        
+
+        [XmlArrayAttribute("ClaimedRoles")]
+        [XmlArrayItemAttribute("ClaimedRole", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+        public Collection<AnyType> ClaimedRoles { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the ClaimedRoles collection is empty.</para>
         /// </summary>
@@ -66,28 +53,15 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.ClaimedRoles != null) 
+                return ((this.ClaimedRoles != null)
                             && (this.ClaimedRoles.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<EncapsulatedPkiDataType> _certifiedRoles;
-        
-        [XmlArrayAttribute("CertifiedRoles", Order=1)]
-        [XmlArrayItemAttribute("CertifiedRole", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
-        public List<EncapsulatedPkiDataType> CertifiedRoles
-        {
-            get
-            {
-                return _certifiedRoles;
-            }
-            set
-            {
-                _certifiedRoles = value;
-            }
-        }
-        
+
+        [XmlArrayAttribute("CertifiedRoles")]
+        [XmlArrayItemAttribute("CertifiedRole", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+        public Collection<EncapsulatedPkiDataType> CertifiedRoles { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the CertifiedRoles collection is empty.</para>
         /// </summary>
@@ -97,7 +71,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.CertifiedRoles != null) 
+                return ((this.CertifiedRoles != null)
                             && (this.CertifiedRoles.Count != 0));
             }
         }

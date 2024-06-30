@@ -21,39 +21,26 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("OtherCertStatusRefsType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("OtherCertStatusRefsType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
     public partial class OtherCertStatusRefsType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<AnyType> _otherRef;
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("OtherRef", Order=0)]
-        public List<AnyType> OtherRef
-        {
-            get
-            {
-                return _otherRef;
-            }
-            set
-            {
-                _otherRef = value;
-            }
-        }
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("OtherRef")]
+        public Collection<AnyType> OtherRef { get; set; }
     }
 }

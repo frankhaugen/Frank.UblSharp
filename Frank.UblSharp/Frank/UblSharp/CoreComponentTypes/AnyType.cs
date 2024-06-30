@@ -21,42 +21,29 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("AnyType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("AnyType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("Any", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlRootAttribute("Any", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     public partial class AnyType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<XmlElement> _any;
-        
-        [XmlAnyElementAttribute(Order=0)]
+
+        [XmlAnyElementAttribute()]
         [System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute()]
-        public List<XmlElement> Any
-        {
-            get
-            {
-                return _any;
-            }
-            set
-            {
-                _any = value;
-            }
-        }
-        
+        public Collection<System.Xml.Linq.XElement> Any { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Any collection is empty.</para>
         /// </summary>
@@ -66,27 +53,15 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.Any != null) 
+                return ((this.Any != null)
                             && (this.Any.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<XmlAttribute> _anyAttribute;
-        
+
+        [XmlAnyAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute()]
-        public List<XmlAttribute> AnyAttribute
-        {
-            get
-            {
-                return _anyAttribute;
-            }
-            set
-            {
-                _anyAttribute = value;
-            }
-        }
-        
+        public Collection<XmlAttribute> AnyAttribute { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the AnyAttribute collection is empty.</para>
         /// </summary>
@@ -96,11 +71,11 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.AnyAttribute != null) 
+                return ((this.AnyAttribute != null)
                             && (this.AnyAttribute.Count != 0));
             }
         }
-        
+
         [XmlTextAttribute()]
         public string[] Text { get; set; }
     }

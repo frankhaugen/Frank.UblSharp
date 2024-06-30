@@ -21,91 +21,78 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Transportation Segment. Details</ccts:DictionaryEntryName><ccts:Definition>A class to describe one segment or leg in a transportation service.</ccts:Definition><ccts:ObjectClass>Transportation Segment</ccts:ObjectClass></ccts:Component></para>
     /// </summary>
     [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Transportation Segment. Details</ccts:DictionaryEntryName><ccts:Definition>A class to describe one segment or leg in a transportation service.</ccts:Definition><ccts:ObjectClass>Transportation Segment</ccts:ObjectClass></ccts:Component>")]
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("TransportationSegmentType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlTypeAttribute("TransportationSegmentType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("TransportationSegment", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlRootAttribute("TransportationSegment", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public partial class TransportationSegmentType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transportation Segment. Sequence. Numeric</ccts:DictionaryEntryName><ccts:Definition>A number indicating the order of this segment in the sequence of transportation segments making up a transportation service.</ccts:Definition><ccts:Cardinality>1</ccts:Cardinality><ccts:ObjectClass>Transportation Segment</ccts:ObjectClass><ccts:PropertyTerm>Sequence</ccts:PropertyTerm><ccts:RepresentationTerm>Numeric</ccts:RepresentationTerm><ccts:DataType>Numeric. Type</ccts:DataType><ccts:Examples>1, 2, 3, 4, etc.</ccts:Examples></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transportation Segment. Sequence. Numeric</ccts:DictionaryEntryName><ccts:Definition>A number indicating the order of this segment in the sequence of transportation segments making up a transportation service.</ccts:Definition><ccts:Cardinality>1</ccts:Cardinality><ccts:ObjectClass>Transportation Segment</ccts:ObjectClass><ccts:PropertyTerm>Sequence</ccts:PropertyTerm><ccts:RepresentationTerm>Numeric</ccts:RepresentationTerm><ccts:DataType>Numeric. Type</ccts:DataType><ccts:Examples>1, 2, 3, 4, etc.</ccts:Examples></ccts:Component>")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("SequenceNumeric", Order=0, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("SequenceNumeric", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.SequenceNumericType SequenceNumeric { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transportation Segment. Transport Execution Plan Reference. Identifier</ccts:DictionaryEntryName><ccts:Definition>An identifier for the transport execution plan governing this transportation segment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transportation Segment</ccts:ObjectClass><ccts:PropertyTerm>Transport Execution Plan Reference</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transportation Segment. Transport Execution Plan Reference. Identifier</ccts:DictionaryEntryName><ccts:Definition>An identifier for the transport execution plan governing this transportation segment.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transportation Segment</ccts:ObjectClass><ccts:PropertyTerm>Transport Execution Plan Reference</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("TransportExecutionPlanReferenceID", Order=1, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("TransportExecutionPlanReferenceID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.TransportExecutionPlanReferenceIdType TransportExecutionPlanReferenceId { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transportation Segment. Transportation Service</ccts:DictionaryEntryName><ccts:Definition>The transportation service used in this transportation segment.</ccts:Definition><ccts:Cardinality>1</ccts:Cardinality><ccts:ObjectClass>Transportation Segment</ccts:ObjectClass><ccts:PropertyTerm>Transportation Service</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transportation Service</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transportation Service</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transportation Segment. Transportation Service</ccts:DictionaryEntryName><ccts:Definition>The transportation service used in this transportation segment.</ccts:Definition><ccts:Cardinality>1</ccts:Cardinality><ccts:ObjectClass>Transportation Segment</ccts:ObjectClass><ccts:PropertyTerm>Transportation Service</ccts:PropertyTerm><ccts:AssociatedObjectClass>Transportation Service</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Transportation Service</ccts:RepresentationTerm></ccts:Component>")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("TransportationService", Order=2)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("TransportationService")]
         public TransportationServiceType TransportationService { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transportation Segment. Transport Service Provider_ Party. Party</ccts:DictionaryEntryName><ccts:Definition>The transport service provider responsible for carrying out transportation services in this transportation segment.</ccts:Definition><ccts:Cardinality>1</ccts:Cardinality><ccts:ObjectClass>Transportation Segment</ccts:ObjectClass><ccts:PropertyTermQualifier>Transport Service Provider</ccts:PropertyTermQualifier><ccts:PropertyTerm>Party</ccts:PropertyTerm><ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Party</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transportation Segment. Transport Service Provider_ Party. Party</ccts:DictionaryEntryName><ccts:Definition>The transport service provider responsible for carrying out transportation services in this transportation segment.</ccts:Definition><ccts:Cardinality>1</ccts:Cardinality><ccts:ObjectClass>Transportation Segment</ccts:ObjectClass><ccts:PropertyTermQualifier>Transport Service Provider</ccts:PropertyTermQualifier><ccts:PropertyTerm>Party</ccts:PropertyTerm><ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Party</ccts:RepresentationTerm></ccts:Component>")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("TransportServiceProviderParty", Order=3)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("TransportServiceProviderParty")]
         public PartyType TransportServiceProviderParty { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transportation Segment. Referenced_ Consignment. Consignment</ccts:DictionaryEntryName><ccts:Definition>A consignment referenced in this transportation segment. Such a consignment may have different identifiers than the consignment identifiers being used in the transportation service agreed between the transport user and the transport service provider.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transportation Segment</ccts:ObjectClass><ccts:PropertyTermQualifier>Referenced</ccts:PropertyTermQualifier><ccts:PropertyTerm>Consignment</ccts:PropertyTerm><ccts:AssociatedObjectClass>Consignment</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Consignment</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transportation Segment. Referenced_ Consignment. Consignment</ccts:DictionaryEntryName><ccts:Definition>A consignment referenced in this transportation segment. Such a consignment may have different identifiers than the consignment identifiers being used in the transportation service agreed between the transport user and the transport service provider.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Transportation Segment</ccts:ObjectClass><ccts:PropertyTermQualifier>Referenced</ccts:PropertyTermQualifier><ccts:PropertyTerm>Consignment</ccts:PropertyTerm><ccts:AssociatedObjectClass>Consignment</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Consignment</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ReferencedConsignment", Order=4)]
+        [XmlElementAttribute("ReferencedConsignment")]
         public ConsignmentType ReferencedConsignment { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<ShipmentStageType> _shipmentStage;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transportation Segment. Shipment Stage</ccts:DictionaryEntryName><ccts:Definition>The shipment stage associated with this transportation segment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transportation Segment</ccts:ObjectClass><ccts:PropertyTerm>Shipment Stage</ccts:PropertyTerm><ccts:AssociatedObjectClass>Shipment Stage</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Shipment Stage</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Transportation Segment. Shipment Stage</ccts:DictionaryEntryName><ccts:Definition>The shipment stage associated with this transportation segment.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Transportation Segment</ccts:ObjectClass><ccts:PropertyTerm>Shipment Stage</ccts:PropertyTerm><ccts:AssociatedObjectClass>Shipment Stage</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Shipment Stage</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("ShipmentStage", Order=5)]
-        public List<ShipmentStageType> ShipmentStage
-        {
-            get
-            {
-                return _shipmentStage;
-            }
-            set
-            {
-                _shipmentStage = value;
-            }
-        }
-        
+        [XmlElementAttribute("ShipmentStage")]
+        public Collection<ShipmentStageType> ShipmentStage { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the ShipmentStage collection is empty.</para>
         /// </summary>
@@ -115,7 +102,7 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.ShipmentStage != null) 
+                return ((this.ShipmentStage != null)
                             && (this.ShipmentStage.Count != 0));
             }
         }

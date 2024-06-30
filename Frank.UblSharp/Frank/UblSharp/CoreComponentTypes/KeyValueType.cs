@@ -21,41 +21,41 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("KeyValueType", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlTypeAttribute("KeyValueType", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("KeyValue", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlRootAttribute("KeyValue", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     public partial class KeyValueType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("DSAKeyValue", Order=0)]
+        [XmlElementAttribute("DSAKeyValue")]
         public DsaKeyValueType DsaKeyValue { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("RSAKeyValue", Order=1)]
+        [XmlElementAttribute("RSAKeyValue")]
         public RsaKeyValueType RsaKeyValue { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlAnyElementAttribute(Order=2)]
+        [XmlAnyElementAttribute()]
         [System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute()]
-        public XmlElement Any { get; set; }
-        
+        public System.Xml.Linq.XElement Any { get; set; }
+
         [XmlTextAttribute()]
         public string[] Text { get; set; }
     }

@@ -21,32 +21,19 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("KeyInfoType", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlTypeAttribute("KeyInfoType", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("KeyInfo", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlRootAttribute("KeyInfo", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     public partial class KeyInfoType
     {
-        
-        [XmlIgnoreAttribute()]
-        private List<string> _keyName;
-        
-        [XmlElementAttribute("KeyName", Order=0)]
-        public List<string> KeyName
-        {
-            get
-            {
-                return _keyName;
-            }
-            set
-            {
-                _keyName = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("KeyName")]
+        public Collection<string> KeyName { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the KeyName collection is empty.</para>
         /// </summary>
@@ -56,27 +43,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.KeyName != null) 
+                return ((this.KeyName != null)
                             && (this.KeyName.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<KeyValueType> _keyValue;
-        
-        [XmlElementAttribute("KeyValue", Order=1)]
-        public List<KeyValueType> KeyValue
-        {
-            get
-            {
-                return _keyValue;
-            }
-            set
-            {
-                _keyValue = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("KeyValue")]
+        public Collection<KeyValueType> KeyValue { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the KeyValue collection is empty.</para>
         /// </summary>
@@ -86,27 +60,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.KeyValue != null) 
+                return ((this.KeyValue != null)
                             && (this.KeyValue.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<RetrievalMethodType> _retrievalMethod;
-        
-        [XmlElementAttribute("RetrievalMethod", Order=2)]
-        public List<RetrievalMethodType> RetrievalMethod
-        {
-            get
-            {
-                return _retrievalMethod;
-            }
-            set
-            {
-                _retrievalMethod = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("RetrievalMethod")]
+        public Collection<RetrievalMethodType> RetrievalMethod { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the RetrievalMethod collection is empty.</para>
         /// </summary>
@@ -116,27 +77,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.RetrievalMethod != null) 
+                return ((this.RetrievalMethod != null)
                             && (this.RetrievalMethod.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<X509DataType> _x509Data;
-        
-        [XmlElementAttribute("X509Data", Order=3)]
-        public List<X509DataType> X509Data
-        {
-            get
-            {
-                return _x509Data;
-            }
-            set
-            {
-                _x509Data = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("X509Data")]
+        public Collection<X509DataType> X509Data { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the X509Data collection is empty.</para>
         /// </summary>
@@ -146,27 +94,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.X509Data != null) 
+                return ((this.X509Data != null)
                             && (this.X509Data.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<PgpDataType> _pgpData;
-        
-        [XmlElementAttribute("PGPData", Order=4)]
-        public List<PgpDataType> PgpData
-        {
-            get
-            {
-                return _pgpData;
-            }
-            set
-            {
-                _pgpData = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("PGPData")]
+        public Collection<PgpDataType> PgpData { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the PgpData collection is empty.</para>
         /// </summary>
@@ -176,27 +111,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.PgpData != null) 
+                return ((this.PgpData != null)
                             && (this.PgpData.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<SpkiDataType> _spkiData;
-        
-        [XmlElementAttribute("SPKIData", Order=5)]
-        public List<SpkiDataType> SpkiData
-        {
-            get
-            {
-                return _spkiData;
-            }
-            set
-            {
-                _spkiData = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("SPKIData")]
+        public Collection<SpkiDataType> SpkiData { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the SpkiData collection is empty.</para>
         /// </summary>
@@ -206,27 +128,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.SpkiData != null) 
+                return ((this.SpkiData != null)
                             && (this.SpkiData.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<string> _mgmtData;
-        
-        [XmlElementAttribute("MgmtData", Order=6)]
-        public List<string> MgmtData
-        {
-            get
-            {
-                return _mgmtData;
-            }
-            set
-            {
-                _mgmtData = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("MgmtData")]
+        public Collection<string> MgmtData { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the MgmtData collection is empty.</para>
         /// </summary>
@@ -236,28 +145,15 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.MgmtData != null) 
+                return ((this.MgmtData != null)
                             && (this.MgmtData.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<XmlElement> _any;
-        
-        [XmlAnyElementAttribute(Order=7)]
+
+        [XmlAnyElementAttribute()]
         [System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute()]
-        public List<XmlElement> Any
-        {
-            get
-            {
-                return _any;
-            }
-            set
-            {
-                _any = value;
-            }
-        }
-        
+        public Collection<System.Xml.Linq.XElement> Any { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Any collection is empty.</para>
         /// </summary>
@@ -267,17 +163,17 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.Any != null) 
+                return ((this.Any != null)
                             && (this.Any.Count != 0));
             }
         }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("Id")]
         [KeyAttribute()]
         public string Id { get; set; }
-        
+
         [XmlTextAttribute()]
         public string[] Text { get; set; }
     }

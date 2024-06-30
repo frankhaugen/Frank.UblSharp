@@ -1,11 +1,18 @@
 ﻿using System.Xml.Serialization;
 using FluentAssertions;
 using Frank.UblSharp.Invoice;
+using Xunit.Abstractions;
 
 namespace Frank.UblSharp.Tests.UblSerializationTests;
 
 public class UblInvoiceSerializerTests
 {
+	private readonly ITestOutputHelper _outputHelper;
+
+	public UblInvoiceSerializerTests(ITestOutputHelper outputHelper)
+	{
+		_outputHelper = outputHelper;
+	}
 
 	[Fact]
 	public void CanSerializeInvoice()
@@ -22,6 +29,9 @@ public class UblInvoiceSerializerTests
 		document.Id.Value.Should().Be("TOSL108");
 		document.IssueDate.Value.Should().Be(new DateTime(2009, 12, 15));
 		document.InvoiceTypeCode!.Value.Should().Be("380");
+		
+		document.InvoiceLine.Should().HaveCount(5);
+		
 	}
 
     private static string GetInvoiceXml()

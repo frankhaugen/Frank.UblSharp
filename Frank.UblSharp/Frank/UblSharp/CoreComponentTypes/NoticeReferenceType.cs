@@ -21,44 +21,31 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("NoticeReferenceType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("NoticeReferenceType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
     public partial class NoticeReferenceType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("Organization", Order=0)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("Organization")]
         public string Organization { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<int> _noticeNumbers;
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlArrayAttribute("NoticeNumbers", Order=1)]
-        [XmlArrayItemAttribute("int", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
-        public List<int> NoticeNumbers
-        {
-            get
-            {
-                return _noticeNumbers;
-            }
-            set
-            {
-                _noticeNumbers = value;
-            }
-        }
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlArrayAttribute("NoticeNumbers")]
+        [XmlArrayItemAttribute("int", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+        public Collection<int> NoticeNumbers { get; set; }
     }
 }

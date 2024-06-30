@@ -21,67 +21,54 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Lot Identification. Details</ccts:DictionaryEntryName><ccts:Definition>A class for defining a lot identifier (the identifier of a set of item instances that would be used in case of a recall of that item).</ccts:Definition><ccts:ObjectClass>Lot Identification</ccts:ObjectClass></ccts:Component></para>
     /// </summary>
     [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Lot Identification. Details</ccts:DictionaryEntryName><ccts:Definition>A class for defining a lot identifier (the identifier of a set of item instances that would be used in case of a recall of that item).</ccts:Definition><ccts:ObjectClass>Lot Identification</ccts:ObjectClass></ccts:Component>")]
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("LotIdentificationType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlTypeAttribute("LotIdentificationType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("LotIdentification", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlRootAttribute("LotIdentification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public partial class LotIdentificationType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Lot Identification. Lot Number. Identifier</ccts:DictionaryEntryName><ccts:Definition>An identifier for the lot.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Lot Identification</ccts:ObjectClass><ccts:PropertyTerm>Lot Number</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Lot Identification. Lot Number. Identifier</ccts:DictionaryEntryName><ccts:Definition>An identifier for the lot.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Lot Identification</ccts:ObjectClass><ccts:PropertyTerm>Lot Number</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("LotNumberID", Order=0, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("LotNumberID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.LotNumberIdType LotNumberId { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Lot Identification. Expiry Date. Date</ccts:DictionaryEntryName><ccts:Definition>The expiry date of the lot.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Lot Identification</ccts:ObjectClass><ccts:PropertyTerm>Expiry Date</ccts:PropertyTerm><ccts:RepresentationTerm>Date</ccts:RepresentationTerm><ccts:DataType>Date. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Lot Identification. Expiry Date. Date</ccts:DictionaryEntryName><ccts:Definition>The expiry date of the lot.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Lot Identification</ccts:ObjectClass><ccts:PropertyTerm>Expiry Date</ccts:PropertyTerm><ccts:RepresentationTerm>Date</ccts:RepresentationTerm><ccts:DataType>Date. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ExpiryDate", Order=1, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("ExpiryDate", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ExpiryDateType ExpiryDate { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<ItemPropertyType> _additionalItemProperty;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Lot Identification. Additional_ Item Property. Item Property</ccts:DictionaryEntryName><ccts:Definition>An additional property of the lot.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Lot Identification</ccts:ObjectClass><ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier><ccts:PropertyTerm>Item Property</ccts:PropertyTerm><ccts:AssociatedObjectClass>Item Property</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Item Property</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Lot Identification. Additional_ Item Property. Item Property</ccts:DictionaryEntryName><ccts:Definition>An additional property of the lot.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Lot Identification</ccts:ObjectClass><ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier><ccts:PropertyTerm>Item Property</ccts:PropertyTerm><ccts:AssociatedObjectClass>Item Property</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Item Property</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("AdditionalItemProperty", Order=2)]
-        public List<ItemPropertyType> AdditionalItemProperty
-        {
-            get
-            {
-                return _additionalItemProperty;
-            }
-            set
-            {
-                _additionalItemProperty = value;
-            }
-        }
-        
+        [XmlElementAttribute("AdditionalItemProperty")]
+        public Collection<ItemPropertyType> AdditionalItemProperty { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the AdditionalItemProperty collection is empty.</para>
         /// </summary>
@@ -91,7 +78,7 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.AdditionalItemProperty != null) 
+                return ((this.AdditionalItemProperty != null)
                             && (this.AdditionalItemProperty.Count != 0));
             }
         }

@@ -6,5 +6,4 @@ public class ClassDeclarationResult
 {
     public string ClassName { get; set; }
     public ClassDeclarationSyntax ClassDeclaration { get; set; }
-    public List<PropertyDefinitionResult> Properties { get; set; }
 }

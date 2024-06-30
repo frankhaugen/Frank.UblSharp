@@ -21,58 +21,45 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Pricing Reference. Details</ccts:DictionaryEntryName><ccts:Definition>A reference to the basis for pricing. This may be based on a catalogue or a quoted amount from a price list and include some alternative pricing conditions.</ccts:Definition><ccts:ObjectClass>Pricing Reference</ccts:ObjectClass></ccts:Component></para>
     /// </summary>
     [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Pricing Reference. Details</ccts:DictionaryEntryName><ccts:Definition>A reference to the basis for pricing. This may be based on a catalogue or a quoted amount from a price list and include some alternative pricing conditions.</ccts:Definition><ccts:ObjectClass>Pricing Reference</ccts:ObjectClass></ccts:Component>")]
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("PricingReferenceType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlTypeAttribute("PricingReferenceType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("PricingReference", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlRootAttribute("PricingReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public partial class PricingReferenceType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Pricing Reference. Original_ Item Location Quantity. Item Location Quantity</ccts:DictionaryEntryName><ccts:Definition>An original set of location-specific properties (e.g., price and quantity) associated with this item.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Pricing Reference</ccts:ObjectClass><ccts:PropertyTermQualifier>Original</ccts:PropertyTermQualifier><ccts:PropertyTerm>Item Location Quantity</ccts:PropertyTerm><ccts:AssociatedObjectClass>Item Location Quantity</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Item Location Quantity</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Pricing Reference. Original_ Item Location Quantity. Item Location Quantity</ccts:DictionaryEntryName><ccts:Definition>An original set of location-specific properties (e.g., price and quantity) associated with this item.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Pricing Reference</ccts:ObjectClass><ccts:PropertyTermQualifier>Original</ccts:PropertyTermQualifier><ccts:PropertyTerm>Item Location Quantity</ccts:PropertyTerm><ccts:AssociatedObjectClass>Item Location Quantity</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Item Location Quantity</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("OriginalItemLocationQuantity", Order=0)]
+        [XmlElementAttribute("OriginalItemLocationQuantity")]
         public ItemLocationQuantityType OriginalItemLocationQuantity { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<PriceType> _alternativeConditionPrice;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Pricing Reference. Alternative Condition_ Price. Price</ccts:DictionaryEntryName><ccts:Definition>The price expressed in terms other than the actual price, e.g., the list price v. the contracted price, or the price in bags v. the price in kilos, or the list price in bags v. the contracted price in kilos.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Pricing Reference</ccts:ObjectClass><ccts:PropertyTermQualifier>Alternative Condition</ccts:PropertyTermQualifier><ccts:PropertyTerm>Price</ccts:PropertyTerm><ccts:AssociatedObjectClass>Price</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Price</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Pricing Reference. Alternative Condition_ Price. Price</ccts:DictionaryEntryName><ccts:Definition>The price expressed in terms other than the actual price, e.g., the list price v. the contracted price, or the price in bags v. the price in kilos, or the list price in bags v. the contracted price in kilos.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Pricing Reference</ccts:ObjectClass><ccts:PropertyTermQualifier>Alternative Condition</ccts:PropertyTermQualifier><ccts:PropertyTerm>Price</ccts:PropertyTerm><ccts:AssociatedObjectClass>Price</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Price</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("AlternativeConditionPrice", Order=1)]
-        public List<PriceType> AlternativeConditionPrice
-        {
-            get
-            {
-                return _alternativeConditionPrice;
-            }
-            set
-            {
-                _alternativeConditionPrice = value;
-            }
-        }
-        
+        [XmlElementAttribute("AlternativeConditionPrice")]
+        public Collection<PriceType> AlternativeConditionPrice { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the AlternativeConditionPrice collection is empty.</para>
         /// </summary>
@@ -82,7 +69,7 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.AlternativeConditionPrice != null) 
+                return ((this.AlternativeConditionPrice != null)
                             && (this.AlternativeConditionPrice.Count != 0));
             }
         }

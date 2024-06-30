@@ -21,13 +21,13 @@ namespace Frank.UblSharp.CommonExtensionComponentsCommonExtensionComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("ExtensionURIType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
+    [XmlTypeAttribute("ExtensionURIType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("ExtensionURI", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
+    [XmlRootAttribute("ExtensionURI", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
     public partial class ExtensionUriType : Frank.UblSharp.UnqualifiedDataTypesUnqualifiedDataTypes.IdentifierType_2
     {
     }

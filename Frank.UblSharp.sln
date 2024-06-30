@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.UblSharp.GeneratorV3"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.UblSharp.GeneratorV4", "Frank.UblSharp.GeneratorV4\Frank.UblSharp.GeneratorV4.csproj", "{D23CAEB1-BC22-4C54-8FD0-33D10B77BEB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.UblSharp.Generation", "Frank.UblSharp.Generation\Frank.UblSharp.Generation.csproj", "{4251AE86-9FD4-465C-9A99-54ADE795A88B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,5 +86,9 @@ Global
 		{D23CAEB1-BC22-4C54-8FD0-33D10B77BEB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D23CAEB1-BC22-4C54-8FD0-33D10B77BEB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D23CAEB1-BC22-4C54-8FD0-33D10B77BEB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4251AE86-9FD4-465C-9A99-54ADE795A88B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4251AE86-9FD4-465C-9A99-54ADE795A88B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4251AE86-9FD4-465C-9A99-54ADE795A88B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4251AE86-9FD4-465C-9A99-54ADE795A88B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

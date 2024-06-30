@@ -21,32 +21,19 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("SignedDataObjectPropertiesType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("SignedDataObjectPropertiesType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("SignedDataObjectProperties", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlRootAttribute("SignedDataObjectProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     public partial class SignedDataObjectPropertiesType
     {
-        
-        [XmlIgnoreAttribute()]
-        private List<DataObjectFormatType> _dataObjectFormat;
-        
-        [XmlElementAttribute("DataObjectFormat", Order=0)]
-        public List<DataObjectFormatType> DataObjectFormat
-        {
-            get
-            {
-                return _dataObjectFormat;
-            }
-            set
-            {
-                _dataObjectFormat = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("DataObjectFormat")]
+        public Collection<DataObjectFormatType> DataObjectFormat { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the DataObjectFormat collection is empty.</para>
         /// </summary>
@@ -56,27 +43,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.DataObjectFormat != null) 
+                return ((this.DataObjectFormat != null)
                             && (this.DataObjectFormat.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<CommitmentTypeIndicationType> _commitmentTypeIndication;
-        
-        [XmlElementAttribute("CommitmentTypeIndication", Order=1)]
-        public List<CommitmentTypeIndicationType> CommitmentTypeIndication
-        {
-            get
-            {
-                return _commitmentTypeIndication;
-            }
-            set
-            {
-                _commitmentTypeIndication = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("CommitmentTypeIndication")]
+        public Collection<CommitmentTypeIndicationType> CommitmentTypeIndication { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the CommitmentTypeIndication collection is empty.</para>
         /// </summary>
@@ -86,27 +60,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.CommitmentTypeIndication != null) 
+                return ((this.CommitmentTypeIndication != null)
                             && (this.CommitmentTypeIndication.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<XAdEsTimeStampType> _allDataObjectsTimeStamp;
-        
-        [XmlElementAttribute("AllDataObjectsTimeStamp", Order=2)]
-        public List<XAdEsTimeStampType> AllDataObjectsTimeStamp
-        {
-            get
-            {
-                return _allDataObjectsTimeStamp;
-            }
-            set
-            {
-                _allDataObjectsTimeStamp = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("AllDataObjectsTimeStamp")]
+        public Collection<XAdEsTimeStampType> AllDataObjectsTimeStamp { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the AllDataObjectsTimeStamp collection is empty.</para>
         /// </summary>
@@ -116,27 +77,14 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.AllDataObjectsTimeStamp != null) 
+                return ((this.AllDataObjectsTimeStamp != null)
                             && (this.AllDataObjectsTimeStamp.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<XAdEsTimeStampType> _individualDataObjectsTimeStamp;
-        
-        [XmlElementAttribute("IndividualDataObjectsTimeStamp", Order=3)]
-        public List<XAdEsTimeStampType> IndividualDataObjectsTimeStamp
-        {
-            get
-            {
-                return _individualDataObjectsTimeStamp;
-            }
-            set
-            {
-                _individualDataObjectsTimeStamp = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("IndividualDataObjectsTimeStamp")]
+        public Collection<XAdEsTimeStampType> IndividualDataObjectsTimeStamp { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the IndividualDataObjectsTimeStamp collection is empty.</para>
         /// </summary>
@@ -146,11 +94,11 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.IndividualDataObjectsTimeStamp != null) 
+                return ((this.IndividualDataObjectsTimeStamp != null)
                             && (this.IndividualDataObjectsTimeStamp.Count != 0));
             }
         }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("Id")]

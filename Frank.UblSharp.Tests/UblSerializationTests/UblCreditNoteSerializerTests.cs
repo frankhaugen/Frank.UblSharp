@@ -1,11 +1,18 @@
 ﻿using System.Xml.Serialization;
 using FluentAssertions;
 using Frank.UblSharp.CreditNote;
+using Xunit.Abstractions;
 
 namespace Frank.UblSharp.Tests.UblSerializationTests;
 
 public class UblCreditNoteSerializerTests
 {
+	private readonly ITestOutputHelper _outputHelper;
+
+	public UblCreditNoteSerializerTests(ITestOutputHelper outputHelper)
+	{
+		_outputHelper = outputHelper;
+	}
 
 	[Fact]
 	public void CanSerializeCreditNote()
@@ -21,6 +28,9 @@ public class UblCreditNoteSerializerTests
 		document!.UblVersionId!.Value.Should().Be("2.1");
 		document.Id.Value.Should().Be("TOSL108");
 		document.IssueDate.Value.Should().Be(new DateTime(2009, 12, 15));
+		
+		document.Note.Should().NotBeNull();
+		document.Note!.First().Value.Should().Be("Ordered in our booth at the convention.");
 	}
 
     private static string GetCreditNoteXml()

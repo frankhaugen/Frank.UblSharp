@@ -21,21 +21,21 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("CompleteCertificateRefsType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("CompleteCertificateRefsType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
     [XmlIncludeAttribute(typeof(AttributeCertificateRefs))]
     [XmlIncludeAttribute(typeof(CompleteCertificateRefs))]
     public partial class CompleteCertificateRefsType
     {
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("CertRefs", Order=0)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("CertRefs")]
         public CertIdListType CertRefs { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("Id")]

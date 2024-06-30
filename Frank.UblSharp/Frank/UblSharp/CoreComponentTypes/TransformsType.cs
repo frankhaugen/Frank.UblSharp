@@ -21,40 +21,27 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("TransformsType", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlTypeAttribute("TransformsType", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("Transforms", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlRootAttribute("Transforms", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     public partial class TransformsType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<TransformType> _transform;
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("Transform", Order=0)]
-        public List<TransformType> Transform
-        {
-            get
-            {
-                return _transform;
-            }
-            set
-            {
-                _transform = value;
-            }
-        }
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("Transform")]
+        public Collection<TransformType> Transform { get; set; }
     }
 }

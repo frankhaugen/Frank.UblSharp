@@ -21,57 +21,57 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("DSAKeyValueType", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlTypeAttribute("DSAKeyValueType", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("DSAKeyValue", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlRootAttribute("DSAKeyValue", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     public partial class DsaKeyValueType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("P", Order=0, DataType="base64Binary")]
+        [XmlElementAttribute("P", DataType = "base64Binary")]
         public Byte[] P { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("Q", Order=1, DataType="base64Binary")]
+        [XmlElementAttribute("Q", DataType = "base64Binary")]
         public Byte[] Q { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("G", Order=2, DataType="base64Binary")]
+        [XmlElementAttribute("G", DataType = "base64Binary")]
         public Byte[] G { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("Y", Order=3, DataType="base64Binary")]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("Y", DataType = "base64Binary")]
         public Byte[] Y { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("J", Order=4, DataType="base64Binary")]
+        [XmlElementAttribute("J", DataType = "base64Binary")]
         public Byte[] J { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("Seed", Order=5, DataType="base64Binary")]
+        [XmlElementAttribute("Seed", DataType = "base64Binary")]
         public Byte[] Seed { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("PgenCounter", Order=6, DataType="base64Binary")]
+        [XmlElementAttribute("PgenCounter", DataType = "base64Binary")]
         public Byte[] PgenCounter { get; set; }
     }
 }

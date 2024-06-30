@@ -21,34 +21,21 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("CompleteRevocationRefsType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("CompleteRevocationRefsType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
     [XmlIncludeAttribute(typeof(AttributeRevocationRefs))]
     [XmlIncludeAttribute(typeof(CompleteRevocationRefs))]
     public partial class CompleteRevocationRefsType
     {
-        
-        [XmlIgnoreAttribute()]
-        private List<CrlRefType> _crlRefs;
-        
-        [XmlArrayAttribute("CRLRefs", Order=0)]
-        [XmlArrayItemAttribute("CRLRef", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
-        public List<CrlRefType> CrlRefs
-        {
-            get
-            {
-                return _crlRefs;
-            }
-            set
-            {
-                _crlRefs = value;
-            }
-        }
-        
+
+        [XmlArrayAttribute("CRLRefs")]
+        [XmlArrayItemAttribute("CRLRef", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+        public Collection<CrlRefType> CrlRefs { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the CrlRefs collection is empty.</para>
         /// </summary>
@@ -58,28 +45,15 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.CrlRefs != null) 
+                return ((this.CrlRefs != null)
                             && (this.CrlRefs.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<OcspRefType> _ocspRefs;
-        
-        [XmlArrayAttribute("OCSPRefs", Order=1)]
-        [XmlArrayItemAttribute("OCSPRef", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
-        public List<OcspRefType> OcspRefs
-        {
-            get
-            {
-                return _ocspRefs;
-            }
-            set
-            {
-                _ocspRefs = value;
-            }
-        }
-        
+
+        [XmlArrayAttribute("OCSPRefs")]
+        [XmlArrayItemAttribute("OCSPRef", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+        public Collection<OcspRefType> OcspRefs { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the OcspRefs collection is empty.</para>
         /// </summary>
@@ -89,28 +63,15 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.OcspRefs != null) 
+                return ((this.OcspRefs != null)
                             && (this.OcspRefs.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<AnyType> _otherRefs;
-        
-        [XmlArrayAttribute("OtherRefs", Order=2)]
-        [XmlArrayItemAttribute("OtherRef", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
-        public List<AnyType> OtherRefs
-        {
-            get
-            {
-                return _otherRefs;
-            }
-            set
-            {
-                _otherRefs = value;
-            }
-        }
-        
+
+        [XmlArrayAttribute("OtherRefs")]
+        [XmlArrayItemAttribute("OtherRef", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+        public Collection<AnyType> OtherRefs { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the OtherRefs collection is empty.</para>
         /// </summary>
@@ -120,11 +81,11 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.OtherRefs != null) 
+                return ((this.OtherRefs != null)
                             && (this.OtherRefs.Count != 0));
             }
         }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("Id")]

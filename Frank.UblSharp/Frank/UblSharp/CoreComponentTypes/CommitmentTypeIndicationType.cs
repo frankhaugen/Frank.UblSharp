@@ -21,45 +21,32 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("CommitmentTypeIndicationType", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlTypeAttribute("CommitmentTypeIndicationType", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("CommitmentTypeIndication", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    [XmlRootAttribute("CommitmentTypeIndication", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     public partial class CommitmentTypeIndicationType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("CommitmentTypeId", Order=0)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("CommitmentTypeId")]
         public ObjectIdentifierType CommitmentTypeId { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<string> _objectReference;
-        
-        [XmlElementAttribute("ObjectReference", Order=1)]
-        public List<string> ObjectReference
-        {
-            get
-            {
-                return _objectReference;
-            }
-            set
-            {
-                _objectReference = value;
-            }
-        }
-        
+
+        [XmlElementAttribute("ObjectReference")]
+        public Collection<string> ObjectReference { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the ObjectReference collection is empty.</para>
         /// </summary>
@@ -69,33 +56,20 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.ObjectReference != null) 
+                return ((this.ObjectReference != null)
                             && (this.ObjectReference.Count != 0));
             }
         }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("AllSignedDataObjects", Order=2)]
+        [XmlElementAttribute("AllSignedDataObjects")]
         public object AllSignedDataObjects { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<AnyType> _commitmentTypeQualifiers;
-        
-        [XmlArrayAttribute("CommitmentTypeQualifiers", Order=3)]
-        [XmlArrayItemAttribute("CommitmentTypeQualifier", Namespace="http://uri.etsi.org/01903/v1.3.2#")]
-        public List<AnyType> CommitmentTypeQualifiers
-        {
-            get
-            {
-                return _commitmentTypeQualifiers;
-            }
-            set
-            {
-                _commitmentTypeQualifiers = value;
-            }
-        }
-        
+
+        [XmlArrayAttribute("CommitmentTypeQualifiers")]
+        [XmlArrayItemAttribute("CommitmentTypeQualifier", Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+        public Collection<AnyType> CommitmentTypeQualifiers { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the CommitmentTypeQualifiers collection is empty.</para>
         /// </summary>
@@ -105,7 +79,7 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.CommitmentTypeQualifiers != null) 
+                return ((this.CommitmentTypeQualifiers != null)
                             && (this.CommitmentTypeQualifiers.Count != 0));
             }
         }

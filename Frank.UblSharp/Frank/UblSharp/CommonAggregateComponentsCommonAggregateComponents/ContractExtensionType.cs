@@ -21,49 +21,36 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Contract Extension. Details</ccts:DictionaryEntryName><ccts:Definition>A class to describe possible extensions to a contract.</ccts:Definition><ccts:ObjectClass>Contract Extension</ccts:ObjectClass></ccts:Component></para>
     /// </summary>
     [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Contract Extension. Details</ccts:DictionaryEntryName><ccts:Definition>A class to describe possible extensions to a contract.</ccts:Definition><ccts:ObjectClass>Contract Extension</ccts:ObjectClass></ccts:Component>")]
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("ContractExtensionType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlTypeAttribute("ContractExtensionType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("ContractExtension", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlRootAttribute("ContractExtension", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public partial class ContractExtensionType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.OptionsDescriptionType> _optionsDescription;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Contract Extension. Options Description. Text</ccts:DictionaryEntryName><ccts:Definition>A description for the possible options that can be carried out during the execution of the contract.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Contract Extension</ccts:ObjectClass><ccts:PropertyTerm>Options Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Contract Extension. Options Description. Text</ccts:DictionaryEntryName><ccts:Definition>A description for the possible options that can be carried out during the execution of the contract.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Contract Extension</ccts:ObjectClass><ccts:PropertyTerm>Options Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("OptionsDescription", Order=0, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.OptionsDescriptionType> OptionsDescription
-        {
-            get
-            {
-                return _optionsDescription;
-            }
-            set
-            {
-                _optionsDescription = value;
-            }
-        }
-        
+        [XmlElementAttribute("OptionsDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.OptionsDescriptionType> OptionsDescription { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the OptionsDescription collection is empty.</para>
         /// </summary>
@@ -73,58 +60,45 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.OptionsDescription != null) 
+                return ((this.OptionsDescription != null)
                             && (this.OptionsDescription.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Contract Extension. Minimum_ Number. Numeric</ccts:DictionaryEntryName><ccts:Definition>The fixed minimum number of contract extensions or renewals.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Contract Extension</ccts:ObjectClass><ccts:PropertyTermQualifier>Minimum</ccts:PropertyTermQualifier><ccts:PropertyTerm>Number</ccts:PropertyTerm><ccts:RepresentationTerm>Numeric</ccts:RepresentationTerm><ccts:DataType>Numeric. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Contract Extension. Minimum_ Number. Numeric</ccts:DictionaryEntryName><ccts:Definition>The fixed minimum number of contract extensions or renewals.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Contract Extension</ccts:ObjectClass><ccts:PropertyTermQualifier>Minimum</ccts:PropertyTermQualifier><ccts:PropertyTerm>Number</ccts:PropertyTerm><ccts:RepresentationTerm>Numeric</ccts:RepresentationTerm><ccts:DataType>Numeric. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("MinimumNumberNumeric", Order=1, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("MinimumNumberNumeric", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.MinimumNumberNumericType MinimumNumberNumeric { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Contract Extension. Maximum_ Number. Numeric</ccts:DictionaryEntryName><ccts:Definition>The maximum allowed number of contract extensions.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Contract Extension</ccts:ObjectClass><ccts:PropertyTermQualifier>Maximum</ccts:PropertyTermQualifier><ccts:PropertyTerm>Number</ccts:PropertyTerm><ccts:RepresentationTerm>Numeric</ccts:RepresentationTerm><ccts:DataType>Numeric. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Contract Extension. Maximum_ Number. Numeric</ccts:DictionaryEntryName><ccts:Definition>The maximum allowed number of contract extensions.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Contract Extension</ccts:ObjectClass><ccts:PropertyTermQualifier>Maximum</ccts:PropertyTermQualifier><ccts:PropertyTerm>Number</ccts:PropertyTerm><ccts:RepresentationTerm>Numeric</ccts:RepresentationTerm><ccts:DataType>Numeric. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("MaximumNumberNumeric", Order=2, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("MaximumNumberNumeric", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.MaximumNumberNumericType MaximumNumberNumeric { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Contract Extension. Option Validity_ Period. Period</ccts:DictionaryEntryName><ccts:Definition>The period during which the option for extending the contract is available.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Contract Extension</ccts:ObjectClass><ccts:PropertyTermQualifier>Option Validity</ccts:PropertyTermQualifier><ccts:PropertyTerm>Period</ccts:PropertyTerm><ccts:AssociatedObjectClass>Period</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Period</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Contract Extension. Option Validity_ Period. Period</ccts:DictionaryEntryName><ccts:Definition>The period during which the option for extending the contract is available.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Contract Extension</ccts:ObjectClass><ccts:PropertyTermQualifier>Option Validity</ccts:PropertyTermQualifier><ccts:PropertyTerm>Period</ccts:PropertyTerm><ccts:AssociatedObjectClass>Period</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Period</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("OptionValidityPeriod", Order=3)]
+        [XmlElementAttribute("OptionValidityPeriod")]
         public PeriodType OptionValidityPeriod { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<RenewalType> _renewal;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Contract Extension. Renewal</ccts:DictionaryEntryName><ccts:Definition>The period allowed for each contract extension.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Contract Extension</ccts:ObjectClass><ccts:PropertyTerm>Renewal</ccts:PropertyTerm><ccts:AssociatedObjectClass>Renewal</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Renewal</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Contract Extension. Renewal</ccts:DictionaryEntryName><ccts:Definition>The period allowed for each contract extension.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Contract Extension</ccts:ObjectClass><ccts:PropertyTerm>Renewal</ccts:PropertyTerm><ccts:AssociatedObjectClass>Renewal</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Renewal</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("Renewal", Order=4)]
-        public List<RenewalType> Renewal
-        {
-            get
-            {
-                return _renewal;
-            }
-            set
-            {
-                _renewal = value;
-            }
-        }
-        
+        [XmlElementAttribute("Renewal")]
+        public Collection<RenewalType> Renewal { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Renewal collection is empty.</para>
         /// </summary>
@@ -134,7 +108,7 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.Renewal != null) 
+                return ((this.Renewal != null)
                             && (this.Renewal.Count != 0));
             }
         }

@@ -21,8 +21,8 @@ namespace Frank.UblSharp.CommonExtensionComponentsCommonExtensionComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para>A container for all extensions present in the document.</para>
     /// <para>A container for all extensions present in the document.</para>
@@ -31,40 +31,27 @@ namespace Frank.UblSharp.CommonExtensionComponentsCommonExtensionComponents
         "sions present in the document.")]
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("UBLExtensionsType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
+    [XmlTypeAttribute("UBLExtensionsType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("UBLExtensions", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
+    [XmlRootAttribute("UBLExtensions", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
     public partial class UblExtensionsType
     {
-        
+
         /// <summary>
         /// <para xml:lang="en">Gets or sets a value uniquely identifying this entity.</para>
         /// </summary>
         [DescriptionAttribute("Gets or sets a value uniquely identifying this entity.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlIgnoreAttribute()]
         [KeyAttribute()]
         public long Id { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<UblExtensionType> _ublExtension;
-        
+
         /// <summary>
         /// <para>A single extension for private use.</para>
         /// </summary>
         [DescriptionAttribute("A single extension for private use.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("UBLExtension", Order=0)]
-        public List<UblExtensionType> UblExtension
-        {
-            get
-            {
-                return _ublExtension;
-            }
-            set
-            {
-                _ublExtension = value;
-            }
-        }
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("UBLExtension")]
+        public Collection<UblExtensionType> UblExtension { get; set; }
     }
 }

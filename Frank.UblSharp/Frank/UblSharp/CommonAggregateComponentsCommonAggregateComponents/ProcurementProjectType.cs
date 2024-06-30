@@ -21,71 +21,45 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Details</ccts:DictionaryEntryName><ccts:Definition>A class to describe a project to procure goods, works, or services.</ccts:Definition><ccts:ObjectClass>Procurement Project</ccts:ObjectClass></ccts:Component></para>
     /// </summary>
     [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ABIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Details</ccts:DictionaryEntryName><ccts:Definition>A class to describe a project to procure goods, works, or services.</ccts:Definition><ccts:ObjectClass>Procurement Project</ccts:ObjectClass></ccts:Component>")]
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("ProcurementProjectType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlTypeAttribute("ProcurementProjectType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("ProcurementProject", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    [XmlRootAttribute("ProcurementProject", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public partial class ProcurementProjectType
     {
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Identifier</ccts:DictionaryEntryName><ccts:Definition>An identifier for this procurement project.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTerm>Identifier</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Identifier</ccts:DictionaryEntryName><ccts:Definition>An identifier for this procurement project.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTerm>Identifier</ccts:PropertyTerm><ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm><ccts:DataType>Identifier. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ID", Order=0, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("ID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         [KeyAttribute()]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.IdType Id { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.NameType> _name;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Name</ccts:DictionaryEntryName><ccts:Definition>A name of this procurement project.</ccts:Definition><ccts:Cardinality>1..n</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTerm>Name</ccts:PropertyTerm><ccts:RepresentationTerm>Name</ccts:RepresentationTerm><ccts:DataType>Name. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Name</ccts:DictionaryEntryName><ccts:Definition>A name of this procurement project.</ccts:Definition><ccts:Cardinality>1..n</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTerm>Name</ccts:PropertyTerm><ccts:RepresentationTerm>Name</ccts:RepresentationTerm><ccts:DataType>Name. Type</ccts:DataType></ccts:Component>")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("Name", Order=1, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.NameType> Name
-        {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                _name = value;
-            }
-        }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DescriptionType> _description;
-        
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("Name", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.NameType> Name { get; set; }
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing this procurement project.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing this procurement project.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("Description", Order=2, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DescriptionType> Description
-        {
-            get
-            {
-                return _description;
-            }
-            set
-            {
-                _description = value;
-            }
-        }
-        
+        [XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.DescriptionType> Description { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Description collection is empty.</para>
         /// </summary>
@@ -95,67 +69,54 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.Description != null) 
+                return ((this.Description != null)
                             && (this.Description.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Procurement_ Type Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the type of procurement project (e.g., goods, works, services).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Procurement</ccts:PropertyTermQualifier><ccts:PropertyTerm>Type Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Procurement_ Type Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the type of procurement project (e.g., goods, works, services).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Procurement</ccts:PropertyTermQualifier><ccts:PropertyTerm>Type Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ProcurementTypeCode", Order=3, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("ProcurementTypeCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ProcurementTypeCodeType ProcurementTypeCode { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Procurement Sub_ Type Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the subcategory of the type of work for this project (e.g., land surveying, IT consulting).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Procurement Sub</ccts:PropertyTermQualifier><ccts:PropertyTerm>Type Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Procurement Sub_ Type Code. Code</ccts:DictionaryEntryName><ccts:Definition>A code signifying the subcategory of the type of work for this project (e.g., land surveying, IT consulting).</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Procurement Sub</ccts:PropertyTermQualifier><ccts:PropertyTerm>Type Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ProcurementSubTypeCode", Order=4, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("ProcurementSubTypeCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.ProcurementSubTypeCodeType ProcurementSubTypeCode { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Quality Control Code. Code</ccts:DictionaryEntryName><ccts:Definition>The indication of whether or not the control quality is included in the works project.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTerm>Quality Control Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Quality Control Code. Code</ccts:DictionaryEntryName><ccts:Definition>The indication of whether or not the control quality is included in the works project.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTerm>Quality Control Code</ccts:PropertyTerm><ccts:RepresentationTerm>Code</ccts:RepresentationTerm><ccts:DataType>Code. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("QualityControlCode", Order=5, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("QualityControlCode", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.QualityControlCodeType QualityControlCode { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Required_ Fee. Amount</ccts:DictionaryEntryName><ccts:Definition>The amount of the reimbursement fee for concession procurement projects.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Required</ccts:PropertyTermQualifier><ccts:PropertyTerm>Fee</ccts:PropertyTerm><ccts:RepresentationTerm>Amount</ccts:RepresentationTerm><ccts:DataType>Amount. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Required_ Fee. Amount</ccts:DictionaryEntryName><ccts:Definition>The amount of the reimbursement fee for concession procurement projects.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Required</ccts:PropertyTermQualifier><ccts:PropertyTerm>Fee</ccts:PropertyTerm><ccts:RepresentationTerm>Amount</ccts:RepresentationTerm><ccts:DataType>Amount. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("RequiredFeeAmount", Order=6, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("RequiredFeeAmount", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.RequiredFeeAmountType RequiredFeeAmount { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.FeeDescriptionType> _feeDescription;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Fee_ Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing the reimbursement fee for concession procurement projects.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Fee</ccts:PropertyTermQualifier><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Fee_ Description. Text</ccts:DictionaryEntryName><ccts:Definition>Text describing the reimbursement fee for concession procurement projects.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Fee</ccts:PropertyTermQualifier><ccts:PropertyTerm>Description</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("FeeDescription", Order=7, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.FeeDescriptionType> FeeDescription
-        {
-            get
-            {
-                return _feeDescription;
-            }
-            set
-            {
-                _feeDescription = value;
-            }
-        }
-        
+        [XmlElementAttribute("FeeDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.FeeDescriptionType> FeeDescription { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the FeeDescription collection is empty.</para>
         /// </summary>
@@ -165,49 +126,36 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.FeeDescription != null) 
+                return ((this.FeeDescription != null)
                             && (this.FeeDescription.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Requested_ Delivery Date. Date</ccts:DictionaryEntryName><ccts:Definition>The requested delivery date for this procurement project.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Requested</ccts:PropertyTermQualifier><ccts:PropertyTerm>Delivery Date</ccts:PropertyTerm><ccts:RepresentationTerm>Date</ccts:RepresentationTerm><ccts:DataType>Date. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Requested_ Delivery Date. Date</ccts:DictionaryEntryName><ccts:Definition>The requested delivery date for this procurement project.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Requested</ccts:PropertyTermQualifier><ccts:PropertyTerm>Delivery Date</ccts:PropertyTerm><ccts:RepresentationTerm>Date</ccts:RepresentationTerm><ccts:DataType>Date. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("RequestedDeliveryDate", Order=8, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("RequestedDeliveryDate", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.RequestedDeliveryDateType RequestedDeliveryDate { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Estimated_ Overall Contract. Quantity</ccts:DictionaryEntryName><ccts:Definition>The estimated overall quantity for this procurement project.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Estimated</ccts:PropertyTermQualifier><ccts:PropertyTerm>Overall Contract</ccts:PropertyTerm><ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm><ccts:DataType>Quantity. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Estimated_ Overall Contract. Quantity</ccts:DictionaryEntryName><ccts:Definition>The estimated overall quantity for this procurement project.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Estimated</ccts:PropertyTermQualifier><ccts:PropertyTerm>Overall Contract</ccts:PropertyTerm><ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm><ccts:DataType>Quantity. Type</ccts:DataType></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("EstimatedOverallContractQuantity", Order=9, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("EstimatedOverallContractQuantity", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.EstimatedOverallContractQuantityType EstimatedOverallContractQuantity { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.NoteType> _note;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Note. Text</ccts:DictionaryEntryName><ccts:Definition>Free-form text applying to the Procurement Project. This element may contain additional information about the lot/contract that is not contained explicitly in another structure.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTerm>Note</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>BBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Note. Text</ccts:DictionaryEntryName><ccts:Definition>Free-form text applying to the Procurement Project. This element may contain additional information about the lot/contract that is not contained explicitly in another structure.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTerm>Note</ccts:PropertyTerm><ccts:RepresentationTerm>Text</ccts:RepresentationTerm><ccts:DataType>Text. Type</ccts:DataType></ccts:Component>")]
-        [XmlElementAttribute("Note", Order=10, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public List<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.NoteType> Note
-        {
-            get
-            {
-                return _note;
-            }
-            set
-            {
-                _note = value;
-            }
-        }
-        
+        [XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        public Collection<Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.NoteType> Note { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Note collection is empty.</para>
         /// </summary>
@@ -217,49 +165,36 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.Note != null) 
+                return ((this.Note != null)
                             && (this.Note.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Requested Tender Total</ccts:DictionaryEntryName><ccts:Definition>Budget monetary amounts for the project as whole.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTerm>Requested Tender Total</ccts:PropertyTerm><ccts:AssociatedObjectClass>Requested Tender Total</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Requested Tender Total</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Requested Tender Total</ccts:DictionaryEntryName><ccts:Definition>Budget monetary amounts for the project as whole.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTerm>Requested Tender Total</ccts:PropertyTerm><ccts:AssociatedObjectClass>Requested Tender Total</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Requested Tender Total</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("RequestedTenderTotal", Order=11)]
+        [XmlElementAttribute("RequestedTenderTotal")]
         public RequestedTenderTotalType RequestedTenderTotal { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Main_ Commodity Classification. Commodity Classification</ccts:DictionaryEntryName><ccts:Definition>An association to the main classification category for the deliverable requested.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Main</ccts:PropertyTermQualifier><ccts:PropertyTerm>Commodity Classification</ccts:PropertyTerm><ccts:AssociatedObjectClass>Commodity Classification</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Commodity Classification</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Main_ Commodity Classification. Commodity Classification</ccts:DictionaryEntryName><ccts:Definition>An association to the main classification category for the deliverable requested.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Main</ccts:PropertyTermQualifier><ccts:PropertyTerm>Commodity Classification</ccts:PropertyTerm><ccts:AssociatedObjectClass>Commodity Classification</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Commodity Classification</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("MainCommodityClassification", Order=12)]
+        [XmlElementAttribute("MainCommodityClassification")]
         public CommodityClassificationType MainCommodityClassification { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<CommodityClassificationType> _additionalCommodityClassification;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Additional_ Commodity Classification. Commodity Classification</ccts:DictionaryEntryName><ccts:Definition>An association to additional classification categories for the deliverable requested.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier><ccts:PropertyTerm>Commodity Classification</ccts:PropertyTerm><ccts:AssociatedObjectClass>Commodity Classification</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Commodity Classification</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Additional_ Commodity Classification. Commodity Classification</ccts:DictionaryEntryName><ccts:Definition>An association to additional classification categories for the deliverable requested.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier><ccts:PropertyTerm>Commodity Classification</ccts:PropertyTerm><ccts:AssociatedObjectClass>Commodity Classification</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Commodity Classification</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("AdditionalCommodityClassification", Order=13)]
-        public List<CommodityClassificationType> AdditionalCommodityClassification
-        {
-            get
-            {
-                return _additionalCommodityClassification;
-            }
-            set
-            {
-                _additionalCommodityClassification = value;
-            }
-        }
-        
+        [XmlElementAttribute("AdditionalCommodityClassification")]
+        public Collection<CommodityClassificationType> AdditionalCommodityClassification { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the AdditionalCommodityClassification collection is empty.</para>
         /// </summary>
@@ -269,31 +204,18 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.AdditionalCommodityClassification != null) 
+                return ((this.AdditionalCommodityClassification != null)
                             && (this.AdditionalCommodityClassification.Count != 0));
             }
         }
-        
-        [XmlIgnoreAttribute()]
-        private List<LocationType> _realizedLocation;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Realized_ Location. Location</ccts:DictionaryEntryName><ccts:Definition>A place where this procurement project will be physically realized.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Realized</ccts:PropertyTermQualifier><ccts:PropertyTerm>Location</ccts:PropertyTerm><ccts:AssociatedObjectClass>Location</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Location</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Realized_ Location. Location</ccts:DictionaryEntryName><ccts:Definition>A place where this procurement project will be physically realized.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Realized</ccts:PropertyTermQualifier><ccts:PropertyTerm>Location</ccts:PropertyTerm><ccts:AssociatedObjectClass>Location</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Location</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("RealizedLocation", Order=14)]
-        public List<LocationType> RealizedLocation
-        {
-            get
-            {
-                return _realizedLocation;
-            }
-            set
-            {
-                _realizedLocation = value;
-            }
-        }
-        
+        [XmlElementAttribute("RealizedLocation")]
+        public Collection<LocationType> RealizedLocation { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the RealizedLocation collection is empty.</para>
         /// </summary>
@@ -303,49 +225,36 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.RealizedLocation != null) 
+                return ((this.RealizedLocation != null)
                             && (this.RealizedLocation.Count != 0));
             }
         }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Planned_ Period. Period</ccts:DictionaryEntryName><ccts:Definition>The period during which this procurement project is planned to take place.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Planned</ccts:PropertyTermQualifier><ccts:PropertyTerm>Period</ccts:PropertyTerm><ccts:AssociatedObjectClass>Period</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Period</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Planned_ Period. Period</ccts:DictionaryEntryName><ccts:Definition>The period during which this procurement project is planned to take place.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTermQualifier>Planned</ccts:PropertyTermQualifier><ccts:PropertyTerm>Period</ccts:PropertyTerm><ccts:AssociatedObjectClass>Period</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Period</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("PlannedPeriod", Order=15)]
+        [XmlElementAttribute("PlannedPeriod")]
         public PeriodType PlannedPeriod { get; set; }
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Contract Extension</ccts:DictionaryEntryName><ccts:Definition>The contract extension for this tendering process.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTerm>Contract Extension</ccts:PropertyTerm><ccts:AssociatedObjectClass>Contract Extension</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Contract Extension</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Contract Extension</ccts:DictionaryEntryName><ccts:Definition>The contract extension for this tendering process.</ccts:Definition><ccts:Cardinality>0..1</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTerm>Contract Extension</ccts:PropertyTerm><ccts:AssociatedObjectClass>Contract Extension</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Contract Extension</ccts:RepresentationTerm></ccts:Component>")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ContractExtension", Order=16)]
+        [XmlElementAttribute("ContractExtension")]
         public ContractExtensionType ContractExtension { get; set; }
-        
-        [XmlIgnoreAttribute()]
-        private List<RequestForTenderLineType> _requestForTenderLine;
-        
+
         /// <summary>
         /// <para><ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2"><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Request For Tender Line</ccts:DictionaryEntryName><ccts:Definition>A good or service this project is intended to procure.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTerm>Request For Tender Line</ccts:PropertyTerm><ccts:AssociatedObjectClass>Request For Tender Line</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Request For Tender Line</ccts:RepresentationTerm></ccts:Component></para>
         /// </summary>
         [DescriptionAttribute(@"<ccts:Component xmlns:ccts=""urn:un:unece:uncefact:documentation:2""><ccts:ComponentType>ASBIE</ccts:ComponentType><ccts:DictionaryEntryName>Procurement Project. Request For Tender Line</ccts:DictionaryEntryName><ccts:Definition>A good or service this project is intended to procure.</ccts:Definition><ccts:Cardinality>0..n</ccts:Cardinality><ccts:ObjectClass>Procurement Project</ccts:ObjectClass><ccts:PropertyTerm>Request For Tender Line</ccts:PropertyTerm><ccts:AssociatedObjectClass>Request For Tender Line</ccts:AssociatedObjectClass><ccts:RepresentationTerm>Request For Tender Line</ccts:RepresentationTerm></ccts:Component>")]
-        [XmlElementAttribute("RequestForTenderLine", Order=17)]
-        public List<RequestForTenderLineType> RequestForTenderLine
-        {
-            get
-            {
-                return _requestForTenderLine;
-            }
-            set
-            {
-                _requestForTenderLine = value;
-            }
-        }
-        
+        [XmlElementAttribute("RequestForTenderLine")]
+        public Collection<RequestForTenderLineType> RequestForTenderLine { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the RequestForTenderLine collection is empty.</para>
         /// </summary>
@@ -355,7 +264,7 @@ namespace Frank.UblSharp.CommonAggregateComponentsCommonAggregateComponents
         {
             get
             {
-                return ((this.RequestForTenderLine != null) 
+                return ((this.RequestForTenderLine != null)
                             && (this.RequestForTenderLine.Count != 0));
             }
         }

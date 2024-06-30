@@ -21,33 +21,20 @@ namespace Frank.UblSharp.CoreComponentTypes
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("SignaturePropertyType", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlTypeAttribute("SignaturePropertyType", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("SignatureProperty", Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    [XmlRootAttribute("SignatureProperty", Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     public partial class SignaturePropertyType
     {
-        
-        [XmlIgnoreAttribute()]
-        private List<XmlElement> _any;
-        
-        [XmlAnyElementAttribute(Order=0)]
+
+        [XmlAnyElementAttribute()]
         [System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute()]
-        public List<XmlElement> Any
-        {
-            get
-            {
-                return _any;
-            }
-            set
-            {
-                _any = value;
-            }
-        }
-        
+        public Collection<System.Xml.Linq.XElement> Any { get; set; }
+
         /// <summary>
         /// <para xml:lang="en">Gets a value indicating whether the Any collection is empty.</para>
         /// </summary>
@@ -57,21 +44,21 @@ namespace Frank.UblSharp.CoreComponentTypes
         {
             get
             {
-                return ((this.Any != null) 
+                return ((this.Any != null)
                             && (this.Any.Count != 0));
             }
         }
-        
-        [RequiredAttribute(AllowEmptyStrings=true)]
+
+        [RequiredAttribute(AllowEmptyStrings = true)]
         [XmlAttributeAttribute("Target")]
         public string Target { get; set; }
-        
+
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
         [XmlAttributeAttribute("Id")]
         [KeyAttribute()]
         public string Id { get; set; }
-        
+
         [XmlTextAttribute()]
         public string[] Text { get; set; }
     }

@@ -21,8 +21,8 @@ namespace Frank.UblSharp.CommonExtensionComponentsCommonExtensionComponents
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
-    
-    
+
+
     /// <summary>
     /// <para>A single extension for private use.</para>
     /// <para>A single extension for private use.</para>
@@ -30,100 +30,100 @@ namespace Frank.UblSharp.CommonExtensionComponentsCommonExtensionComponents
     [DescriptionAttribute("A single extension for private use. A single extension for private use.")]
     [GeneratedCodeAttribute("XmlSchemaClassGenerator", "2.1.1144.0")]
     [SerializableAttribute()]
-    [XmlTypeAttribute("UBLExtensionType", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
+    [XmlTypeAttribute("UBLExtensionType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
     [DebuggerStepThroughAttribute()]
-    [XmlRootAttribute("UBLExtension", Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
+    [XmlRootAttribute("UBLExtension", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
     public partial class UblExtensionType
     {
-        
+
         /// <summary>
         /// <para>An identifier for the Extension assigned by the creator of the extension.</para>
         /// </summary>
         [DescriptionAttribute("An identifier for the Extension assigned by the creator of the extension.")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ID", Order=0, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("ID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         [KeyAttribute()]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.IdType Id { get; set; }
-        
+
         /// <summary>
         /// <para>A name for the Extension assigned by the creator of the extension.</para>
         /// </summary>
         [DescriptionAttribute("A name for the Extension assigned by the creator of the extension.")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("Name", Order=1, Namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [XmlElementAttribute("Name", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public Frank.UblSharp.CommonBasicComponentsCommonBasicComponents.NameType Name { get; set; }
-        
+
         /// <summary>
         /// <para>An agency that maintains one or more Extensions.</para>
         /// </summary>
         [DescriptionAttribute("An agency that maintains one or more Extensions.")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ExtensionAgencyID", Order=2)]
+        [XmlElementAttribute("ExtensionAgencyID")]
         public ExtensionAgencyIdType ExtensionAgencyId { get; set; }
-        
+
         /// <summary>
         /// <para>The name of the agency that maintains the Extension.</para>
         /// </summary>
         [DescriptionAttribute("The name of the agency that maintains the Extension.")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ExtensionAgencyName", Order=3)]
+        [XmlElementAttribute("ExtensionAgencyName")]
         public ExtensionAgencyNameType ExtensionAgencyName { get; set; }
-        
+
         /// <summary>
         /// <para>The version of the Extension.</para>
         /// </summary>
         [DescriptionAttribute("The version of the Extension.")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ExtensionVersionID", Order=4)]
+        [XmlElementAttribute("ExtensionVersionID")]
         public ExtensionVersionIdType ExtensionVersionId { get; set; }
-        
+
         /// <summary>
         /// <para>A URI for the Agency that maintains the Extension.</para>
         /// </summary>
         [DescriptionAttribute("A URI for the Agency that maintains the Extension.")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ExtensionAgencyURI", Order=5)]
+        [XmlElementAttribute("ExtensionAgencyURI")]
         public ExtensionAgencyUriType ExtensionAgencyUri { get; set; }
-        
+
         /// <summary>
         /// <para>A URI for the Extension.</para>
         /// </summary>
         [DescriptionAttribute("A URI for the Extension.")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ExtensionURI", Order=6)]
+        [XmlElementAttribute("ExtensionURI")]
         public ExtensionUriType ExtensionUri { get; set; }
-        
+
         /// <summary>
         /// <para>A code for reason the Extension is being included.</para>
         /// </summary>
         [DescriptionAttribute("A code for reason the Extension is being included.")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ExtensionReasonCode", Order=7)]
+        [XmlElementAttribute("ExtensionReasonCode")]
         public ExtensionReasonCodeType ExtensionReasonCode { get; set; }
-        
+
         /// <summary>
         /// <para>A description of the reason for the Extension.</para>
         /// </summary>
         [DescriptionAttribute("A description of the reason for the Extension.")]
         [AllowNullAttribute()]
         [MaybeNullAttribute()]
-        [XmlElementAttribute("ExtensionReason", Order=8)]
+        [XmlElementAttribute("ExtensionReason")]
         public ExtensionReasonType ExtensionReason { get; set; }
-        
+
         /// <summary>
         /// <para>The definition of the extension content.</para>
         /// </summary>
         [DescriptionAttribute("The definition of the extension content.")]
-        [RequiredAttribute(AllowEmptyStrings=true)]
-        [XmlElementAttribute("ExtensionContent", Order=9)]
+        [RequiredAttribute(AllowEmptyStrings = true)]
+        [XmlElementAttribute("ExtensionContent")]
         public ExtensionContentType ExtensionContent { get; set; }
     }
 }
