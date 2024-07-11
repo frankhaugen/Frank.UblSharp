@@ -3,4 +3,14 @@
     <PropertyGroup>
     </PropertyGroup>
 
+    <ItemGroup>
+        <PackageReference Include="XmlSchemaClassGenerator-beta" Version="2.1.1155" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="..\Frank.UblSharp.Generation\Frank.UblSharp.Generation.csproj"
+                          OutputItemType="Analyzer"
+                          ReferenceOutputAssembly="true"
+                          PrivateAssets="all" />
+    </ItemGroup>
 </Project>

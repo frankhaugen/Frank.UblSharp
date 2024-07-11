@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Frank.Analyzers.AutoProperties" Version="0.2.0" />
+    </ItemGroup>
+
 </Project>
