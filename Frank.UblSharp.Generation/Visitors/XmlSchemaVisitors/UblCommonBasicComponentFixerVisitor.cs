@@ -7,9 +7,11 @@ namespace Frank.UblSharp.Generation.XmlSchemaVisitors;
 
 public class UblCommonBasicComponentFixerVisitor : IAsyncVisitor<XmlSchemaSet>
 {
+    public void Visit(XmlSchemaSet schemaSet) => FlattenCommonBasicComponents(schemaSet);
+
     public Task VisitAsync(XmlSchemaSet schemaSet)
     {
-        FlattenCommonBasicComponents(schemaSet);
+        Visit(schemaSet);
         return Task.CompletedTask;
     }
 

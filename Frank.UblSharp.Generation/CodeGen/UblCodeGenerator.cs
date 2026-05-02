@@ -1,6 +1,9 @@
 ﻿using System.CodeDom;
+using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Xml.Schema;
+using Frank.UblSharp.Internals.XsdCodeGenerator;
 using Frank.UblSharp.Resources;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -13,62 +16,52 @@ namespace Frank.UblSharp.Generation.CodeGen;
 [Generator]
 public class UblCodeGenerator : ISourceGenerator
 {
-    private XmlSchemaSet? _xmlSchemaSet;
-    private DirectoryInfo? _outputDir;
-    
     /// <inheritdoc />
     public void Initialize(GeneratorInitializationContext context)
     {
     }
-    
+
     /// <inheritdoc />
     public void Execute(GeneratorExecutionContext context)
     {
         var xmlSchemaSet = ResourcesHelper.GetXmlSchemaSet();
         var schemaFilter = new UblMainDocumentXmlSchemaFilter();
         xmlSchemaSet = schemaFilter.Filter(xmlSchemaSet);
-        
-        var visitor = new XmlSchemaMetaVisitor();
-        visitor.VisitAsync(xmlSchemaSet).GetAwaiter().GetResult();
-        
-        _xmlSchemaSet = xmlSchemaSet;
-        if (_xmlSchemaSet is null) return;
-        
+
+        new XmlSchemaMetaVisitor().Visit(xmlSchemaSet);
+
         if (!context.TryGetProjectDir(out var projectDir) || !context.TryGetRootNamespace(out var rootNamespace)) return;
         if (projectDir is null) return;
         if (rootNamespace is null) return;
 
-        var codeWriter = new CodeWriter();
-        codeWriter.CodeNamespaceGenerated += CodeWriterOnCodeNamespaceGenerated;
-        _outputDir = new DirectoryInfo(projectDir);
-        var generator = UblGeneratorFactory.Create(_outputDir, s => context.ReportDiagnostic(Diagnostic.Create(new DiagnosticDescriptor("FRANK0003", "Failed to generate UBL classes", s, "Frank", DiagnosticSeverity.Error, true), Location.None)), codeWriter);
-        generator.Generate(_xmlSchemaSet);
+        var outputDir = new DirectoryInfo(projectDir);
+        var codeWriter = new CodeWriter(cn => EmitNamespaceSource(context, cn));
+        var generator = UblGeneratorFactory.Create(
+            outputDir,
+            s => context.ReportDiagnostic(Diagnostic.Create(
+                new DiagnosticDescriptor("FRANK0003", "Failed to generate UBL classes", s, "Frank", DiagnosticSeverity.Error, true),
+                Location.None)),
+            codeWriter);
+        generator.Generate(xmlSchemaSet);
     }
 
-    private void CodeWriterOnCodeNamespaceGenerated(object? sender, CodeNamespace e)
+    private static void EmitNamespaceSource(GeneratorExecutionContext context, CodeNamespace codeNamespace)
     {
         var rewriter = new CompilationUnitSyntaxRewriter();
-        
-        var compilationUnit = GetCompilationUnit(e);
-        
+
+        var compilationUnit = GetCompilationUnit(codeNamespace);
+
         var newCompilationUnit = rewriter.Visit(compilationUnit);
-        
+
         var sourceText = SourceText.From(newCompilationUnit.NormalizeWhitespace().ToFullString(), Encoding.UTF8);
-        var fileName = $"{e.Name}.g.cs";
-        var filePath = Path.Combine(_outputDir!.FullName, fileName);
-        var file = new FileInfo(filePath);
-        file.Directory?.Create();
-        using var fileStream = file.OpenWrite();
-        using var textWriter = new StreamWriter(fileStream);
-        sourceText.Write(textWriter);
-        
-        
+        var hint = Regex.Replace(codeNamespace.Name, @"[^\w]", "_");
+        context.AddSource($"{hint}.g.cs", sourceText);
     }
 
-    private CompilationUnitSyntax GetCompilationUnit(CodeNamespace codeNamespace)
+    private static CompilationUnitSyntax GetCompilationUnit(CodeNamespace codeNamespace)
     {
         var compilationUnit = SyntaxFactory.CompilationUnit().AddMembers(SyntaxFactory.NamespaceDeclaration(SyntaxFactory.ParseName(codeNamespace.Name)));
-        
+
         foreach (CodeTypeDeclaration codeNamespaceType in codeNamespace.Types)
         {
             var classDeclaration = SyntaxFactory.ClassDeclaration(codeNamespaceType.Name);
@@ -76,10 +69,10 @@ public class UblCodeGenerator : ISourceGenerator
             {
                 if (codeTypeMember is CodeMemberField codeMemberField)
                 {
-                    var fieldDeclaration = SyntaxFactory.FieldDeclaration(SyntaxFactory.VariableDeclaration(SyntaxFactory.ParseTypeName(codeMemberField.Type.BaseType), SyntaxFactory.SeparatedList(new[] {SyntaxFactory.VariableDeclarator(codeMemberField.Name)})));
+                    var fieldDeclaration = SyntaxFactory.FieldDeclaration(SyntaxFactory.VariableDeclaration(SyntaxFactory.ParseTypeName(codeMemberField.Type.BaseType), SyntaxFactory.SeparatedList(new[] { SyntaxFactory.VariableDeclarator(codeMemberField.Name) })));
                     classDeclaration = classDeclaration.AddMembers(fieldDeclaration);
                 }
-                
+
                 if (codeTypeMember is CodeMemberProperty codeMemberProperty)
                 {
                     var propertyDeclaration = SyntaxFactory.PropertyDeclaration(SyntaxFactory.ParseTypeName(codeMemberProperty.Type.BaseType), codeMemberProperty.Name)
@@ -90,7 +83,7 @@ public class UblCodeGenerator : ISourceGenerator
                         })));
                     classDeclaration = classDeclaration.AddMembers(propertyDeclaration);
                 }
-                
+
                 if (codeTypeMember is CodeMemberMethod codeMemberMethod)
                 {
                     var methodDeclaration = SyntaxFactory.MethodDeclaration(SyntaxFactory.ParseTypeName(codeMemberMethod.ReturnType.BaseType), codeMemberMethod.Name)
@@ -98,7 +91,7 @@ public class UblCodeGenerator : ISourceGenerator
                         .WithBody(SyntaxFactory.Block());
                     classDeclaration = classDeclaration.AddMembers(methodDeclaration);
                 }
-                
+
                 if (codeTypeMember is CodeTypeDeclaration codeTypeDeclaration)
                 {
                     var nestedClassDeclaration = SyntaxFactory.ClassDeclaration(codeTypeDeclaration.Name);
@@ -106,10 +99,10 @@ public class UblCodeGenerator : ISourceGenerator
                     {
                         if (nestedCodeTypeMember is CodeMemberField nestedCodeMemberField)
                         {
-                            var fieldDeclaration = SyntaxFactory.FieldDeclaration(SyntaxFactory.VariableDeclaration(SyntaxFactory.ParseTypeName(nestedCodeMemberField.Type.BaseType), SyntaxFactory.SeparatedList(new[] {SyntaxFactory.VariableDeclarator(nestedCodeMemberField.Name)})));
+                            var fieldDeclaration = SyntaxFactory.FieldDeclaration(SyntaxFactory.VariableDeclaration(SyntaxFactory.ParseTypeName(nestedCodeMemberField.Type.BaseType), SyntaxFactory.SeparatedList(new[] { SyntaxFactory.VariableDeclarator(nestedCodeMemberField.Name) })));
                             nestedClassDeclaration = nestedClassDeclaration.AddMembers(fieldDeclaration);
                         }
-                        
+
                         if (nestedCodeTypeMember is CodeMemberProperty nestedCodeMemberProperty)
                         {
                             var propertyDeclaration = SyntaxFactory.PropertyDeclaration(SyntaxFactory.ParseTypeName(nestedCodeMemberProperty.Type.BaseType), nestedCodeMemberProperty.Name)
@@ -120,7 +113,7 @@ public class UblCodeGenerator : ISourceGenerator
                                 })));
                             nestedClassDeclaration = nestedClassDeclaration.AddMembers(propertyDeclaration);
                         }
-                        
+
                         if (nestedCodeTypeMember is CodeMemberMethod nestedCodeMemberMethod)
                         {
                             var methodDeclaration = SyntaxFactory.MethodDeclaration(SyntaxFactory.ParseTypeName(nestedCodeMemberMethod.ReturnType.BaseType), nestedCodeMemberMethod.Name)
@@ -129,20 +122,23 @@ public class UblCodeGenerator : ISourceGenerator
                             nestedClassDeclaration = nestedClassDeclaration.AddMembers(methodDeclaration);
                         }
                     }
+
                     classDeclaration = classDeclaration.AddMembers(nestedClassDeclaration);
                 }
             }
+
             compilationUnit = compilationUnit.AddMembers(classDeclaration);
         }
-        
-        
+
         return compilationUnit;
     }
 
-    private class CodeWriter : OutputWriter
+    private sealed class CodeWriter : OutputWriter
     {
-        public override void Write(CodeNamespace cn) => CodeNamespaceGenerated.Invoke(this, cn);
+        private readonly Action<CodeNamespace> _emit;
 
-        public event EventHandler<CodeNamespace> CodeNamespaceGenerated;
+        public CodeWriter(Action<CodeNamespace> emit) => _emit = emit;
+
+        public override void Write(CodeNamespace cn) => _emit(cn);
     }
 }

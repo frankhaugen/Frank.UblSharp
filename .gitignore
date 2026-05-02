@@ -62,6 +62,9 @@ project.lock.json
 project.fragment.lock.json
 artifacts/
 
+# OASIS UBL 2.1 HTML docs (materialize with scripts/Materialize-Ubl21HtmlArtifacts.ps1 → artifacts/UBL-2.1-documentation/)
+UBL-2.1/**/*.html
+
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
 

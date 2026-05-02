@@ -1,3 +1,9 @@
 <Project>
-  <!-- Shared targets; extend as needed (see RoboSharp pattern). -->
+  <!-- Optional: dotnet build -p:PopulateUblHtmlArtifacts=true (downloads OASIS UBL-2.1.zip, writes artifacts/UBL-2.1-documentation/). -->
+  <Target Name="PopulateUblHtmlArtifacts"
+          BeforeTargets="BeforeBuild"
+          Condition="'$(PopulateUblHtmlArtifacts)' == 'true' AND '$(MSBuildProjectName)' == 'Frank.UblSharp'">
+    <Exec Command="powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File &quot;$(MSBuildThisFileDirectory)scripts\Materialize-Ubl21HtmlArtifacts.ps1&quot;"
+          WorkingDirectory="$(MSBuildThisFileDirectory)" />
+  </Target>
 </Project>

@@ -1,0 +1,24 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".github/workflows/merge.yml" />
+    <File Path=".github/workflows/pull-request.yml" />
+    <File Path=".github/workflows/release.yml" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="icon.png" />
+    <File Path="LICENSE" />
+    <File Path="nuget.config" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="Frank.UblSharp.CodeCleaner/Frank.UblSharp.CodeCleaner.csproj" />
+  <Project Path="Frank.UblSharp.Generation/Frank.UblSharp.Generation.csproj" />
+  <Project Path="Frank.UblSharp.Generator/Frank.UblSharp.Generator.csproj" />
+  <Project Path="Frank.UblSharp.GeneratorV2/Frank.UblSharp.GeneratorV2.csproj" />
+  <Project Path="Frank.UblSharp.GeneratorV3/Frank.UblSharp.GeneratorV3.csproj" />
+  <Project Path="Frank.UblSharp.GeneratorV4/Frank.UblSharp.GeneratorV4.csproj" />
+  <Project Path="Frank.UblSharp.Internals.XsdCodeGenerator/Frank.UblSharp.Internals.XsdCodeGenerator.csproj" />
+  <Project Path="Frank.UblSharp.Resources/Frank.UblSharp.Resources.csproj" />
+  <Project Path="Frank.UblSharp.Tests/Frank.UblSharp.Tests.csproj" />
+  <Project Path="Frank.UblSharp.Validation/Frank.UblSharp.Validation.csproj" />
+  <Project Path="Frank.UblSharp/Frank.UblSharp.csproj" />
+</Solution>

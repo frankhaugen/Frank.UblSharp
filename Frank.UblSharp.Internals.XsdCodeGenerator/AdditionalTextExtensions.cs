@@ -12,7 +12,8 @@ namespace Frank.UblSharp.Internals.XsdCodeGenerator
         public static Member GenerateMember(this AdditionalText file, string projectDir)
     {
         var relativePath = file.GetRelativePath(projectDir);
-        var directories = relativePath.Split('/').ToList();
+        var directoryPath = Path.GetDirectoryName(relativePath)?.Replace('\\', '/') ?? string.Empty;
+        var directories = directoryPath.Split(new[] { '/' }, StringSplitOptions.RemoveEmptyEntries).ToList();
         var memberDeclarationSyntax = file.GenerateFileInfoProperty(relativePath);
 
         return new Member

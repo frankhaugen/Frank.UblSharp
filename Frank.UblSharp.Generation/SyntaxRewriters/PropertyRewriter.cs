@@ -16,42 +16,55 @@ internal class PropertyRewriter : CSharpSyntaxRewriter
         _property = property;
     }
 
-    public override SyntaxNode VisitIdentifierName(IdentifierNameSyntax name)
+    public override SyntaxNode? VisitIdentifierName(IdentifierNameSyntax name)
     {
-        if (_backingField != null && name.Identifier.ValueText.Equals(_backingField.Name))
+        if (name.Identifier.ValueText.Equals(_backingField.Name, StringComparison.Ordinal))
         {
             var symbolInfo = _semanticModel.GetSymbolInfo(name);
-            if (symbolInfo.Symbol != null && Equals(symbolInfo.Symbol.OriginalDefinition, _backingField))
+            if (symbolInfo.Symbol is { } sym
+                && SymbolEqualityComparer.Default.Equals(sym.OriginalDefinition, _backingField))
             {
                 name = name.WithIdentifier(SyntaxFactory.Identifier(_property.Identifier.ValueText));
-                return name.WithAdditionalAnnotations(Microsoft.CodeAnalysis.Formatting.Formatter.Annotation);
+                return name.WithAdditionalAnnotations(Formatter.Annotation);
             }
         }
 
-        return name;
+        return base.VisitIdentifierName(name);
     }
 
-    public override SyntaxNode VisitPropertyDeclaration(PropertyDeclarationSyntax propertyDeclaration)
+    public override SyntaxNode? VisitPropertyDeclaration(PropertyDeclarationSyntax propertyDeclaration)
     {
-        if (propertyDeclaration == _property) return ConvertToAutoProperty(propertyDeclaration).WithAdditionalAnnotations(Formatter.Annotation);
+        if (propertyDeclaration == _property)
+            return ConvertToAutoProperty(propertyDeclaration).WithAdditionalAnnotations(Formatter.Annotation);
         return base.VisitPropertyDeclaration(propertyDeclaration);
     }
 
-    public override SyntaxNode VisitFieldDeclaration(FieldDeclarationSyntax field)
+    public override SyntaxNode? VisitFieldDeclaration(FieldDeclarationSyntax field)
     {
-        if (field == null)
+        if (field.Declaration.Variables.Count == 1
+            && SymbolEqualityComparer.Default.Equals(
+                _semanticModel.GetDeclaredSymbol(field.Declaration.Variables.First()),
+                _backingField))
+        {
             return null;
-        if (field.Declaration.Variables.Count == 1 && Equals(_semanticModel.GetDeclaredSymbol(field.Declaration.Variables.First()), _backingField)) return null;
-        return field;
+        }
+
+        return base.VisitFieldDeclaration(field);
     }
 
-    public override SyntaxNode VisitVariableDeclarator(VariableDeclaratorSyntax variable)
+    public override SyntaxNode? VisitVariableDeclarator(VariableDeclaratorSyntax variable)
     {
-        if (variable.Parent.Parent is FieldDeclarationSyntax field && field.Declaration.Variables.Count == 1 && Equals(_semanticModel.GetDeclaredSymbol(variable), _backingField)) return null;
-        return variable;
+        if (variable.Parent?.Parent is FieldDeclarationSyntax field
+            && field.Declaration.Variables.Count == 1
+            && SymbolEqualityComparer.Default.Equals(_semanticModel.GetDeclaredSymbol(variable), _backingField))
+        {
+            return null;
+        }
+
+        return base.VisitVariableDeclarator(variable);
     }
 
-    private PropertyDeclarationSyntax ConvertToAutoProperty(PropertyDeclarationSyntax propertyDeclaration)
+    private static PropertyDeclarationSyntax ConvertToAutoProperty(PropertyDeclarationSyntax propertyDeclaration)
     {
         return propertyDeclaration.WithAccessorList(SyntaxFactory.AccessorList(SyntaxFactory.List(new[]
         {

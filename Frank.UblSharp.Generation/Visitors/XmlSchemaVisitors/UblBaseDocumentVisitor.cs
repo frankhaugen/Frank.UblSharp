@@ -9,13 +9,17 @@ public class UblBaseDocumentVisitor : IAsyncVisitor<XmlSchemaSet>
     public const string AbstractBaseSchemaElementName = "BaseDocument";
     public const string AbstractBaseSchemaName = "BaseDocument";
 
-    /// <inheritdoc />
-    public async Task VisitAsync(XmlSchemaSet element)
+    public void Visit(XmlSchemaSet element)
     {
         ModifyMaindocSchemasForInheritance(element);
         FixBaseDocumentInheritance(element);
-        
-        await Task.CompletedTask;
+    }
+
+    /// <inheritdoc />
+    public Task VisitAsync(XmlSchemaSet element)
+    {
+        Visit(element);
+        return Task.CompletedTask;
     }
 
     private static void FixBaseDocumentInheritance(XmlSchemaSet schemaSet)

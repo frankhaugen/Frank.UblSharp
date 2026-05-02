@@ -5,10 +5,17 @@ namespace Frank.UblSharp.Generation;
 
 public class XmlSchemaMetaVisitor : IAsyncVisitor<XmlSchemaSet>
 {
-    public async Task VisitAsync(XmlSchemaSet element)
+    /// <summary>Runs schema fixups synchronously (preferred inside source generators).</summary>
+    public void Visit(XmlSchemaSet element)
     {
-        await new UblBaseDocumentVisitor().VisitAsync(element);
-        await new UblCommonBasicComponentFixerVisitor().VisitAsync(element);
-        await new UblCoreComponentsRenamerVisitor().VisitAsync(element);
+        new UblBaseDocumentVisitor().Visit(element);
+        new UblCommonBasicComponentFixerVisitor().Visit(element);
+        new UblCoreComponentsRenamerVisitor().Visit(element);
+    }
+
+    public Task VisitAsync(XmlSchemaSet element)
+    {
+        Visit(element);
+        return Task.CompletedTask;
     }
 }

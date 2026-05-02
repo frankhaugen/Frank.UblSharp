@@ -54,7 +54,7 @@ public static class UblGeneratorFactory
             GenerateInterfaces = true,
             NetCoreSpecificCode = true,
             SeparateClasses = true,
-            EntityFramework = true,
+            EntityFramework = false,
             EnumAsString = true,
             MapUnionToWidestCommonType = true,
             GenerateNullables = true,

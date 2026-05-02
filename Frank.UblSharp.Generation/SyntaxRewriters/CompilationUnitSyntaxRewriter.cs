@@ -1,4 +1,5 @@
-﻿using Microsoft.CodeAnalysis;
+﻿using Basic.Reference.Assemblies;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
@@ -9,10 +10,12 @@ internal class CompilationUnitSyntaxRewriter : CSharpSyntaxRewriter
     {
         var syntaxTree = node.SyntaxTree;
         var rootNode = syntaxTree.GetRoot();
-        var compilation = CSharpCompilation.Create("YourCompilation")
-            .AddReferences(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
-            .AddSyntaxTrees(syntaxTree);
-        
+        var compilation = CSharpCompilation.Create(
+            "UblGenerationScratch",
+            syntaxTrees: new[] { syntaxTree },
+            references: Net100.References.All,
+            options: new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
+
         var propertiesWithBackingFields = ExtractPropertiesWithBackingFields(rootNode, compilation.GetSemanticModel(syntaxTree));
 
         foreach (var propertiesWithBackingField in propertiesWithBackingFields)
@@ -20,17 +23,16 @@ internal class CompilationUnitSyntaxRewriter : CSharpSyntaxRewriter
             var rewriter = new PropertyRewriter(compilation.GetSemanticModel(syntaxTree), propertiesWithBackingField.BackingField, propertiesWithBackingField.Property);
             var newRootNode = rewriter.Visit(rootNode);
 
-            // After doing the rewrite, refresh the syntax tree and semantic model.
             var newSyntaxTree = newRootNode.SyntaxTree;
             rootNode = newRootNode;
             compilation = compilation.ReplaceSyntaxTree(syntaxTree, newSyntaxTree);
             syntaxTree = newSyntaxTree;
         }
-        
+
         return syntaxTree.GetRoot();
     }
-    
-    private IEnumerable<PropertyWithBackingField> ExtractPropertiesWithBackingFields(SyntaxNode root, SemanticModel semanticModel)
+
+    private static IEnumerable<PropertyWithBackingField> ExtractPropertiesWithBackingFields(SyntaxNode root, SemanticModel semanticModel)
     {
         var properties = root.DescendantNodes().OfType<PropertyDeclarationSyntax>();
         foreach (var property in properties)
@@ -43,12 +45,14 @@ internal class CompilationUnitSyntaxRewriter : CSharpSyntaxRewriter
         }
     }
 
-    private ISymbol? GetBackingFieldSymbol(PropertyDeclarationSyntax property, SemanticModel semanticModel)
+    private static ISymbol? GetBackingFieldSymbol(PropertyDeclarationSyntax property, SemanticModel semanticModel)
     {
         var propertySymbol = semanticModel.GetDeclaredSymbol(property);
         if (propertySymbol == null) return null;
 
-        foreach (var accessor in propertySymbol.GetMethod?.DeclaringSyntaxReferences.Concat(propertySymbol.SetMethod?.DeclaringSyntaxReferences) ?? [])
+        var accessorRefs = (propertySymbol.GetMethod?.DeclaringSyntaxReferences ?? Enumerable.Empty<SyntaxReference>())
+            .Concat(propertySymbol.SetMethod?.DeclaringSyntaxReferences ?? Enumerable.Empty<SyntaxReference>());
+        foreach (var accessor in accessorRefs)
         {
             var syntaxNode = accessor.GetSyntax() as AccessorDeclarationSyntax;
             if (syntaxNode == null) continue;
@@ -56,7 +60,8 @@ internal class CompilationUnitSyntaxRewriter : CSharpSyntaxRewriter
             foreach (var identifier in syntaxNode.DescendantNodes().OfType<IdentifierNameSyntax>())
             {
                 var symbol = semanticModel.GetSymbolInfo(identifier).Symbol;
-                if (symbol is IFieldSymbol fieldSymbol && fieldSymbol.ContainingType == propertySymbol.ContainingType)
+                if (symbol is IFieldSymbol fieldSymbol
+                    && SymbolEqualityComparer.Default.Equals(fieldSymbol.ContainingType, propertySymbol.ContainingType))
                     return symbol;
             }
         }

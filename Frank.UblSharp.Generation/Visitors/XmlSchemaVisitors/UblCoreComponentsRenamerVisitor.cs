@@ -6,9 +6,11 @@ namespace Frank.UblSharp.Generation.XmlSchemaVisitors;
 
 public class UblCoreComponentsRenamerVisitor : IAsyncVisitor<XmlSchemaSet>
 {
+    public void Visit(XmlSchemaSet schemaSet) => RenameCoreComponentTypes(schemaSet);
+
     public Task VisitAsync(XmlSchemaSet schemaSet)
     {
-        RenameCoreComponentTypes(schemaSet);
+        Visit(schemaSet);
         return Task.CompletedTask;
     }
 
