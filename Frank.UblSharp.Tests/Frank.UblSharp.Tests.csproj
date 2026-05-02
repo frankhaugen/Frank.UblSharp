@@ -28,7 +28,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Frank.UblSharp.Generator\Frank.UblSharp.Generator.csproj" />
       <ProjectReference Include="..\Frank.UblSharp\Frank.UblSharp.csproj" />
     </ItemGroup>
 

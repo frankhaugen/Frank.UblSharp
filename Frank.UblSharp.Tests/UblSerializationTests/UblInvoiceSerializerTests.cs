@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 using FluentAssertions;
-using Frank.UblSharp.Invoice;
+using Invoice;
 using Xunit.Abstractions;
 
 namespace Frank.UblSharp.Tests.UblSerializationTests;

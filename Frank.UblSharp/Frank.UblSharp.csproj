@@ -4,31 +4,42 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Using Include="System.Collections.ObjectModel" />
+        <Using Include="System.Xml.Serialization" />
+        <Using Include="System.ComponentModel.DataAnnotations" />
+        <Using Include="System.Diagnostics.CodeAnalysis" />
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="XmlSchemaClassGenerator-beta" Version="2.1.1155" PrivateAssets="all" />
         <PackageReference Include="System.CodeDom" Version="8.0.0" PrivateAssets="all" />
         <PackageReference Include="System.Collections.Immutable" Version="8.0.0" PrivateAssets="all" />
         <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" PrivateAssets="all" />
+        <PackageReference Include="Basic.Reference.Assemblies.Net100" Version="1.8.3" PrivateAssets="all" />
     </ItemGroup>
 
-    <!-- Peer assemblies for the analyzer host: XSD generator deps + projects referenced by Frank.UblSharp.Generation at compile time. -->
+    <!-- Build generator first; do not reference it as a runtime assembly. -->
+    <ItemGroup>
+        <ProjectReference Include="..\Frank.UblSharp.Generation\Frank.UblSharp.Generation.csproj"
+                          ReferenceOutputAssembly="false" />
+    </ItemGroup>
+
+    <!-- Peer assemblies for the analyzer host: same directory as Generation.dll so Resources/Internals resolve (CLR probes next to the loading assembly). -->
     <Target Name="AddXmlSchemaClassGeneratorAnalyzerPeer" BeforeTargets="CoreCompile">
         <PropertyGroup>
             <_ArtifactsBin>$(MSBuildThisFileDirectory)..\artifacts\bin</_ArtifactsBin>
+            <_ArtifactsCfg>$([System.String]::Copy('$(Configuration)').ToLowerInvariant())</_ArtifactsCfg>
+            <_GenOut>$(_ArtifactsBin)\Frank.UblSharp.Generation\$(_ArtifactsCfg)</_GenOut>
         </PropertyGroup>
         <ItemGroup>
             <Analyzer Include="$(NuGetPackageRoot)xmlschemaclassgenerator-beta\2.1.1155\lib\netstandard2.0\XmlSchemaClassGenerator.dll" Condition="Exists('$(NuGetPackageRoot)xmlschemaclassgenerator-beta\2.1.1155\lib\netstandard2.0\XmlSchemaClassGenerator.dll')" />
             <Analyzer Include="$(NuGetPackageRoot)system.codedom\8.0.0\lib\netstandard2.0\System.CodeDom.dll" Condition="Exists('$(NuGetPackageRoot)system.codedom\8.0.0\lib\netstandard2.0\System.CodeDom.dll')" />
             <Analyzer Include="$(NuGetPackageRoot)system.collections.immutable\8.0.0\lib\netstandard2.0\System.Collections.Immutable.dll" Condition="Exists('$(NuGetPackageRoot)system.collections.immutable\8.0.0\lib\netstandard2.0\System.Collections.Immutable.dll')" />
             <Analyzer Include="$(NuGetPackageRoot)system.text.encoding.codepages\8.0.0\lib\netstandard2.0\System.Text.Encoding.CodePages.dll" Condition="Exists('$(NuGetPackageRoot)system.text.encoding.codepages\8.0.0\lib\netstandard2.0\System.Text.Encoding.CodePages.dll')" />
-            <Analyzer Include="$(_ArtifactsBin)\Frank.UblSharp.Resources\$(Configuration)\Frank.UblSharp.Resources.dll" Condition="Exists('$(_ArtifactsBin)\Frank.UblSharp.Resources\$(Configuration)\Frank.UblSharp.Resources.dll')" />
-            <Analyzer Include="$(_ArtifactsBin)\Frank.UblSharp.Internals.XsdCodeGenerator\$(Configuration)\Frank.UblSharp.Internals.XsdCodeGenerator.dll" Condition="Exists('$(_ArtifactsBin)\Frank.UblSharp.Internals.XsdCodeGenerator\$(Configuration)\Frank.UblSharp.Internals.XsdCodeGenerator.dll')" />
+            <Analyzer Include="$(NuGetPackageRoot)basic.reference.assemblies.net100\1.8.3\lib\netstandard2.0\Basic.Reference.Assemblies.Net100.dll" Condition="Exists('$(NuGetPackageRoot)basic.reference.assemblies.net100\1.8.3\lib\netstandard2.0\Basic.Reference.Assemblies.Net100.dll')" />
+            <Analyzer Include="$(_GenOut)\Frank.UblSharp.Generation.dll" Condition="Exists('$(_GenOut)\Frank.UblSharp.Generation.dll')" />
+            <Analyzer Include="$(_GenOut)\Frank.UblSharp.Resources.dll" Condition="Exists('$(_GenOut)\Frank.UblSharp.Resources.dll')" />
+            <Analyzer Include="$(_GenOut)\Frank.UblSharp.Internals.XsdCodeGenerator.dll" Condition="Exists('$(_GenOut)\Frank.UblSharp.Internals.XsdCodeGenerator.dll')" />
         </ItemGroup>
     </Target>
-
-    <ItemGroup>
-        <ProjectReference Include="..\Frank.UblSharp.Generation\Frank.UblSharp.Generation.csproj"
-                          OutputItemType="Analyzer"
-                          ReferenceOutputAssembly="true"
-                          PrivateAssets="all" />
-    </ItemGroup>
 </Project>

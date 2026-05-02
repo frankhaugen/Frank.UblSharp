@@ -1,7 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.CodeAnalysis.Formatting;
 
 internal class PropertyRewriter : CSharpSyntaxRewriter
 {
@@ -25,7 +24,7 @@ internal class PropertyRewriter : CSharpSyntaxRewriter
                 && SymbolEqualityComparer.Default.Equals(sym.OriginalDefinition, _backingField))
             {
                 name = name.WithIdentifier(SyntaxFactory.Identifier(_property.Identifier.ValueText));
-                return name.WithAdditionalAnnotations(Formatter.Annotation);
+                return name;
             }
         }
 
@@ -35,7 +34,7 @@ internal class PropertyRewriter : CSharpSyntaxRewriter
     public override SyntaxNode? VisitPropertyDeclaration(PropertyDeclarationSyntax propertyDeclaration)
     {
         if (propertyDeclaration == _property)
-            return ConvertToAutoProperty(propertyDeclaration).WithAdditionalAnnotations(Formatter.Annotation);
+            return ConvertToAutoProperty(propertyDeclaration);
         return base.VisitPropertyDeclaration(propertyDeclaration);
     }
 
